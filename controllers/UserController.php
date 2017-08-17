@@ -6,18 +6,17 @@ class UserController
 		//Registration for applicants
 
 		public function actionSignup()
-		{
-			if($_POST){
+		{if($_POST){
 			$firstname=$_POST['firstname'];
 			echo $firstname;
-			$lastname=$_POST['lastname'];	
-			echo '<br/>'.$lastname;
+			$secondname=$_POST['secondname'];	
+			echo '<br/>'.$secondname;
 			$password=$_POST['password'];	
 			echo '<br/>'.$password;
 			$email=$_POST['email'];	
 			echo '<br/>'.$email;
-			$cellphone=$_POST['cellphone'];
-			echo $cellphone;	
+			$check=$_POST['a'];
+			echo $check;
 			
 		}
 			require_once(ROOT . '/views/user/signup.php'); 
@@ -31,7 +30,15 @@ class UserController
 		{
 			return true;
 		}
+		
 
+		//Login
+
+		public function actionLogin()
+		{
+
+
+		}
 
 
 }

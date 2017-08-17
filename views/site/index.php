@@ -2,8 +2,10 @@
 
 <section id="banner-content">
 <div>
-    <a class="button-post" href="/user/login">Post a CV</a>
-    <a class="button-post" href="post_vacancy.html">Post a vacancy</a>
+  <form action="#" method="POST">
+    <a class="button-post" href="/user/signup" name="a">Post a CV</a>
+    <a class="button-post" href="/user/signup" name="b">Post a vacancy</a>
+  </form>
 </div>
 </section>
 
