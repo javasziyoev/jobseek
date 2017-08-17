@@ -1,21 +1,628 @@
+html {
+    font-family: "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+    
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    text-decoration: none;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
 
-/*
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-*/
+body { 
+    background: #fff;
+    margin: 0%; 
+    padding: 0%;
+}
 
-body {
+#header-content {
+    margin: 0%;
+    padding: 1% 2% 0 2%;
+    
+    background-color: #f2f2f2;
+    /*background-color: rgb(36, 41, 46); */
+    height: 50px;
+    display: flex;
+}
+
+#nav-bar-content {
+    margin: 0%;
+    padding: 0 2%;
+    background-color: #2f2f2f;
+    height: 3em;
+}
+
+#banner-content {
+    margin: 0%;
+    background-color: #ffffff;
+    height: 314px;
+    /*max-width: 1600px;*/
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 314px;
+    color: #fff;
+    background: url(/template/img/banner.jpg) 0 50% no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 20px 2%;
+}
+
+#top-jobs-content {
+    margin: 0% auto; 
+    padding: 2%;
+    background-color: #fff;
+    display: flex;
+}
+
+#main-content {
+    margin: 0% auto; 
+    padding: 2%;
+    background-color: #eee;
+}
+
+#jobs-at-content {
+    border-right: 1px solid #cbd1d4;
+    max-width: 250px;
+    min-width: 250px;
+}
+
+#featured-jobs-content {
+    margin-left: 25px;
+    max-width: 600px;
+    min-width: 600px;
+}
+
+#jobs-at-content ul {
+    list-style: none;
+}
+
+#jobs-at-content ul li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#inner-content {
+    height: auto
+}
+
+#footer-content {
+    clear: both;
+    margin: 0%;
+    padding: 2%;
+    background-color: #fff;
+    height: 70px;
+    /*border-top: 1px solid rgb(224, 223, 222);*/
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    margin-top: 5px;
+    margin-right: 2em; 
+}
+.nav-search-bar {
+    margin-left: 5px;
+    width: 80%;
+    display: flex;
+}
+
+.search-input {
+    height: 38px;
+    padding-left: 10px; 
+    border-style: none;
+    border: 1px solid #cbd1d4;
+    outline: none;
+    width: 100%;
+    background-color: #fff;
+    color: rgb(153, 153, 153);
+    display: inline-block;
+    box-sizing: border-box;
+    
+}
+
+.select-category {
+    height: 38px;
+    border-style: none;
+    border: 1px solid #cbd1d4;
+    outline: none;
+    width: 130px;
+    background-image: url(/template/img/select_min.svg);
+    background-position: 100% 50%;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    display: inline-block;
+    height: 38px;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-left: -1px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 11px;
+    padding-right: 25px;
+    padding-top: 0px;
+    position: relative;
+    width: 140px;
+    -moz-appearance: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    
+}
+
+.search-button {
+    color: #fff;
+    border-style: none;
+    border: .1em solid rgb(29, 152, 220);
+    border-color: rgb(29, 152, 220);
+    background-color: rgb(29, 152, 220);
+    
+    width: 110px;
+    height: 38px;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    padding: 8px 14px;
+    letter-spacing: .06em;
+    margin: 0 .6em;
+
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: none;
+    
+}
+
+.search-button:hover {
+    color: #fff;
+    cursor: pointer;
+    border-color: #0088cc;
+    background-color: #0088cc;
+}
+
+.search-button:active {
+    outline: none;
+}
+
+
+.footer-ul {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    font-size: .7em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: rgb(153, 153, 153);
+}
+
+a {
+    text-decoration: none;
+    color: #0088cc;
+    /*color: rgb(153, 153, 153) */
+}
+
+a:hover {
+    color: rgb(29, 152, 220);
+}
+
+.footer-li {
+    padding-right: 5px;
+    border-right: 1px solid rgb(153, 153, 153);
+}
+
+.footer-li-end {
+    padding-left: 5px;
+}
+
+.gray-text {
+    color: rgb(153, 153, 153);
+}
+
+.white-text {
+    color: #fff;
+}
+
+.dark-gray-text {
+    color: #333;
+}
+
+.nav-bar-ul {
+    list-style: none;
+    text-decoration: none;
+    font-size: .8em;
+    margin: 0;
+}
+
+.nav-bar-li:hover {
+    background-color: rgb(70, 70, 70);
+    color: rgb(230, 230, 230);
+    height: 3em;
+}
+
+ul {
+    padding-left: 0;
+}
+
+/* nav bar */
+#nav{
+	float: left;
+	width: 100%;
+	list-style: none;
+}
+#nav li{
+	float: left;
+	margin-right: 25px;
+	position: relative;
+    display: block;
+}
+#nav li a{
+	display:block;
+	color: #fff;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#nav li a:hover{
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+	background: rgb(70, 70, 70);
+}
+
+/*--- ВЫПАДАЮЩИЕ ПУНКТЫ ---*/
+#nav ul{
+	list-style: none;
+	position: absolute;
+	left: -9999px; /* Скрываем за экраном, когда не нужно (данный метод лучше, чем display:none;) */
+	opacity: 0; /* Устанавливаем начальное состояние прозрачности */
+}
+#nav ul li{
+	padding-top: 1px; /* Вводим отступ между li чтобы создать иллюзию разделенных пунктов меню */
+	float: none;
+}
+#nav ul a{
+	white-space: nowrap; /* Останавливаем перенос текста и создаем многострочный выпадающий пункт */
+	display: block;
+}
+#nav li:hover ul{ /* Выводим выпадающий пункт при наведении курсора */
+	left: 0; /* Приносим его обратно на экран, когда нужно */
+	opacity: 1; /* Делаем непрозрачным */
+}
+#nav li:hover a{ /* Устанавливаем стили для верхнего уровня, когда выводится выпадающий список */
+	background: rgb(70, 70, 70);
+}
+#nav li:hover ul a{ /* Изменяем некоторые стили верхнего уровня при выводе выпадающего пункта */
+	text-decoration: none;
+}
+#nav li:hover ul li a:hover{ /* Устанавливаем стили для выпадающих пунктов, когда курсор наводится на конкретный пункт */
+	background: #333;
+    background: rgba(51, 51, 51, 0.95); /* Будет полупрозрачным */
+    transform: scale(1.05);
+	
+}
+
+
+
+
+.button-post {
+    color: #fff;
+    border-style: none;
+    border: .1em solid #fff;
+    background-color: none;
+    
+    width: 110px;
+    height: 38px;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    padding: 8px 14px;
+    letter-spacing: .06em;
+    margin: 0 .6em;
+    
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: none; 
+}
+
+.button-post:hover {
+    color: #333;
+    background-color: #fff;
+}
+
+.jobs-count {
+    float: right;
+    margin-right: 25px;
+    color: #aaa;
+}
+
+
+.vacancies-of-the-day {
 
 }
-.regmenu {
-	width: 20%;
-	height: 10%;
-	margin: auto;
-} 
 
-.regmenu input {
-	width: 100%;
-	height: 40%;
-	margin: 10px;
+.vacancies-of-the-day-item {
+    margin: 10px 20px 10px 0;
+    background: #ffffff;
+    padding: 1%;
+    width: 43%;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #f2f2f2;
+}
+
+.vacancy-of-the-day-title {
+    display: block;
+    color: #333;
+}
+
+.vacancy-of-the-day-title:hover {
+    color: rgb(29, 152, 220);
+}
+
+.vacancy-of-the-day-salary {
+    display: block;
+    color: #333;
+}
+
+.vacancy-of-the-day-company {
+    color: #555555;
+    font-size: .8em;
+}
+
+.vacancy-of-the-day-company:hover {
+    color: rgb(29, 152, 220);
+}
+
+.work-in-industry-ul {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0% 0%;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto auto;
+    border-bottom-color: rgb(51, 51, 51);
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: rgb(51, 51, 51);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(51, 51, 51);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(51, 51, 51);
+    border-top-style: none;
+    border-top-width: 0px;
+    color: rgb(51, 51, 51);
+    column-gap: 60px;
+    column-width: 260px;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    outline-color: rgb(51, 51, 51);
+    outline-style: none;
+    outline-width: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    margin-top: 10px;
+}
+
+.work-in-industry-ul li {
+    margin: 10px 0;
+}
+
+.work-in-industry-ul li a{
+    color: #333;
+}
+
+.work-in-industry-ul li a:hover{
+    color: rgb(29, 152, 220);
+}
+
+
+/* POST A VACANCY */
+#post-a-vacancy-content {
+    margin-top: 25px;
+}
+
+
+/* SIGN UP */
+#sign-up-content {
+    margin-top: 25px;
+}
+
+/* Базовый контейнер табов */
+.tabs {
+	min-width: 320px;
+	max-width: 800px;
+	padding: 0px;
+	margin: 0 auto;
+}
+/* Стили секций с содержанием */
+.tabs>section {
+	display: none;
+	padding: 15px;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+.tabs>section>p {
+	margin: 0 0 5px;
+	line-height: 1.5;
+	color: #383838;
+	/* прикрутим анимацию */
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+/* Описываем анимацию свойства opacity */
+ 
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* Прячем чекбоксы */
+.tabs>input {
+	display: none;
+	position: absolute;
+}
+/* Стили переключателей вкладок (табов) */
+.tabs>label {
+	display: inline-block;
+	margin: 0 0 -1px;
+	padding: 15px 25px;
+	font-weight: 600;
+	text-align: center;
+	color: #aaa;
+	border: 0px solid #ddd;
+	border-width: 1px;
+	background: #f1f1f1;
+}
+
+/* Изменения стиля переключателей вкладок при наведении */
+ 
+.tabs>label:hover {
+	color: #888;
+	cursor: pointer;
+}
+/* Стили для активной вкладки */
+.tabs>input:checked+label {
+	color: #555;
+	border-top: 1px solid #0088cc;
+	border-bottom: 1px solid #fff;
+	background: #fff;
+}
+/* Активация секций с помощью псевдокласса :checked */
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+	display: block;
+}
+/* Убираем текст с переключателей 
+* и оставляем иконки на малых экранах
+*/
+ 
+@media screen and (max-width: 680px) {
+	.tabs>label:before {
+		margin: 0;
+		font-size: 18px;
+	}
+}
+/* Изменяем внутренние отступы 
+*  переключателей для малых экранов
+*/
+@media screen and (max-width: 400px) {
+	.tabs>label {
+		padding: 15px;
+	}
 }
