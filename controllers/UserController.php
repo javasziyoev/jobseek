@@ -17,7 +17,7 @@ class UserController
 			$lastname=$_POST['lastname'];	
 			$password=$_POST['password'];	
 			$email=$_POST['email'];	
-			$cellphone=$_POST['cellphone'];
+			$cellphone=$_POST['cellphone'];}
 			else if (isset($_POST['actionEmployer']))
 			
 			{  
