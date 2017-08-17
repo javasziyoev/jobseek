@@ -2,7 +2,7 @@
 
 <section id="banner-content">
 <div>
-    <a class="button-post" href="">Post a CV</a>
+    <a class="button-post" href="/user/login">Post a CV</a>
     <a class="button-post" href="post_vacancy.html">Post a vacancy</a>
 </div>
 </section>
