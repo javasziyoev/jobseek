@@ -1,3 +1,5 @@
+<?php include ROOT . '/views/layouts/header.php'; ?>
+
 <div id="wrapper">
       <section id="sign-up-content">
         <div class="tabs">
@@ -118,3 +120,5 @@
       </section>
 
     </div>
+
+<?php include ROOT . '/views/layouts/footer.php'; ?>
