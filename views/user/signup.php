@@ -10,7 +10,9 @@
             <label for="tab2" title="Sign up 2">Employer registration</label>
 
             <section id="content-tab1">
-                <form action="" method="POST">
+                <form action="#" method="POST">
+                <input type="hidden" name="actionSignup" value = "1">
+
                 <div>
                     <div>
                         <label>First name</label>
@@ -58,7 +60,9 @@
             </section>
 
             <section id="content-tab2">
-                    <form action="">
+                    <form action="" method = "POST">
+                    <input type="hidden" name="actionEmployer"  value = "2">
+
                         <div>
                             <div>
                                 <select class="select-category">

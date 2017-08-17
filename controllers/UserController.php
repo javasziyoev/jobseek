@@ -8,6 +8,7 @@ class UserController
 		public function actionSignup()
 		{
 			if($_POST){
+				if($_POST['actionSignup']==1){
 			$firstname=$_POST['firstname'];
 			echo $firstname;
 			$lastname=$_POST['lastname'];	
@@ -17,7 +18,11 @@ class UserController
 			$email=$_POST['email'];	
 			echo '<br/>'.$email;
 			$cellphone=$_POST['cellphone'];
-			echo $cellphone;	
+			echo $cellphone;}
+			else if ($_POST['actionEmployer']==2)
+			
+			{ echo 'trfgh';
+			}
 			
 		}
 			require_once(ROOT . '/views/user/signup.php'); 
@@ -27,10 +32,7 @@ class UserController
 
 		//Registration for employeers
 		
-		public function actionEmployer()
-		{
-			return true;
-		}
+	
 
 
 
