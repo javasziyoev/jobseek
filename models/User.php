@@ -2,12 +2,12 @@
 
 
 class User{
-$db = Db::getConnection();
+
+public static function getResult(){
+/*$db = Db::getConnection();
 $result = $db->query('');
-
-
-
+return $result;*/
 }
 
-
+}
 ?>

@@ -65,62 +65,62 @@
 
                         <div>
                             <div>
-                                <select class="select-category">
-                                    <option value="cny" selected="">LLC</option>
-                                    <option value="usd">ХУЙ</option>
-                                    <option value="rub">PIZDA</option>
+                                <select name = "selectCurrency" class="select-category">
+                                    <option value="cny" selected="">cny</option>
+                                    <option value="usd">usd</option>
+                                    <option value="rub">rub</option>
                                 </select>
                             </div>
                             <div>
                                 <div>
-                                    <input type="text" placeholder="Company name">
+                                    <input name="Company_name" type="text" placeholder="Company name">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input type="text" placeholder="Website">
+                                    <input name="Website" type="text" placeholder="Website">
                                 </div>
                             </div>
                             <div>
-                                <select class="select-category">
-                                    <option value="1" selected="">Less than 50 employees</option>
-                                    <option value="2" selected="">From 51 to 100 employees</option>
-                                    <option value="3" selected="">From 101 to 250 employees</option>
-                                    <option value="4" selected="">From 251 to 500 employees</option>
-                                    <option value="5" selected="">More than 500 employees</option>
+                                <select name = "employees" class="select-category">
+                                    <option value="Less than 50 employees" selected="">Less than 50 employees</option>
+                                    <option value="From 51 to 100 employees" selected="">From 51 to 100 employees</option>
+                                    <option value="From 101 to 250 employees" selected="">From 101 to 250 employees</option>
+                                    <option value="From 101 to 250 employees" selected="">From 251 to 500 employees</option>
+                                    <option value="More than 500 employees" selected="">More than 500 employees</option>
                                 </select>
                             </div>
                             <div>
-                                <select class="select-category">
-                                    <option value="1" selected="">Beijin</option>
-                                    <option value="2" selected="">Moscow</option>
-                                    <option value="3" selected="">Dushanbe</option>
+                                <select name = "selectCity" class="select-category">
+                                    <option value="Beijin" selected="">Beijin</option>
+                                    <option value="Moscow" selected="">Moscow</option>
+                                    <option value="Dushanbe" selected="">Dushanbe</option>
                                 </select>
                             </div>
                             <label><strong>Contact person</strong> (confidential)</label>
                             <div>
                                 <div>
-                                    <input type="text" placeholder="Name">
+                                    <input name ="Name" type="text" placeholder="Name">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input type="text" placeholder="Last name">
+                                    <input  name = "Last_name"type="text" placeholder="Last name">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input type="email" placeholder="Email">
+                                    <input name ="Email" type="email" placeholder="Email">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input type="text" placeholder="Phone number">
+                                    <input name="Phone_number" type="text" placeholder="Phone number">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input type="text" placeholder="Extension number">
+                                    <input name="Extension_number" type="text" placeholder="Extension number">
                                 </div>
                             </div>
                             <small>By clicking "register a company", you acknowledge that you read and fully agree
