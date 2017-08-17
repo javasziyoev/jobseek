@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Job Seeker</title>
     
-  <link rel="stylesheet" href="style.css" />   
-  <link rel="stylesheet" media="screen and (min-device-width: 1440px)" href="desktop.css" /> 
-  <link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1440px)' href='medium-style.css' />
-  <link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href='mobile-style.css' />
+  <link rel="stylesheet" href="/template/css/style.css" />   
+  <link rel="stylesheet" media="screen and (min-device-width: 1440px)" href="/template/css/desktop.css" /> 
+  <link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1440px)' href='/template/css/medium-style.css' />
+  <link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href='/template/css/mobile-style.css' />
 </head>
 <body>
     <div id="header-content">

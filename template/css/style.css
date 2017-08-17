@@ -50,7 +50,7 @@ body {
     padding-top: 20px;
     height: 314px;
     color: #fff;
-    background: url(img/banner.jpg) 0 50% no-repeat;
+    background: url(/template/img/banner.jpg) 0 50% no-repeat;
     background-position-x: center;
     background-size: cover;
     overflow: hidden;
@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6, h7 {
     border: 1px solid #cbd1d4;
     outline: none;
     width: 130px;
-    background-image: url(img/select_min.svg);
+    background-image: url(/template/img/select_min.svg);
     background-position: 100% 50%;
     background-position-x: 100%;
     background-position-y: 50%;
