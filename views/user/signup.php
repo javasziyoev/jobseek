@@ -66,9 +66,22 @@
                         <div>
                             <div>
                                 <select name = "selectCurrency" class="select-category">
-                                    <option value="cny" selected="">cny</option>
-                                    <option value="usd">usd</option>
-                                    <option value="rub">rub</option>
+                                    <?php
+                                    require_once(ROOT . '/models/User.php');
+                                     $fuck = User::getCompanyClass();       
+                                    $fuck1 = User::getCompanyClass1();  $i=0;         
+                                            foreach($fuck as $Duck)
+                                            {
+                                             echo '<option value = '.$Duck.'>';
+   
+
+                                              echo ''.$fuck1[$i].'</option>';
+                                              $i++;
+                                            }
+
+ 
+
+                                    ?>
                                 </select>
                             </div>
                             <div>
@@ -111,6 +124,11 @@
                             <div>
                                 <div>
                                     <input name ="Email" type="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <input name ="password" type="password" placeholder="password">
                                 </div>
                             </div>
                             <div>
