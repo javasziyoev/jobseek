@@ -5,10 +5,14 @@ class UserController
 
 		//Registration for applicants
 
+
+
 		public function actionSignup()
 		{
 			if($_POST){
-			if($_POST['actionSignup']){
+			if(isset($_POST['actionSignup']))
+			
+			{
 			$firstname=$_POST['firstname'];
 			echo $firstname;
 			$lastname=$_POST['lastname'];	
@@ -19,7 +23,7 @@ class UserController
 			echo '<br/>'.$email;
 			$cellphone=$_POST['cellphone'];
 			echo $cellphone;}
-			else if ($_POST['actionEmployer'])
+			else if (isset($_POST['actionEmployer']))
 			
 			{ echo 'trfgh';
 			}
@@ -28,6 +32,7 @@ class UserController
 			require_once(ROOT . '/views/user/signup.php'); 
 			return true;
 		}
+	
 
 
 		//Registration for employeers
