@@ -62,13 +62,6 @@ class UserController
             $password = $_POST['password'];
             // Флаг ошибок
             $errors = false;
-            // Валидация полей
-            if (!User::checkEmail($email)) {
-                $errors[] = 'Неправильный email';
-            }
-            if (!User::checkPassword($password)) {
-                $errors[] = 'Пароль не должен быть короче 6-ти символов';
-            }
             // Проверяем существует ли пользователь
             $userId = User::checkUserData($email, $password);
             if ($userId == false) {

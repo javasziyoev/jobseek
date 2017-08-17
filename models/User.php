@@ -45,6 +45,34 @@ public static function getResult2($Company_name,$Website,$Name,$Last_name,$Email
         }}
     return $someArr1;
     }
+    public static function checkUserData($email, $password)
+    {
+        // Соединение с БД
+        $db = Db::getConnection();
+        // Текст запроса к БД
+        $sql = 'SELECT * FROM user WHERE email = :email AND password = :password';
+        // Получение результатов. Используется подготовленный запрос
+        $result = $db->prepare($sql);
+        $result->bindParam(':email', $email, PDO::PARAM_INT);
+        $result->bindParam(':password', $password, PDO::PARAM_INT);
+        $result->execute();
+        // Обращаемся к записи
+        $user = $result->fetch();
+        if ($user) {
+            // Если запись существует, возвращаем id пользователя
+            return $user['id'];
+        }
+        return false;
+    }
+    /**
+     * Запоминаем пользователя
+     * @param integer $userId <p>id пользователя</p>
+     */
+    public static function auth($userId)
+    {
+        // Записываем идентификатор пользователя в сессию
+        $_SESSION['user'] = $userId;
+    }
     
 
    
