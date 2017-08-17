@@ -1,0 +1,21 @@
+
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+
+}
+.regmenu {
+	width: 20%;
+	height: 10%;
+	margin: auto;
+} 
+
+.regmenu input {
+	width: 100%;
+	height: 40%;
+	margin: 10px;
+}
