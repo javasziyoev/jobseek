@@ -68,8 +68,8 @@
                                 <select name = "selectCurrency" class="select-category">
                                     <?php
                                     require_once(ROOT . '/models/User.php');
-                                     $fuck = User::getCompanyClass();       
-                                    $fuck1 = User::getCompanyClass1();  $i=0;         
+                                     $fuck = User::getCompanyId();       
+                                    $fuck1 = User::getCompanyName();  $i=0;         
                                             foreach($fuck as $Duck)
                                             {
                                              echo '<option value = '.$Duck.'>';

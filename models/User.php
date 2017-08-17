@@ -14,7 +14,7 @@ public static function getResult2($Company_name,$Website,$Name,$Last_name,$Email
     return $result;
     }*/   
 
-    public static function getCompanyClass()
+    public static function getCompanyId()
     {   $someArr=[];$i=0; 
         $db=Db::getConnection();
         $sql = 'Select * from `company_class`';
@@ -30,7 +30,7 @@ public static function getResult2($Company_name,$Website,$Name,$Last_name,$Email
             return $someArr;
             
     }
-    public static function getCompanyClass1()
+    public static function getCompanyName()
     {   $someArr1=[];$i=0; 
              $db=Db::getConnection();
         $sql = 'Select * from `company_class`';
@@ -45,6 +45,7 @@ public static function getResult2($Company_name,$Website,$Name,$Last_name,$Email
         }}
     return $someArr1;
     }
+    
 
 }
 ?>
