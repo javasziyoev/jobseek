@@ -43,8 +43,9 @@ class UserController
 			return true;
 		}
 
-		public function actionLogin()
+		public function actionsignin()
     {
+        
         // Переменные для формы
         $email = false;
         $password = false;
@@ -77,7 +78,7 @@ class UserController
             }
         }
         // Подключаем вид
-        require_once(ROOT . '/views/user/login.php');
+        require_once(ROOT . '/views/user/signin.php');
         return true;
     }
 
