@@ -1,4 +1,4 @@
-
+<?php include ROOT . '/views/layouts/header.php'; ?>
 
 <section id="banner-content">
 <div>
@@ -184,3 +184,4 @@
       </div>
 
      
+<?php include ROOT . '/views/layouts/footer.php'; ?>
