@@ -1,24 +1,24 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<?php include ROOT . '/views/layouts/header.php'; 
+?>
 
 <div id="wrapper">
       <section id="sign-up-content">
         <div class="tabs">
-            <input id="tab1" type="radio" name="tabs" checked>
+            <input id="tab1" type="radio" name="tabs" <?php if($i == 0)echo 'checked' ?> >
             <label for="tab1" title="Sign up 1">Job seeker registration</label>
 
-            <input id="tab2" type="radio" name="tabs">
+            <input id="tab2" type="radio" name="tabs" <?php if($i == 1)echo 'checked' ?> >
             <label for="tab2" title="Sign up 2">Employer registration</label>
-
+            
             <section id="content-tab1">
                 <form action="#" method="POST">
-                <input type="hidden" name="actionSignup" value = "1">
 
                 <div>
                     <div>
                         <label>First name</label>
                     </div>
                     <div>
-                        <input type="text" name = "firstname">
+                        <input type="text" name = "firstname" value="<?php echo $firstname; ?>">
                     </div>
                 </div>
                 <div>
@@ -26,7 +26,7 @@
                         <label>Last name</label>
                     </div>
                     <div>
-                        <input type="text" name = "lastname">
+                        <input type="text" name = "lastname" value="<?php echo $lastname; ?>">
                     </div>
                 </div>
                 
@@ -35,7 +35,7 @@
                         <label>Email</label>
                     </div>
                     <div>
-                        <input type="text" name = "email">
+                        <input type="email" name = "email" value="<?php echo $email; ?>">
                     </div>
                 </div>
                 <div>
@@ -43,7 +43,7 @@
                         <label>Password</label>
                     </div>
                     <div>
-                        <input type="text" name = "password">
+                        <input type="password" name = "password" value="<?php echo $password; ?>">
                     </div>
                 </div>
                 <div>
@@ -51,21 +51,27 @@
                         <label>Phone number</label>
                     </div>
                     <div>
-                    <input type="text" name = "cellphone">
+                    <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>">
                     </div>
                 </div>
 
-                <input type="submit" value="Register">
+                <input type="submit" value="Register" name="submit1">
             </form>
+            <?php if (isset($errors) && is_array($errors)): ?>
+                        <ul>
+                            <?php foreach ($errors as $error): ?>
+                                <li> - <?php echo $error; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+            <?php endif; ?>
             </section>
 
             <section id="content-tab2">
-                    <form action="" method = "POST">
-                    <input type="hidden" name="actionEmployer"  value = "2">
+                    <form action="#" method = "POST">
 
                         <div>
                             <div>
-                                <select name = "selectCurrency" class="select-category">
+                                <select name = "selectclass" class="select-category">
                                     <?php
                                     require_once(ROOT . '/models/User.php');
                                      $fuck = User::getCompanyId();       
@@ -86,12 +92,12 @@
                             </div>
                             <div>
                                 <div>
-                                    <input name="Company_name" type="text" placeholder="Company name">
+                                    <input name="Company_name" type="text" placeholder="Company name" value="<?php echo $company_name; ?>">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input name="Website" type="text" placeholder="Website">
+                                    <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>">
                                 </div>
                             </div>
                             <div>
@@ -125,38 +131,38 @@
                             <label><strong>Contact person</strong> (confidential)</label>
                             <div>
                                 <div>
-                                    <input name ="Name" type="text" placeholder="Name">
+                                    <input name ="Name" type="text" placeholder="Name" value="<?php echo $name; ?>">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input  name = "Last_name"type="text" placeholder="Last name">
+                                    <input  name = "Last_name"type="text" placeholder="Last name" value = "<?php echo $last_name; ?>">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input name ="Email" type="email" placeholder="Email">
+                                    <input name ="Email_e" type="email" placeholder="Email" value="<?php echo $email_e; ?>">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input name ="password" type="password" placeholder="password">
+                                    <input name ="password_e" type="password" placeholder="password">
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input name="Phone_number" type="text" placeholder="Phone number">
+                                    <input name="Phone_number" type="text" placeholder="Phone number" <?php echo $phone_number; ?>>
                                 </div>
                             </div>
                             <div>
                                 <div>
-                                    <input name="Extension_number" type="text" placeholder="Extension number">
+                                    <input name="Extension_number" type="text" placeholder="Extension number" value="<?php echo $extension_number; ?>">
                                 </div>
                             </div>
                             <small>By clicking "register a company", you acknowledge that you read and fully agree
                                 with the terms of use if the website.
                             </small><br>
-                            <input type="submit" value="Register company">
+                            <input type="submit" name="submit2" value="Register company">
                         </form>
             </section>
         </div>

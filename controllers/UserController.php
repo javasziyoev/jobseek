@@ -6,86 +6,69 @@ class UserController
 		//Registration for applicants
 
 
-
+        
 		public function actionSignup()
 		{
-			if($_POST){
-			if(isset($_POST['actionSignup']))
-			
-			{//employees
-			$firstname=$_POST['firstname'];
-			$lastname=$_POST['lastname'];	
-			$password=$_POST['password'];	
-			$email=$_POST['email'];	
-			$cellphone=$_POST['cellphone'];}
-			else if (isset($_POST['actionEmployer']))
-						require_once(ROOT . '/models/User.php');
-//$res = 	User::getResult1($firstname,$lastname,$password,$email,$cellphone);
-	//	echo $res;
-			{  //employer
-				$Company_name = $_POST['Company_name'];
-				$Website = $_POST['Website'];
-				$Name = $_POST['Name'];
-				$Last_name = $_POST['Last_name'];
-				$Email = $_POST['Email'];
-				$password = $_POST['password'];
-				$Phone_number = $_POST['Phone_number'];
-				$Extension_number = $_POST['Extension_number'];
-				$selectCurrency = htmlspecialchars ($_POST['selectCurrency'])	;
-				$employees = htmlspecialchars ($_POST['employees'])	;
-				$selectCity = htmlspecialchars ($_POST['selectCity']);
-				require_once(ROOT . '/models/User.php');
-			//	$res = 	User::getResult2($Company_name,$Website,$Name,$Last_name,$Email,$password,$Phone_number,$Phone_number,$Extension_number,	$selectCurrency,$employees,$selectCity);
-//echo $res;
-} 
-			
-			
-			
-		
-		}
-			require_once(ROOT . '/views/user/signup.php'); 
-			return true;
-		}
+            $i = 0;
+            //applicant variables
+            require_once(ROOT. '/config/applicant_variables.php');
+            /////
+            //employer variables
+            require_once(ROOT. '/config/employer_variables.php');
+            $result = false;
 
-		public function actionsignin()
-    {
-        
-        // Переменные для формы
-        $email = false;
-        $password = false;
-        
-        // Обработка формы
-        if (isset($_POST['submit'])) {
-            // Если форма отправлена 
-            // Получаем данные из формы
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            // Флаг ошибок
-            $errors = false;
-            // Проверяем существует ли пользователь
-            $userId = User::checkUserData($email, $password);
-            if ($userId == false) {
-                // Если данные неправильные - показываем ошибку
-                $errors[] = 'Неправильные данные для входа на сайт';
-            } else {
-                // Если данные правильные, запоминаем пользователя (сессия)
-                User::auth($userId);
-                // Перенаправляем пользователя в закрытую часть - кабинет 
-                header("Location: /cabinet");
+     
+            if (isset($_POST['submit1'])) {
+			    $firstname = $_POST['firstname'];
+			    $lastname = $_POST['lastname'];	
+                $password = $_POST['password'];	
+			    $email = $_POST['email'];	
+                $cellphone = $_POST['cellphone'];
+                require_once(ROOT. '/config/applicant_errors.php');
+                if ($errors == false){
+                    $result = User::registera($firstname,$lastname,md5($password),$email,$cellphone);
+                    
+                }
+
             }
-        }
-        // Подключаем вид
-        require_once(ROOT . '/views/user/signin.php');
-        return true;
-    }
+            //employer
+
+            if (isset($_POST['submit2'])){
+                $company_class = $_POST['selectclass'];
+                $company_name = $_POST['Company_name'];
+                $website = $_POST['Website'];
+                $employees = $_POST['employees'];
+                $selectcity = $_POST['selectCity'];
+                $name = $_POST['Name'];
+                $last_name = $_POST['Last_name'];
+                $email_e = $_POST['Email_e'];
+                $password = $_POST['password_e'];
+                $phone_number = $_POST['Phone_number'];
+                $extension_number = $_POST['Extension_number'];
+                require_once(ROOT. '/config/employer_errors.php');
+                require_once(ROOT. '/config/applicant_errors.php');
+                
+                if ($errors == false){
+                    registere($company_class,$company_name,$website,$employees,$selectcity,$name,$last_name,
+                    $email_e,$password,$phone_number,$extension_number);
+                    $i = 1;
+                }
+                
+            }
+            ///////
+            
+                
+                
+            require_once(ROOT. '/views/user/signup.php');
+            return true;
+        
+            
 
 	
+ }
 
-
-		//Registration for employeers
 		
-	
+}	
 
 
 
-}

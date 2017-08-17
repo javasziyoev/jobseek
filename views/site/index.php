@@ -1,10 +1,11 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 <section id="banner-content">
-<div>
-  <form action="#" method="POST">
+<div >
+  <form action="#" method="post">
     <a class="button-post" href="/user/signup" name="a">Post a CV</a>
     <a class="button-post" href="/user/signup" name="b">Post a vacancy</a>
+
   </form>
 </div>
 </section>

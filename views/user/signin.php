@@ -7,7 +7,6 @@
         <form action="#" method="POST">
            <input type="email" placeholder="Email" name="email">
            <input type="password" placeholder="Password" name="password">
-
            <input type="submit" value="Sign in">
         </form>
     </section>
