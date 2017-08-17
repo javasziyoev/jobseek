@@ -94,15 +94,7 @@
                                     <input name="Website" type="text" placeholder="Website">
                                 </div>
                             </div>
-                            <div>
-                                <select name = "employees" class="select-category">
-                                    <option value="Less than 50 employees" selected="">Less than 50 employees</option>
-                                    <option value="From 51 to 100 employees" selected="">From 51 to 100 employees</option>
-                                    <option value="From 101 to 250 employees" selected="">From 101 to 250 employees</option>
-                                    <option value="From 101 to 250 employees" selected="">From 251 to 500 employees</option>
-                                    <option value="More than 500 employees" selected="">More than 500 employees</option>
-                                </select>
-                            </div>
+                           
                             <div>
                                 <select name = "selectCity" class="select-category">
                                 <?php
