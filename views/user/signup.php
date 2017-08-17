@@ -105,10 +105,22 @@
                             </div>
                             <div>
                                 <select name = "selectCity" class="select-category">
-                                    <option value="Beijin" selected="">Beijin</option>
-                                    <option value="Moscow" selected="">Moscow</option>
-                                    <option value="Dushanbe" selected="">Dushanbe</option>
-                                </select>
+                                <?php
+                                require_once(ROOT . '/models/User.php');
+                                 $fuck = User::getcityId();       
+                                $fuck1 = User::getcityName();  $i=0;         
+                                        foreach($fuck as $Duck)
+                                        {
+                                         echo '<option value = '.$Duck.'>';
+
+
+                                          echo ''.$fuck1[$i].'</option>';
+                                          $i++;
+                                        }
+
+
+
+                                ?>                                </select>
                             </div>
                             <label><strong>Contact person</strong> (confidential)</label>
                             <div>

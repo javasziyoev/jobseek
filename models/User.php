@@ -74,6 +74,37 @@ public static function getResult2($Company_name,$Website,$Name,$Last_name,$Email
         $_SESSION['user'] = $userId;
     }
     
+    public static function getcityId()
+    {   $someArr=[];$i=0; 
+        $db=Db::getConnection();
+        $sql = 'Select * from `city`';
+        $result=$db->prepare($sql);
+        $result->execute();
+
+        while( $user = $result->fetch()){
+            if($user)
+            {
+               $someArr[$i]= $user['city_id'];
+               $i++;
+            }}
+            return $someArr;
+            
+    }
+    public static function getcityName()
+    {   $someArr1=[];$i=0; 
+             $db=Db::getConnection();
+        $sql = 'Select * from `city`';
+        $result=$db->prepare($sql);
+        $result->execute();
+
+       while( $user = $result->fetch()){
+        if($user)
+        {
+           $someArr1[$i]= $user['city_name'];
+           $i++;
+        }}
+    return $someArr1;
+    }
 
    
 
