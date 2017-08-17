@@ -6,17 +6,17 @@
             <input id="tab1" type="radio" name="tabs" checked>
             <label for="tab1" title="Sign up 1">Job seeker registration</label>
 
-            <input id="tab2" type="radio" name="tabs" checked>
+            <input id="tab2" type="radio" name="tabs">
             <label for="tab2" title="Sign up 2">Employer registration</label>
 
             <section id="content-tab1">
-                <form action="">
+                <form action="" method="POST">
                 <div>
                     <div>
                         <label>First name</label>
                     </div>
                     <div>
-                        <input>
+                        <input type="text" name = "firstname">
                     </div>
                 </div>
                 <div>
@@ -24,15 +24,24 @@
                         <label>Last name</label>
                     </div>
                     <div>
-                        <input>
+                        <input type="text" name = "lastname">
                     </div>
                 </div>
+                
                 <div>
                     <div>
                         <label>Email</label>
                     </div>
                     <div>
-                        <input>
+                        <input type="text" name = "email">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label>Password</label>
+                    </div>
+                    <div>
+                        <input type="text" name = "password">
                     </div>
                 </div>
                 <div>
@@ -40,7 +49,7 @@
                         <label>Phone number</label>
                     </div>
                     <div>
-                        <input>
+                    <input type="text" name = "cellphone">
                     </div>
                 </div>
 
