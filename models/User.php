@@ -46,5 +46,7 @@ public static function getResult2($Company_name,$Website,$Name,$Last_name,$Email
     return $someArr1;
     }
 
+   
+
 }
 ?>
