@@ -23,9 +23,25 @@
               <option value="employerList">Companies</option>
             </select>
             <input type="submit" value="Search" class="search-button">
-            <small>Advanced search</small>
-          </div>
-      </div>
+            <!-- <small>Advanced search</small> -->
+            <a href="#win1"><input type="submit" value="Sign In" class="sign-in-button"></a>
+    
+
+
+            <!-- Модальное окно -->
+            <a href="#x" class="overlay" id="win1"></a>
+            <div class="popup">
+                <section id="sign-up-content">
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Email" name="email" class="input-text">
+                        <input type="password" placeholder="Password" name="password" class="input-text">
+                        <input type="submit" value="Sign in" class="post-button">
+                    </form>
+                </section>
+                <a class="close"title="Close" href="#close"></a>
+            </div>
+        </div>
+    </div>
 
       <section id="nav-bar-content">
           <ul id="nav" class="nav-bar-ul">
