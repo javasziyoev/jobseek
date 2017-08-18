@@ -857,3 +857,58 @@ ul {
 #vacancy-details-content .block-email {
     margin-right: 1em;
 }
+
+
+
+/* Cataloge-page */
+#vacancy-catalog-content {
+    margin-top: 25px;
+    display: flex;
+}
+
+#vacancy-catalog-content .catalog-side-panel {
+    width: 600px;
+    background-color: #f2f2f2;
+    
+    margin-right: 2em;
+}
+
+#vacancy-catalog-content .catalog-main {
+    display: block;
+}
+
+#vacancy-catalog-content .vacancy-title {
+    color: #be6013;
+    font-weight: 600;
+    font-size: 1.16em;
+}
+
+#vacancy-catalog-content .vacancy-title:hover {
+    color: #0088cc;
+}
+
+#vacancy-catalog-content .salary {
+    color: #555;
+    margin-bottom: .5em;
+}
+
+#vacancy-catalog-content .short-description {
+    margin-bottom: .5em;
+}
+
+#vacancy-catalog-content .company-name {
+    font-size: .8em;
+    color: #999;
+}
+
+#vacancy-catalog-content .city {
+    color: #777;
+    font-weight: 600;
+    font-size: .8em;
+}
+
+#vacancy-catalog-content .post-date {
+    color: #777;
+    font-weight: 600;
+    font-size: .8em;
+}
