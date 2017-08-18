@@ -13,7 +13,7 @@ class Router
 
 // Return type
 
-	private function getURI()
+	public static function getURI()
 	{
 		if (!empty($_SERVER['REQUEST_URI'])) {
 		return trim($_SERVER['REQUEST_URI'], '/');
