@@ -35,7 +35,7 @@ class UserController
                 require_once(ROOT. '/config/applicant_errors.php');
                 if ($errors == false){
                     $result = User::registera($firstname,$lastname,$password,$email,$cellphone);
-                    echo $result;
+                    header("Location: /user/signin");
                     
                 }
 
@@ -53,15 +53,17 @@ class UserController
                 $password = $_POST['password_e'];
                 $phone_number = $_POST['Phone_number'];
                 $extension_number = $_POST['Extension_number'];
+                
+                
                 require_once(ROOT . '/models/User.php');  
 
                 require_once(ROOT. '/config/employer_errors.php');
                 require_once(ROOT. '/config/applicant_errors.php');
                 
-                    $result = registere($company_class_id,$company_name,$website,$employees,$selectcity,$name,$last_name,
+                    $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,
                     $email_e,$password,$phone_number,$extension_number);
                     $i = 1;
-                    print_r($result);
+
                     
                 
                 
