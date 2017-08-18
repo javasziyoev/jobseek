@@ -24,7 +24,8 @@
             </select>
             <input type="submit" value="Search" class="search-button">
             <!-- <small>Advanced search</small> -->
-            <a href="#win1" class="sign-in-button">Sign In</a>
+            <a href="#win1"><input type="submit" value="Sign In" class="sign-in-button"></a>
+    
 
 
             <!-- Модальное окно -->
