@@ -2,9 +2,9 @@
 
 <section id="banner-content">
 <div >
-  <form action="#" method="post">
-    <input type="submit" class="button-post" value="Post a CV">
-    <input type="submit" class="button-post" value="Post a vacancy">
+  <form action="/user/signup" method="post">
+    <input type="submit" class="button-post" name = "Post_a_CV" value="Post a CV">
+    <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
   </form>
 </div>
 </section>

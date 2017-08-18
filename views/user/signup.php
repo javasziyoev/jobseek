@@ -4,10 +4,10 @@
 <div id="wrapper">
       <section id="sign-up-content">
         <div class="tabs">
-            <input id="tab1" type="radio" name="tabs" <?php if($i == 0)echo 'checked' ?> >
+            <input id="tab1" type="radio" name="tabs" <?php if($i == 0)echo 'checked';  ?> >
             <label for="tab1" title="Sign up 1">Job seeker registration</label>
 
-            <input id="tab2" type="radio" name="tabs" <?php if($i == 1)echo 'checked' ?> >
+            <input id="tab2" type="radio" name="tabs" <?php if($i == 1)echo 'checked'; if($k == 1)echo 'checked'; ?> >
             <label for="tab2" title="Sign up 2">Employer registration</label>
             
             <section id="content-tab1">
