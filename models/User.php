@@ -132,16 +132,8 @@ public static function getEmployment_type()
     return $someArr1;
     }
     
-    /**
-     * Запоминаем пользователя
-     * @param integer $userId <p>id пользователя</p>
-     */
-    public static function auth($userId)
-    {
-        // Записываем идентификатор пользователя в сессию
-        $_SESSION['user'] = $userId;
-    }
-    
+
+
     public static function getcityId()
     {   $someArr=[];$i=0; 
         $db=Db::getConnection();
@@ -272,7 +264,27 @@ $k=0;
         }
         return $someArr2;
 }
+public static function CheckUserData($email,$password)
+{
+    $db = Db::getConnection();
 
+    $sql = 'SELECT * FROM applicant WHERE email = :email AND password = :password';
+    $result = $db->prepare($sql);
+    $result->bindParam(':email', $email, PDO::PARAM_INT);
+    $result->bindParam(':password', $password, PDO::PARAM_INT);
+    $result->execute();
+
+    $user = $result->fetch();
+    if($user){
+        return $user['applicant_id'];
+    }
+    return false;
+}
+public static function auth($userId)
+{
+    session_start();
+    $_SESSION['user'] = $userId;
+}
 
 
 
