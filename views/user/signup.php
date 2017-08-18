@@ -1,3 +1,4 @@
+
 <?php include ROOT . '/views/layouts/header.php'; 
 ?>
 
@@ -32,13 +33,15 @@
 
                 <input type="submit" value="Register" name="submit1" class="post-button">
             </form>
-            <?php if (isset($errors) && is_array($errors)): ?>
-                        <ul>
-                            <?php foreach ($errors as $error): ?>
-                                <li> - <?php echo $error; ?></li>
+            <div style="width:48%;height:40%;margin:auto;position:relative;top:-292px;float:right;">
+            <?php if (isset($a_errors) && is_array($a_errors)): ?>
+                        <ul style="list-style-type: none; ">
+                            <?php foreach ($a_errors as $error): ?>
+                                <li style="color:red;margin:10px;text-decoration:underline;"> - <?php echo $error; ?></li>
                             <?php endforeach; ?>
                         </ul>
             <?php endif; ?>
+            </div>
             </section>
 
             <section id="content-tab2">
@@ -108,6 +111,15 @@
                                 with the terms of use if the website.
                             </small><br>
                             <input type="submit" name="submit2" value="Register" class="post-button">
+                            <div style="width:48%;height:auto;float:right;position:relative;top:-450px;">
+                            <?php if (isset($e_errors) && is_array($e_errors)): ?>
+                        <ul style="list-style-type: none; ">
+                            <?php foreach ($e_errors as $error): ?>
+                                <li style="color:red;margin:10px;"> - <?php echo $error; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+            <?php endif; ?>
+                                    </div>
                         </form>
             </section>
         </div>

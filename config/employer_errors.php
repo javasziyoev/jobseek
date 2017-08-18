@@ -1,24 +1,30 @@
 <?php
- 
-             $errors = [];
+                require_once(ROOT . '/models/User.php');  
+             $e_errors = [];
  
              //checking fields for errors
              if (!User::checkName($company_name)) {
-                 $errors[] = 'Company Name must be longer then 2 chars';
+                 $e_errors[] = 'Company Name must be longer then 2 chars';
              }
              if (!User::checkName($name)) {
-                $errors[] = 'First name must be longer then 2 chars';
+                $e_errors[] = 'First name must be longer then 2 chars';
              }
              if (!User::checkName($last_name)) {
-                 $errors[] = 'Last name must be longer then 2 chars';
+                 $e_errors[] = 'Last name must be longer then 2 chars';
              }
+             if($email_e == ''){
+                 $e_errors[] = 'an email is empty';
+             }
+             if($password == ''){
+                $e_errors[] = 'insert a password';
+            }
              if (User::checkEmailExists($email_e)){
-                 $errors[] = 'This email has already been taken';
+                 $e_errors[] = 'This email has already been taken';
              }
              if (User::checkEmailExists($password)){
-                $errors[] = 'Password must have at least 6 chars';
+                $e_errors[] = 'Password must have at least 6 chars';
             }
-            if ($errors == true){
+            if ($e_errors == true){
                 $i = 1;
             }
 ?>

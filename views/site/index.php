@@ -2,10 +2,28 @@
 
 <section id="banner-content">
 <div >
-  <form action="/user/signup" method="post">
+<?php require_once(ROOT. '/models/user.php');
+        if (User::isGuest()) 
+        {
+  echo '<form action="/user/signup" method="post">
+  
     <input type="submit" class="button-post" name = "Post_a_CV" value="Post a CV">
     <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
-  </form>
+  </form>';}
+  else {
+    echo'
+    <form action="/employer/post_a_vacancy" method="post">
+    <div>
+    <input type="submit" class="button-post" name = "Post_a_CV" value="Post a CV">
+    </div>
+    </form>
+    <div>
+    <form action="/employer/post_a_vacancy" method="post">
+    <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
+    </div>
+    </form>';
+  }
+  ?>
 </div>
 </section>
 

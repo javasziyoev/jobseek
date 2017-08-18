@@ -37,7 +37,7 @@ class UserController
 			    $email = $_POST['email'];	
                 $cellphone = $_POST['cellphone'];
                 require_once(ROOT. '/config/applicant_errors.php');
-                if ($errors == false){
+                if ($a_errors == false){
                     $result = User::registera($firstname,$lastname,$password,$email,$cellphone);
                     header("Location: /user/signin");
                     
@@ -59,13 +59,13 @@ class UserController
                 $extension_number = $_POST['Extension_number'];
                 
                 
-                require_once(ROOT . '/models/User.php');  
+
 
                 require_once(ROOT. '/config/employer_errors.php');
-                if ($errors == false){
+                if ($e_errors == false){
                     $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,$email_e,$password,$phone_number,$extension_number);
                     header("Location: /user/signin");
-                    echo $result;
+                    
                 }
                 
 
