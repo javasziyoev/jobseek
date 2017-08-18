@@ -9,6 +9,10 @@ class UserController
         
 		public function actionSignup()
 		{
+            if(isset($_POST['logsign'])){
+                $aa = $_POST['logemail'];
+            }
+            
             $i = 0;
             $k = 0;
             //applicant variables
@@ -116,6 +120,14 @@ class UserController
     require_once(ROOT. '/views/user/signin.php');
 
      return true;
+ }
+
+ //Log out
+ public function actionLogout()
+ {
+     session_start();
+     unset($_SESSION["user"]);
+     header("Location: /index");
  }
 		
 }	

@@ -24,24 +24,57 @@
             </select>
             <input type="submit" value="Search" class="search-button">
             <!-- <small>Advanced search</small> -->
-            <a href="#win1"><input type="submit" value="Sign In" class="sign-in-button"></a>
-    
-
-
-            <!-- Модальное окно -->
-            <a href="#x" class="overlay" id="win1"></a>
-            <div class="popup">
-                <section id="sign-up-content">
-                    <form action="#" method="POST">
-                        <input type="email" placeholder="Email" name="logemail" class="input-text">
-                        <input type="password" placeholder="Password" name="logpassword" class="input-text">
-                        <input type="submit" value="Sign in" name="logsign" class="post-button">
+            
+            
+                <?php
+                require_once(ROOT .'/models/user.php');
+                if (User::isGuest()){
+                    echo '
+                    <a href="#win1"><input type="submit" value="Sign In" class="sign-in-button"></a>
+                    
+        
+        
+                    <!-- Модальное окно -->
+                    <a href="#x" class="overlay" id="win1"></a>
+                    <div class="popup">
+                    <form action="" method="POST">
+                    <section id="sign-up-content">
+                        
+                            <input type="email" placeholder="Email" name="logemail" class="input-text">
+                            <input type="password" placeholder="Password" name="logpassword" class="input-text">
+                            <input type="submit" value="Sign in" name="logsign" class="post-button">
+                        
+                    </section>
                     </form>
-                </section>
-                <a class="close"title="Close" href="#close"></a>
-            </div>
-        </div>
-    </div>
+                    <a class="close"title="Close" href="#close"></a>
+                    </div>
+                    </div>
+                    </div>';
+                }
+                    else {
+                        echo '
+                        <a href="/user/logout"><input type="submit" value="Sign Out" class="sign-in-button"></a>
+                        
+            
+            
+                        <!-- Модальное окно -->
+                       
+                        
+                        
+                        <section >
+                            
+                            
+                        </section>
+                        
+                        
+                        
+                        </div>
+                        </div>';
+                    }
+                
+            
+                ?>
+                
 
       <section id="nav-bar-content">
           <ul id="nav" class="nav-bar-ul">

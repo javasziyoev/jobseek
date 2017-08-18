@@ -265,10 +265,28 @@ public static function CheckUserData($email,$password)
 }
 public static function auth($userId)
 {
-    session_start();
+
     $_SESSION['user'] = $userId;
 }
 
+public static function checkLogged()
+{
+
+    //If there is a session ,return an id
+    if (isset($_SESSION['user'])) {
+        return $_SESSION['user'];
+    }
+    header("Location: /user/signin");
+}
+
+public static function isGuest()
+{
+
+    if (isset($_SESSION['user'])) {
+        return false;
+    }
+    return true;
+}
 
 
 
