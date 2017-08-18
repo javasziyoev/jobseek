@@ -54,22 +54,12 @@
                     else {
                         echo '
                         <a href="/user/logout"><input type="submit" value="Sign Out" class="sign-in-button"></a>
-                        
-            
-            
-                        <!-- Модальное окно -->
-                       
-                        
-                        
+                        <a href="/cabinet"><input type="submit" value="Profile" style="background-color:red;" class="sign-in-button"></a>
                         <section >
-                            
-                            
                         </section>
-                        
-                        
-                        
                         </div>
-                        </div>';
+                        </div>
+                        ';
                     }
                 
             
