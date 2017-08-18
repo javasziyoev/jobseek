@@ -265,7 +265,7 @@ $k=0;
 }
 
 //For applicator Sign in
-public static function CheckUserDataA($email,$password)
+public static function CheckUserData($email,$password)
 {
     $db = Db::getConnection();
 

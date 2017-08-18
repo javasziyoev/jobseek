@@ -100,6 +100,7 @@ class UserController
 
 
      //Check whether user is on database
+     
      $userId = User::checkUserData($email, $password);
      print($userId);
      if ($userId == false){
