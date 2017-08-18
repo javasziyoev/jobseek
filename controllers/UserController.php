@@ -58,11 +58,11 @@ class UserController
                 require_once(ROOT . '/models/User.php');  
 
                 require_once(ROOT. '/config/employer_errors.php');
-                require_once(ROOT. '/config/applicant_errors.php');
-                
+                if ($errors == false){
                     $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,
                     $email_e,$password,$phone_number,$extension_number);
-                    $i = 1;
+                }
+                
 
                     
                 

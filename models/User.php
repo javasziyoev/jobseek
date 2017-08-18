@@ -42,7 +42,6 @@ $email_e,$password,$phone_number,$extension_number)
     $result->bindParam(':phone_number', $phone_number, PDO::PARAM_STR);
     $result->bindParam(':extension_number', $extension_number, PDO::PARAM_STR);
 
-
     return $result->execute();
 }
 
