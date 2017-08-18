@@ -187,11 +187,41 @@ public static function getSectorsId()
     while( $user = $result->fetch()){
         if($user)
         {
-           $someArr[$i]= $user['industry_id'];
+           $someArr[$i]= $user;
            $i++;
         }}
         return $someArr;
 }
+public static function getFJobId()
+{$someArr=[];$i=0; 
+    $someArr2=[];
+    $db=Db::getConnection();
+    $sql = 'SELECT * FROM `featured_job`';
+    $result=$db->prepare($sql);
+    $result->execute();
+
+    while( $user = $result->fetch()){
+        if($user['actuality']==1)
+        {
+           $someArr[$i]= $user['vacancy_id'];
+           $i++;
+        }}
+$k=0;
+
+        for($j=0;$j<$i;$j++)
+        {    $sql = 'SELECT * FROM `vacancy` WHERE vacancy_id ='.$someArr[$j];
+            $result = $db->prepare($sql);
+            $result->execute();
+              while($user = $result->fetch())     
+              { 
+                $someArr2[$k]=$user;
+                $k++;
+              }       
+        }
+        return $someArr2;
+}
+
+
 
 
 }

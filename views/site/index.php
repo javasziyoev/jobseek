@@ -64,76 +64,34 @@
           <section id="featured-jobs-content">
             <h3 class="dark-gray-text">Featured jobs</h3>
             <div class="vacancies-of-the-day" id="inner-content">
-              <div class="vacancies-of-the-day-item ">
+                      <?php            
+                require_once(ROOT.'/models/User.php');
+                $getFJobId = User::getFJobId();
+                $db = Db::getConnection();
+                
+                foreach($getFJobId as $getJobs)
+                {
+                 
+                 echo '              <div class="vacancies-of-the-day-item ">
                 <a href="">
-                  <span class="vacancy-of-the-day-title">Senior Huesos</span>
-                  <span class="vacancy-of-the-day-salary">from 43 000 RUB</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Microsoft</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Vodolaz</span>
-                  <span class="vacancy-of-the-day-salary">salary not specified</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">RCIT</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Restorator</span>
-                  <span class="vacancy-of-the-day-salary">from 3 000 to 3 500 USD</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Versus Battle</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Jiguli-master</span>
-                  <span class="vacancy-of-the-day-salary">from 1 000 TJS</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Jiguli</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Jiguli-master</span>
-                  <span class="vacancy-of-the-day-salary">from 1 000 TJS</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Jiguli</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Jiguli-master</span>
-                  <span class="vacancy-of-the-day-salary">from 1 000 TJS</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Jiguli</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Jiguli-master</span>
-                  <span class="vacancy-of-the-day-salary">from 1 000 TJS</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Jiguli</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Jiguli-master</span>
-                  <span class="vacancy-of-the-day-salary">from 1 000 TJS</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Jiguli</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Jiguli-master</span>
-                  <span class="vacancy-of-the-day-salary">from 1 000 TJS</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Jiguli</span></a>
-              </div>
-              <div class="vacancies-of-the-day-item">
-                <a href="">
-                  <span class="vacancy-of-the-day-title">Jiguli-master</span>
-                  <span class="vacancy-of-the-day-salary">from 1 000 TJS</span>
-                </a>
-                <a href=""><span class="vacancy-of-the-day-company">Jiguli</span></a>
-              </div>
+';                echo ' <span class="vacancy-of-the-day-title">';
+                 echo $getJobs['position'].'</span>';
+                  echo '   <span class="vacancy-of-the-day-salary">';
+                  echo $getJobs['salary'].'</span>';
+
+                 echo $getJobs['salary_currency_id'];
+                 $sql = 'SELECT * FROM `employer` WHERE employer_id ='.$getJobs['employer_id'];
+                 $result = $db->prepare($sql);
+                 $result->execute();
+                 $job=$result->fetch();
+                 echo '<a href=""><span class="vacancy-of-the-day-company">';
+                 echo $job['company_name'];
+                 echo '</span></a></a>
+                 </div>';
+                }        
+                   ?>
+                
+              
             </div>  
           </section>
       </section>
@@ -149,7 +107,7 @@
                 
                 foreach($forsectorsId as $sectors)
                 {
-                 echo '<li><a href= '.$sectors.'>';
+                 echo '<li><a href= '.$sectors['industry_id'].'>';
 
 
                   echo ''.$forsectorsName[$i].'</a></li>';
