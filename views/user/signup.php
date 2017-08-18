@@ -14,30 +14,20 @@
                 <form action="#" method="POST">
 
                 <div>
-                    <div>
-                        <input type="text" name = "firstname" value="<?php echo $firstname; ?>" class="input-text" placeholder="Name">
-                    </div>
+                    <input type="text" name = "firstname" value="<?php echo $firstname; ?>" class="input-text" placeholder="Name">
                 </div>
                 <div>
-                    <div>
-                        <input type="text" name = "lastname" value="<?php echo $lastname; ?>" class="input-text" placeholder="Last name">
-                    </div>
+                    <input type="text" name = "lastname" value="<?php echo $lastname; ?>" class="input-text" placeholder="Last name">
                 </div>
                 
                 <div>
-                    <div>
-                        <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text" placeholder="Email">
-                    </div>
+                    <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text" placeholder="Email">
                 </div>
                 <div>
-                    <div>
-                        <input type="password" name = "password" value="<?php echo $password; ?>" class="input-text" placeholder="Password">
-                    </div>
+                    <input type="password" name = "password" value="<?php echo $password; ?>" class="input-text" placeholder="Password">
                 </div>
                 <div>
-                    <div>
-                        <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text" placeholder="Phone number">
-                    </div>
+                    <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text" placeholder="Phone number">
                 </div>
 
                 <input type="submit" value="Register" name="submit1" class="post-button">
