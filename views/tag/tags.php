@@ -7,7 +7,18 @@
     </section>
     <section id="vacancy-catalog-content">
         <div class="catalog-side-panel">
-            <div>Found 100500 vacancies</div>
+            <div>Found <?php $i=0;           
+              $db=Db::getConnection();
+        $uri = Router::getURI();
+        $internalRoute=preg_replace('~tag/~','',$uri);
+
+        $sql = 'SELECT * FROM `vacancy` WHERE industry_id='.$internalRoute;
+        $result = $db->prepare($sql);
+                               $result->execute();
+                               while($count=$result->fetch())
+                               {$i++;}
+                               echo $i;
+             ?> vacancies</div>
             <div></div>
 
         </div>
