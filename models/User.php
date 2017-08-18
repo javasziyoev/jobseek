@@ -22,20 +22,18 @@ class User
     }
 
 //registration for employeers
-public static function registere($company_class_id,$company_name,$website,$employees,$selectcity,$name,$last_name,
+public static function registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,
 $email_e,$password,$phone_number,$extension_number)
 {
     $db = Db::getConnection();
     
-    $sql = 'INSERT INTO employer(company_class_id,company_name, website_url,employees_count_id,city_id,
-    contact_first_name,contact_last_name,contact_email,contact_cellphone,contact_cellphone_ext) '
-            . 'VALUES (:company_class_id, :company_name, :website, :employees, :selectcity,:name,:last_name,
+    $sql = 'INSERT INTO employer(`company_class_id`, `company_name`, `website_url`, `city_id`, `contact_first_name`, `contact_last_name`, `contact_email`, `contact_password`, `contact_cellphone`, `contact_cellphone_ext`) '
+            .'VALUES (:company_class_id, :company_name, :website, :employees, :selectcity,:name,:last_name,
             :email_e,:password,:phone_number,:extension_number)';
     $result = $db->prepare($sql);
     $result->bindParam(':company_class_id', $company_class_id, PDO::PARAM_STR);
     $result->bindParam(':company_name', $company_name, PDO::PARAM_STR);
     $result->bindParam(':website', $website, PDO::PARAM_STR);
-    $result->bindParam(':employees', $employees, PDO::PARAM_STR);
     $result->bindParam(':selectcity', $selectcity, PDO::PARAM_STR);
     $result->bindParam(':name', $name, PDO::PARAM_STR);
     $result->bindParam(':last_name', $last_name, PDO::PARAM_STR);
