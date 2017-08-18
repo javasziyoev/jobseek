@@ -89,12 +89,42 @@ class UserController
 //Sign In
  public function actionSignin()
  {
-    include_once(ROOT. '/views/user/signin.php');
+     $email = '';
+     $password = '';
+
+     $errors = false;
+    if (isset($_POST['loginsubmit'])){
+        $email = $_POST['loginemail'];
+        $password = $_POST['loginpassword'];
+        echo $email,$password;
+        require_once(ROOT. '/models/user.php');
+     //Fields Validation
+     if (!User::checkEmail($email)) {
+         $errors[] = 'Invalid email';
+     }
+     if (!User::checkPassword($password))  {
+         $errors = "Password must be longer than 6 chars";
+     }
 
 
+     //Check whether user is on database
+     $userId = User::checkUserData($email, $password);
+     print($userId);
+     if ($userId == false){
+         $errors[] = "Incorrect user data";
+     } else{
+         User::auth($userId);
+         //User in Cabinet
+         header("Location: /cabinet/");
+        }
+     }
+    require_once(ROOT. '/views/user/signin.php');
+
+     return true;
  }
 		
 }	
+
 
 
 

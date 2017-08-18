@@ -33,9 +33,9 @@
             <div class="popup">
                 <section id="sign-up-content">
                     <form action="#" method="POST">
-                        <input type="email" placeholder="Email" name="email" class="input-text">
-                        <input type="password" placeholder="Password" name="password" class="input-text">
-                        <input type="submit" value="Sign in" class="post-button">
+                        <input type="email" placeholder="Email" name="logemail" class="input-text">
+                        <input type="password" placeholder="Password" name="logpassword" class="input-text">
+                        <input type="submit" value="Sign in" name="logsign" class="post-button">
                     </form>
                 </section>
                 <a class="close"title="Close" href="#close"></a>
