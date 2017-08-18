@@ -63,10 +63,10 @@
                                 </select>
                             </div>
                             <div>
-                                <input name="Company_name" type="text" placeholder="Company name" value="<?php echo $company_name; ?>">
+                                <input name="Company_name" type="text" placeholder="Company name" value="<?php echo $company_name; ?>" class="input-text company-name">
                             </div>
                             <div>
-                                <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>">
+                                <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>" class="input-text">
                             </div>
                            
                             <div>
@@ -107,10 +107,10 @@
                             <div>
                                 <input name="Extension_number" type="text" placeholder="Extension number" value="<?php echo $extension_number; ?>" class="input-text">
                             </div>
-                            <small>By clicking "register a company", you acknowledge that you read and fully agree
+                            <small>By clicking "register", you acknowledge that you read and fully agree
                                 with the terms of use if the website.
                             </small><br>
-                            <input type="submit" name="submit2" value="Register company" class="post-button">
+                            <input type="submit" name="submit2" value="Register" class="post-button">
                         </form>
             </section>
         </div>
