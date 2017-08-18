@@ -26,7 +26,7 @@ class UserController
                 $cellphone = $_POST['cellphone'];
                 require_once(ROOT. '/config/applicant_errors.php');
                 if ($errors == false){
-                    $result = User::registera($firstname,$lastname,md5($password),$email,$cellphone);
+                    $result = User::registera($firstname,$lastname,$password,$email,$cellphone);
                     
                 }
 
