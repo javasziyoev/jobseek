@@ -8,5 +8,6 @@ return array(
 	'employer/post_a_vacancy' =>'vacancy/vacancy',
 	'vacancy/details' => 'vacancy/details', 
 	'tag'=>'tag/index',
-	'tag/([0-9]+)'=>'tag/index',
+	'tag/([0-9]+)' => 'tag/index',
+	'cabinet' => 'cabinet/index',
 	);

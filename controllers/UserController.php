@@ -86,7 +86,13 @@ class UserController
 
 	
  }
+//Sign In
+ public function actionSignin()
+ {
+    include_once(ROOT. '/views/user/signin.php');
 
+
+ }
 		
 }	
 

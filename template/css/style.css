@@ -1077,25 +1077,7 @@ ul {
     -o-transform: rotate(360deg);
     transform: rotate(360deg);    
 }
-/* изображения внутри окна */
-.popup img {
-    width: 100%;
-    height: auto;
-}
-/* миниатюры слева/справа */
-.pic-left, 
-.pic-right {
-    width: 25%;
-    height: auto;
-}
-.pic-left {
-    float: left;
-    margin: 5px 15px 5px 0;
-}
-.pic-right {
-    float: right;
-    margin: 5px 0 5px 15px;
-}
+
 /* элементы м-медиа, фреймы */
 .popup embed, 
 .popup iframe {
