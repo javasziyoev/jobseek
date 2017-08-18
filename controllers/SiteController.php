@@ -8,7 +8,9 @@ class SiteController
 		{
 			require_once(ROOT. "/views/site/index.php");  
 			
+			
 		}
+	
 
 
 }

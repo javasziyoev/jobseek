@@ -144,36 +144,19 @@
           <h3 class="dark-gray-text">Work in sectors</h3>
           <ul class="work-in-industry-ul">
             <?php
-            
+            require_once(ROOT.'/models/User.php');
+                $forsectorsId = User::getSectorsId();
+                $forsectorsName = User::getSectorsName();  $i=0;         
+                
+                foreach($forsectorsId as $sectors)
+                {
+                 echo '<li><a href= '.$sectors.'>';
+
+
+                  echo ''.$forsectorsName[$i].'</a></li>';
+                  $i++;
+                }        
             ?>
-            <li><a href="">Accounting, Management Accounting, Corporate Finance</a></li>
-            <li><a href="">Administrative Personnel</a></li>
-            <li><a href="">Art, Entertainment, Media</a></li>
-            <li><a href="">Automotive Business</a></li>
-            <li><a href="">Banks, Investments, Finance</a></li>
-            <li><a href="">Career Starters, Students</a></li>
-            <li><a href="">Construction, Real Estate</a></li>
-            <li><a href="">Consulting</a></li>
-            <li><a href="">Domestic Staff</a></li>
-            <li><a href="">Government, NGOs</a></li>
-            <li><a href="">Human Resources, Training</a></li>
-            <li><a href="">IT, Internet, Telecom</a></li>
-            <li><a href="">Installation and Service</a></li>
-            <li><a href="">Insurance</a></li>
-            <li><a href="">Lawyers</a></li>
-            <li><a href="">Maintenance and Operations Personnel</a></li>
-            <li><a href="">Management</a></li>
-            <li><a href="">Manufacturing</a></li>
-            <li><a href="">Marketing, Advertising, PR</a></li>
-            <li><a href="">Medicine, Pharmaceuticals</a></li>
-            <li><a href="">Procurement</a></li>
-            <li><a href="">Raw Materials</a></li>
-            <li><a href="">Sales</a></li>
-            <li><a href="">Science, Education</a></li>
-            <li><a href="">Security</a></li>
-            <li><a href="">Sports Clubs, Fitness Clubs, Beauty Salons</a></li>
-            <li><a href="">Tourism, Hotels, Restaurants</a></li>
-            <li><a href="">Transport, Logistics</a></li>
           </ul>
           <!--
           <p>Donec sed urna lectus, vel viverra tellus. Nullam molestie tortor eu erat aliquet fermentum. Suspendisse commodo purus aliquam mi tempor pulvinar.  Pellentesque bibendum suscipit dui, id vehicula leo aliquet at. Duis sem diam, pharetra sed posuere sed, iaculis vitae leo.</p> 

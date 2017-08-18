@@ -162,6 +162,36 @@ $email_e,$password,$phone_number,$extension_number)
             return true;
         return false;
     }
+    public static function getSectorsName()
+    {$someArr=[];$i=0; 
+        $db=Db::getConnection();
+        $sql = 'SELECT * FROM `industry`';
+        $result=$db->prepare($sql);
+        $result->execute();
+
+        while( $user = $result->fetch()){
+            if($user)
+            {
+               $someArr[$i]= $user['industry_name'];
+               $i++;
+            }}
+            return $someArr;
+}
+public static function getSectorsId()
+{$someArr=[];$i=0; 
+    $db=Db::getConnection();
+    $sql = 'SELECT * FROM `industry`';
+    $result=$db->prepare($sql);
+    $result->execute();
+
+    while( $user = $result->fetch()){
+        if($user)
+        {
+           $someArr[$i]= $user['industry_id'];
+           $i++;
+        }}
+        return $someArr;
+}
 
 
 }
