@@ -59,21 +59,14 @@
                                               echo ''.$fuck1[$i].'</option>';
                                               $i++;
                                             }
-
- 
-
                                     ?>
                                 </select>
                             </div>
                             <div>
-                                <div>
-                                    <input name="Company_name" type="text" placeholder="Company name" value="<?php echo $company_name; ?>">
-                                </div>
+                                <input name="Company_name" type="text" placeholder="Company name" value="<?php echo $company_name; ?>">
                             </div>
                             <div>
-                                <div>
-                                    <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>">
-                                </div>
+                                <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>">
                             </div>
                            
                             <div>
@@ -97,39 +90,27 @@
                             </div>
                             <label><strong>Contact person</strong> (confidential)</label>
                             <div>
-                                <div>
-                                    <input name ="Name" type="text" placeholder="Name" value="<?php echo $name; ?>">
-                                </div>
+                                <input name ="Name" type="text" placeholder="Name" value="<?php echo $name; ?>" class="input-text">
                             </div>
                             <div>
-                                <div>
-                                    <input  name = "Last_name"type="text" placeholder="Last name" value = "<?php echo $last_name; ?>">
-                                </div>
+                                <input  name = "Last_name"type="text" placeholder="Last name" value = "<?php echo $last_name; ?>" class="input-text">
                             </div>
                             <div>
-                                <div>
-                                    <input name ="Email_e" type="email" placeholder="Email" value="<?php echo $email_e; ?>">
-                                </div>
+                                <input name ="Email_e" type="email" placeholder="Email" value="<?php echo $email_e; ?>" class="input-text">
                             </div>
                             <div>
-                                <div>
-                                    <input name ="password_e" type="password" placeholder="password">
-                                </div>
+                                <input name ="password_e" type="password" placeholder="password" class="input-text">
                             </div>
                             <div>
-                                <div>
-                                    <input name="Phone_number" type="text" placeholder="Phone number" <?php echo $phone_number; ?>>
-                                </div>
+                                <input name="Phone_number" type="text" placeholder="Phone number" <?php echo $phone_number; ?> class="input-text">
                             </div>
                             <div>
-                                <div>
-                                    <input name="Extension_number" type="text" placeholder="Extension number" value="<?php echo $extension_number; ?>">
-                                </div>
+                                <input name="Extension_number" type="text" placeholder="Extension number" value="<?php echo $extension_number; ?>" class="input-text">
                             </div>
                             <small>By clicking "register a company", you acknowledge that you read and fully agree
                                 with the terms of use if the website.
                             </small><br>
-                            <input type="submit" name="submit2" value="Register company">
+                            <input type="submit" name="submit2" value="Register company" class="post-button">
                         </form>
             </section>
         </div>
