@@ -70,7 +70,7 @@
                             </div>
                            
                             <div>
-                                <select name = "selectCity" class="select-category">
+                                <select name = "selectCity" class="select-category select-city">
                                 <?php
                                 require_once(ROOT . '/models/User.php');
                                  $fuck = User::getcityId();       
@@ -99,7 +99,7 @@
                                 <input name ="Email_e" type="email" placeholder="Email" value="<?php echo $email_e; ?>" class="input-text">
                             </div>
                             <div>
-                                <input name ="password_e" type="password" placeholder="password" class="input-text">
+                                <input name ="password_e" type="password" placeholder="Password" class="input-text">
                             </div>
                             <div>
                                 <input name="Phone_number" type="text" placeholder="Phone number" <?php echo $phone_number; ?> class="input-text">
