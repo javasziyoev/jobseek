@@ -742,3 +742,118 @@ ul {
 .select-city {
     margin-top: 10px;
 }
+
+
+
+.respond-button {
+    color: #fff;
+    border-style: none;
+    border: .1em solid #8cb900;
+    background-color: #8cb900;
+    
+    width: 110px;
+    height: 38px;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    padding: 8px 14px;
+    letter-spacing: .06em;
+    margin: 5px .6em;
+
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: none;
+
+    margin-top: 2em;
+    
+}
+
+.respond-button:hover {
+    color: #fff;
+    cursor: pointer;
+    border-color: #83AE00;
+    background-color: #83AE00;
+}
+
+#vacancy-details-content {
+    margin-top: 25px;
+}
+
+#vacancy-details-content .vacancy-name {
+    font-size: 2em;
+}
+
+#vacancy-details-content .company-name {
+    font-size: .7em;
+}
+
+#vacancy-details-content .vacancy-properties {
+    background-color: #efefef;
+    width: 70%;
+    display: flex;
+    padding: 1em 1em;
+    margin-top: 2em;
+}
+
+#vacancy-details-content .salary-content {
+    margin-right: 2em;
+}
+
+#vacancy-details-content .salary-level {
+    font-size: 1em;
+    color: #555;
+}
+
+#vacancy-details-content .salary-value {
+    display: block;
+    font-weight: 600;
+}
+
+#vacancy-details-content .vacancy-info {
+    max-width: 800px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#vacancy-details-content .info-label {
+    font-size: 1.3em;
+    color: #555;
+}
+
+#vacancy-details-content .info-contact-label {
+    font-size: 1em;
+    color: #555;
+}
+
+#vacancy-details-content .block-emp {
+    
+}
+#vacancy-details-content .block-cont {
+    
+}
+#vacancy-details-content .block-phone {
+    margin-right: .5em;
+}
+#vacancy-details-content .block-email {
+    margin-right: 1em;
+}
