@@ -46,6 +46,58 @@ $email_e,$password,$phone_number,$extension_number)
     return $result->execute();
 }
 
+public static function getCurrent()
+{
+      $someArr=[];$i=0; 
+        $db=Db::getConnection();
+        $sql = 'Select * from `currency`';
+        $result=$db->prepare($sql);
+        $result->execute();
+
+        while( $user = $result->fetch()){
+            if($user)
+            {
+               $someArr[$i]= $user;
+               $i++;
+            }}
+            return $someArr;
+            
+    
+}
+public static function getIndustry()
+{
+      $someArr=[];$i=0; 
+        $db=Db::getConnection();
+        $sql = 'Select * from `industry`';
+        $result=$db->prepare($sql);
+        $result->execute();
+
+        while( $user = $result->fetch()){
+            if($user)
+            {
+               $someArr[$i]= $user;
+               $i++;
+            }}
+            return $someArr;
+}
+public static function getEmployment_type()
+{
+      $someArr=[];$i=0; 
+        $db=Db::getConnection();
+        $sql = 'Select * from `employment_type`';
+        $result=$db->prepare($sql);
+        $result->execute();
+
+        while( $user = $result->fetch()){
+            if($user)
+            {
+               $someArr[$i]= $user;
+               $i++;
+            }}
+            return $someArr;
+            
+    
+}
 
 
     public static function getCompanyId()
@@ -100,7 +152,7 @@ $email_e,$password,$phone_number,$extension_number)
         while( $user = $result->fetch()){
             if($user)
             {
-               $someArr[$i]= $user['city_id'];
+               $someArr[$i]= $user;
                $i++;
             }}
             return $someArr;
