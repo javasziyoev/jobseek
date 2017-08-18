@@ -10,13 +10,20 @@ class UserController
 		public function actionSignup()
 		{
             $i = 0;
+            $k = 0;
             //applicant variables
             require_once(ROOT. '/config/applicant_variables.php');
             /////
             //employer variables
             require_once(ROOT. '/config/employer_variables.php');
             
+            if (isset($_POST['post_a_vacancy']))
+            {
+                $k = 1;
+            }
+
             $result = false;
+            
 
      if($_POST){
             if (isset($_POST['submit1'])) {
