@@ -5,5 +5,6 @@ return array(
 	'index' => 'site/index',
     'user/signup' => 'user/signup',
 	'user/signin' => 'user/signin',
-	'vacancy' =>'vacancy/vacancy',
+	'employer/post_a_vacancy' =>'vacancy/vacancy',
+	'vacancy/details' => 'vacancy/details', 
 	);
