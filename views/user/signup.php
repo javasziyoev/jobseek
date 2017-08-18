@@ -14,48 +14,23 @@
                 <form action="#" method="POST">
 
                 <div>
-                    <div>
-                        <label>First name</label>
-                    </div>
-                    <div>
-                        <input type="text" name = "firstname" value="<?php echo $firstname; ?>">
-                    </div>
+                    <input type="text" name = "firstname" value="<?php echo $firstname; ?>" class="input-text" placeholder="Name">
                 </div>
                 <div>
-                    <div>
-                        <label>Last name</label>
-                    </div>
-                    <div>
-                        <input type="text" name = "lastname" value="<?php echo $lastname; ?>">
-                    </div>
+                    <input type="text" name = "lastname" value="<?php echo $lastname; ?>" class="input-text" placeholder="Last name">
                 </div>
                 
                 <div>
-                    <div>
-                        <label>Email</label>
-                    </div>
-                    <div>
-                        <input type="email" name = "email" value="<?php echo $email; ?>">
-                    </div>
+                    <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text" placeholder="Email">
                 </div>
                 <div>
-                    <div>
-                        <label>Password</label>
-                    </div>
-                    <div>
-                        <input type="password" name = "password" value="<?php echo $password; ?>">
-                    </div>
+                    <input type="password" name = "password" value="<?php echo $password; ?>" class="input-text" placeholder="Password">
                 </div>
                 <div>
-                    <div>
-                        <label>Phone number</label>
-                    </div>
-                    <div>
-                    <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>">
-                    </div>
+                    <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text" placeholder="Phone number">
                 </div>
 
-                <input type="submit" value="Register" name="submit1">
+                <input type="submit" value="Register" name="submit1" class="post-button">
             </form>
             <?php if (isset($errors) && is_array($errors)): ?>
                         <ul>
@@ -100,15 +75,7 @@
                                     <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>">
                                 </div>
                             </div>
-                            <div>
-                                <select name = "employees" class="select-category">
-                                    <option value="Less than 50 employees" selected="">Less than 50 employees</option>
-                                    <option value="From 51 to 100 employees" selected="">From 51 to 100 employees</option>
-                                    <option value="From 101 to 250 employees" selected="">From 101 to 250 employees</option>
-                                    <option value="From 101 to 250 employees" selected="">From 251 to 500 employees</option>
-                                    <option value="More than 500 employees" selected="">More than 500 employees</option>
-                                </select>
-                            </div>
+                           
                             <div>
                                 <select name = "selectCity" class="select-category">
                                 <?php
