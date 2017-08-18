@@ -3,9 +3,8 @@
 <section id="banner-content">
 <div >
   <form action="#" method="post">
-    <a class="button-post" href="/user/signup" name="a">Post a CV</a>
-    <a class="button-post" href="/user/signup" name="b">Post a vacancy</a>
-
+    <input type="submit" class="button-post" value="Post a CV">
+    <input type="submit" class="button-post" value="Post a vacancy">
   </form>
 </div>
 </section>

@@ -362,12 +362,15 @@ ul {
 
 
 .button-post {
+    
     color: #fff;
     border-style: none;
     border: .1em solid #fff;
-    background-color: none;
+    background-color: inherit;
     
-    width: 110px;
+    cursor: pointer;
+    text-align: center;
+    width: 160px;
     height: 38px;
     font-size: 15px;
     font-weight: 400;
