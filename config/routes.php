@@ -7,4 +7,6 @@ return array(
 	'user/signin' => 'user/signin',
 	'employer/post_a_vacancy' =>'vacancy/vacancy',
 	'vacancy/details' => 'vacancy/details', 
+	'tag'=>'tag/index',
+	'tag/([0-9]+)'=>'tag/index',
 	);

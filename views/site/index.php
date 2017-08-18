@@ -107,7 +107,7 @@
                 
                 foreach($forsectorsId as $sectors)
                 {
-                 echo '<li><a href= '.$sectors['industry_id'].'>';
+                 echo '<li><a href= index/tag/'.$sectors['industry_id'].'>';
 
 
                   echo ''.$forsectorsName[$i].'</a></li>';

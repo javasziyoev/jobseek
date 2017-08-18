@@ -13,6 +13,8 @@ class VacancyController {
     public function actionDetails() {
         require_once(ROOT. '/views/vacancy/details.php');
     }
+
+
 }
 
 
