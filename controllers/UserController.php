@@ -17,7 +17,7 @@ class UserController
             require_once(ROOT. '/config/employer_variables.php');
             $result = false;
 
-     
+     if($_POST){
             if (isset($_POST['submit1'])) {
 			    $firstname = $_POST['firstname'];
 			    $lastname = $_POST['lastname'];	
@@ -37,7 +37,6 @@ class UserController
                 $company_class = $_POST['selectclass'];
                 $company_name = $_POST['Company_name'];
                 $website = $_POST['Website'];
-                $employees = $_POST['employees'];
                 $selectcity = $_POST['selectCity'];
                 $name = $_POST['Name'];
                 $last_name = $_POST['Last_name'];
@@ -58,7 +57,7 @@ class UserController
             ///////
             
                 
-                
+        } 
             require_once(ROOT. '/views/user/signup.php');
             return true;
         
