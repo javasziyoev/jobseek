@@ -24,7 +24,7 @@ class UserController
 
             $result = false;
             
-
+           
      if($_POST){
             if (isset($_POST['submit1'])) {
 			    $firstname = $_POST['firstname'];
