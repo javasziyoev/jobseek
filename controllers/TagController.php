@@ -5,9 +5,11 @@ class TagController
 
 
 		public function actionIndex()
-		{
-            echo "temur pepa";
-            require_once (ROOT. '/views/tag/tags.php');
+		{ 
+			$uri = Router::getURI();
+			$internalRoute=preg_replace('~tag/~','',$uri);
+			echo $internalRoute;
+ 			require_once (ROOT. '/views/tag/tags.php');
 		}
 	
 
