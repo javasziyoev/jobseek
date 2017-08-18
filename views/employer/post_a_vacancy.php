@@ -4,15 +4,15 @@
       <section id="post-a-vacancy-content">
         <h3 class="dark-gray-text">Post a vacancy</h3>
         <div>
-          <form action="">
-            <input type="text" name="position" placeholder="Position"><br>
-            <input type="text" name="salary" placeholder="Salary">
+          <form action="" method="POST">
+            <input name ="position" type="text" name="position" placeholder="Position"><br>
+            <input name ="salary"   type="text" name="salary" placeholder="Salary">
               <select class="select-category">
                   <option value="cny" selected="">CNY</option>
                   <option value="usd">USD</option>
                   <option value="rub">RUB</option>
               </select><br>
-            <input type="text" name="salary" placeholder="Required experience"><br>
+            <input name ="required_experience" type="text" name="salary" placeholder="Required experience"><br>
             Select industry: <select class="select-category">
                 <option value="cny" selected="">Administrative Personnel</option>
                 <option value="usd">IT, Internet, Telecom</option>
@@ -30,9 +30,9 @@
             </select><br>
 
             Address: <input type="text" name="address"><br>
-            <textarea placeholder="Info"></textarea><br>
+            <textarea name = "info" placeholder="Info"></textarea><br>
 
-            <input type="submit" value="Post a vacancy">
+            <input name  = "submit" type="submit" value="Post a vacancy">
           </form>
         </div>
       </section>
