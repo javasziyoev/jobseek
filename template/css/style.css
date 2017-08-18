@@ -626,3 +626,108 @@ ul {
 		padding: 15px;
 	}
 }
+
+
+
+
+.input-text {
+    height: 38px;
+    border-style: none;
+    border: 1px solid #cbd1d4;
+    outline: none;
+
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-sizing: border-box;
+    color: rgb(51, 51, 51);
+    display: inline-block;
+    height: 38px;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-left: -1px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 11px;
+    padding-right: 25px;
+    padding-top: 0px;
+    position: relative;
+    width: 200px;
+    -moz-appearance: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+    margin-top: 10px;
+    
+}
+
+
+
+.post-button {
+    color: #fff;
+    border-style: none;
+    border: .1em solid rgb(29, 152, 220);
+    border-color: rgb(29, 152, 220);
+    background-color: rgb(29, 152, 220);
+    
+    width: 110px;
+    height: 38px;
+    font-size: 15px;
+    font-weight: 400;
+    outline: none;
+    padding: 8px 14px;
+    letter-spacing: .06em;
+    margin: 5px .6em;
+
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: rgb(255, 255, 255);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: none;
+    
+}
+
+.post-button:hover {
+    color: #fff;
+    cursor: pointer;
+    border-color: #0088cc;
+    background-color: #0088cc;
+}
+
+.post-button:active {
+    outline: none;
+}

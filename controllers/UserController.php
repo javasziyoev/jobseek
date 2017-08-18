@@ -29,6 +29,7 @@ class UserController
                 if ($errors == false){
                     $result = User::registera($firstname,$lastname,$password,$email,$cellphone);
                     echo $result;
+                    
                 }
 
             }
