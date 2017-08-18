@@ -99,7 +99,7 @@ public static function getEmployment_type()
 }
 
 
-    public static function getCompanyId()
+    public static function getCompany()
     {   $someArr=[];$i=0; 
         $db=Db::getConnection();
         $sql = 'Select * from `company_class`';
@@ -109,61 +109,32 @@ public static function getEmployment_type()
         while( $user = $result->fetch()){
             if($user)
             {
-               $someArr[$i]= $user['company_class_id'];
+               $someArr[$i]= $user;
                $i++;
             }}
             return $someArr;
             
     }
-    public static function getCompanyName()
-    {   $someArr1=[];$i=0; 
-             $db=Db::getConnection();
-        $sql = 'Select * from `company_class`';
+   
+
+
+    public static function getcity()
+    {   $someArr=[];$i=0; 
+        $db=Db::getConnection();
+        $sql = 'Select * from `city`';
         $result=$db->prepare($sql);
         $result->execute();
 
-       while( $user = $result->fetch()){
-        if($user)
-        {
-           $someArr1[$i]= $user['class_name'];
-           $i++;
-        }}
-    return $someArr1;
+        while( $user = $result->fetch()){
+            if($user)
+            {
+               $someArr[$i]= $user;
+               $i++;
+            }}
+            return $someArr;
+            
     }
     
-
-
-    public static function getcityId()
-    {   $someArr=[];$i=0; 
-        $db=Db::getConnection();
-        $sql = 'Select * from `city`';
-        $result=$db->prepare($sql);
-        $result->execute();
-
-        while( $user = $result->fetch()){
-            if($user)
-            {
-               $someArr[$i]= $user['city_id'];
-               $i++;
-            }}
-            return $someArr;
-            
-    }
-    public static function getcityName()
-    {   $someArr1=[];$i=0; 
-             $db=Db::getConnection();
-        $sql = 'Select * from `city`';
-        $result=$db->prepare($sql);
-        $result->execute();
-
-       while( $user = $result->fetch()){
-        if($user)
-        {
-           $someArr1[$i]= $user['city_name'];
-           $i++;
-        }}
-    return $someArr1;
-    }
 
     //Checking firstname and lastname for errors;
     public static function checkName($name)
