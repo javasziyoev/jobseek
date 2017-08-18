@@ -264,7 +264,9 @@ $k=0;
         }
         return $someArr2;
 }
-public static function CheckUserData($email,$password)
+
+//For applicator Sign in
+public static function CheckUserDataA($email,$password)
 {
     $db = Db::getConnection();
 
@@ -278,6 +280,16 @@ public static function CheckUserData($email,$password)
     if($user){
         return $user['applicant_id'];
     }
+    $sql = 'SELECT * FROM employer WHERE email = :email AND password = :password';
+    $result = $db->prepare($sql);
+    $result->bindParam(':email', $email, PDO::PARAM_INT);
+    $result->bindParam(':password', $password, PDO::PARAM_INT);
+    $result->execute();
+
+    $user = $result->fetch();
+    if($user){
+        return $user['employer_id'];
+    }
     return false;
 }
 public static function auth($userId)
@@ -285,6 +297,7 @@ public static function auth($userId)
     session_start();
     $_SESSION['user'] = $userId;
 }
+
 
 
 
