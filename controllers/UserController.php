@@ -59,8 +59,9 @@ class UserController
 
                 require_once(ROOT. '/config/employer_errors.php');
                 if ($errors == false){
-                    $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,
-                    $email_e,$password,$phone_number,$extension_number);
+                    $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,$email_e,$password,$phone_number,$extension_number);
+                    header("Location: /user/signin");
+                    echo $result;
                 }
                 
 
@@ -99,13 +100,13 @@ class UserController
      }
 
 
-     //Check whether user is on database
+     //Check whether user is in database
      
      $userId = User::checkUserData($email, $password);
      print($userId);
      if ($userId == false){
          //Employer sign in
-         $errors[] = "Incorrect user data";
+        echo $errors = "Incorrect user data";
      } else{
          User::auth($userId);
          //User in Cabinet
