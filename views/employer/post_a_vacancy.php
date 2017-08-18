@@ -49,7 +49,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
             <?php
             
             require_once('/models/User.php');
-             $curr=User::getcityId();
+             $curr=User::getcity();
              foreach($curr as $current)
              {
 echo'<option value='.$current['city_id'].'>'.$current['city_name'].'</option>';

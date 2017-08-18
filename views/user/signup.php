@@ -49,15 +49,13 @@
                                 <select name = "selectclass" class="select-category">
                                     <?php
                                     require_once(ROOT . '/models/User.php');
-                                     $fuck = User::getCompanyId();       
-                                    $fuck1 = User::getCompanyName();  $i=0;         
+                                     $fuck = User::getCompany();       
                                             foreach($fuck as $Duck)
                                             {
-                                             echo '<option value = '.$Duck.'>';
+                                             echo '<option value = '.$Duck['company_class_id'].'>';
    
 
-                                              echo ''.$fuck1[$i].'</option>';
-                                              $i++;
+                                              echo ''.$Duck['class_name'].'</option>';
                                             }
                                     ?>
                                 </select>
@@ -73,14 +71,13 @@
                                 <select name = "selectCity" class="select-category select-city">
                                 <?php
                                 require_once(ROOT . '/models/User.php');
-                                 $fuck = User::getcityId();       
-                                $fuck1 = User::getcityName();  $i=0;         
+                                 $fuck = User::getcity();       
                                         foreach($fuck as $Duck)
                                         {
-                                         echo '<option value = '.$Duck.'>';
+                                         echo '<option value = '.$Duck['city_id'].'>';
 
 
-                                          echo ''.$fuck1[$i].'</option>';
+                                          echo ''.$Duck['city_name'].'</option>';
                                           $i++;
                                         }
 
