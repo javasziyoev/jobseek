@@ -15,47 +15,32 @@
 
                 <div>
                     <div>
-                        <label>First name</label>
-                    </div>
-                    <div>
-                        <input type="text" name = "firstname" value="<?php echo $firstname; ?>">
+                        <input type="text" name = "firstname" value="<?php echo $firstname; ?>" class="input-text" placeholder="Name">
                     </div>
                 </div>
                 <div>
                     <div>
-                        <label>Last name</label>
-                    </div>
-                    <div>
-                        <input type="text" name = "lastname" value="<?php echo $lastname; ?>">
+                        <input type="text" name = "lastname" value="<?php echo $lastname; ?>" class="input-text" placeholder="Last name">
                     </div>
                 </div>
                 
                 <div>
                     <div>
-                        <label>Email</label>
-                    </div>
-                    <div>
-                        <input type="email" name = "email" value="<?php echo $email; ?>">
+                        <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text" placeholder="Email">
                     </div>
                 </div>
                 <div>
                     <div>
-                        <label>Password</label>
-                    </div>
-                    <div>
-                        <input type="password" name = "password" value="<?php echo $password; ?>">
+                        <input type="password" name = "password" value="<?php echo $password; ?>" class="input-text" placeholder="Password">
                     </div>
                 </div>
                 <div>
                     <div>
-                        <label>Phone number</label>
-                    </div>
-                    <div>
-                    <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>">
+                        <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text" placeholder="Phone number">
                     </div>
                 </div>
 
-                <input type="submit" value="Register" name="submit1">
+                <input type="submit" value="Register" name="submit1" class="post-button">
             </form>
             <?php if (isset($errors) && is_array($errors)): ?>
                         <ul>
