@@ -12,4 +12,5 @@ return array(
 	'cabinet' => 'cabinet/index',
 	'user/logout' => 'user/logout',
 	'help/writeus' => 'help/writeus',
+	'panel/moder' => 'panel/moder',
 	);
