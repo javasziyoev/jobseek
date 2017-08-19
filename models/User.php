@@ -261,6 +261,18 @@ public static function CheckUserData($email,$password)
     if($user){
         return $user['employer_id'];
     }
+    //admin
+    $sql = '';
+    $sql = 'SELECT * FROM gods WHERE nick = :email AND password = :password';
+    $result = $db->prepare($sql);
+    $result->bindParam(':email', $email, PDO::PARAM_INT);
+    $result->bindParam(':password', $password, PDO::PARAM_INT);
+    $result->execute();
+
+    $user = $result->fetch();
+    if($user){
+        return $user['role'];
+    }
     return false;
 }
 public static function auth($userId)
@@ -293,13 +305,20 @@ public static function getUserById($id)
     if ($id){
         $db = Db::getConnection();
         $sql = 'SELECT * FROM applicant WHERE applicant_id=:id';
-
+        $sql1 = 'SELECT * FROM employer WHERE employer_id=:id';
+        $sql2 = 'SELECT * FROM gods WHERE nick=:id';
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
-
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $result->execute();
-
+        $result = $db->prepare($sql1);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        $result = $db->prepare($sql2);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
         return $result->fetch();
     }
 }

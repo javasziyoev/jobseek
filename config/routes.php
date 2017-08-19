@@ -13,4 +13,5 @@ return array(
 	'user/logout' => 'user/logout',
 	'help/writeus' => 'help/writeus',
 	'panel/moder' => 'panel/moder',
+	'panel/admin' => 'panel/admin',
 	);

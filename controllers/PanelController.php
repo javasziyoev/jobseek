@@ -1,27 +1,18 @@
 <?php
-
-<<<<<<< HEAD
-class PanelController
-{
-
-
-		public function actionModer()
-		{
-echo 'blabla';			
-			
-		}
-	
-
-
-}
-=======
-class PanelController(){
+include_once(ROOT. '/components/AdminBase.php');
+class PanelController extends AdminBase{
 
     public function actionAdmin(){
+    
+        //checking admin
+        self::checkAdmin();
 
+        //view
+        require_once(ROOT . '/views/panel/admin.php');
+        return true;
+        }
 
-
-    }
+    
 
 
     public function actionModer(){
@@ -36,5 +27,4 @@ class PanelController(){
 
 
 
->>>>>>> 5d5876a1587a0fe4b03e75774b57f715392e1f46
 ?>
