@@ -7,6 +7,8 @@ class PanelController extends AdminBase{
         //checking admin
         self::checkAdmin();
 
+        //show moders
+        
         //view
         require_once(ROOT . '/views/panel/admin.php');
         return true;
