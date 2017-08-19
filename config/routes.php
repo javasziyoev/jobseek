@@ -11,5 +11,4 @@ return array(
 	'tag/([0-9]+)' => 'tag/index',
 	'cabinet' => 'cabinet/index',
 	'user/logout' => 'user/logout',
-	''=>'site/index',
 	);
