@@ -94,7 +94,7 @@
                       <a href="#" title="Help">Help</a>
                       <ul>
                           <li><a href="#">Support community</a></li>
-                          <li><a href="#">Write to us</a></li>
+                          <li><a href="/help/writeus">Write to us</a></li>
                       </ul>
                   </li>
               </ul>
