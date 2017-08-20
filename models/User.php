@@ -271,7 +271,7 @@ public static function CheckUserData($email,$password)
 
     $user = $result->fetch();
     if($user){
-        return $user['role'];
+        return $user['nick'];
     }
     return false;
 }
@@ -302,27 +302,50 @@ public static function isGuest()
 
 public static function getUserById($id)
 {
-    if ($id){
+    
         $db = Db::getConnection();
         $sql = 'SELECT * FROM applicant WHERE applicant_id=:id';
         $sql1 = 'SELECT * FROM employer WHERE employer_id=:id';
-        $sql2 = 'SELECT * FROM gods WHERE nick=:id';
+       
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $result->execute();
-        $result = $db->prepare($sql1);
-        $result->bindParam(':id', $id, PDO::PARAM_INT);
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $result->execute();
-        $result = $db->prepare($sql2);
-        $result->bindParam(':id', $id, PDO::PARAM_INT);
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $result->execute();
-        return $result->fetch();
-    }
+        if ($result){
+            return $result->fetch();
+        }
+        
+    return false;
 }
 
+public static function getUserByIdAd($id)
+{
+        $db = Db::getConnection();
+        $sql = 'SELECT * FROM gods WHERE nick=:id';
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        if ($result){
+            return $result->fetch();
+        }
+        return false;
+}
 
+public static function getModerssName()
+{$someArr=[];$i=0; 
+    $db=Db::getConnection();
+    $sql = 'SELECT `nick` FROM `gods` where `role`="moder"';
+    $result=$db->prepare($sql);
+    $result->execute();
+
+    while( $user = $result->fetch()){
+        if($user)
+        {
+           $someArr[$i]= $user['nick'];
+           $i++;
+        }}
+        return $someArr;
+}
 }
 ?>

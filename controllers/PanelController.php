@@ -1,4 +1,5 @@
 <?php
+include_once(ROOT. '/models/user.php');
 include_once(ROOT. '/components/AdminBase.php');
 class PanelController extends AdminBase{
 
@@ -10,6 +11,7 @@ class PanelController extends AdminBase{
         //show moders
         
         //view
+
         require_once(ROOT . '/views/panel/admin.php');
         return true;
         }
