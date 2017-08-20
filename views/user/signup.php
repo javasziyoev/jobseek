@@ -95,6 +95,7 @@ if(f.lastname.value=="")
 </script><style>p
 {
 color:red;}</style>;
+
             <div style="width:48%;height:40%;margin:auto;position:relative;top:-292px;float:right;">
             <?php if (isset($a_errors) && is_array($a_errors)): ?>
                         <ul style="list-style-type: none; ">
@@ -125,10 +126,10 @@ color:red;}</style>;
                                     ?>
                                 </select>
                             </div>
-                            <div>
+                            <div>  <div id = "Company_name"></div>     
                                 <input name="Company_name" type="text" placeholder="Company name" value="<?php echo $company_name; ?>" class="input-text company-name">
                             </div>
-                            <div>
+                            <div> <div id = "Website"></div>  
                                 <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>" class="input-text">
                             </div>
                            
@@ -151,19 +152,19 @@ color:red;}</style>;
                                 ?>                                </select>
                             </div>
                             <label><strong>Contact person</strong> (confidential)</label>
-                            <div>
+                            <div>  <div id = "Name"></div>                 
                                 <input name ="Name" type="text" placeholder="Name" value="<?php echo $name; ?>" class="input-text">
                             </div>
-                            <div>
+                            <div> <div id = "Last_name"></div>
                                 <input  name = "Last_name"type="text" placeholder="Last name" value = "<?php echo $last_name; ?>" class="input-text">
                             </div>
-                            <div>
+                            <div><div id = "Email_e"></div>  
                                 <input name ="Email_e" type="email" placeholder="Email" value="<?php echo $email_e; ?>" class="input-text">
                             </div>
-                            <div>
+                            <div> <div id = "password_e"></div>   
                                 <input name ="password_e" type="password" placeholder="Password" class="input-text">
                             </div>
-                            <div>
+                            <div><div id = "Phone_number"></div>   
                                 <input name="Phone_number" type="text" placeholder="Phone number" <?php echo $phone_number; ?> class="input-text">
                             </div>
                             <div>
@@ -172,6 +173,8 @@ color:red;}</style>;
                             <small>By clicking "register", you acknowledge that you read and fully agree
                                 with the terms of use if the website.
                             </small><br>
+                            <p><input type="checkbox" name="agree" onclick="agreeForm1(this.form)"> 
+    I agree </p>
                             <input type="submit" name="submit2" value="Register" class="post-button">
                             <div style="width:48%;height:auto;float:right;position:relative;top:-450px;">
                             <?php if (isset($e_errors) && is_array($e_errors)): ?>
@@ -183,6 +186,81 @@ color:red;}</style>;
             <?php endif; ?>
                                     </div>
                         </form>
+                        <script> 
+                                       
+function agreeForm1(f) {
+   
+if (f.Company_name.value!="")
+  {   f.submit2.disabled=0;
+if(f.Website.value!="")
+  { f.submit2.disabled=0;
+    if(f.Name.value!="")
+      { f.submit2.disabled=0;
+        if(f.Last_name.value!="")
+          { f.submit2.disabled=0;
+            if(f.Email_e.value!="")
+              { f.submit2.disabled=0;
+                 if(f.password_e.value!="")
+              { 
+                
+                f.submit2.disabled=0;
+                 if(f.Phone_number.value!="")
+              { 
+                
+                f.submit2.disabled=0;
+                 
+           }
+           else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;}
+           }
+           else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;}
+           
+              }
+           else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;}
+           
+           
+          } else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+}
+      }
+    else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+}
+  }  else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+}
+
+  }
+  else   {   f.submit2.disabled=1;
+            if(f.agree.checked) f.agree.checked=0;
+         }
+
+if(!f.agree.checked) {alert('please fil necessary fields');
+checking1();
+                      }
+                      else checking1();
+
+function checking1(){ 
+       if (f.Company_name.value=="") 
+            document.getElementById('Company_name').innerHTML="<p>Please feel Company_name</p>";
+else document.getElementById('Company_name').innerHTML="";
+   if (f.Website.value=="") 
+            document.getElementById('Website').innerHTML="<p>Please feel Website</p>";
+else document.getElementById('Website').innerHTML="";
+     if (f.Name.value=="") 
+            document.getElementById('Name').innerHTML="<p>Please feel name</p>";
+else document.getElementById('Name').innerHTML="";
+     if (f.Company_name.value=="") 
+            document.getElementById('Last_name').innerHTML="<p>Please feel Last_name</p>";
+else document.getElementById('Last_name').innerHTML="";
+     if (f.Company_name.value=="") 
+            document.getElementById('Email_e').innerHTML="<p>Please feel Email_e</p>";
+else document.getElementById('Email_e').innerHTML="";
+     if (f.Company_name.value=="") 
+            document.getElementById('password_e').innerHTML="<p>Please feel password_e</p>";
+else document.getElementById('password_e').innerHTML="";
+     if (f.Company_name.value=="") 
+            document.getElementById('Phone_number').innerHTML="<p>Please feel Phone_number</p>";
+else document.getElementById('Phone_number').innerHTML="";
+   }
+}
+</script>
             </section>
         </div>
       </section>
