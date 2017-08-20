@@ -3,12 +3,11 @@
 <div>
 <h1>
 <?php
-$k = '';
-if($user['nick'] == true){ $k = $user['nick']; }
-if($user['first_name'] == true){ $k = $user['first_name']; }
-if($user['contact_first_name'] == true){ $k = $user['contact_first_name']; }
+echo 'Hello ';
+if($user['first_name'])echo $user['first_name'];
+if($user['contact_first_name'])echo $user['first_name'];
+if($user['nick'])echo $user['nick'];
 
-echo 'Hello '.$k;
 ?>
 </h1>
 </div>

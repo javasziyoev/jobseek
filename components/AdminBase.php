@@ -8,9 +8,10 @@ abstract class AdminBase
     {
         //checking user for auth
         $userId = User::checkLogged();
-
+ 
         //info about user
-        $user = User::getUserById($userId);
+        $user = User::getUserByIdAd($userId);
+        
 
         //if admin let him enter
         if ($user['role'] == 'admin') {
@@ -18,6 +19,7 @@ abstract class AdminBase
         }
 
         //else go out
+
         die('Access denied');
     } 
 } 
