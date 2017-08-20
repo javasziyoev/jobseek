@@ -18,6 +18,8 @@ class PanelController extends AdminBase{
 
 
     public function actionModer(){
+        require_once(ROOT. '/views/panel/moder.php');
+        
         $db = Db::getConnection();
         
         require_once('/models/Panels.php');
