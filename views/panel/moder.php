@@ -2,7 +2,7 @@
 
 <div>
 <h1>
-You are my Admin
+You are my Moderator
 </h1>
 <a href=""><input type="submit" value="Submit" style="background-color:red;" class="sign-in-button"></a>
 <select ></select>
