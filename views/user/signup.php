@@ -14,25 +14,87 @@
             <section id="content-tab1">
                 <form action="#" method="POST">
 
-                <div>
+                <div>  <div id = "firstname"></div> 
                     <input type="text" name = "firstname" value="<?php echo $firstname; ?>" class="input-text" placeholder="Name">
                 </div>
-                <div>
+                <div>  <div id = "lastname"></div> 
                     <input type="text" name = "lastname" value="<?php echo $lastname; ?>" class="input-text" placeholder="Last name">
                 </div>
                 
-                <div>
+                <div>  <div id = "email"></div> 
                     <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text" placeholder="Email">
                 </div>
-                <div>
+                <div>  <div id = "password"></div> 
                     <input type="password" name = "password" value="<?php echo $password; ?>" class="input-text" placeholder="Password">
                 </div>
-                <div>
+                <div>  <div id = "cellphone"></div> 
                     <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text" placeholder="Phone number">
                 </div>
+                <p><input type="checkbox" name="agree" onclick="agreeForm(this.form)"> 
+    I agree </p>
 
-                <input type="submit" value="Register" name="submit1" class="post-button">
+                <input type="submit" value="Register" name="submit1" class="post-button" disabled>
             </form>
+            <script> 
+                
+function agreeForm(f) {
+   
+if (f.firstname.value!="")
+  {   f.submit1.disabled=0;
+if(f.lastname.value!="")
+  { f.submit1.disabled=0;
+    if(f.email.value!="")
+      { f.submit1.disabled=0;
+        if(f.password.value!="")
+          { f.submit1.disabled=0;
+            if(f.cellphone.value!="")
+              { f.submit1.disabled=0;
+                
+              } else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+}
+          } else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+}
+      }
+    else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+}
+  }  else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+}
+
+  }
+  else   {   f.submit1.disabled=1;
+            if(f.agree.checked) f.agree.checked=0;
+         }
+
+if(!f.agree.checked) {alert('please fil necessary fields');
+checking();
+                      }
+                      else checking();
+
+                      function checking(){ 
+       if (f.firstname.value=="") 
+            document.getElementById('firstname').innerHTML="<p>Please feel name</p>";
+else document.getElementById('firstname').innerHTML="";
+if(f.lastname.value=="")
+              document.getElementById('lastname').innerHTML="<p color='red'>Please feel lastname</p>";
+        else document.getElementById('lastname').innerHTML="";
+
+    if(f.email.value=="")
+     document.getElementById('email').innerHTML="<p color='red'>Please feel email</p>";
+     else document.getElementById('email').innerHTML="";
+
+        if(f.password.value=="")
+                      document.getElementById('password').innerHTML="<p color='red'>Please feel password</p>";
+                else document.getElementById('password').innerHTML="";
+
+            if(f.cellphone.value=="")
+                            document.getElementById('cellphone').innerHTML="<p color='red'>Please feel cellphone</p>"; 
+                      else document.getElementById('cellphone').innerHTML="";}
+
+   }
+
+</script><style>p
+{
+color:red;}</style>;
             <div style="width:48%;height:40%;margin:auto;position:relative;top:-292px;float:right;">
             <?php if (isset($a_errors) && is_array($a_errors)): ?>
                         <ul style="list-style-type: none; ">
