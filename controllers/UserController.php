@@ -12,7 +12,7 @@ class UserController
             if(isset($_POST['logsign'])){
                 $aa = $_POST['logemail'];
             }
-            
+            $e = '';
             $i = 0;
             $k = 0;
             //applicant variables
@@ -33,14 +33,16 @@ class UserController
             if (isset($_POST['submit1'])) {
 			    $firstname = $_POST['firstname'];
 			    $lastname = $_POST['lastname'];	
-                $password = $_POST['password'];	
+                $password = $_POST['password'];
+
 			    $email = $_POST['email'];	
                 $cellphone = $_POST['cellphone'];
                 require_once(ROOT. '/config/applicant_errors.php');
                 if ($a_errors == false){
+                    $password =  md5($password);
                     $result = User::registera($firstname,$lastname,$password,$email,$cellphone);
                     header("Location: /user/signin");
-                    
+                   
                 }
 
             }
@@ -63,6 +65,7 @@ class UserController
 
                 require_once(ROOT. '/config/employer_errors.php');
                 if ($e_errors == false){
+                    $password =  md5($password);
                     $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,$email_e,$password,$phone_number,$extension_number);
                     header("Location: /user/signin");
                     
@@ -107,12 +110,12 @@ class UserController
 
 
      //Check whether user is in database
-     
+     $password = md5($password);
      $userId = User::checkUserData($email, $password);
 
      if ($userId == false){
          //Employer sign in
-        echo $errors = "Incorrect user data";
+         $errors = "Incorrect user data";
      } else{
         
          User::auth($userId);
