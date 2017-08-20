@@ -87,6 +87,8 @@ class UserController
 //Sign In
  public function actionSignin()
  {
+     include_once(ROOT. '/models/user.php');
+    
      $email = '';
      $password = '';
 
@@ -94,7 +96,7 @@ class UserController
     if (isset($_POST['loginsubmit'])){
         $email = $_POST['loginemail'];
         $password = $_POST['loginpassword'];
-        require_once(ROOT. '/models/user.php');
+        
      //Fields Validation
      if (!User::checkEmail($email)) {
          $errors[] = 'Invalid email';
@@ -107,14 +109,16 @@ class UserController
      //Check whether user is in database
      
      $userId = User::checkUserData($email, $password);
-     print($userId);
+
      if ($userId == false){
          //Employer sign in
         echo $errors = "Incorrect user data";
      } else{
+        
          User::auth($userId);
          //User in Cabinet
          header("Location: /cabinet/");
+        
         }
      }
     require_once(ROOT. '/views/user/signin.php');

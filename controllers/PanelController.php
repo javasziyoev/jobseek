@@ -1,12 +1,23 @@
 <?php
+<<<<<<< HEAD
 
 class PanelController{
+=======
+include_once(ROOT. '/components/AdminBase.php');
+class PanelController extends AdminBase{
+>>>>>>> d7f2c795f9a2f518bc1531b3cefbbe35756ed601
 
     public function actionAdmin(){
+    
+        //checking admin
+        self::checkAdmin();
 
+        //view
+        require_once(ROOT . '/views/panel/admin.php');
+        return true;
+        }
 
-
-    }
+    
 
 
     public function actionModer(){
@@ -121,4 +132,9 @@ foreach ($fucker as $vacans)
 
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d7f2c795f9a2f518bc1531b3cefbbe35756ed601
 ?>
