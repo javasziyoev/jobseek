@@ -271,7 +271,7 @@ public static function CheckUserData($email,$password)
 
     $user = $result->fetch();
     if($user){
-        return $user['role'];
+        return $user['nick'];
     }
     return false;
 }
@@ -330,6 +330,22 @@ public static function getUserByIdAd($id)
             return $result->fetch();
         }
         return false;
-    }
+}
+
+public static function getModerssName()
+{$someArr=[];$i=0; 
+    $db=Db::getConnection();
+    $sql = 'SELECT `nick` FROM `gods` where `role`="moder"';
+    $result=$db->prepare($sql);
+    $result->execute();
+
+    while( $user = $result->fetch()){
+        if($user)
+        {
+           $someArr[$i]= $user['nick'];
+           $i++;
+        }}
+        return $someArr;
+}
 }
 ?>
