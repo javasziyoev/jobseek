@@ -9,6 +9,8 @@ class UserController
         
 		public function actionSignup()
 		{
+            
+           
             if(isset($_POST['logsign'])){
                 $aa = $_POST['logemail'];
             }
@@ -90,6 +92,10 @@ class UserController
 //Sign In
  public function actionSignin()
  {
+    require_once (ROOT . '/models/user.php');
+    if (!user::isGuest()){
+        header("Location: /index");
+    }
      include_once(ROOT. '/models/user.php');
     
      $email = '';
