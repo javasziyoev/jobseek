@@ -8,7 +8,7 @@ class User
     public static function registera($firstname,$lastname,$password,$email,$cellphone)
     {
         $db = Db::getConnection();
-        
+       
         $sql = 'INSERT INTO applicant(first_name, last_name, password, email, cellphone) '
                 . 'VALUES (:firstname, :lastname, :password, :email, :cellphone)';
         $result = $db->prepare($sql);
