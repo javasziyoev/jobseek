@@ -1,67 +1,58 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<!doctype html>
 
-<div>
-<h1>
-You are my Admin
-</h1>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Mjolnir</title>
+    <link rel="stylesheet" href="/template/css/style.css" />   
+  <link rel="stylesheet" media="screen and (min-device-width: 1440px)" href="/template/css/desktop.css" /> 
+  <link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1440px)' href='/template/css/medium-style.css' />
+  <link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href='/template/css/mobile-style.css' />
 
-<div style="width:30%;height:400px;">
-<form action="#" method="POST">
-<select style="width:50%;height:auto;font-size:20px;float:right;" name="sel">
-<option>PERSONAL</option>
-<?php
-$i = 0;
+    <link rel="stylesheet" href="/template/css/mjolnir.css" />   
+</head>
+<body>
+<div id="wrapper">
+    <nav id="nav-menu">
+        <h1>Admin Panel</h1>
+        <ul>
+            <li class="active"><a href="">statistics</a></li>
+            <li><a href="">news</a></li>
+            <li><a href="">users</a></li>
+            <li><a href="">roles</a></li>
+            <li><a href="">vacancies</a></li>
+            <li><a href="">industries</a></li>
+            <li><a href="">logs</a></li>
+            <li><a href="">feedbacks</a></li>
+            <li><a href="/user/logout">sign out</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        
 
-while ($i<=sizeof($k[0])-1)
-{
 
-    echo '<option style="width:100%;"value='.$i.'>'.'Name:'.ucfirst($k[0][$i]).'   Role:'.$k[1][$i].'</option>';
-    $i++;
-}
+        <div class="vacancies-of-the-day-item ">
+            <label>100500</label><br>
+            <label>users</label>
+        </div>
 
-?>
-</select>
+        <div class="vacancies-of-the-day-item ">
+            <label>100500</label><br>
+            <label>cv</label>
+        </div>
 
+        <div class="vacancies-of-the-day-item ">
+            <label>100500</label><br>
+            <label>vacancies</label>
+        </div>
 
-<div style="width:48%;border:1px solid black;">
-<input type="text" name="inp1" placeholder="name" style="margin:5px;width:96%;"></input>
-<input type="text" name="inp2" placeholder="password" style="margin:5px;width:96%;"></input>
-<select name="sel1">
-    <option >admin</option>
-    <option >moder</option>
- </select>
- <a><input type="submit" name="add" value="ADD" style="background-color:white;color:black;width:96%;" class="sign-in-button"></a>
- <a><input type="submit" name="delete" value="DELETE" style="background-color:white;color:black;width:96%;" class="sign-in-button"></a>
-
+        <div class="vacancies-of-the-day-item ">
+            <label>100500</label><br>
+            <label>employers</label>
+        </div>
+    </main>
 </div>
-
-</form>
-</div>
-</div>
-
-</div>  
-          </section>
-      </section>
-    <div style="position:absolute;relative;top:115px;right:0px;">
-          <select >
-            <?php
-            require_once(ROOT.'/models/User.php');
-                $forsectorsId = User::getSectorsId();
-                $forsectorsName = User::getSectorsName();  $i=0;         
-                
-                foreach($forsectorsId as $sectors)
-                {
-                 echo '<option ><a href= /tag/'.$sectors['industry_id'].'>';
-
-
-                  echo ''.$forsectorsName[$i].'</a></option>';
-                  $i++;
-                }        
-            ?>
-          </select>
-    </div>
-
-    <a href="/panel/applicant"><input type="submit" value="Applicants" style="background-color:white;color:black;" class="sign-in-button"></a>
-<a href="/panel/employeers"><input type="submit" value="Employeers" style="background-color:white;color:black;" class="sign-in-button"></a>       
-      
-      </div>
+</body>
+</html>
