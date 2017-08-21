@@ -16,7 +16,7 @@
 <body>
 <div id="wrapper">
 <div class="tabs">
-            <input id="tab1" type="radio" name="tabs">
+            <input id="tab1" type="radio" name="tabs" checked>
             <label for="tab1" title="Sign up 1">statistics</label>
 
             <input id="tab2" type="radio" name="tabs">
