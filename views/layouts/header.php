@@ -24,47 +24,38 @@
             </select>
             <input type="submit" value="Search" class="search-button">
             <!-- <small>Advanced search</small> -->
+        </div>
             
-            
-                <?php
-                require_once(ROOT .'/models/user.php');
-                if (User::isGuest()){
-                    echo '
-                    <a href="#win1"><input type="submit" value="Sign In" class="sign-in-button"></a>
-                    
-        
-        
-                    <!-- Модальное окно -->
-                    <a href="#x" class="overlay" id="win1"></a>
-                    <div class="popup">
-                    <form action="" method="POST">
-                    <section id="sign-up-content">
-                        
-                            <input type="email" placeholder="Email" name="logemail" class="input-text">
-                            <input type="password" placeholder="Password" name="logpassword" class="input-text">
-                            <input type="submit" value="Sign in" name="logsign" class="post-button">
-                        
-                    </section>
-                    </form>
-                    <a class="close"title="Close" href="#close"></a>
-                    </div>
-                    </div>
+        <?php
+            require_once(ROOT .'/models/user.php');
+            if (User::isGuest()){
+                echo '
+                <div>
+                    <a href="/user/signin"><input type="submit" value="Sign In" class="sign-in-button"></a>
+                </div>
                     </div>';
-                }
-                    else {
-                        echo '
-                        <a href="/user/logout"><input type="submit" value="Sign Out" class="sign-in-button"></a>
-                        <a href="/cabinet"><input type="submit" value="Profile" style="background-color:red;" class="sign-in-button"></a>
-                        <section >
-                        </section>
-                        </div>
-                        </div>
-                        ';
-                    }
-                
-            
-                ?>
-                
+            }
+            else {
+                        require_once(ROOT . '/models/user.php');
+                        $userId = User::checkLogged();
+                       
+                echo '
+                <div>
+                    <ul id="nav" class="nav-bar-ul">
+                        <li>
+                            <a href="" style="background-color: #333; line-height: 8px;">'.$userId.'</a>
+                            <ul>
+                                <li><a href="/cabinet">Profile</a></li>
+                                <li><a href="/cabinet/favorite">Favorites</a></li>
+                                <li><a href="/user/logout">Sign out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                ';
+            }
+        ?>
+    </div>
 
       <section id="nav-bar-content">
           <ul id="nav" class="nav-bar-ul">

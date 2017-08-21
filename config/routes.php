@@ -10,8 +10,11 @@ return array(
 	'tag'=>'tag/index',
 	'tag/([0-9]+)' => 'tag/index',
 	'cabinet' => 'cabinet/index',
+	'cabinet/favorite' => 'cabinet/favorite',
 	'user/logout' => 'user/logout',
 	'help/writeus' => 'help/writeus',
 	'panel/moder' => 'panel/moder',
 	'panel/admin' => 'panel/admin',
+	'panel/applicant' => 'panel/applicant',
+	'news/([0-9]+)' => 'news/view/$1',
 	);
