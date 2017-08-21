@@ -63,7 +63,11 @@
             </section>
 
             <section id="content-tab2">
-                хуй2
+                <input placeholder="Title"><br>
+                <input placeholder="Image thumbnail URL"><br>
+                <textarea name="" placeholder="Short description"></textarea><br>
+                <textarea name="" placeholder="Content"></textarea><br>
+                <input type="submit" name = "b" value="Add" class="post-button" style="margin-top: 1px;">
             </section>
             <section id="content-tab3">
                 хуй3
