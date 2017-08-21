@@ -10,10 +10,10 @@ You are my Moderator
 </div><button ></button><?php 
 require_once('/models/Panels.php');?>
 
-<?php 
+<?php //для вакансий
 Panels::actionModer();?>
 
-<?php 
+<?php //для фьючеред джобс стив джобс
  Panels::getAllFJobs();
 ?>
 
