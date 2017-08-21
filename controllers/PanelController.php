@@ -26,7 +26,8 @@ class PanelController extends AdminBase{
         Panels::registerPersonal($name,$password,$role);
         header("Location: /panel/admin");
         }
-
+        $r = Panels::adminStats();
+        
         //view
 
 

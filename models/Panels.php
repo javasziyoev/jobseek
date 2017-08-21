@@ -103,8 +103,32 @@ class Panels
                 
         return false;
     }
+    public static function adminStats()
+    {   $arr = [];
+        $sql = [];
+        $i = 0;
+        $db = Db::getConnection();
+
+        $sql[0] = 'SELECT (SELECT COUNT(*) FROM applicant ) + 
+        (SELECT COUNT(*) FROM employer) + (SELECT COUNT(*) FROM gods ) as t2';
+        $sql[1] = 'SELECT COUNT(*) FROM cv';
+        $sql[2] = 'SELECT COUNT(*) FROM vacancy';
+        $sql[3] = 'SELECT COUNT(*) FROM employer';
+        while ($i<4){
+        $result = $db->prepare($sql[$i]);
+        $result->execute();
+            $arr[$i] = $result->fetch();
+            $i++;
+        }
+        if($arr){
+            return $arr;
+        }
+        return false;
+        }
+
+    }
     
     
     
-}
+
 ?>
