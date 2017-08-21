@@ -74,9 +74,32 @@
             <section id="content-tab5">
                 хуй5
             </section>
+
             <section id="content-tab6">
-                хуй6
+                <div>
+                    <input type="text" name = "industryname" class="input-text" placeholder="Industry Name">
+                    <input type="submit" value="Add" class="post-button" style="margin-top: 1px;">
+                </div>
+                <div>
+                    <input type="text" name = "industryid" class="input-text" placeholder="Industry ID">
+                    <input type="submit" value="Delete" class="post-button" style="margin-top: 1px; background-color: #ef546c; border-color: #ef546c;">
+                </div>
+                <div style="margin-top: 20px;">
+                    <h2>All industries</h2>
+                    <table>
+                        <tr>
+                            <th style="border-right: 1px solid #333">id</th>
+                            <th>industry name</th>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid #333">1234</td>
+                            <td>Хуйпизда</td>
+                        </tr>
+                    </table>
+
+                </div>
             </section>
+
             <section id="content-tab7">
                 хуй7
             </section>
@@ -113,3 +136,9 @@
 </div>
 </body>
 </html>
+
+
+
+
+
+
