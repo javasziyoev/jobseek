@@ -1,14 +1,15 @@
 <?php
-
+include_once(ROOT. '/models/user.php');
 class UserController
 {
-
+    
 		//Registration for applicants
 
 
         
 		public function actionSignup()
 		{
+
             
            
             if(isset($_POST['logsign'])){
@@ -105,7 +106,6 @@ class UserController
     if (isset($_POST['loginsubmit'])){
         $email = $_POST['loginemail'];
         $password = $_POST['loginpassword'];
-        
      //Fields Validation
      if (!User::checkEmail($email)) {
          $errors[] = 'Invalid email';
@@ -118,7 +118,7 @@ class UserController
      //Check whether user is in database
      $password = md5($password);
      $userId = User::checkUserData($email, $password);
-    
+  
      if ($userId == false){
          //Employer sign in
          $errors = "Incorrect user data";

@@ -133,14 +133,7 @@
                 }        
             ?>
           </ul>
-          <!--
-          <p>Donec sed urna lectus, vel viverra tellus. Nullam molestie tortor eu erat aliquet fermentum. Suspendisse commodo purus aliquam mi tempor pulvinar.  Pellentesque bibendum suscipit dui, id vehicula leo aliquet at. Duis sem diam, pharetra sed posuere sed, iaculis vitae leo.</p> 
           
-          <div class="box"><h2>Senior Huesos in Microsoft</h2><img class="image-box" src="" />Curabitur pulvinar odio ut magna aliquet consequat. Etiam id euismod justo. Praesent vel lectus ipsum, ac placerat urna. Quisque a leo nibh.  Curabitur bibendum accumsan orci eget euismod. Pellentesque mattis gravida imperdiet.</div>  
-          <div class="box"><h2>Vodolaz in RCIT</h2><img class="image-box" src="" />Vestibulum luctus augue at arcu eleifend ac convallis massa bibendum. Proin ut odio quam, eu feugiat risus. Curabitur bibendum accumsan orci eget euismod. Aliquam porttitor faucibus orci, vitae semper dui varius eu.</div> 
-          <div class="box"><h2>Restorator</h2><img class="image-box" src="" />Vivamus ut enim eu leo euismod semper. Cras sagittis auctor ante, sagittis scelerisque diam iaculis at. Pellentesque mattis gravida imperdiet. Praesent vestibulum volutpat vestibulum. </div> 
-          <div class="box"><h2>Jiguli-master</h2><img class="image-box" src="" />Quisque eget leo eget magna ultrices tincidunt. Vestibulum luctus elementum sollicitudin. Sed at mi sit amet nisl semper tincidunt non in lorem. Donec semper commodo interdum.</div> 
-          -->
           <br style="clear:both" />
         </div>    
           

@@ -14,4 +14,6 @@ return array(
 	'help/writeus' => 'help/writeus',
 	'panel/moder' => 'panel/moder',
 	'panel/admin' => 'panel/admin',
+	'panel/applicant' => 'panel/applicant',
+	'news/([0-9]+)' => 'news/view/$1',
 	);
