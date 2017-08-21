@@ -24,34 +24,35 @@
             </select>
             <input type="submit" value="Search" class="search-button">
             <!-- <small>Advanced search</small> -->
+        </div>
             
-            
-                <?php
-                require_once(ROOT .'/models/user.php');
-                if (User::isGuest()){
-                    echo '
+        <?php
+            require_once(ROOT .'/models/user.php');
+            if (User::isGuest()){
+                echo '
+                <div>
                     <a href="/user/signin"><input type="submit" value="Sign In" class="sign-in-button"></a>
-                    <!-- Модальное окно -->
-
-                    </div>
-                    </div>
+                </div>
                     </div>';
-                }
-                    else {
-                        echo '
-                        <a href="/user/logout"><input type="submit" value="Sign Out" class="sign-in-button"></a>
-                        <a href="/cabinet"><input type="submit" value="Profile" style="background-color:red;" class="sign-in-button"></a>
-                        <a href="/cabinet/favorite"><input type="submit" value="Favorite" style="" class="sign-in-button"></a>
-                        <section >
-                        </section>
-                        </div>
-                        </div>
-                        ';
-                    }
-                
-            
-                ?>
-                
+            }
+            else {
+                echo '
+                <div>
+                    <ul id="nav" class="nav-bar-ul">
+                        <li>
+                            <a href="" style="background-color: #333; line-height: 8px;">Hey, Хуй</a>
+                            <ul>
+                                <li><a href="/cabinet">Profile</a></li>
+                                <li><a href="/cabinet/favorite">Favorites</a></li>
+                                <li><a href="/user/logout">Sign out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                ';
+            }
+        ?>
+    </div>
 
       <section id="nav-bar-content">
           <ul id="nav" class="nav-bar-ul">
