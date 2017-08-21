@@ -58,8 +58,9 @@ class PanelController extends AdminBase{
     
 
     
-}}
+}
 
 
 
+}
 ?>
