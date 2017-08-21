@@ -21,7 +21,8 @@ abstract class AdminBase
         //else go out
 
         die('Access denied');
-    } 
+    }
+     
 } 
 
 
