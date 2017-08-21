@@ -31,12 +31,8 @@
                 if (User::isGuest()){
                     echo '
                     <a href="/user/signin"><input type="submit" value="Sign In" class="sign-in-button"></a>
-                    
-        
-        
                     <!-- Модальное окно -->
-                    
-                    
+
                     </div>
                     </div>
                     </div>';
@@ -45,6 +41,7 @@
                         echo '
                         <a href="/user/logout"><input type="submit" value="Sign Out" class="sign-in-button"></a>
                         <a href="/cabinet"><input type="submit" value="Profile" style="background-color:red;" class="sign-in-button"></a>
+                        <a href="/cabinet/favorite"><input type="submit" value="Favorite" style="" class="sign-in-button"></a>
                         <section >
                         </section>
                         </div>

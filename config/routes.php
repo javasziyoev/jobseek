@@ -10,6 +10,7 @@ return array(
 	'tag'=>'tag/index',
 	'tag/([0-9]+)' => 'tag/index',
 	'cabinet' => 'cabinet/index',
+	'cabinet/favorite' => 'cabinet/favorite',
 	'user/logout' => 'user/logout',
 	'help/writeus' => 'help/writeus',
 	'panel/moder' => 'panel/moder',
