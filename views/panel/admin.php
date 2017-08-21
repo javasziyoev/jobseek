@@ -86,22 +86,16 @@
                 </div>
                 <div style="margin-top: 20px;">
                     <h2>All industries</h2>
-                    <select >
-                    <?php
-                    require_once(ROOT.'/models/User.php');
-                        $forsectorsId = User::getSectorsId();
-                        $forsectorsName = User::getSectorsName();  $i=0;         
-                        
-                        foreach($forsectorsId as $sectors)
-                        {
-                         echo '<option ><a href= /tag/'.$sectors['industry_id'].'>';
-        
-        
-                          echo ''.$forsectorsName[$i].'</a></option>';
-                          $i++;
-                        }        
-                    ?>
-                  </select>
+                    <table>
+                        <tr>
+                            <th style="border-right: 1px solid #333">id</th>
+                            <th>industry name</th>
+                        </tr>
+                        <tr>
+                            <td style="border-right: 1px solid #333">1234</td>
+                            <td>Хуйпизда</td>
+                        </tr>
+                    </table>
 
                 </div>
             </section>
