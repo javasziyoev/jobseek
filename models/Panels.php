@@ -24,7 +24,6 @@ class Panels
                 }}
                 return $someArr;
     }
-<<<<<<< HEAD
     public static function actionModer(){
         require_once(ROOT. '/views/panel/moder.php');
         
@@ -201,7 +200,6 @@ echo '__________________________________________________________________________
      
      }
     
-=======
 ////moder name
     public static function getPersonalName()
     {   $Arr1=[];
@@ -211,7 +209,6 @@ echo '__________________________________________________________________________
         $sql = 'SELECT `nick`,`role` FROM `gods` order by `id`';
         $result=$db->prepare($sql);
         $result->execute();
->>>>>>> e92df7d446563891f3b095b71357befb1820eb82
     
         while( $user = $result->fetch()){
             if($user)
