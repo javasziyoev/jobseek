@@ -38,13 +38,15 @@
             else {
                 echo '
                 <div>
-                    <ul>
-                        <li>Hey, Хуй</li>
-                        <ul>
-                            <li><a href="/cabinet">Profile</a></li>
-                            <li><a href="/cabinet/favorite">Favorites</a></li>
-                            <li><a href="/user/logout">Sign out</a></li>
-                        </ul>
+                    <ul id="nav" class="nav-bar-ul">
+                        <li>
+                            <a href="" style="background-color: #333; line-height: 8px;">Hey, Хуй</a>
+                            <ul>
+                                <li><a href="/cabinet">Profile</a></li>
+                                <li><a href="/cabinet/favorite">Favorites</a></li>
+                                <li><a href="/user/logout">Sign out</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 ';
