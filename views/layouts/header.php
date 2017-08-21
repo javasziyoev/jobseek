@@ -36,11 +36,14 @@
                     </div>';
             }
             else {
+                        require_once(ROOT . '/models/user.php');
+                        $userId = User::checkLogged();
+                       
                 echo '
                 <div>
                     <ul id="nav" class="nav-bar-ul">
                         <li>
-                            <a href="" style="background-color: #333; line-height: 8px;">Hey, Хуй</a>
+                            <a href="" style="background-color: #333; line-height: 8px;">'.$userId.'</a>
                             <ul>
                                 <li><a href="/cabinet">Profile</a></li>
                                 <li><a href="/cabinet/favorite">Favorites</a></li>
