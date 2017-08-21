@@ -1,4 +1,17 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Mjolnir</title>
+    <link rel="stylesheet" href="/template/css/style.css" />   
+  <link rel="stylesheet" media="screen and (min-device-width: 1440px)" href="/template/css/desktop.css" /> 
+  <link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1440px)' href='/template/css/medium-style.css' />
+  <link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href='/template/css/mobile-style.css' />
+
+    <link rel="stylesheet" href="/template/css/mjolnir.css" />   
+</head>
 
 <?php 
 require_once('/models/Panels.php');?>
@@ -23,9 +36,3 @@ Panels::actionModer();?>
  Panels::getAllFJobs();
 ?>
 </section>
-
-
-
-
-
-<?php include ROOT . '/views/layouts/footer.php'; ?>
