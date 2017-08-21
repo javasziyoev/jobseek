@@ -53,3 +53,8 @@ html {
 #wrapper {
     display: flex;
 }
+
+.tabs {
+    max-width: none;
+    margin-top: 20px;
+}
