@@ -16,7 +16,7 @@
 <body>
 <div id="wrapper">
 <div class="tabs">
-            <input id="tab1" type="radio" name="tabs" checked>
+            <input id="tab1" type="radio" name="tabs">
             <label for="tab1" title="Sign up 1">statistics</label>
 
             <input id="tab2" type="radio" name="tabs">
@@ -76,14 +76,16 @@
             </section>
 
             <section id="content-tab6">
+            <form method="POST">
                 <div>
-                    <input type="text" name = "industryname" class="input-text" placeholder="Industry Name">
-                    <input type="submit" value="Add" class="post-button" style="margin-top: 1px;">
+                    <input type="text" name = "a" class="input-text" placeholder="Industry Name">
+                    <input type="submit" name = "b" value="Add" class="post-button" style="margin-top: 1px;">
                 </div>
                 <div>
-                    <input type="text" name = "industryid" class="input-text" placeholder="Industry ID">
-                    <input type="submit" value="Delete" class="post-button" style="margin-top: 1px; background-color: #ef546c; border-color: #ef546c;">
+                    <input type="text" name = "c" class="input-text" placeholder="Industry ID">
+                    <input type="submit" name ="d" value="Delete" class="post-button" style="margin-top: 1px; background-color: #ef546c; border-color: #ef546c;">
                 </div>
+                </form>
                 <div style="margin-top: 20px;">
                     <h2>All industries</h2>
                     <table>
@@ -91,10 +93,26 @@
                             <th style="border-right: 1px solid #333">id</th>
                             <th>industry name</th>
                         </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #333">1234</td>
-                            <td>Хуйпизда</td>
-                        </tr>
+                      
+            <?php
+            require_once(ROOT.'/models/User.php');
+                $forsectorsId = User::getSectorsId();
+                $forsectorsName = User::getSectorsName();  $i=0;         
+                
+                foreach($forsectorsId as $sectors)
+                {
+                 echo '<tr>
+                 <td style="border-right: 1px solid #333">'.$sectors['industry_id'].'</td>
+                 <td>'.$sectors['industry_name'].'</td>
+             </tr>';
+
+
+                  
+                 
+                }        
+            ?>
+          
+                        
                     </table>
 
                 </div>

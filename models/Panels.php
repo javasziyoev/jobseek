@@ -303,6 +303,37 @@ echo '__________________________________________________________________________
         return false;
         }
 
+        public static function selectAdd($id){
+            $db = Db::getConnection();
+            $sql = 'INSERT INTO `industry`(`industry_name`) VALUES (:name)';
+            $result = $db->prepare($sql);
+            $result->bindParam(':name', $id, PDO::PARAM_STR);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+            if ($result){
+                return $result->fetch();
+                }
+                    
+            return false;
+        
+
+        }
+
+        public static function selectDelete($id){
+            $db = Db::getConnection();
+            $sql = 'DELETE FROM `industry` WHERE `industry_id` = :id';
+            $result = $db->prepare($sql);
+            $result->bindParam(':id', $id, PDO::PARAM_STR);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+            if ($result){
+                return $result->fetch();
+                }
+                    
+            return false;
+        
+
+        }
     }
     
     
