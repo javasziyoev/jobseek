@@ -34,22 +34,22 @@
 
 
         <div class="vacancies-of-the-day-item ">
-            <label>100500</label><br>
+            <label><?php print_r($r[0][0]); ?> </label><br>
             <label>users</label>
         </div>
 
         <div class="vacancies-of-the-day-item ">
-            <label>100500</label><br>
+            <label><?php print_r($r[1][0]); ?></label><br>
             <label>cv</label>
         </div>
 
         <div class="vacancies-of-the-day-item ">
-            <label>100500</label><br>
+            <label><?php print_r($r[2][0]); ?></label><br>
             <label>vacancies</label>
         </div>
 
         <div class="vacancies-of-the-day-item ">
-            <label>100500</label><br>
+            <label><?php print_r($r[3][0]); ?></label><br>
             <label>employers</label>
         </div>
     </main>

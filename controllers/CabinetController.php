@@ -14,6 +14,10 @@ class CabinetController
         require_once(ROOT . '/views/cabinet/index.php');
         return true;
     }
+    public function actionFavorite()
+    {
+        
+    }
 
 
 
