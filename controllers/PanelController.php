@@ -35,13 +35,11 @@ class PanelController extends AdminBase{
         return true;
         }
 
-<<<<<<< HEAD
     public function actionModer()
     {
         require_once(ROOT . '/views/panel/moder.php');
         return true;
     }
-=======
     
 
     public function actionApplicant(){
@@ -128,7 +126,6 @@ foreach ($fucker as $vacans)
     </td>
     <td>  <input name = "submit'.$vacans['vacancy_id'].'" type = "submit" value = "prove">
     </td>
->>>>>>> e92df7d446563891f3b095b71357befb1820eb82
 
 
     
