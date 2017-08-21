@@ -22,7 +22,7 @@
             
             <div>
                 <label>City</label><br>
-                <select name = "selectCity" class="select-category select-city">
+                <select name = "selectCity" class="select-category select-city"onchange="changing(this)">
                     <?php
                     require_once(ROOT . '/models/User.php');
                     $fuck = User::getcity();       
@@ -110,5 +110,16 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
         </div>
     </section>
 </div>
-
+<script>
+function changing(select){
+            var selectedOption = select.options[select.selectedIndex];
+  var cityes=[]
+ cityes = document.getElementsByClassName('vacancy-post');
+  for(var i =0 ; i<cityes.length;i++)
+    {
+    if(selectedOption.text==cityes[i].innerHTML.split('<label class="city">')[1].split(' · </label>')[0]){
+     document.write(cityes[i].innerHTML);
+      break;}
+    }
+}</script>
 <?php include ROOT . '/views/layouts/footer.php'; ?>
