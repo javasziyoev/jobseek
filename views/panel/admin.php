@@ -16,7 +16,7 @@
 <body>
 <div id="wrapper">
 <div class="tabs">
-            <input id="tab1" type="radio" name="tabs" checked>
+            <input id="tab1" type="radio" name="tabs">
             <label for="tab1" title="Sign up 1">statistics</label>
 
             <input id="tab2" type="radio" name="tabs">
@@ -91,10 +91,26 @@
                             <th style="border-right: 1px solid #333">id</th>
                             <th>industry name</th>
                         </tr>
-                        <tr>
-                            <td style="border-right: 1px solid #333">1234</td>
-                            <td>Хуйпизда</td>
-                        </tr>
+                        <select >
+            <?php
+            require_once(ROOT.'/models/User.php');
+                $forsectorsId = User::getSectorsId();
+                $forsectorsName = User::getSectorsName();  $i=0;         
+                
+                foreach($forsectorsId as $sectors)
+                {
+                 echo '<tr>
+                 <td style="border-right: 1px solid #333">'.$sectors['industry_id'].'</td>
+                 <td>'.$sectors['industry_name'].'</td>
+             </tr>';
+
+
+                  echo ''.$forsectorsName[$i].'</a></option>';
+                  $i++;
+                }        
+            ?>
+          </select>
+                        
                     </table>
 
                 </div>
