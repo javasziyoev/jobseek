@@ -30,23 +30,13 @@
                 require_once(ROOT .'/models/user.php');
                 if (User::isGuest()){
                     echo '
-                    <a href="#win1"><input type="submit" value="Sign In" class="sign-in-button"></a>
+                    <a href="/user/signin"><input type="submit" value="Sign In" class="sign-in-button"></a>
                     
         
         
                     <!-- Модальное окно -->
-                    <a href="#x" class="overlay" id="win1"></a>
-                    <div class="popup">
-                    <form action="" method="POST">
-                    <section id="sign-up-content">
-                        
-                            <input type="email" placeholder="Email" name="logemail" class="input-text">
-                            <input type="password" placeholder="Password" name="logpassword" class="input-text">
-                            <input type="submit" value="Sign in" name="logsign" class="post-button">
-                        
-                    </section>
-                    </form>
-                    <a class="close"title="Close" href="#close"></a>
+                    
+                    
                     </div>
                     </div>
                     </div>';
