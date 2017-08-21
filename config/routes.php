@@ -17,4 +17,5 @@ return array(
 	'panel/admin' => 'panel/admin',
 	'panel/applicant' => 'panel/applicant',
 	'news/([0-9]+)' => 'news/view/$1',
+	
 	);
