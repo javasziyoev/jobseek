@@ -28,8 +28,21 @@ class PanelController extends AdminBase{
         }
         $r = Panels::adminStats();
         
-        //view
+        //sektors
 
+
+
+        if(isset($_POST['b'])){
+            $a = $_POST['a'];
+            Panels::selectAdd($a);
+        }
+        if(isset($_POST['d'])){
+            $c = $_POST['c'];
+            Panels::selectDelete($c);
+        }
+
+
+        ///////
 
         require_once(ROOT . '/views/panel/admin.php');
         return true;

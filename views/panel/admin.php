@@ -76,14 +76,16 @@
             </section>
 
             <section id="content-tab6">
+            <form method="POST">
                 <div>
-                    <input type="text" name = "industryname" class="input-text" placeholder="Industry Name">
-                    <input type="submit" value="Add" class="post-button" style="margin-top: 1px;">
+                    <input type="text" name = "a" class="input-text" placeholder="Industry Name">
+                    <input type="submit" name = "b" value="Add" class="post-button" style="margin-top: 1px;">
                 </div>
                 <div>
-                    <input type="text" name = "industryid" class="input-text" placeholder="Industry ID">
-                    <input type="submit" value="Delete" class="post-button" style="margin-top: 1px; background-color: #ef546c; border-color: #ef546c;">
+                    <input type="text" name = "c" class="input-text" placeholder="Industry ID">
+                    <input type="submit" name ="d" value="Delete" class="post-button" style="margin-top: 1px; background-color: #ef546c; border-color: #ef546c;">
                 </div>
+                </form>
                 <div style="margin-top: 20px;">
                     <h2>All industries</h2>
                     <table>
