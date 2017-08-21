@@ -89,7 +89,7 @@ foreach ($fucker as $vacans)
     </td>
     <td>  <textarea name = "infos'. $vacans['vacancy_id'].'">'. $vacans['info'].'</textarea>
     </td>
-    <td>  <input name = "short_descr'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['short_descr'].'>
+    <td>  <textarea name = "short_descr'. $vacans['vacancy_id'].'" >'. $vacans['short_descr'].'></textarea>
     </td>
     <td>  <input name = "employment_type_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employment_type_id'].'>
     </td>
