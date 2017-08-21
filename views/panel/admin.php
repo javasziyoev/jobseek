@@ -91,7 +91,7 @@
                             <th style="border-right: 1px solid #333">id</th>
                             <th>industry name</th>
                         </tr>
-                        <select >
+                      
             <?php
             require_once(ROOT.'/models/User.php');
                 $forsectorsId = User::getSectorsId();
@@ -105,11 +105,11 @@
              </tr>';
 
 
-                  echo ''.$forsectorsName[$i].'</a></option>';
-                  $i++;
+                  
+                 
                 }        
             ?>
-          </select>
+          
                         
                     </table>
 
