@@ -103,35 +103,36 @@ foreach ($fucker as $vacans)
 
     </tr>';
     if(isset($_POST['submit'. $vacans['vacancy_id']]))
-     
-     
-     {$sql = 'UPDATE `vacancy` SET `vacancy_id`=:vacancy_id,`employer_id`=:employer_id,`industry_id`=:industry_id,
-     `position`=:position,`salary`=:salary,`salary_currency_id`=:salary_currency_id,
-     `required_experience`=:required_experience,`city_id`=:city_id,`post_date`=:post_date,
-     `info`=:info,`short_descr`=:short_descr,`employment_type_id`=:employment_type_id,
-     `address`=:addres,`published`=:published WHERE `vacancy_id` = :vacancy_id';
- $result = $db->prepare($sql);
- echo $_POST['vacancy_id'. $vacans['vacancy_id']];
- $result->bindParam(':vacancy_id',$_POST['vacancy_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':employer_id', $_POST['employer_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':industry_id', $_POST['industry_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':position', $_POST['position'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':salary', $_POST['salary'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':salary_currency_id', $_POST['salary_currency_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':required_experience', $_POST['required_experience'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':city_id', $_POST['city_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':post_date', $_POST['post_date'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':info', $_POST['infos'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':short_descr', $_POST['short_descr'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':employment_type_id', $_POST['employment_type_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':addres', $_POST['address'. $vacans['vacancy_id']], PDO::PARAM_STR);
- $result->bindParam(':published', $_POST['published'. $vacans['vacancy_id']], PDO::PARAM_STR);
- 
- return $result->execute();
- 
- 
-  }
+    
+    
+    {$sql = 'UPDATE `vacancy` SET `vacancy_id`=:vacancy_id,`employer_id`=:employer_id,`industry_id`=:industry_id,
+    `position`=:position,`salary`=:salary,`salary_currency_id`=:salary_currency_id,
+    `required_experience`=:required_experience,`city_id`=:city_id,`post_date`=:post_date,
+    `info`=:info,`short_descr`=:short_descr,`employment_type_id`=:employment_type_id,
+    `address`=:addres,`published`=:published WHERE `vacancy_id` = :vacancy_id';
+$result = $db->prepare($sql);
+$result->bindParam(':vacancy_id',$_POST['vacancy_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':employer_id', $_POST['employer_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':industry_id', $_POST['industry_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':position', $_POST['position'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':salary', $_POST['salary'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':salary_currency_id', $_POST['salary_currency_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':required_experience', $_POST['required_experience'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':city_id', $_POST['city_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':post_date', $_POST['post_date'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':info', $_POST['infos'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':short_descr', $_POST['short_descr'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':employment_type_id', $_POST['employment_type_id'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':addres', $_POST['address'. $vacans['vacancy_id']], PDO::PARAM_STR);
+$result->bindParam(':published', $_POST['published'. $vacans['vacancy_id']], PDO::PARAM_STR);
+
+return $result->execute();
+continue;
+
+ }
      } echo ' </table></form>';
+
+  
 
      
     
