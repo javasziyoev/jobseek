@@ -9,10 +9,11 @@ You are my Moderator
 
 </div><button ></button><?php 
 require_once('/models/Panels.php');?>
-<button type="submit" onclick="showit()" >List of vacancies</button>
 
 <?php 
-Panels::actionModer();
+Panels::actionModer();?>
+
+<?php 
  Panels::getAllFJobs();
 ?>
 
