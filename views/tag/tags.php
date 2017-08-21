@@ -19,7 +19,43 @@
                                {$i++;}
                                echo $i;
              ?> vacancies</div>
-            <div></div>
+            
+            <div>
+                <label>City</label><br>
+                <select name = "selectCity" class="select-category select-city">
+                    <?php
+                    require_once(ROOT . '/models/User.php');
+                    $fuck = User::getcity();       
+                            foreach($fuck as $Duck)
+                            {
+                            echo '<option value = '.$Duck['city_id'].'>';
+
+
+                            echo ''.$Duck['city_name'].'</option>';
+                            $i++;
+                            }
+                    ?>
+                </select>
+            </div>
+
+            <div>Salary</div>
+            <div>
+                <label>Employment type</label>
+
+            <select name ="employment_type" class="select-category">
+            <?php
+            
+            require_once('/models/User.php');
+             $curr=User::getEmployment_type();
+             foreach($curr as $current)
+             {
+echo'<option value='.$current['employment_type_id'].'>'.$current['employment_type_name'].'</option>';
+             }
+             ?>
+            </select>
+
+
+            </div>
 
         </div>
 
