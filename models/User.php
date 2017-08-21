@@ -288,6 +288,7 @@ public static function checkLogged()
     if (isset($_SESSION['user'])) {
         return $_SESSION['user'];
     }
+
     header("Location: /user/signin");
 }
 

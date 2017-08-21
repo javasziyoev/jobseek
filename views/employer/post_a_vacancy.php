@@ -8,7 +8,8 @@
             <input name ="position" type="text" name="position" placeholder="Position"><br>
             <input name ="salary"   type="text" name="salary" placeholder="Salary">
               <select name ='curency'  class="select-category">
-                 <?php
+                 <?php 
+          
                 
                 require_once('/models/User.php');
                  $curr=User::getCurrent();
