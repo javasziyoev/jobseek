@@ -3,11 +3,11 @@
 
 <div id="wrapper">
     <section id="sign-up-content">
-        <label>Log in</label>
+        <p>Sign in to Job Seeker</p>
         <form action="#" method="POST">
-           <input type="text" placeholder="Email" name="loginemail">
-           <input type="password" placeholder="Password" name="loginpassword">
-           <input type="submit" name="loginsubmit" value="Sign in">
+           <input type="text" placeholder="Email" name="loginemail" class="input-text" ><br>
+           <input type="password" placeholder="Password" name="loginpassword" class="input-text" ><br><br>
+           <input type="submit" name="loginsubmit" value="Sign in" class="sign-in-button">
         </form>
     </section>
 
