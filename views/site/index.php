@@ -95,9 +95,14 @@
 ';                echo ' <span class="vacancy-of-the-day-title">';
                  echo $getJobs['position'].'</span>';
                   echo '   <span class="vacancy-of-the-day-salary">';
-                  echo $getJobs['salary'].'</span>';
-
-                 echo $getJobs['salary_currency_id'];
+                  echo $getJobs['salary'].' ';
+                  $sql = 'SELECT * FROM `currency` WHERE currency_id='.$getJobs['salary_currency_id'];
+                  $result=$db->prepare($sql);
+                  $result->execute();
+                  $user = $result->fetch();
+     
+                  echo $user['currency_code'].'</span>';           
+                     
                  $sql = 'SELECT * FROM `employer` WHERE employer_id ='.$getJobs['employer_id'];
                  $result = $db->prepare($sql);
                  $result->execute();
