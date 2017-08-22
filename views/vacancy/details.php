@@ -1,6 +1,13 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 
+<?PHP
+
+$db=Db::getConnection();
+$uri = Router::getURI();
+$internalRoute=preg_replace('~vacancy/details/~','',$uri);
+echo $internalRoute;
+?>
 <div id="wrapper">
     <section id="vacancy-details-content">
         <h1 class="vacancy-name">Название вакансии</h1>
