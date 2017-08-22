@@ -29,6 +29,7 @@ require_once('/models/Panels.php');?>
             <section id="content-tab1">
 
 <?php //для вакансий
+
 Panels::actionModer();?>
     </section>
     <section id="content-tab2">
