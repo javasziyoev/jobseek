@@ -12,12 +12,12 @@ public function actionIndex($page){
     $res = News::getNews($page,$cubes);
     ///
     require_once(ROOT.'/views/news/index.php');
-    return $res;
+    
 }
 
 public function actionView($col){
-    $cubes = 8;
-   
+    $c = News::getView($col);
+    print_r($c[0][1]);
     require_once(ROOT. '/views/news/newsevent.php');
 }
 

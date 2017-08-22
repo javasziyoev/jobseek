@@ -39,7 +39,25 @@ class News
 				   $i++;
 				}}
 				return $Arr;
+		}}
+	public static function getView($id){
+		$Arr = [];
+		$i = 0; 
+		$db=Db::getConnection();
+		$sql = "SELECT * FROM `news` WHERE `id` = ".' '.$id;
+		$result=$db->prepare($sql);
+		$result->bindParam(':per', $per,PDO::PARAM_STR);
+		$result->execute();
+	
+		while( $user = $result->fetch()){
+			if($user)
+			{
+			   $Arr[$i]= $user;
+			   $i++;
+			}
 		}
+		return $Arr;
+	
 	}
 	
 }
