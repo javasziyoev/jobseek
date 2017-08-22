@@ -4,28 +4,31 @@
     <link href="/template/css/style.css" type="text/css" rel="stylesheet">
  </head>
 <body>
-<div>
-<div style="height:100px;">
-</div>
-<div class="cms-announce-tiles" style="width:75%;margin-left:20%;min-width:900px;">
-    
+
+
+<div style="width:100%">
+<div style="width:600px;border:solid;">
  <?php
         $k = 0;  
         while($k < $cubes){
             if ($res[$k][0] == 1)break;
             echo
-    '<a href="/news/view/'.$res[$k][0].'" class="cms-announce-tile cms-announce-tile_3-4-5" style="display:inline-block;margin:15px;">
-        <div class="cms-announce-tile__image-wrapper" style="border solid;"><img src="https://hhcdn.ru/icms/10116446.jpeg" class="cms-announce-tile__image">
-        </div><span class="bloko-link">'.$res[$k][1].'</span>
-        
-    </a>';
+            '<div style="width:500px;">
+            <div><img src="https://hhcdn.ru/icms/10116446.jpeg"></div>
+            <div style="display: block;">
+                <a href="#">'.$res[$k][1].'</a>
+                <h6>'.$res[$k][2].'</h6>
+                <p>'.$res[$k][3].'</p>
+            </div>
+        </div>';
     
             $k++;
             }
     ?>
     
 </div>
-<div>
+</div>
+
 <div class="page">
     <?php 
     $i = 1;
