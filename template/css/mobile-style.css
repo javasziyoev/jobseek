@@ -83,3 +83,8 @@
 .width-900 {
     width: 100%;
 }
+
+.button-post:hover {
+    color: #fff;
+    background-color: #333;
+}
