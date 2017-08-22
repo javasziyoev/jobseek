@@ -60,3 +60,31 @@
     color: #333;
     border-color: #333;
 }
+
+#news ul {
+    display: initial;
+}
+
+#news-content {
+    width: none;
+}
+
+#newsy {
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.4em;  
+}
+
+
+#news-content {
+    width: none;
+   }
+
+.width-900 {
+    width: 100%;
+}
+
+.button-post:hover {
+    color: #fff;
+    background-color: #333;
+}
