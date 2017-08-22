@@ -12,12 +12,16 @@
  <?php
         $k = 0;  
         while($k < $cubes){
+            if ($res[$k][0] == 1)break;
             echo
     '<a href="/news/view/'.$res[$k][0].'" class="cms-announce-tile cms-announce-tile_3-4-5" style="display:inline-block;margin:15px;">
         <div class="cms-announce-tile__image-wrapper" style="border solid;"><img src="https://hhcdn.ru/icms/10116446.jpeg" class="cms-announce-tile__image">
-        </div><span class="bloko-link">Еще больше цифр про людей</span>
+        </div><span class="bloko-link">'.$res[$k][1].'</span>
+        
     </a>';
-            $k++;}
+    
+            $k++;
+            }
     ?>
     
 </div>
@@ -28,7 +32,7 @@
     while($i < $e + 1){
         echo '<a href="/news/page-'.$i.'" >'.$i.'</a>';
         if ($i == 10)break;
-        if ($res[$k][0] == false)break;
+        
         $i++;
     }
     if($e > 10){

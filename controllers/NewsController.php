@@ -10,7 +10,6 @@ public function actionIndex($page){
     $e = floor($k['COUNT(*)'] / $cubes) + 1;
     //get news from BD
     $res = News::getNews($page,$cubes);
-  
     ///
     require_once(ROOT.'/views/news/index.php');
 }
