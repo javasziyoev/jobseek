@@ -81,7 +81,7 @@
            
           <section id="featured-jobs-content">
             <h3 class="dark-gray-text">Featured jobs</h3>
-            <div class="vacancies-of-the-day" id="inner-content">
+            <div class="vacancies-of-the-day" id="inner-content" style="padding-left: 0px;">
                       <?php            
                 require_once(ROOT.'/models/User.php');
                 $getFJobId = User::getFJobId();

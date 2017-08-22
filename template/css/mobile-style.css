@@ -23,3 +23,40 @@
 .search-button {
     display: none;
 }
+
+#jobs-at-content {
+    display: none;
+}
+
+.logo {
+    display: none;
+}
+
+#inner-content {
+    padding: 10px 1em;
+}
+
+#no-mob {
+    display: none;
+}
+
+#top-jobs-content {
+    padding: 1em 0;
+}
+
+#header-content {
+    padding-top: .8em;
+}
+
+.vacancies-of-the-day {
+    display: inline-block;
+}
+
+.vacancies-of-the-day-item {
+    width: 100%;
+}
+
+.button-post {
+    color: #333;
+    border-color: #333;
+}

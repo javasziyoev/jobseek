@@ -75,15 +75,15 @@
                           <li><a href="#">Services description</a></li>
                       </ul>
                   </li>
-                  <li>
-                      <a href="#" title="Companies">Companies</a>
+                  <li id="no-mob">
+                      <a href="#" title="Companies" style="display: none;">Companies</a>
                       <ul>
                           <li><a href="#">Catalog of companies</a></li>
                           <li><a href="#">Jobs by industry</a></li>
                       </ul>
                   </li>
-                  <li>
-                      <a href="#" title="Help">Help</a>
+                  <li id="no-mob">
+                      <a href="#" title="Help" style="display: none;">Help</a>
                       <ul>
                           <li><a href="#">Support community</a></li>
                           <li><a href="/help/writeus">Write to us</a></li>
