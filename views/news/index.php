@@ -7,13 +7,13 @@
 <div>
 <div style="height:100px;">
 </div>
-<div class="cms-announce-tiles" style="width:75%;margin-left:16%;min-width:900px;">
+<div class="cms-announce-tiles" style="width:75%;margin-left:20%;min-width:900px;">
     
  <?php
         $k = 0;  
         while($k < $cubes){
             echo
-    '<a href="/news/view/'.$res[$k][0].'" class="cms-announce-tile cms-announce-tile_3-4-5" style="margin:15px;">
+    '<a href="/news/view/'.$res[$k][0].'" class="cms-announce-tile cms-announce-tile_3-4-5" style="display:inline-block;margin:15px;">
         <div class="cms-announce-tile__image-wrapper" style="border solid;"><img src="https://hhcdn.ru/icms/10116446.jpeg" class="cms-announce-tile__image">
         </div><span class="bloko-link">Еще больше цифр про людей</span>
     </a>';
