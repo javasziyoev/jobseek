@@ -48,4 +48,6 @@
               
             </div>  
           </section></div>
+
+          <!-- ТИмур запили нормальный вывод здесь , спасибо -->
 <?php include ROOT . '/views/layouts/footer.php'; ?>
