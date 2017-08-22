@@ -1,74 +1,70 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 
-<?PHP
 
-$db=Db::getConnection();
-$uri = Router::getURI();
-$internalRoute=preg_replace('~vacancy/details/~','',$uri);
-echo $internalRoute;
-?>
 <div id="wrapper">
     <section id="vacancy-details-content">
-        <h1 class="vacancy-name">Название вакансии</h1>
-        <h2><a href="" class="company-name">Название компании</a></h2>
+    <?php require_once(ROOT.'/models/Details.php') ;
+                 $details =  Details::tagSearch();
+                 
+    ?>
+        <h1 class="vacancy-name"><?php  echo $details[0]['position'];?></h1>
+        <h2> <a href="" class="company-name">  <?php 
+        echo $details[1]['company_name'];
+        
+        ?></a></h2>
 
         <div class="vacancy-properties">
             <div class="salary-content">
-                <label class="salary-level">Salary level</label>
-                <span class="salary-value">salary not specified</span>
+                <label class="salary-level">Salary</label>
+                <span class="salary-value"><?php  echo $details[0]['salary'].'  '.$details[3]['currency_code'];?></span>
             </div>
 
             <div class="salary-content">
                 <label class="salary-level">City</label>
-                <span class="salary-value">Moscow</span>
+                <span class="salary-value"><?php  echo $details[2]['city_name'];?></span>
             </div>
 
-            <div class="salary-content">
+             <div class="salary-content">
                 <label class="salary-level">Required experience</label>
-                <span class="salary-value">not required</span>
-            </div>
+                <span class="salary-value"><?php  echo $details[0]['required_experience'];?></span>
+            </div> 
         </div>
 
         <div class="vacancy-info">
-            Приглашаем на работу в магазины «Lady&Gentleman City»!
-            Требования:
-            Гражданство РФ
-            Коммуникабельность, энергичность, грамотная речь, желание работать в fashion-индустрии
-            Возможно без опыта работы
-            Обязанности:
-            Активное обслуживание покупателей в соответствии с корпоративными стандартами
-            Формирование базы постоянных клиентов
-            Обеспечение выкладки и развеска по стандартам мерчендайзинга
-            Компания рада предложить:
-            Официальное оформление по ТК РФ с первого рабочего дня (никаких «стажировок»)
-            Оплачиваемый отпуск и больничный лист
-            Удобный график 2/2 по 12 часов, из которых 1,5 часа – перерывы на отдых
-            Работу в самых популярных ТРЦ, выбор Вашего места работы с учетом места жительства
-            Интересную работу с наиболее известными мировыми брендами – Вы всегда в курсе последних тенденций!
-            Невероятно интересное обучение торговым маркам, технике продаж, мерчендайзингу, модным тенденциям наступающих сезонов – за счет компании и в процессе работы (без «предварительных курсов» и т.п.)
-            Стильную, комфортную и модную форменную одежду
-            Всегда своевременное начисление зарплаты полностью на банковскую карту
+        <?php  echo $details[0]['info'];?>
+           
         </div>
 
         <div>
             <label class="info-label block-emp">Employment type:</label>
-            <span style="display: block; margin-bottom: 1em;">Full time, shift schedule</span>
+            <span style="display: block; margin-bottom: 1em;"><?php  echo $details[4]['employment_type_name'];?></span>
         </div>
         <div>
             <label class="info-label block-cont">Contact information:</label>
-            <span style="display: block; margin-bottom: .8em;">Имя контакта</span>
+            <span style="display: block; margin-bottom: .8em;"><?php 
+        echo $details[1]['contact_first_name'].'  '.$details[1]['contact_last_name'];
+        
+        ?></span>
             <div>
-                <label class="info-contact-label block-phone">Phone:</label>
-                <span>+7 (123) 456 78 90</span>
+                
+                
+                <span><?php 
+        echo $details[1]['contact_cellphone'];
+        echo '<br/>'.$details[1]['contact_cellphone_ext'];
+        
+        ?></span>
             </div>
             <div>
                 <label class="info-contact-label block-email">Email:</label>
-                <span>huipizda@mail.ru</span>
+                <span><?php 
+        echo $details[1]['contact_email'];
+        
+        ?></span>
             </div>
         </div>
 
-        <input type="submit" value="Respond" class="post-button respond-button">
+        <!-- <input type="submit" value="Respond" class="post-button respond-button"> -->
     </section>
 </div>
 
