@@ -16,12 +16,14 @@ html {
     text-decoration-color: rgb(255, 255, 255);
     text-decoration-line: none;
     text-decoration-style: solid;
+   
 }
 
 body { 
     background: #fff;
     margin: 0%; 
     padding: 0%;
+    
 }
 
 #header-content {

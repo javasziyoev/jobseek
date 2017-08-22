@@ -6,7 +6,7 @@ public function actionIndex($page){
    
     // bottom navigator
     $k = News::getAmount();
-    $cubes = 10;
+    $cubes = 8;
     $e = floor($k['COUNT(*)'] / $cubes) + 1;
     //get news from BD
     $res = News::getNews($page,$cubes);
