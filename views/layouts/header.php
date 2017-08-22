@@ -38,12 +38,13 @@
             else {
                         require_once(ROOT . '/models/user.php');
                         $userId = User::checkLogged();
+                        $user = User::getUserById($userId);
                        
                 echo '
                 <div>
                     <ul id="nav" class="nav-bar-ul">
                         <li>
-                            <a href="" style="background-color: #333; line-height: 8px;">'.$userId.'</a>
+                            <a href="" style="background-color: #333; line-height: 8px;">'.$user['first_name'].'</a>
                             <ul>
                                 <li><a href="/cabinet">Profile</a></li>
                                 <li><a href="/cabinet/favorite">Favorites</a></li>

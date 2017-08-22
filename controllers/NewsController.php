@@ -17,7 +17,7 @@ public function actionIndex($page){
 
 public function actionView($col){
     echo $col;
-   
+    require_once(ROOT. '/views/news/newsevent.php');
 }
 
 public function actionCategory()
