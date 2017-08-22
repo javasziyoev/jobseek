@@ -67,7 +67,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
              $som=""; $som2="";
                 foreach($tags as $tag)
                 {echo '  <div class="vacancy-post">
-                    <a href="" class="vacancy-title">'.$tag['position'].'</a>';
+                    <a href="/vacancy/details/'.$tag['vacancy_id'].'" class="vacancy-title">'.$tag['position'].'</a>';
                    echo ' <div class="salary">  <label>'.$tag['salary'].'</label><label>';
                    $sql = 'SELECT * FROM `currency` WHERE currency_id ='.$tag['salary_currency_id'];
                    $result = $db->prepare($sql);
@@ -150,7 +150,7 @@ document.getElementsByClassName('catalog-main')[0].innerHTML=all;
 
 document.getElementsByClassName('catalog-main')[0].innerHTML=begining;
           var selectedOption = select.options[select.selectedIndex];
-var cityes=[],some=[];
+var cityes=[],some=[];all2='';
 cityes = document.getElementsByClassName('vacancy-post');
 for(var i =0 ; i<cityes.length;i++)
   {
