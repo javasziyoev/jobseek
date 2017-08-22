@@ -28,6 +28,7 @@
     while($i < $e + 1){
         echo '<a href="/news/page-'.$i.'" >'.$i.'</a>';
         if ($i == 10)break;
+        if ($res[$k][0] == false)break;
         $i++;
     }
     if($e > 10){
