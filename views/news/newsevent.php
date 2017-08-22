@@ -3,7 +3,7 @@
 
 <div id="wrapper">
 <section id="vacancy-details-content">
-<h1 class="vacancy-name">Название Новости</h1>
+<h1 class="vacancy-name"></h1>
 <h2><a href="" class="company-name">Дата</a></h2>
 <!--
 <div class="vacancy-properties">

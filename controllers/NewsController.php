@@ -12,15 +12,18 @@ public function actionIndex($page){
     $res = News::getNews($page,$cubes);
     ///
     require_once(ROOT.'/views/news/index.php');
+    return $res;
 }
 
 public function actionView($col){
-    echo $col;
+    $cubes = 8;
+   
     require_once(ROOT. '/views/news/newsevent.php');
 }
 
 public function actionCategory()
 {
+
 
    
 }
