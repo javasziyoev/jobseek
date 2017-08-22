@@ -45,6 +45,11 @@ class VacancyController {
         require_once(ROOT. '/views/vacancy/details.php');
     }
 
+    public function actionAll() {
+        require_once(ROOT. '/views/vacancy/alluserVacancy.php');
+        
+
+    }
 
 }
 
