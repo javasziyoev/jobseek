@@ -27,7 +27,7 @@ class News
 			$page = intval($page);
 			$per = ($page - 1) * $cubes;
 			$db=Db::getConnection();
-			$sql = "SELECT * FROM `news` WHERE 1 order by `id` limit 12 OFFSET".' '.$per;
+			$sql = "SELECT * FROM `news` WHERE 1 ORDER BY id DESC limit 12 OFFSET".' '.$per;
 			$result=$db->prepare($sql);
 			$result->bindParam(':per', $per,PDO::PARAM_STR);
 			$result->execute();
