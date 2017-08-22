@@ -91,7 +91,7 @@
                 {
                  
                  echo '              <div class="vacancies-of-the-day-item ">
-                <a href="">
+                <a href="/vacancy/details/'.$getJobs['vacancy_id'].'">
 ';                echo ' <span class="vacancy-of-the-day-title">';
                  echo $getJobs['position'].'</span>';
                   echo '   <span class="vacancy-of-the-day-salary">';
