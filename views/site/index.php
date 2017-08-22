@@ -27,6 +27,38 @@
 </div>
 </section>
 
+
+<section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
+        <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto;" class="width-900">
+          <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
+            <div id="newsy">
+              <div><strong><a href="">Рынок труда: что случилось в 2015 году</a></strong></div>
+              <div>Date</div>
+            </div>
+
+            <div id="newsy">
+              <div><strong><a href="">Отдых работе не помеха</a></strong></div>
+              <div>Date</div>
+            </div>
+            <div id="newsy">
+              <div><strong><a href="">Работай. Учись. Отдыхай!</a></strong></div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Анал. Карнавал. Пидорсы!</a></strong></div>
+              <div>Date</div>
+            </div>
+          </ul>
+          
+          <br style="clear:both" />
+        </div>    
+          
+      </section>
+
+
+
+
+
   <div id="wrapper">
       <section id="top-jobs-content">
           <section id="jobs-at-content">
