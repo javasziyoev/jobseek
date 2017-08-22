@@ -22,7 +22,7 @@
             
             <div>
                 <label>City</label><br>
-                <select name = "selectCity" class="select-category select-city"onchange="changing(this)">
+                <select name = "selectCity" class="select-category select-city"  onchange="changing(this)">
                     <?php
                     require_once(ROOT . '/models/User.php');
                     $fuck = User::getcity();       
@@ -42,7 +42,7 @@
             <div>
                 <label>Employment type</label>
 
-            <select name ="employment_type" class="select-category">
+            <select name ="employment_type" class="select-category"  onchange="changing2(this)" >
             <?php
             
             require_once('/models/User.php');
@@ -90,7 +90,15 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
        $som2=$tag['vacancy_id'];
        
                         echo '                <div> <span><label class="city">'.$som.' · </label>';
-                        echo '<label class="post-date">'.$tag['post_date'].'</label> </span> </div></div>';
+                        echo '<label class="post-date">'.$tag['post_date'].'</label> <br/>
+                        <label class="jobid">';
+                        if( $tag['employment_type_id']==1)
+                        {echo 'part-time job';}
+                        if( $tag['employment_type_id']==2)
+                        {echo 'full-time job';}
+
+                         echo ' · </label>
+                        </span> </div></div>';
                         echo '<form method = "POST"><button name = "favor" value = '.$som2.'>Add to favorites</button></form>';
                         
                         if(isset($_POST['favor']))
@@ -111,15 +119,50 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
     </section>
 </div>
 <script>
+var begining = document.getElementsByClassName('catalog-main')[0].innerHTML;
+document.getElementsByClassName('catalog-main')[0].innerHTML=begining;
+var cityes=[],some=[],all='',all2='';
+var selectedOption=document.getElementsByClassName('select-city')[0].options[0];
+cityes = document.getElementsByClassName('vacancy-post');
+for(var i =0 ; i<cityes.length;i++)
+  {
+  if(selectedOption.text==cityes[i].innerHTML.split('<label class="city">')[1].split(' · </label>')[0]){
+  all+=(cityes[i].innerHTML);
+   }
+  }
+document.getElementsByClassName('catalog-main')[0].innerHTML=all;
+//changing cityes
 function changing(select){
-            var selectedOption = select.options[select.selectedIndex];
-  var cityes=[]
- cityes = document.getElementsByClassName('vacancy-post');
-  for(var i =0 ; i<cityes.length;i++)
-    {
-    if(selectedOption.text==cityes[i].innerHTML.split('<label class="city">')[1].split(' · </label>')[0]){
-     document.write(cityes[i].innerHTML);
-      break;}
-    }
-}</script>
+
+document.getElementsByClassName('catalog-main')[0].innerHTML=begining;
+          var selectedOption = select.options[select.selectedIndex];
+var cityes=[],some=[],all='';
+cityes = document.getElementsByClassName('vacancy-post');
+for(var i =0 ; i<cityes.length;i++)
+  {
+  if(selectedOption.text==cityes[i].innerHTML.split('<label class="city">')[1].split(' · </label>')[0]){
+  all+=(cityes[i].innerHTML);
+   }
+  }
+document.getElementsByClassName('catalog-main')[0].innerHTML=all;
+
+}function changing2(select){
+
+document.getElementsByClassName('catalog-main')[0].innerHTML=begining;
+          var selectedOption = select.options[select.selectedIndex];
+var cityes=[],some=[];
+cityes = document.getElementsByClassName('vacancy-post');
+for(var i =0 ; i<cityes.length;i++)
+  {
+  if(selectedOption.text==cityes[i].innerHTML.split('<label class="jobid">')[1].split(' · </label>')[0]){
+  all2+=(cityes[i].innerHTML);
+   }
+  }
+document.getElementsByClassName('catalog-main')[0].innerHTML=all2;
+}
+
+
+             
+
+               </script>
 <?php include ROOT . '/views/layouts/footer.php'; ?>
