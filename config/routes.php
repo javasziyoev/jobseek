@@ -16,7 +16,7 @@ return array(
 	'panel/moder' => 'panel/moder',
 	'panel/admin' => 'panel/admin',
 	'panel/applicant' => 'panel/applicant',
-	'news' => 'news/index',
-	'news/id/([0-9]+)' => 'news/view/$1',
+	'news/page-([0-9]+)' => 'news/index/$1',
+	'news/view/([0-9]+)' => 'news/view/$1',
 	
 	);

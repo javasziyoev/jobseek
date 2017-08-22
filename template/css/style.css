@@ -1214,14 +1214,16 @@ ul {
     color: #09f
 }
 .cms-announce-tile__image-wrapper {
-    background-color: black;
+    background-color: inherit;
     position: relative;
     line-height: 0;
     margin-bottom: 5px;
-    overflow: hidden
+    overflow: hidden;
 }
 .cms-announce-tile__image {
-    border: 0;
+    border: 1px;
+    border-radius: 10%;
+    border-color: #2f2f2f;
     width: 101%;
     opacity: .8;
     z-index: 1;
@@ -1258,4 +1260,24 @@ ul {
     }
 }
 
+.page {
+    width:40%;
+    height:auto;
+    float:right;
+    margin-right:18%;
 
+}
+.page a{
+    display: inline-block;
+    font-size:20px;
+    border:solid;
+    width:5%;
+    height: 3%;
+    min-width: 20px;
+    text-align: center;
+    margin: 2px;
+}
+
+.page  a:active {
+    color: #f00; /* Цвет активной ссылки */ 
+   } 

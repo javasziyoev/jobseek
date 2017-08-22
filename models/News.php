@@ -4,60 +4,45 @@
 class News
 {
 
-	/** Returns single news items with specified id
-	* @rapam integer &id
-	*/
 
-	public static function getNewsItemByID($id)
-	{
-		$id = intval($id);
 
-		if ($id) {
-/*			$host = 'localhost';
-			$dbname = 'php_base';
-			$user = 'root';
-			$password = '';
-			$db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);*/
-			$db = Db::getConnection();
-			$result = $db->query('SELECT * FROM news WHERE id=' . $id);
-
-			/*$result->setFetchMode(PDO::FETCH_NUM);*/
-			$result->setFetchMode(PDO::FETCH_ASSOC);
-
-			$newsItem = $result->fetch();
-
-			return $newsItem;
-		}
+	public static function getAmount(){
+		$db = Db::getConnection();
+        $sql = 'SELECT COUNT(*) FROM `news`';
+        $result = $db->prepare($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $result->execute();
+        if ($result){
+            return $result->fetch();
+            }
+                
+        return false;
 
 	}
 
-	/**
-	* Returns an array of news items
-	*/
-	public static function getNewsList() {
-/*		$host = 'localhost';
-		$dbname = 'php_base';
-		$user = 'root';
-		$password = '';
-		$db = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);*/
-
-		$db = Db::getConnection();
-		$newsList = array();
-
-		$result = $db->query('SELECT id, title, date, author_name, short_content FROM news ORDER BY id ASC LIMIT 10');
-
-		$i = 0;
-		while($row = $result->fetch()) {
-			$newsList[$i]['id'] = $row['id'];
-			$newsList[$i]['title'] = $row['title'];
-			$newsList[$i]['date'] = $row['date'];
-			$newsList[$i]['author_name'] = $row['author_name'];
-			$newsList[$i]['short_content'] = $row['short_content'];
-			$i++;
+	public static function getNews($page,$cubes){
+		{
+			$Arr = [];
+			$i = 0; 
+			$page = intval($page);
+			$per = ($page - 1) * $cubes;
+			$db=Db::getConnection();
+			$sql = "SELECT * FROM `news` WHERE 1 order by `id` limit 12 OFFSET".' '.$per;
+			$result=$db->prepare($sql);
+			$result->bindParam(':per', $per,PDO::PARAM_STR);
+			$result->execute();
+		
+			while( $user = $result->fetch()){
+				if($user)
+				{
+				   $Arr[$i]= $user;
+				   $i++;
+				}}
+				return $Arr;
 		}
-
-		return $newsList;
+	}
 	
 }
 
-}
+
+?>
