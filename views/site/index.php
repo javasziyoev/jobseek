@@ -32,6 +32,7 @@
         <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto;" class="width-900">
           <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
             <div id="newsy">
+<<<<<<< HEAD
             <?php 
             $c = News::getAmount();
             $c = $c['COUNT(*)'];
@@ -55,6 +56,24 @@
               <div>Date</div>
             </div>';
             ?>
+=======
+              <div><strong><a href="">Рынок труда: что случилось в 2015 году</a></strong></div>
+              <div>Date</div>
+            </div>
+
+            <div id="newsy">
+              <div><strong><a href="">Отдых работе не помеха</a></strong></div>
+              <div>Date</div>
+            </div>
+            <div id="newsy">
+              <div><strong><a href="">Работай. Учись. Отдыхай!</a></strong></div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Анал. Карнавал. Пидорсы!</a></strong></div>
+              <div>Date</div>
+            </div>
+>>>>>>> d567185f3f1bf548f2bffb6ff27f1c1de959d0ee
           </ul>
           
           <br style="clear:both" />

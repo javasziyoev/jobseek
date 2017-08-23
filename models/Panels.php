@@ -142,64 +142,7 @@ continue;
 echo '____________________________________________________________________________________________________________<br/>';
 
       }
-    public static  function getFJob()
-      {$someArr=[];$i=0; 
-      
-          $db=Db::getConnection();
-          $sql = 'SELECT * FROM `featured_job`';
-          $result=$db->prepare($sql);
-          $result->execute();
-      
-          while( $user = $result->fetch()){
-              if($user)
-              {
-                 $someArr[$i]= $user;
-                 $i++;
-              }}
-             return $someArr;
-             }
-       public  static function getAllFJobs()
-       {
-     $getFJobId = Panels::getFJob();
-     $db = Db::getConnection();
-     echo '<form action ="" method = "POST"> <table>
-         <tr>
-         <th>
-         featured_job_id
-         </th>
-             <th>
-             vacancy_id  </th>
-         <th>
-         actuality
-         </th>
-      </tr>';
-     foreach($getFJobId as $getJobs)
-     {
-     
-      echo '<tr><td>';
-      echo '<input type = "text" name = "featured_job_id'. $getJobs['featured_job_id'].'" value  ='.$getJobs['featured_job_id'].'></td><td>';
-       echo '<input type = "text" name = "vacancy_id'. $getJobs['featured_job_id'].'" value  ='.$getJobs['vacancy_id'].'></td><td>';
-       
-      echo '<input type = "text" name = "actuality'. $getJobs['featured_job_id'].'" value  ='.$getJobs['actuality'].'></td><td>';
-      echo '<input type = "submit" name = "submit1'. $getJobs['featured_job_id'].'" value  ="prove"></td></tr>';
-      
-      if(isset($_POST['submit1'. $getJobs['featured_job_id']]))
-     {$sql = 'UPDATE `featured_job` SET
-      `featured_job_id`=:featured_job_id,`vacancy_id`=:vacancy_id,`actuality`=:actuality WHERE `featured_job_id`=:featured_job_id';
-     $result = $db->prepare($sql);
-     $result->bindParam(':featured_job_id',$_POST['featured_job_id'. $getJobs['featured_job_id']], PDO::PARAM_STR);
-     $result->bindParam(':vacancy_id', $_POST['vacancy_id'. $getJobs['featured_job_id']], PDO::PARAM_STR);
-     $result->bindParam(':actuality', $_POST['actuality'. $getJobs['featured_job_id']], PDO::PARAM_STR);
-     
-     return $result->execute();
-     
-     
-     } 
-     } 
-     echo ' </table></form>';
-     
-     
-     }
+  
     
 ////moder name
     public static function getPersonalName()

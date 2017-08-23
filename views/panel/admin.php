@@ -76,7 +76,14 @@
                 хуй4
             </section>
             <section id="content-tab5">
+<<<<<<< HEAD
                 <?php Panels::actionModer(); ?>
+=======
+<?php            require_once('/models/Panels.php');
+
+Panels::actionModer();            
+            ?>
+>>>>>>> d567185f3f1bf548f2bffb6ff27f1c1de959d0ee
             </section>
 
             <section id="content-tab6">
