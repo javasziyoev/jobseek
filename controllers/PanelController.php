@@ -44,6 +44,44 @@ class PanelController extends AdminBase{
 
         ///////
 
+        
+    if(isset($_POST['ba']))
+    {
+        $title = $_POST['title'];
+        $date1 = $_POST['date'];
+        $short = $_POST['short'];
+        $content = $_POST['content'];
+        //moving file
+        $last = News::getAmount();
+        $path = 'template/img/';
+        $name = $_FILES['preview']['name'];
+        $temp = $_FILES['preview']['tmp_name'];
+        move_uploaded_file($temp, $path . $last['COUNT(*)'].'.jpeg');
+        /////
+        //ERRORS
+        $err = false;
+        if (strlen($title) < 1){$err[] = 'title is empty';}
+
+        if (strlen($short) < 1){$err[] = 'short content is empty'; }
+        if (strlen($content) < 1){$err[] = 'content is empty'; }
+        if ($_FILES['preview']['error'] != 0){
+            $err[] = 'no file selected';
+            }
+            if(!$err){
+                Panels::addNews($title,$date1,$short,$content,$last);
+            }
+            
+            //print errors
+        $k = 0;
+            while($k < sizeof($err)){
+                echo $err[$k].'<br>';
+                $k++;
+            }
+    }
+   
+
+    
+//////
         require_once(ROOT . '/views/panel/admin.php');
         return true;
         }
@@ -74,12 +112,6 @@ class PanelController extends AdminBase{
 }
 public function actionAddNews()
 {
-    if(isset($_POST['ba']))
-    {
-        $at = $_POST['in1'];
-        
-    }
-    echo $at;
    
 }
 

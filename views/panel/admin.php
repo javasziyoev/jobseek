@@ -63,11 +63,12 @@
             </section>
 
             <section id="content-tab2">
-            <form method="POST">
-                <input name="in1" placeholder="Title"><br>
-                <input  name="in2" placeholder="Image thumbnail URL"><br>
-                <textarea name="t1" placeholder="Short description"></textarea><br>
-                <textarea name="t2" placeholder="Content"></textarea><br>
+            <form enctype="multipart/form-data" method="POST">
+                <input name="title" placeholder="Title" style="width:20%;"><br><br>
+                <input  type="date" name="date" placeholder="Date" style="width:20%;"><br><br>
+                <textarea name="short" placeholder="Short description"></textarea><br><br>
+                <textarea name="content" placeholder="Content"></textarea><br><br>
+                <input name="preview" type="file" accept="image/jpeg,image/png" ></input><br><br>
                 <input type="submit" name = "ba" value="Add" class="post-button" style="margin-top: 1px;">
             </form>
             </section>

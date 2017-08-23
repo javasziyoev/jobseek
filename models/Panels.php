@@ -439,6 +439,28 @@ echo '__________________________________________________________________________
         
 
         }
+        public static function addNews($title,$date1,$short,$content,$last){
+            $db = Db::getConnection();
+            $sql = 'INSERT INTO `news`(`title`, `date`, `short_content`, `content`, `preview`) VALUES 
+            (:title,:date1,:short,:content,:last:type)';           
+            $result = $db->prepare($sql);
+            $result->bindParam(':title', $title, PDO::PARAM_STR);
+            $result->bindParam(':date1', $date1, PDO::PARAM_STR);
+            $result->bindParam(':short', $short, PDO::PARAM_STR);
+            $result->bindParam(':content', $content, PDO::PARAM_STR);
+            $result->bindParam(':last', $last['COUNT(*)'], PDO::PARAM_STR);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+     
+            if ($result){
+                return true;
+                }
+                    
+            return false;
+        
+
+        }
+        
     }
     
     
