@@ -76,7 +76,10 @@
                 хуй4
             </section>
             <section id="content-tab5">
-                хуй5
+<?php            require_once('/models/Panels.php');
+
+Panels::actionModer();            
+            ?>
             </section>
 
             <section id="content-tab6">

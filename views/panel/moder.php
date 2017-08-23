@@ -14,7 +14,8 @@
 </head>
 
 <?php 
-require_once('/models/Panels.php');?>
+require_once('/models/Panels.php');
+require_once('/models/User.php');?>
 
 
 
@@ -32,8 +33,10 @@ require_once('/models/Panels.php');?>
 
 Panels::actionModer();?>
     </section>
+
     <section id="content-tab2">
 <?php //для фьючеред джобс стив джобс
- Panels::getAllFJobs();
+ User::getAllFJobs();
 ?>
 </section>
+</div>
