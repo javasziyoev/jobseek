@@ -13,22 +13,18 @@
     <link rel="stylesheet" href="/template/css/mjolnir.css" />   
 </head>
 
-<<<<<<< HEAD
-=======
-<?php 
-require_once('/models/Panels.php');
-require_once('/models/User.php');?>
->>>>>>> d567185f3f1bf548f2bffb6ff27f1c1de959d0ee
 
 
 
-<div id="wrapper" style="margin-top: 25px;">
+<div id="wrapper" style="margin-top: 25px;margin-right:10%;margin-left:0;">
 <div class="tabs">
             <input id="tab1" type="radio" name="tabs" checked>
             <label for="tab1" title="Sign up 1">Vacancies</label>
 
             <input id="tab2" type="radio" name="tabs">
             <label for="tab2" title="Sign up 2">Featured jobs</label>
+            <input id="tab3" type="radio" name="tabs" checked>
+            <label for="tab3" title="Sign up 3">Search publicated vacancies</label>
 
             <section id="content-tab1">
 
@@ -42,4 +38,11 @@ Panels::actionModer();?>
  User::getAllFJobs();
 ?>
 </section>
+<section id="content-tab3">
+<?php //для фьючеред джобс стив джобс
+ Panels::getPublVac();
+?>
+</section>
+
+</div>
 </div>

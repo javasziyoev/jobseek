@@ -77,6 +77,13 @@
             </section>
             <section id="content-tab5">
                 <?php Panels::actionModer(); ?>
+<<<<<<< HEAD
+=======
+<?php            require_once('/models/Panels.php');
+
+Panels::actionModer();            
+            ?>
+>>>>>>> 9bf172762caa9cf2874c3ce68aef5d8b4c9b865d
             </section>
 
             <section id="content-tab6">
