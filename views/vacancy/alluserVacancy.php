@@ -50,4 +50,66 @@
           </section></div>
 
           <!-- ТИмур запили нормальный вывод здесь , спасибо -->
+          <section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
+        <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto;" class="width-900">
+          <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="">Название вакансии 1</a></strong></div>
+              <div>Название отрасли</div>
+              <div>Date</div>
+            </div>
+          </ul>
+          
+          <br style="clear:both">
+        </div>    
+          
+      </section>
+
+
+
 <?php include ROOT . '/views/layouts/footer.php'; ?>
