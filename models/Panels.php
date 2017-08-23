@@ -25,10 +25,14 @@ class Panels
                 return $someArr;
     }
     public static function actionModer(){
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 73aaa54e9e7cbe73980523db062ae568e3662087
         
         $db = Db::getConnection();
         
-        require_once('/models/Panels.php');
+        
 $fucker = Panels::getVacansies();
 echo '<form action ="" method = "POST"> <table>
 <tr>

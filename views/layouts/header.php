@@ -27,7 +27,7 @@
         </div>
             
         <?php
-            require_once(ROOT .'/models/user.php');
+           
             if (User::isGuest()){
                 echo '
                 <div>
@@ -36,7 +36,7 @@
                     </div>';
             }
             else {
-                        require_once(ROOT . '/models/user.php');
+                        
                         $userId = User::checkLogged();
                         $user = User::getUserById($userId);
                        

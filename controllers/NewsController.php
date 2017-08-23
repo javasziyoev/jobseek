@@ -1,5 +1,5 @@
 <?php
-include_once(ROOT. '/models/news.php');
+
 class NewsController{
 
 public function actionIndex($page){

@@ -1,5 +1,5 @@
 <?php
-include_once(ROOT. '/models/user.php');
+
 abstract class AdminBase
 {
 

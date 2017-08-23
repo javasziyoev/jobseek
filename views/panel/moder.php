@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="/template/css/mjolnir.css" />   
 </head>
 
+<<<<<<< HEAD
+=======
 <?php 
 require_once('/models/Panels.php');
 require_once('/models/User.php');?>
+>>>>>>> d567185f3f1bf548f2bffb6ff27f1c1de959d0ee
 
 
 

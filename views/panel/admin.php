@@ -76,6 +76,7 @@
                 хуй4
             </section>
             <section id="content-tab5">
+                <?php Panels::actionModer(); ?>
 <?php            require_once('/models/Panels.php');
 
 Panels::actionModer();            
@@ -102,7 +103,7 @@ Panels::actionModer();
                         </tr>
                       
             <?php
-            require_once(ROOT.'/models/User.php');
+            
                 $forsectorsId = User::getSectorsId();
                 $forsectorsName = User::getSectorsName();  $i=0;         
                 

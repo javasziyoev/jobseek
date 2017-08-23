@@ -24,7 +24,7 @@
                 <label>City</label><br>
                 <select name = "selectCity" class="select-category select-city"  onchange="changing(this)">
                     <?php
-                    require_once(ROOT . '/models/User.php');
+                    
                     $fuck = User::getcity();       
                             foreach($fuck as $Duck)
                             {
@@ -45,7 +45,7 @@
             <select name ="employment_type" class="select-category"  onchange="changing2(this)" >
             <?php
             
-            require_once('/models/User.php');
+           
              $curr=User::getEmployment_type();
              foreach($curr as $current)
              {
@@ -61,7 +61,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
 
         <div class="catalog-main">
                 <?php 
-			 require_once(ROOT.'/models/Tags.php');
+			
              $tags =  Tags::tagSearch();
              $db=Db::getConnection();
              $som=""; $som2="";

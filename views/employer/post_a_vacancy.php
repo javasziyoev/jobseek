@@ -11,7 +11,7 @@
                  <?php 
           
                 
-                require_once('/models/User.php');
+               
                  $curr=User::getCurrent();
                  foreach($curr as $current)
                  {
@@ -26,7 +26,7 @@ echo'<option value='.$current['currency_id'].'>'.$current['currency_code'].'</op
                
             <?php
             
-            require_once('/models/User.php');
+            
              $curr=User::getIndustry();
              foreach($curr as $current)
              {
@@ -38,7 +38,7 @@ echo'<option value='.$current['industry_id'].'>'.$current['industry_name'].'</op
             <select name ="employment_type" class="select-category">
             <?php
             
-            require_once('/models/User.php');
+           
              $curr=User::getEmployment_type();
              foreach($curr as $current)
              {
@@ -49,7 +49,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
             City: <select name = "city" class="select-category">
             <?php
             
-            require_once('/models/User.php');
+            
              $curr=User::getcity();
              foreach($curr as $current)
              {

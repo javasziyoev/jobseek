@@ -114,7 +114,7 @@ color:red;}</style>;
                             <div>
                                 <select name = "selectclass" class="select-category">
                                     <?php
-                                    require_once(ROOT . '/models/User.php');
+                                   
                                      $fuck = User::getCompany();       
                                             foreach($fuck as $Duck)
                                             {
@@ -136,7 +136,7 @@ color:red;}</style>;
                             <div>
                                 <select name = "selectCity" class="select-category select-city">
                                 <?php
-                                require_once(ROOT . '/models/User.php');
+                                
                                  $fuck = User::getcity();       
                                         foreach($fuck as $Duck)
                                         {

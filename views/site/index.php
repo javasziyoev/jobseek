@@ -2,7 +2,7 @@
 
 <section id="banner-content">
 <div >
-<?php require_once(ROOT. '/models/user.php');
+<?php 
         if (User::isGuest()) 
         {
   echo '<form action="/user/signup" method="post">
@@ -32,6 +32,31 @@
         <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto;" class="width-900">
           <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
             <div id="newsy">
+<<<<<<< HEAD
+            <?php 
+            $c = News::getAmount();
+            $c = $c['COUNT(*)'];
+            echo
+             ' <div><strong><a href="news/view/'.$c.'">Рынок труда: что случилось в 2015 году</a></strong></div>
+              <div>Date</div>
+            </div>
+            
+            <div id="newsy">
+              <div><strong><a href="news/view/'.($c-1).'">Отдых работе не помеха</a></strong></div>
+              <div>Date</div>
+            </div>
+            
+            <div id="newsy">
+              <div><strong><a href="news/view/'.($c-2).'">Работай. Учись. Отдыхай!</a></strong></div>
+              <div>Date</div>
+            </div>
+            
+            <div id="newsy" style="border-color: #fafafa;">
+              <div><strong><a href="news/view/'.($c-3).'">Анал. Карнавал. Пидорсы!</a></strong></div>
+              <div>Date</div>
+            </div>';
+            ?>
+=======
               <div><strong><a href="">Рынок труда: что случилось в 2015 году</a></strong></div>
               <div>Date</div>
             </div>
@@ -48,6 +73,7 @@
               <div><strong><a href="">Анал. Карнавал. Пидорсы!</a></strong></div>
               <div>Date</div>
             </div>
+>>>>>>> d567185f3f1bf548f2bffb6ff27f1c1de959d0ee
           </ul>
           
           <br style="clear:both" />
@@ -115,7 +141,7 @@
             <h3 class="dark-gray-text">Featured jobs</h3>
             <div class="vacancies-of-the-day" id="inner-content" style="padding-left: 0px;">
                       <?php            
-                require_once(ROOT.'/models/User.php');
+               
                 $getFJobId = User::getFJobId();
                 $db = Db::getConnection();
                 
@@ -156,7 +182,7 @@
           <h3 class="dark-gray-text">Work in sectors</h3>
           <ul class="work-in-industry-ul">
             <?php
-            require_once(ROOT.'/models/User.php');
+            
                 $forsectorsId = User::getSectorsId();
                 $forsectorsName = User::getSectorsName();  $i=0;         
                 

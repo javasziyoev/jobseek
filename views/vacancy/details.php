@@ -4,7 +4,7 @@
 
 <div id="wrapper">
     <section id="vacancy-details-content">
-    <?php require_once(ROOT.'/models/Details.php') ;
+    <?php 
                  $details =  Details::tagSearch();
                  
     ?>

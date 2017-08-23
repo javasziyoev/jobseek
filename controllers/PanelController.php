@@ -1,5 +1,5 @@
 <?php
-include_once(ROOT. '/models/Panels.php');
+
 include_once(ROOT. '/components/AdminBase.php');
 class PanelController extends AdminBase{
 
@@ -67,7 +67,7 @@ class PanelController extends AdminBase{
         $db = Db::getConnection();
         require_once(ROOT . '/views/panel/moder.php');
         
-        require_once('/models/Panels.php');
+        
     
 
     
