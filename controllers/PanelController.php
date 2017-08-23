@@ -51,7 +51,7 @@ class PanelController extends AdminBase{
     
 
     public function actionApplicant(){
-        self::checkAdmin();
+        self::checkModer();
         $q = Panels::show_applicants();
         print_r($q[0]['applicant_id']);
         require_once(ROOT . '/views/panel/applicant.php');
@@ -63,7 +63,7 @@ class PanelController extends AdminBase{
 
     public function actionModer(){
         
-        
+        self::checkModer();
         $db = Db::getConnection();
         require_once(ROOT . '/views/panel/moder.php');
         
