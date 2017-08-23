@@ -60,6 +60,9 @@
 
       <section id="nav-bar-content">
           <ul id="nav" class="nav-bar-ul">
+                <li>
+                      <a href="/news/page-1" title="Looking for a job">News</a>
+                  </li>
                   <li>
                       <a href="#" title="Looking for a job">Looking for a job</a>
                       <ul>
