@@ -25,7 +25,6 @@ class Panels
                 return $someArr;
     }
     public static function actionModer(){
-        require_once(ROOT. '/views/panel/moder.php');
         
         $db = Db::getConnection();
         
