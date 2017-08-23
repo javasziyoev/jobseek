@@ -32,48 +32,33 @@
         <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto;" class="width-900">
           <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
             <div id="newsy">
-<<<<<<< HEAD
             <?php 
             $c = News::getAmount();
             $c = $c['COUNT(*)'];
+            $q = News::getView($c);
+            $w = News::getView($c-1);
+            $e = News::getView($c-2);
+            $r = News::getView($c-3);
             echo
-             ' <div><strong><a href="news/view/'.$c.'">Рынок труда: что случилось в 2015 году</a></strong></div>
-              <div>Date</div>
+             ' <div><strong><a href="news/view/'.$c.'">'.$q[0][1].'</a></strong></div>
+              <div>'.$q[0][2].'</div>
             </div>
             
             <div id="newsy">
-              <div><strong><a href="news/view/'.($c-1).'">Отдых работе не помеха</a></strong></div>
-              <div>Date</div>
+              <div><strong><a href="news/view/'.($c-1).'">'.$w[0][1].'а</a></strong></div>
+              <div>'.$w[0][2].'</div>
             </div>
             
             <div id="newsy">
-              <div><strong><a href="news/view/'.($c-2).'">Работай. Учись. Отдыхай!</a></strong></div>
-              <div>Date</div>
+              <div><strong><a href="news/view/'.($c-2).'">'.$e[0][1].'</a></strong></div>
+              <div>'.$e[0][2].'</div>
             </div>
             
             <div id="newsy" style="border-color: #fafafa;">
-              <div><strong><a href="news/view/'.($c-3).'">Анал. Карнавал. Пидорсы!</a></strong></div>
-              <div>Date</div>
+              <div><strong><a href="news/view/'.($c-3).'">'.$r[0][1].'</a></strong></div>
+              <div>'.$r[0][2].'</div>
             </div>';
             ?>
-=======
-              <div><strong><a href="">Рынок труда: что случилось в 2015 году</a></strong></div>
-              <div>Date</div>
-            </div>
-
-            <div id="newsy">
-              <div><strong><a href="">Отдых работе не помеха</a></strong></div>
-              <div>Date</div>
-            </div>
-            <div id="newsy">
-              <div><strong><a href="">Работай. Учись. Отдыхай!</a></strong></div>
-              <div>Date</div>
-            </div>
-            <div id="newsy" style="border-color: #fafafa;">
-              <div><strong><a href="">Анал. Карнавал. Пидорсы!</a></strong></div>
-              <div>Date</div>
-            </div>
->>>>>>> d567185f3f1bf548f2bffb6ff27f1c1de959d0ee
           </ul>
           
           <br style="clear:both" />

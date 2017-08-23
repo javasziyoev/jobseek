@@ -1,10 +1,10 @@
 <?php
 
-abstract class AdminBase extends ModerBase
+abstract class ModerBase 
 {
 
 
-    public static function checkAdmin()
+    public static function checkModer()
     {
         //checking user for auth
         $userId = User::checkLogged();
@@ -14,7 +14,7 @@ abstract class AdminBase extends ModerBase
 
 
         //if admin let him enter
-        if ($user['role'] == 'admin') {
+        if ($user['role'] == 'moder') {
             return true;
         }
 
