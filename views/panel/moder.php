@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="/template/css/mjolnir.css" />   
 </head>
 
-<?php 
-require_once('/models/Panels.php');?>
 
 
 

@@ -1284,3 +1284,18 @@ ul {
 .page  a:active {
     color: #f00; /* Цвет активной ссылки */ 
    } 
+
+
+   #newsy {
+    margin: 0 2em 0 0; border-right: 1px solid #cbd1d4; padding: 1em;
+   }
+
+   #news-content {
+    margin-left:auto;
+    margin-right:auto;
+    width:900px;
+   }
+
+   .width-900 {
+    width:900px;
+   }

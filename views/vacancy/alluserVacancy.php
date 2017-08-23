@@ -3,7 +3,7 @@
 <div id="wrapper" style="margin-top: 25px">
 <section id="featured-jobs-content">
             <h3 class="dark-gray-text">All vacancies by     <?php
-                            require_once(ROOT.'/models/UserVacancs.php');
+                   
                             $db = Db::getConnection();
                             
                 $getFJobId = UserVacancs::getEmployer();
@@ -16,7 +16,7 @@
             ?></h3>
             <div class="vacancies-of-the-day" id="inner-content" style="padding-left: 0px;">
                       <?php            
-                require_once(ROOT.'/models/Details.php') ;
+             
                 $details =  Details::tagSearch();
                 
                 foreach($getFJobId as $getJobs)

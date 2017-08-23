@@ -4,7 +4,7 @@
 
 <div id="wrapper">
     <section id="vacancy-details-content">
-    <?php require_once(ROOT.'/models/Details.php') ;
+    <?php 
                  $details =  Details::tagSearch();
                  
     ?>
@@ -63,6 +63,7 @@
         ?></span>
             </div>
         </div>
+        <a href = "/vacancy/all/<?php echo $details[1]['employer_id']; ?>">Look to all vacancies of this employer </a>
 
         <!-- <input type="submit" value="Respond" class="post-button respond-button"> -->
     </section>

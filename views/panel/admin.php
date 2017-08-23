@@ -76,7 +76,7 @@
                 хуй4
             </section>
             <section id="content-tab5">
-                хуй5
+                <?php Panels::actionModer(); ?>
             </section>
 
             <section id="content-tab6">
@@ -99,7 +99,7 @@
                         </tr>
                       
             <?php
-            require_once(ROOT.'/models/User.php');
+            
                 $forsectorsId = User::getSectorsId();
                 $forsectorsName = User::getSectorsName();  $i=0;         
                 
