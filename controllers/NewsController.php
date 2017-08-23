@@ -21,12 +21,7 @@ public function actionView($col){
     require_once(ROOT. '/views/news/newsevent.php');
 }
 
-public function actionCategory()
-{
 
-
-   
-}
 
 
 }

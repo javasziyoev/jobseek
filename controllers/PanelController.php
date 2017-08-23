@@ -72,6 +72,16 @@ class PanelController extends AdminBase{
 
     
 }
+public function actionAddNews()
+{
+    if(isset($_POST['ba']))
+    {
+        $at = $_POST['in1'];
+        
+    }
+    echo $at;
+   
+}
 
 
 

@@ -63,11 +63,13 @@
             </section>
 
             <section id="content-tab2">
-                <input placeholder="Title"><br>
-                <input placeholder="Image thumbnail URL"><br>
-                <textarea name="" placeholder="Short description"></textarea><br>
-                <textarea name="" placeholder="Content"></textarea><br>
-                <input type="submit" name = "b" value="Add" class="post-button" style="margin-top: 1px;">
+            <form method="POST">
+                <input name="in1" placeholder="Title"><br>
+                <input  name="in2" placeholder="Image thumbnail URL"><br>
+                <textarea name="t1" placeholder="Short description"></textarea><br>
+                <textarea name="t2" placeholder="Content"></textarea><br>
+                <input type="submit" name = "ba" value="Add" class="post-button" style="margin-top: 1px;">
+            </form>
             </section>
             <section id="content-tab3">
                 хуй3
@@ -77,13 +79,6 @@
             </section>
             <section id="content-tab5">
                 <?php Panels::actionModer(); ?>
-<<<<<<< HEAD
-=======
-<?php            require_once('/models/Panels.php');
-
-Panels::actionModer();            
-            ?>
->>>>>>> 9bf172762caa9cf2874c3ce68aef5d8b4c9b865d
             </section>
 
             <section id="content-tab6">
