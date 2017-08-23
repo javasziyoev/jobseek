@@ -24,11 +24,27 @@ class Panels
                 }}
                 return $someArr;
     }
-    public static function getVacansies1()
+    public static function getVacansies1($id)
     {
           $someArr=[];$i=0; 
             $db=Db::getConnection();
-            $sql = 'Select * from `vacancy` where published = 1';
+            $sql = 'Select * from `vacancy` where published = 1 and vacancy_id='.$id;
+            $result=$db->prepare($sql);
+            $result->execute();
+    
+            while( $user = $result->fetch()){
+                if($user)
+                {
+                   $someArr[$i]= $user;
+                   $i++;
+                }}
+                return $someArr;
+    }
+    public static function getVacansies2($position)
+    {
+          $someArr=[];$i=0; 
+            $db=Db::getConnection();
+            $sql = 'Select * from `vacancy` where published = 1 and position='.$position;
             $result=$db->prepare($sql);
             $result->execute();
     
@@ -43,9 +59,23 @@ class Panels
     public static function getPublVac(){
         
         $db = Db::getConnection();
-        
-        
-$fucker = Panels::getVacansies1();
+        $id=0;$position='';
+      echo '  <form action ="#" method = "POST"><input type = "text" name = "search" placeholder="write vacancyes id for search">
+      <input type="text" name ="possearch" placeholder="search by vacancies name">
+      <input type = "submit" name = "searchsubmit" value = "submit">
+        </form>';
+        if(isset($_POST['searchsubmit'])){
+        if(($_POST['search']!=''))
+        {$id=$_POST['search'];
+$fucker = Panels::getVacansies1($id);
+echo '1';
+}
+else if (($_POST['possearch']!=''))
+{
+    $fucker = Panels::getVacansies2($position); 
+    echo '2';
+}}
+if(($fucker)){
 echo '<form action ="" method = "POST"> <table>
 <tr>
 <th>
@@ -146,9 +176,9 @@ continue;
 
  }
      } echo ' </table></form>';
-
+    
   
-
+    }
      
     
     

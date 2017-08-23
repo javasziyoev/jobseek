@@ -16,7 +16,7 @@
 
 
 
-<div id="wrapper" style="margin-top: 25px;margin-right:10%;margin-left:0;">
+<div id="wrapper" style="margin-top: 25px;margin-left:0;">
 <div class="tabs">
             <input id="tab1" type="radio" name="tabs" checked>
             <label for="tab1" title="Sign up 1">Vacancies</label>
@@ -39,6 +39,7 @@ Panels::actionModer();?>
 ?>
 </section>
 <section id="content-tab3">
+
 <?php //для фьючеред джобс стив джобс
  Panels::getPublVac();
 ?>
