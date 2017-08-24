@@ -1,36 +1,90 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 
-
 <div id="wrapper">
-    <section id="vacancy-details-content">
-    <?php 
+      <section id="top-jobs-content">
+          
+          <section id="jobs-at-content">
+            <div style="text-align: center; width: 90%; height: 200px; background-color: orange; margin-left: 3%; margin-right: 3%; margin-bottom: 1em;">
+              For small add
+            </div>
+              <h3 class="dark-gray-text">Jobs at</h3>
+              <div>
+                  <ul>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Microsoft</a></span>
+                          <span class="jobs-count">42</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Google</a></span>
+                          <span class="jobs-count">5</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">China Bank</a></span>
+                          <span class="jobs-count">7</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Union Pay</a></span>
+                          <span class="jobs-count">2</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">NVIDIA</a></span>
+                          <span class="jobs-count">10</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Xiaomi</a></span>
+                          <span class="jobs-count">36</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Meizu</a></span>
+                          <span class="jobs-count">15</span>
+                        </div>
+                      </li>
+                  </ul>
+              </div>  
+          </section>
+           
+          <section id="vacancy-details-content" style="margin-left: 1em;">
+          <?php 
                  $details =  Details::tagSearch();
                  
     ?>
-        <h1 class="vacancy-name"><?php  echo $details[0]['position'];?></h1>
+        <h2 class="vacancy-name"><?php  echo $details[0]['position'];?></h2>
         <h2> <a href="" class="company-name">  <?php 
         echo $details[1]['company_name'];
         
         ?></a></h2>
 
         <div class="vacancy-properties">
-            <div class="salary-content">
+            <div class="salary-content" style="margin-bottom: .5em; margin-top: .5em;">
                 <label class="salary-level">Salary</label>
                 <span class="salary-value"><?php  echo $details[0]['salary'].'  '.$details[3]['currency_code'];?></span>
             </div>
 
-            <div class="salary-content">
+            <div class="salary-content" style="margin-bottom: .5em; margin-top: .5em;">
                 <label class="salary-level">City</label>
                 <span class="salary-value"><?php  echo $details[2]['city_name'];?></span>
             </div>
 
-             <div class="salary-content">
+             <div class="salary-content" style="margin-bottom: .5em; margin-top: .5em;">
                 <label class="salary-level">Required experience</label>
                 <span class="salary-value"><?php  echo $details[0]['required_experience'];?></span>
             </div> 
-            <div class="salary-content">
-                <label class="salary-level">Post_date</label>
+            <div class="salary-content" style="margin-bottom: .5em; margin-top: .5em;">
+                <label class="salary-level">Post date</label>    
                 <span class="salary-value"><?php  echo $details[0]['post_date'];?></span>
             </div> 
 
@@ -42,11 +96,11 @@
         </div>
 
         <div>
-            <label class="info-label block-emp">Employment type:</label>
+            <label class="info-label block-emp"><strong>Employment type:</strong></label>
             <span style="display: block; margin-bottom: 1em;"><?php  echo $details[4]['employment_type_name'];?></span>
         </div>
         <div>
-            <label class="info-label block-cont">Contact information:</label>
+            <label class="info-label block-cont"><strong>Contact information:</strong></label>
             <span style="display: block; margin-bottom: .8em;"><?php 
         echo $details[1]['first_name'].'  '.$details[1]['contact_last_name'];
         
@@ -61,7 +115,7 @@
         ?></span>
             </div>
             <div>
-                <label class="info-contact-label block-email">Email:</label>
+                <label class="info-contact-label block-email"><strong>Email:</strong></label>
                 <span><?php 
         echo $details[1]['contact_email'];
         
@@ -71,7 +125,17 @@
         <a href = "/vacancy/all/<?php echo $details[1]['employer_id']; ?>">Look to all vacancies of this employer </a>
 
         <!-- <input type="submit" value="Respond" class="post-button respond-button"> -->
-    </section>
+          </section>
+
+
+          <section id="reklama-bleat">
+          Отключите блокировщик рекламы плес.
+          </section>
+      </section>
+
+
 </div>
+
+
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>
