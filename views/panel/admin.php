@@ -79,10 +79,46 @@
                 Panels::getPublUsers();                    
                 ?>
             </section>
-            <section id="content-tab4">
-                хуй4
+            
+            <section id="content-tab4" style="height:500px;">
+            <form method="POST">
+                <input type = "text" name="personalname" placeholder="name" >
+                <div style="display:inline-block;width:25%;border:solid;float:right;">
+                <table cellspacing="30px;" style="margin:auto;">
+                <tr>
+                    <th>Id</th>
+                    <th>Nick</th>
+                    <th>Role</th>
+                </tr>
+                <?php
+                $i = 0;
+                $pers = Panels::getPersonalName();
+                while ($i < sizeof($pers[0])){
+                echo
+                '<tr>
+                <td>'.$pers[2][$i].' </td><td>'.$pers[0][$i].'</td><td>'.$pers[1][$i].'</td>
+                </tr>';
+                $i++;
+                }
+                ?>
+                </table>
+                </div>
+                <select name="personal" >
+                <option>Admin</option>
+                <option>Moder</option>
+                </select><br><br>
+                <input type = "text" name="personalpassword" placeholder="password"> 
+                
+                <br><br>
+                <input type="submit" name="adminex" value="add"><br><br>
+                <input type = "text" name="personaldelete" placeholder="id"> 
+                <input type="submit" name="adminex1" value="delete">
+                </form>
+                
             </section>
-            <section id="content-tab5">
+            
+            
+            <section id="content-tab5" style="width:900px;">
                 <?php Panels::actionModer(); ?>
             </section>
 

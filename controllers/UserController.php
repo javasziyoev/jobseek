@@ -38,13 +38,15 @@ class UserController
 			    $firstname = $_POST['firstname'];
 			    $lastname = $_POST['lastname'];	
                 $password = $_POST['password'];
-
+                echo $firstname;
 			    $email = $_POST['email'];	
                 $cellphone = $_POST['cellphone'];
                 require_once(ROOT. '/config/applicant_errors.php');
+                echo $firstname,$lastname,$password,$email,$cellphone;
                 if ($a_errors == false){
                     $password =  md5($password);
                     $result = User::registera($firstname,$lastname,$password,$email,$cellphone);
+                    
                     header("Location: /user/signin");
                    
                 }

@@ -474,9 +474,10 @@ echo '__________________________________________________________________________
     public static function getPersonalName()
     {   $Arr1=[];
         $Arr2=[];
+        $Arr3=[];
         $i=0; 
         $db=Db::getConnection();
-        $sql = 'SELECT `nick`,`role` FROM `gods` order by `id`';
+        $sql = 'SELECT `nick`,`role`,`id` FROM `gods` order by `id`';
         $result=$db->prepare($sql);
         $result->execute();
     
@@ -485,9 +486,11 @@ echo '__________________________________________________________________________
             {
                $Arr1[$i] = $user['nick'];
                $Arr2[$i] = $user['role'];
+               $Arr3[$i] = $user['id'];
+               
                $i++;
             }}
-            return Array($Arr1,$Arr2);
+            return Array($Arr1,$Arr2,$Arr3);
             
     }
 

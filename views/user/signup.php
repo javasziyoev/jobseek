@@ -30,8 +30,11 @@
                 <div>  <div id = "cellphone"></div> 
                     <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text" placeholder="Phone number">
                 </div>
+           
                 <p><input type="checkbox" name="agree" onclick="agreeForm(this.form)"> 
-    I agree </p>
+    I agree with  <a href = "/site/agreement">agreement</a> 
+    
+    </p>
 
                 <input type="submit" value="Register" name="submit1" class="post-button" disabled>
             </form>
@@ -175,7 +178,8 @@ color:rgb(239,84,108);}</style>;
                                 with the terms of use if the website.
                             </small><br>
                             <p><input type="checkbox" name="agree" onclick="agreeForm1(this.form)"> 
-    I agree </p>
+                            I agree with  <a href = "/site/agreement">agreement</a> 
+                            </p>
                             <input type="submit" name="submit2" value="Register" class="post-button">
                             <div style="width:48%;height:auto;float:right;position:relative;top:-450px;">
                             <?php if (isset($e_errors) && is_array($e_errors)): ?>

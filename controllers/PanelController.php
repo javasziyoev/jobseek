@@ -9,23 +9,9 @@ class PanelController extends AdminBase{
         self::checkAdmin();
         $sel = '';
         //show moders
-        $k = Panels::getPersonalName();
+ 
   
-        if(isset($_POST['delete'])){
-            $sel = $_POST['sel'];
-            $sel = $sel+1;
-            echo $sel;
-            Panels::deletePersonal($sel);
-            header("Location: /panel/admin");
-            
-        }
-        if(isset($_POST['add'])){
-        $name = $_POST['inp1'];
-        $password = $_POST['inp2'];
-        $role = $_POST['sel1'];
-        Panels::registerPersonal($name,$password,$role);
-        header("Location: /panel/admin");
-        }
+
         $r = Panels::adminStats();
         
         //sektors
@@ -40,7 +26,7 @@ class PanelController extends AdminBase{
             $c = $_POST['c'];
             Panels::selectDelete($c);
         }
-
+        
 
         ///////
 
@@ -82,6 +68,19 @@ class PanelController extends AdminBase{
 
     
 //////
+if(isset($_POST['adminex'])){
+    $add1 = $_POST['personalname'];
+    $add2 = $_POST['personalpassword'];
+    $add2 = md5($add2);
+    $add3 = $_POST['personal'];
+    Panels::registerPersonal($add1,$add2,$add3);
+}
+//
+if(isset($_POST['adminex1'])){
+    $del = $_POST['personaldelete'];
+    Panels::DeletePersonal($del);
+}
+//
         require_once(ROOT . '/views/panel/admin.php');
         return true;
         }

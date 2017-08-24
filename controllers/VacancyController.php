@@ -3,7 +3,9 @@
 
 class VacancyController {
     public function actionVacancy() {
-        
+        if (User::isGuest()){
+            header("Location: /index");
+        }
 			 if($_POST){
                 if (isset($_POST['submit'])) {
                     $position = $_POST['position'];
