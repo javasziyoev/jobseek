@@ -18,7 +18,7 @@ $user = $result->fetch();
 echo $user['company_name'];  
 ?></h3>
 <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto;" class="width-900">
-        <ul class="work-in-industry-ul" style="display: block; margin-top: 2em;">
+        <ul class="all-user-vacancies-ul" style="display: block; margin-top: 2em;">
         <?php            
         
            $details =  Details::tagSearch();
@@ -42,9 +42,7 @@ echo $user['company_name'];
             $result = $db->prepare($sql);
             $result->execute();
             $job=$result->fetch();
-            echo '<div>';
-            echo $job['company_name'];
-            echo '</div>'.$getJobs['post_date'];
+            echo $getJobs['post_date'];
             echo '
             </a>
             </li>';

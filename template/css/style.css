@@ -1349,3 +1349,7 @@ ul {
 #editButton:hover {
     color: rgb(29, 152, 220); 
 }
+
+.all-user-vacancies-ul {
+    list-style: none;
+}
