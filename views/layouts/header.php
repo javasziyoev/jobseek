@@ -36,15 +36,23 @@
                     </div>';
             }
             else {
-                        
-                        $userId = User::checkLogged();
+                $db = Db::getConnection();  
+                                      $userId = User::checkLogged();
+                                      
                         $user = User::getUserById($userId);
+                        $sql = 'SELECT * FROM `employer` WHERE employer_id='.$userId;
+                        $result = $db->prepare($sql);
+                        $result->execute();
+                        $users = $result->fetch();
+                        if($users=='') 
+                        { $users=$userId;
+            
                        
                 echo '
                 <div>
                     <ul id="nav" class="nav-bar-ul">
                         <li>
-                            <a href="" style="background-color: #333; line-height: 8px; margin-left: 5px;">'.$userId.'</a>
+                            <a href="" style="background-color: #333; line-height: 8px; margin-left: 5px;">'.$users.'</a>
                             <ul>
                                 <li><a href="/cabinet">Profile</a></li>
                                 <li><a href="/cabinet/favorite">Favorites</a></li>
@@ -54,7 +62,23 @@
                     </ul>
                 </div>
                 ';
+            } else {  echo '
+                <div>
+                    <ul id="nav" class="nav-bar-ul">
+                        <li>
+                            <a href="" style="background-color: #333; line-height: 8px; margin-left: 5px;">'.$users['first_name'].'</a>
+                            <ul>
+                                <li><a href="/cabinet">Profile</a></li>
+                                <li><a href="/cabinet/favorite">Favorites</a></li>
+                                <li><a href="/user/logout">Sign out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                ';
+
             }
+        }
         ?>
     </div>
 

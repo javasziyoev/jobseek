@@ -340,6 +340,7 @@ public static function auth($userId)
 {
 
     $_SESSION['user'] = $userId;
+    
 }
 
 public static function checkLogged()
