@@ -81,8 +81,7 @@ body {
 
 #featured-jobs-content {
     margin-left: 25px;
-    max-width: 600px;
-    min-width: 600px;
+    min-width: 60%;
 }
 
 #jobs-at-content ul {
