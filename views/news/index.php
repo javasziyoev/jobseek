@@ -14,7 +14,10 @@
         while($k < $cubes){
             if ($res[$k][0] == 1)break;
             echo
-            '<div style="display: inline-block; margin: 1em;">
+            '<div class="cms-announce-tile__image-wrapper">
+            <img src="'.$res[$k][6].'" >
+            </div>
+            <div style="display: inline-block; margin: 1em;">
             <div style="display: block; margin-left: 10px;">
                 <a href="view/'.$res[$k][0].'">'.$res[$k][1].'</a>
                 <h6>'.$res[$k][2].'</h6>
