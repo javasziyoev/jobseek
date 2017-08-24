@@ -1,5 +1,5 @@
 <?php
- require_once(ROOT . '/models/User.php');  
+ 
  
              $a_errors = [];
  
