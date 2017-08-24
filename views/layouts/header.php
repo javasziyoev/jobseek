@@ -71,7 +71,7 @@
                       </ul>
                   </li> -->
                   <li>
-                      <a href="/employer/post_a_vacancy" title="Post a vacancy">Post a vacancy</a>
+                      <a href="/employer/post_a_vacancy" title="Post a vacancy">Post a vacancy</a> 
                   </li>
                   <li >
                       <a href="#" title="Companies" id="no-mob">Companies</a>

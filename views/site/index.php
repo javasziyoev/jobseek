@@ -12,11 +12,6 @@
   </form>';}
   else {
     echo'
-    <form action="/employer/post_a_vacancy" method="post">
-    <div>
-    <input type="submit" class="button-post" name = "Post_a_CV" value="Register">
-    </div>
-    </form>
     <div>
     <form action="/employer/post_a_vacancy" method="post">
     <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
