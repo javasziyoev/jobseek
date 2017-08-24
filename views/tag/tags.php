@@ -7,7 +7,7 @@
     </section>
     <section id="vacancy-catalog-content">
         <div class="catalog-side-panel">
-            <div>Found <?php $i=0;           
+            <div style="margin-bottom: 1em;"><strong>Found <?php $i=0;           
               $db=Db::getConnection();
         $uri = Router::getURI();
         $internalRoute=preg_replace('~tag/~','',$uri);
@@ -18,11 +18,11 @@
                                while($count=$result->fetch())
                                {$i++;}
                                echo $i;
-             ?> vacancies</div>
+             ?> vacancies</strong></div>
             
             <div>
                 <label>City</label><br>
-                <select name = "selectCity" class="select-category select-city"  onchange="changing(this)">
+                <select style="margin-bottom: 1em;" name = "selectCity" class="select-category select-city"  onchange="changing(this)">
                     <?php
                     
                     $fuck = User::getcity();       
@@ -39,10 +39,11 @@
             </div>
 
             <div>Salary</div>
+            <input style="margin-bottom: 1em;" type="range" min="0" max="10000" step="1" value="500"> 
             <div>
                 <label>Employment type</label>
 
-            <select name ="employment_type" class="select-category"  onchange="changing2(this)" >
+            <select style="margin-bottom: 1em;" name ="employment_type" class="select-category"  onchange="changing2(this)" >
             <?php
             
            
@@ -66,8 +67,8 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
              $db=Db::getConnection();
              $som=""; $som2="";
                 foreach($tags as $tag)
-                {echo '  <div class="vacancy-post">
-                    <a href="/vacancy/details/'.$tag['vacancy_id'].'" class="vacancy-title">'.$tag['position'].'</a>';
+                {echo '<div class="vacancy-post"><div class="vacancy-postposted">';
+                   echo ' <a href="/vacancy/details/'.$tag['vacancy_id'].'" class="vacancy-title">'.$tag['position'].'</a>';
                    echo ' <div class="salary">  <label>'.$tag['salary'].'</label><label>';
                    $sql = 'SELECT * FROM `currency` WHERE currency_id ='.$tag['salary_currency_id'];
                    $result = $db->prepare($sql);
@@ -98,7 +99,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
                         {echo 'full-time job';}
 
                          echo ' · </label>
-                        </span> </div></div>';
+                        </span> </div></div></div>';
                         echo '<form method = "POST"><button name = "favor" value = '.$som2.'>Add to favorites</button></form>';
                         
                         if(isset($_POST['favor']))

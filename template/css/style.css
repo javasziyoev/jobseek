@@ -871,8 +871,9 @@ ul {
 
 #vacancy-catalog-content .catalog-side-panel {
     width: 220px;
-    background-color: #f2f2f2;
-    
+    border-right: 1px solid #cbd1d4;
+    padding-left: 1em;
+    padding-top: 1em;
     margin-right: 2em;
 }
 
@@ -917,7 +918,9 @@ ul {
 }
 
 
-
+.vacancy-postposted {
+    margin-bottom: 1.5em;
+}
 
 
 /* Всплывающее окно входа */
