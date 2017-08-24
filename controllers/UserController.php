@@ -11,7 +11,9 @@ class UserController
 		{
 
             
-            
+            if (!User::isGuest()){
+                header("Location: /index");
+            }
       
             if(isset($_POST['logsign'])){
                 $aa = $_POST['logemail'];
