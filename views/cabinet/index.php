@@ -3,7 +3,7 @@
 <div>
 <h1>
 <?php
-echo 'Hello ';
+print_r($user);
 if($user['first_name'])echo $user['first_name'];
 if($user['contact_first_name'])echo $user['first_name'];
 if($user['nick'])echo $user['nick'];
