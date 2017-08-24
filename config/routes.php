@@ -10,7 +10,7 @@ return array(
 	'vacancy/details/([0-9]+)' => 'vacancy/details', 
 	'vacancy/all'=>'vacancy/all',
 	'vacancy/all/([0-9]+)'=>'vacancy/all',	
-	'tag'=>'tag/index',
+	'tag' => 'tag/index',
 	'tag/([0-9]+)' => 'tag/index',
 	'cabinet' => 'cabinet/index',
 	'cabinet/favorite' => 'cabinet/favorite',
@@ -22,6 +22,6 @@ return array(
 	'news/page-([0-9]+)' => 'news/index/$1',
 	'news/view/([0-9]+)' => 'news/view/$1',
 	'index.php' => 'site/index', // actionIndex в SiteController
-	'index' => 'site/index',
-    'site/agreement'=>'site/agreement'
-	);
+	'site/agreement' => 'site/agreement',
+	'/' => 'site/index',
+);
