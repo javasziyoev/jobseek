@@ -1369,3 +1369,12 @@ ul {
 #mobad {
     display: none;
 }
+
+#reklama-bleat {
+    border: 10px solid orange;
+    background: orange;
+    width: 250px;
+    height: 350px;
+    position: relative;
+    right: -4%;
+}
