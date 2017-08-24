@@ -100,7 +100,7 @@ class Panels
                      website_url
                      </th>
                      <th>
-                     contact_first_name
+                     first_name
                      </th>
                      <th>
                      contact_last_name
@@ -126,7 +126,7 @@ class Panels
                          </td>
                          <td>  <input name = "website_url'. $vacans['employer_id'].'" type = "text" value ='. $vacans['website_url'].'>
                          </td>
-                         <td>  <input name = "contact_first_name'. $vacans['employer_id'].'" type = "text" value ='. $vacans['contact_first_name'].'>
+                         <td>  <input name = "first_name'. $vacans['employer_id'].'" type = "text" value ='. $vacans['first_name'].'>
                          </td>
                          <td>  <input name = "contact_last_name'. $vacans['employer_id'].'" type = "text" value ='. $vacans['contact_last_name'].'>
                          </td>
@@ -173,7 +173,7 @@ class Panels
     {                $someArr=[];$i=0; 
     $db=Db::getConnection();
         
-        $sql='SELECT * FROM `employer` WHERE employer_id LIKE "'.$argument.'%" OR company_name LIKE "'.$argument.'%" or contact_email LIKE "'.$argument.'%" OR contact_first_name LIKE "'.$argument.'%"';
+        $sql='SELECT * FROM `employer` WHERE employer_id LIKE "'.$argument.'%" OR company_name LIKE "'.$argument.'%" or contact_email LIKE "'.$argument.'%" OR first_name LIKE "'.$argument.'%"';
         $result=$db->prepare($sql);
         $result->execute();
         while( $user = $result->fetch()){
