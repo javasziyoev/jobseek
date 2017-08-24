@@ -2,7 +2,7 @@
     border: none;
     margin: 0% auto;
     padding: 0%;
-    width: 60%;
+    width: 95%;
     min-width: 700px;
     max-width: 1439px
 }
@@ -23,3 +23,6 @@
     padding: 0px 2% 1% 0%;
 }
 
+#reklama-bleat {
+    right: -2%;
+}
