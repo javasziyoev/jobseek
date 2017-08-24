@@ -150,7 +150,7 @@
                  $result = $db->prepare($sql);
                  $result->execute();
                  $job=$result->fetch();
-                 echo '<a href=""><span class="vacancy-of-the-day-company">';
+                 echo '<a href="/vacancy/all/'.$getJobs['employer_id'].'"><span class="vacancy-of-the-day-company">';
                  echo $job['company_name'];
                  echo '</span></a></a>
                  </div>';
