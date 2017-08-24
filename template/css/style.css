@@ -1299,3 +1299,8 @@ ul {
    .width-900 {
     width:900px;
    }
+
+
+.margin-right {
+    margin-right: .5em;
+}
