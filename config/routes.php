@@ -23,5 +23,5 @@ return array(
 	'news/view/([0-9]+)' => 'news/view/$1',
 	'index.php' => 'site/index', // actionIndex в SiteController
 	'index' => 'site/index',
-    
+    'site/agreement'=>'site/agreement'
 	);
