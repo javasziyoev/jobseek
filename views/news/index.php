@@ -16,7 +16,7 @@
             echo
             '<div style="display: inline-block; margin: 1em;">
             <div style="display: block; margin-left: 10px;">
-                <a href="'.$res[$k][0].'">'.$res[$k][1].'</a>
+                <a href="view/'.$res[$k][0].'">'.$res[$k][1].'</a>
                 <h6>'.$res[$k][2].'</h6>
                 <p>'.$res[$k][3].'</p>
             </div>
@@ -31,13 +31,14 @@
 <div class="page">
     <?php 
     $i = 1;
-    while($i < $e + 1){
+    while($i < $e ){
+        if ($i == 9)break;
         echo '<a href="/news/page-'.$i.'" >'.$i.'</a>';
-        if ($i == 10)break;
+       
         
         $i++;
     }
-    if($e > 10){
+    if($e > 9){
         echo '<a href="" style="width:6%;">...</a>
         <a href>'.$e.'</a>';
     }
