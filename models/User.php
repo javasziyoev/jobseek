@@ -18,12 +18,8 @@ class User
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':cellphone', $cellphone, PDO::PARAM_STR);
 
-<<<<<<< HEAD
-        return $result->sql;
-=======
         return $result->execute();
         
->>>>>>> 84d86acf53021a1e81f810da2b287dd466ab6258
     }
 
 //registration for employeers
@@ -32,7 +28,7 @@ $email_e,$password,$phone_number,$extension_number)
 {
     $db = Db::getConnection();
     
-    $sql = 'INSERT INTO employer(company_class_id, company_name, website_url, city_id, contact_first_name, contact_last_name, contact_email, contact_password, contact_cellphone, contact_cellphone_ext) '
+    $sql = 'INSERT INTO employer(company_class_id, company_name, website_url, city_id, first_name, contact_last_name, contact_email, contact_password, contact_cellphone, contact_cellphone_ext) '
             .'VALUES (:company_class_id, :company_name, :website, :selectcity,:name,:last_name,
             :email_e,:password,:phone_number,:extension_number)';
     $result = $db->prepare($sql);
@@ -327,7 +323,7 @@ public static function CheckUserData($email,$password)
     }
     //admin
     $sql = '';
-    $sql = 'SELECT * FROM gods WHERE nick = :email AND password = :password';
+    $sql = 'SELECT * FROM gods WHERE first_name = :email AND password = :password';
     $result = $db->prepare($sql);
     $result->bindParam(':email', $email, PDO::PARAM_INT);
     $result->bindParam(':password', $password, PDO::PARAM_INT);
@@ -335,7 +331,7 @@ public static function CheckUserData($email,$password)
 
     $user = $result->fetch();
     if($user){
-        return $user['nick'];
+        return $user['first_name'];
     }
     return false;
 }
@@ -387,7 +383,7 @@ public static function getUserById($id)
 public static function getUserByIdAd($id)
 {
         $db = Db::getConnection();
-        $sql = 'SELECT * FROM gods WHERE nick=:id';
+        $sql = 'SELECT * FROM gods WHERE first_name=:id';
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->setFetchMode(PDO::FETCH_ASSOC);

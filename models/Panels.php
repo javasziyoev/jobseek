@@ -477,14 +477,14 @@ echo '__________________________________________________________________________
         $Arr3=[];
         $i=0; 
         $db=Db::getConnection();
-        $sql = 'SELECT `nick`,`role`,`id` FROM `gods` order by `id`';
+        $sql = 'SELECT `first_name`,`role`,`id` FROM `gods` order by `id`';
         $result=$db->prepare($sql);
         $result->execute();
     
         while( $user = $result->fetch()){
             if($user)
             {
-               $Arr1[$i] = $user['nick'];
+               $Arr1[$i] = $user['first_name'];
                $Arr2[$i] = $user['role'];
                $Arr3[$i] = $user['id'];
                
@@ -510,7 +510,7 @@ echo '__________________________________________________________________________
     {
         $db = Db::getConnection();
        
-        $sql = 'INSERT INTO gods(nick, password, role) '
+        $sql = 'INSERT INTO gods(first_name, password, role) '
                 . 'VALUES (:name, :password, :role)';
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
