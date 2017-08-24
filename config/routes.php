@@ -22,6 +22,12 @@ return array(
 	'news/page-([0-9]+)' => 'news/index/$1',
 	'news/view/([0-9]+)' => 'news/view/$1',
 	'index.php' => 'site/index', // actionIndex в SiteController
+<<<<<<< HEAD
 	'site/agreement' => 'site/agreement',
 	'/' => 'site/index',
 );
+=======
+	'index' => 'site/index',
+	'site/agreement'=>'site/agreement',
+	);
+>>>>>>> f63baca241bdd117a2dbabb5867ae44952abc14b

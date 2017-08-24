@@ -307,7 +307,7 @@ ul {
 }
 #nav li{
 	float: left;
-	margin-right: 25px;
+	margin-right: 5px;
 	position: relative;
     display: block;
 }
