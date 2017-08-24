@@ -2,7 +2,7 @@
 return array(
 
 	//user
-	'index' => 'site/index',
+	
     'user/signup' => 'user/signup',
 	'user/signin' => 'user/signin',
 	'employer/post_a_vacancy' =>'vacancy/vacancy',
@@ -22,5 +22,6 @@ return array(
 	'news/page-([0-9]+)' => 'news/index/$1',
 	'news/view/([0-9]+)' => 'news/view/$1',
 	'index.php' => 'site/index', // actionIndex в SiteController
+	'index' => 'site/index',
     
 	);

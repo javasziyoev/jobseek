@@ -3,7 +3,7 @@
 class NewsController{
 
 public function actionIndex($page){
-   
+  
     // bottom navigator
     $k = News::getAmount();
     $cubes = 8;
@@ -17,7 +17,6 @@ public function actionIndex($page){
 
 public function actionView($col){
     $c = News::getView($col);
-    print_r($c[0][1]);
     require_once(ROOT. '/views/news/newsevent.php');
 }
 

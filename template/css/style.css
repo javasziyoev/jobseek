@@ -1299,3 +1299,49 @@ ul {
    .width-900 {
     width:900px;
    }
+
+
+.margin-right {
+    margin-right: .5em;
+}
+
+#editButton {
+    
+    color: #333;
+    border-style: none;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    width: 60px;
+    font-size: 12px;
+    font-weight: 800;
+    outline: none;
+    padding-bottom: .2em;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: none; 
+}
+
+#editButton:hover {
+    color: rgb(29, 152, 220); 
+}

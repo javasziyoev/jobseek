@@ -14,7 +14,7 @@ abstract class ModerBase
 
 
         //if admin let him enter
-        if ($user['role'] == 'moder') {
+        if ($user['role'] == 'moder' or $user['role'] == 'admin') {
             return true;
         }
 
