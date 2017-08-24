@@ -1353,3 +1353,15 @@ ul {
 .all-user-vacancies-ul {
     list-style: none;
 }
+
+#inner-content-thin {
+    margin: 25px 3%; 
+}
+
+.short-descr {
+    height: 6em; width: 40em;
+}
+
+.descr {
+    height: 20em; width: 40em;
+}
