@@ -75,7 +75,7 @@
       <section id="top-jobs-content">
           
           <section id="jobs-at-content">
-            <div style="width: 90%; height: 200px; background-color: orange; margin-left: 3%; margin-right: 3%; margin-bottom: 1em;">
+            <div style="text-align: center; width: 90%; height: 200px; background-color: orange; margin-left: 3%; margin-right: 3%; margin-bottom: 1em;">
               For small add
             </div>
               <h3 class="dark-gray-text">Jobs at</h3>
