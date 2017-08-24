@@ -88,3 +88,15 @@
     color: #fff;
     background-color: #333;
 }
+
+.short-descr {
+    height: 6em; width: 100%;
+}
+
+.descr {
+    height: 20em; width: 100%;
+}
+
+.post-button {
+    width: 100%;
+}
