@@ -154,10 +154,11 @@ class Panels
         }
     }
     public static function getUsersForSearchA($argument)
-    {                $someArr=[];$i=0; 
+    {                  echo 'Looking for applicant'; 
+        $someArr=[];$i=0; 
     $db=Db::getConnection();
         
-        $sql='SELECT * FROM `applicant` WHERE applicant_id LIKE "'.$argument.'%" OR first_nameLIKE "'.$argument.'%" or emailLIKE "'.$argument.'%"';
+        $sql='SELECT * FROM `applicant` WHERE applicant_id LIKE "'.$argument.'%" OR first_name LIKE "'.$argument.'%" or email LIKE "'.$argument.'%"';
         $result=$db->prepare($sql);
         $result->execute();
         while( $user = $result->fetch()){
@@ -277,36 +278,36 @@ address
 </tr>';$some=[];$i=0;
 foreach ($fucker as $vacans)
 { echo ' <tr>
-    <td>  <input name = "vacancy_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['vacancy_id'].'>
+    <td>  <input disabled name = "vacancy_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['vacancy_id'].'>
     </td>
-    <td>  <input name = "employer_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employer_id'].'>
+    <td>  <input disabled  name = "employer_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employer_id'].'>
     </td>
-    <td>  <input name = "industry_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['industry_id'].'>
+    <td>  <input disabled name = "industry_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['industry_id'].'>
     </td>
-    <td>  <input name = "position'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['position'].'>
+    <td>  <input disabled name = "position'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['position'].'>
     </td>
-    <td>  <input name = "salary'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['salary'].'>
+    <td>  <input  disabled name = "salary'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['salary'].'>
     </td>
-    <td>  <input name = "salary_currency_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['salary_currency_id'].'>
+    <td>  <input disabled name = "salary_currency_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['salary_currency_id'].'>
     </td>
-    <td>  <input name = "required_experience'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['required_experience'].'>
+    <td>  <input disabled name = "required_experience'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['required_experience'].'>
     </td>
-    <td>  <input name = "city_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['city_id'].'>
+    <td>  <input disabled name = "city_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['city_id'].'>
     </td>
-    <td>  <input name = "post_date'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['post_date'].'>
+    <td>  <input disabled name = "post_date'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['post_date'].'>
     </td>
-    <td>  <textarea name = "infos'. $vacans['vacancy_id'].'">'. $vacans['info'].'</textarea>
+    <td>  <textarea disabled name = "infos'. $vacans['vacancy_id'].'">'. $vacans['info'].'</textarea>
     </td>
-    <td>  <textarea name = "short_descr'. $vacans['vacancy_id'].'" >'. $vacans['short_descr'].'></textarea>
+    <td>  <textarea disabled name = "short_descr'. $vacans['vacancy_id'].'" >'. $vacans['short_descr'].'></textarea>
     </td>
-    <td>  <input name = "employment_type_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employment_type_id'].'>
+    <td>  <input disabled name = "employment_type_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employment_type_id'].'>
     </td>
-    <td>  <input name = "address'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['address'].'>
+    <td>  <input disabled name = "address'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['address'].'>
     </td>
-    <td>  <input name = "published'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['published'].'>
+    <td>  <input disabled name = "published'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['published'].'>
     </td>
 
-    <td>  <input name = "submit'.$vacans['vacancy_id'].'" type = "submit" value = "prove">
+    <td>  <input disabled name = "submit'.$vacans['vacancy_id'].'" type = "submit" value = "prove">
     </td>
 
     </tr>';
