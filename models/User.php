@@ -19,6 +19,7 @@ class User
         $result->bindParam(':cellphone', $cellphone, PDO::PARAM_STR);
 
         return $result->execute();
+        
     }
 
 //registration for employeers
