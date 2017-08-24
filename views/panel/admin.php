@@ -120,6 +120,24 @@
             
             <section id="content-tab5" style="width:900px;">
                 <?php Panels::actionModer(); ?>
+                <div>Delete vacancy by id <br/>
+                <form action = "#" method="POST">
+                <input type ="text" name ="deleteText" placeholder="write id for deleting">
+                <input type ="submit" name ="deleteSubmit" value="delete">
+
+                </form >
+                <?php
+                        $db = Db::getConnection();
+                        
+                if(isset($_POST['deleteSubmit']))
+                {
+                    $sql="DELETE FROM `vacancy` WHERE vacancy_id=".$_POST['deleteText'];
+                    $result = $db->prepare($sql);
+                    return $result->execute();
+                    
+                }
+                ?>
+                </div>
             </section>
 
             <section id="content-tab6">
