@@ -29,6 +29,11 @@
                 <label class="salary-level">Required experience</label>
                 <span class="salary-value"><?php  echo $details[0]['required_experience'];?></span>
             </div> 
+            <div class="salary-content">
+                <label class="salary-level">Post_date</label>
+                <span class="salary-value"><?php  echo $details[0]['post_date'];?></span>
+            </div> 
+
         </div>
 
         <div class="vacancy-info">

@@ -73,7 +73,11 @@
             </form>
             </section>
             <section id="content-tab3">
-                хуй3
+                <?PHP
+                
+                echo 'search users';
+                Panels::getPublUsers();                    
+                ?>
             </section>
             
             <section id="content-tab4" style="height:500px;">
@@ -162,8 +166,10 @@
             </section>
 
             <section id="content-tab7">
-                хуй7
-            </section>
+            <?php //для фьючеред джобс стив джобс
+            Panels::getPublVac();
+           ?>
+                       </section>
             <section id="content-tab8">
                 хуй8
             </section>

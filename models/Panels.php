@@ -24,6 +24,166 @@ class Panels
                 }}
                 return $someArr;
     }
+
+    public static function getPublUsers(){
+        echo 'Search users by name,id,email <br/>';
+        echo '<form action="#" method = "POST">
+        <input type = "text" name = "searchuser" placeholder="write something">
+        <select name ="typeuser"><option value = "1">Applicant</option>
+        <option value = "2">Employer</option>
+        </select>
+        <input type ="submit" value = "search" name ="usersubmit">
+        </form>'; 
+        
+        if($_POST)
+        {
+            if(isset($_POST['usersubmit']))
+            {
+                if(($_POST['searchuser']))
+                {  if( $_POST['typeuser']==1){
+                   $username= Panels:: getUsersForSearchA($_POST['searchuser']);
+                   if(($username)){
+                    echo '<form action ="" method = "POST"> <table>
+                    <tr>
+                    <th>
+                    applicant_id
+                    </th>
+                        <th>
+                        first_name  </th>
+                    <th>
+                    last_name
+                    </th>
+                    <th>
+                    email
+                    </th>
+                    <th>
+                    cellphone
+                    </th>
+                   
+                    </tr>';$some=[];$i=0;
+                    foreach ($username as $vacans)
+                    { echo ' <tr>
+                        <td>  <input name = "applicant_id'. $vacans['applicant_id'].'" type = "text" value ='. $vacans['applicant_id'].'>
+                        </td>
+                        <td>  <input name = "first_name'. $vacans['applicant_id'].'" type = "text" value ='. $vacans['first_name'].'>
+                        </td>
+                        <td>  <input name = "last_name'. $vacans['applicant_id'].'" type = "text" value ='. $vacans['last_name'].'>
+                        </td>
+                        <td>  <input name = "email'. $vacans['applicant_id'].'" type = "text" value ='. $vacans['email'].'>
+                        </td>
+                        <td>  <input name = "cellphone'. $vacans['applicant_id'].'" type = "text" value ='. $vacans['cellphone'].'>
+                        </td>
+                    
+                    
+                       
+                    
+                        </tr>';
+                      
+                         } echo ' </table></form>';
+                        
+                      
+                        }
+                    
+                }
+            
+            else    if( $_POST['typeuser']==2){
+                    $username= Panels:: getUsersForSearchE($_POST['searchuser']);
+                    if(($username)){
+                     echo '<form action ="" method = "POST"> <table>
+                     <tr>
+                     <th>
+                     employer_id
+                     </th>
+                         <th>
+                         company_name  </th>
+                     <th>
+                     website_url
+                     </th>
+                     <th>
+                     contact_first_name
+                     </th>
+                     <th>
+                     contact_last_name
+                     </th>
+                     <th>
+                     contact_email
+                     </th> 
+                     <th>
+                     contact_cellphone
+                     </th>
+                     <th>
+                     contact_cellphone_ext
+                     </th>
+                     <th>
+                     city
+                     </th>
+                     </tr>';$some=[];$i=0;
+                     foreach ($username as $vacans)
+                     { echo ' <tr>
+                         <td>  <input name = "employer_id'. $vacans['employer_id'].'" type = "text" value ='. $vacans['employer_id'].'>
+                         </td>
+                         <td>  <input name = "company_name'. $vacans['employer_id'].'" type = "text" value ='. $vacans['company_name'].'>
+                         </td>
+                         <td>  <input name = "website_url'. $vacans['employer_id'].'" type = "text" value ='. $vacans['website_url'].'>
+                         </td>
+                         <td>  <input name = "contact_first_name'. $vacans['employer_id'].'" type = "text" value ='. $vacans['contact_first_name'].'>
+                         </td>
+                         <td>  <input name = "contact_last_name'. $vacans['employer_id'].'" type = "text" value ='. $vacans['contact_last_name'].'>
+                         </td>
+                         <td>  <input name = "contact_email'. $vacans['employer_id'].'" type = "text" value ='. $vacans['contact_email'].'>
+                         </td>
+                         <td>  <input name = "contact_cellphone'. $vacans['employer_id'].'" type = "text" value ='. $vacans['contact_cellphone'].'>
+                         </td>
+                         <td>  <input name = "contact_cellphone_ext'. $vacans['employer_id'].'" type = "text" value ='. $vacans['contact_cellphone_ext'].'>
+                         </td>
+                         <td>  <input name = "city_id'. $vacans['employer_id'].'" type = "text" value ='. $vacans['city_id'].'>
+                         </td>
+                     
+                         
+                     
+                         </tr>';
+                         
+                          } echo ' </table></form>';
+                         
+                       
+                         }
+                     
+                 }
+            }
+            }
+        }
+    }
+    public static function getUsersForSearchA($argument)
+    {                  echo 'Looking for applicant'; 
+        $someArr=[];$i=0; 
+    $db=Db::getConnection();
+        
+        $sql='SELECT * FROM `applicant` WHERE applicant_id LIKE "'.$argument.'%" OR first_name LIKE "'.$argument.'%" or email LIKE "'.$argument.'%"';
+        $result=$db->prepare($sql);
+        $result->execute();
+        while( $user = $result->fetch()){
+            if($user)
+            {
+               $someArr[$i]= $user;
+               $i++;
+            }}
+            return $someArr;
+    }   
+    public static function getUsersForSearchE($argument)
+    {                $someArr=[];$i=0; 
+    $db=Db::getConnection();
+        
+        $sql='SELECT * FROM `employer` WHERE employer_id LIKE "'.$argument.'%" OR company_name LIKE "'.$argument.'%" or contact_email LIKE "'.$argument.'%" OR contact_first_name LIKE "'.$argument.'%"';
+        $result=$db->prepare($sql);
+        $result->execute();
+        while( $user = $result->fetch()){
+            if($user)
+            {
+               $someArr[$i]= $user;
+               $i++;
+            }}
+            return $someArr;
+    }       
     public static function getVacansies1($id)
     {
           $someArr=[];$i=0; 
@@ -44,7 +204,7 @@ class Panels
     {
           $someArr=[];$i=0; 
             $db=Db::getConnection();
-            $sql = 'Select * from `vacancy` where published = 1 and position='.$position;
+            $sql = 'Select * from `vacancy` where published = 1 AND position="'.$position.'"';
             $result=$db->prepare($sql);
             $result->execute();
     
@@ -60,6 +220,7 @@ class Panels
         
         $db = Db::getConnection();
         $id=0;$position='';
+        $fucker='';
       echo '  <form action ="#" method = "POST"><input type = "text" name = "search" placeholder="write vacancyes id for search">
       <input type="text" name ="possearch" placeholder="search by vacancies name">
       <input type = "submit" name = "searchsubmit" value = "submit">
@@ -68,13 +229,16 @@ class Panels
         if(($_POST['search']!=''))
         {$id=$_POST['search'];
 $fucker = Panels::getVacansies1($id);
-echo '1';
 }
 else if (($_POST['possearch']!=''))
-{
+{$position=$_POST['possearch'];
     $fucker = Panels::getVacansies2($position); 
-    echo '2';
-}}
+}
+else if(($_POST['search']!='')&&(($_POST['possearch']!='')))
+{echo 'You have selected both name and id. Its inacceptable and i searched by id<br/>';
+    $fucker=Panels::getVacansies1($id);
+}
+}
 if(($fucker)){
 echo '<form action ="" method = "POST"> <table>
 <tr>
@@ -114,36 +278,36 @@ address
 </tr>';$some=[];$i=0;
 foreach ($fucker as $vacans)
 { echo ' <tr>
-    <td>  <input name = "vacancy_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['vacancy_id'].'>
+    <td>  <input disabled name = "vacancy_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['vacancy_id'].'>
     </td>
-    <td>  <input name = "employer_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employer_id'].'>
+    <td>  <input disabled  name = "employer_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employer_id'].'>
     </td>
-    <td>  <input name = "industry_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['industry_id'].'>
+    <td>  <input disabled name = "industry_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['industry_id'].'>
     </td>
-    <td>  <input name = "position'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['position'].'>
+    <td>  <input disabled name = "position'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['position'].'>
     </td>
-    <td>  <input name = "salary'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['salary'].'>
+    <td>  <input  disabled name = "salary'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['salary'].'>
     </td>
-    <td>  <input name = "salary_currency_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['salary_currency_id'].'>
+    <td>  <input disabled name = "salary_currency_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['salary_currency_id'].'>
     </td>
-    <td>  <input name = "required_experience'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['required_experience'].'>
+    <td>  <input disabled name = "required_experience'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['required_experience'].'>
     </td>
-    <td>  <input name = "city_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['city_id'].'>
+    <td>  <input disabled name = "city_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['city_id'].'>
     </td>
-    <td>  <input name = "post_date'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['post_date'].'>
+    <td>  <input disabled name = "post_date'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['post_date'].'>
     </td>
-    <td>  <textarea name = "infos'. $vacans['vacancy_id'].'">'. $vacans['info'].'</textarea>
+    <td>  <textarea disabled name = "infos'. $vacans['vacancy_id'].'">'. $vacans['info'].'</textarea>
     </td>
-    <td>  <textarea name = "short_descr'. $vacans['vacancy_id'].'" >'. $vacans['short_descr'].'></textarea>
+    <td>  <textarea disabled name = "short_descr'. $vacans['vacancy_id'].'" >'. $vacans['short_descr'].'></textarea>
     </td>
-    <td>  <input name = "employment_type_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employment_type_id'].'>
+    <td>  <input disabled name = "employment_type_id'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['employment_type_id'].'>
     </td>
-    <td>  <input name = "address'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['address'].'>
+    <td>  <input disabled name = "address'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['address'].'>
     </td>
-    <td>  <input name = "published'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['published'].'>
+    <td>  <input disabled name = "published'. $vacans['vacancy_id'].'" type = "text" value ='. $vacans['published'].'>
     </td>
 
-    <td>  <input name = "submit'.$vacans['vacancy_id'].'" type = "submit" value = "prove">
+    <td>  <input disabled name = "submit'.$vacans['vacancy_id'].'" type = "submit" value = "prove">
     </td>
 
     </tr>';

@@ -75,32 +75,33 @@ checking();
             document.getElementById('firstname').innerHTML="<p>Please feel name</p>";
 else document.getElementById('firstname').innerHTML="";
 if(f.lastname.value=="")
-              document.getElementById('lastname').innerHTML="<p color='red'>Please feel lastname</p>";
+              document.getElementById('lastname').innerHTML="<p color='rgb(239,84,108)'>Please feel lastname</p>";
         else document.getElementById('lastname').innerHTML="";
 
     if(f.email.value=="")
-     document.getElementById('email').innerHTML="<p color='red'>Please feel email</p>";
+     document.getElementById('email').innerHTML="<p color='rgb(239,84,108)'>Please feel email</p>";
      else document.getElementById('email').innerHTML="";
 
         if(f.password.value=="")
-                      document.getElementById('password').innerHTML="<p color='red'>Please feel password</p>";
+                      document.getElementById('password').innerHTML="<p color='rgb(239,84,108)'>Please feel password</p>";
                 else document.getElementById('password').innerHTML="";
 
             if(f.cellphone.value=="")
-                            document.getElementById('cellphone').innerHTML="<p color='red'>Please feel cellphone</p>"; 
+                            document.getElementById('cellphone').innerHTML="<p color='rgb(239,84,108)'>Please feel cellphone</p>"; 
                       else document.getElementById('cellphone').innerHTML="";}
 
    }
 
-</script><style>p
+</script><style>
+p
 {
-color:red;}</style>;
+color:rgb(239,84,108);}</style>;
 
             <div style="width:48%;height:40%;margin:auto;position:relative;top:-292px;float:right;">
             <?php if (isset($a_errors) && is_array($a_errors)): ?>
                         <ul style="list-style-type: none; ">
                             <?php foreach ($a_errors as $error): ?>
-                                <li style="color:red;margin:10px;text-decoration:underline;"> - <?php echo $error; ?></li>
+                                <li style="color:rgb(239,84,108);margin:10px;text-decoration:underline;"> - <?php echo $error; ?></li>
                             <?php endforeach; ?>
                         </ul>
             <?php endif; ?>
@@ -180,7 +181,7 @@ color:red;}</style>;
                             <?php if (isset($e_errors) && is_array($e_errors)): ?>
                         <ul style="list-style-type: none; ">
                             <?php foreach ($e_errors as $error): ?>
-                                <li style="color:red;margin:10px;"> - <?php echo $error; ?></li>
+                                <li style="color:rgb(239,84,108);margin:10px;"> - <?php echo $error; ?></li>
                             <?php endforeach; ?>
                         </ul>
             <?php endif; ?>

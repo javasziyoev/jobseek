@@ -7,16 +7,11 @@
         {
   echo '<form action="/user/signup" method="post">
   
-    <input type="submit" class="button-post" name = "Post_a_CV" value="Post a CV">
+    <input type="submit" class="button-post" name = "Post_a_CV" value="Register">
     <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
   </form>';}
   else {
     echo'
-    <form action="/employer/post_a_vacancy" method="post">
-    <div>
-    <input type="submit" class="button-post" name = "Post_a_CV" value="Post a CV">
-    </div>
-    </form>
     <div>
     <form action="/employer/post_a_vacancy" method="post">
     <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
@@ -29,7 +24,7 @@
 
 
 <section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
-        <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto;" class="width-900">
+        <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center;" class="width-900">
           <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
             <div id="newsy">
             <?php 
@@ -150,7 +145,7 @@
                  $result = $db->prepare($sql);
                  $result->execute();
                  $job=$result->fetch();
-                 echo '<a href=""><span class="vacancy-of-the-day-company">';
+                 echo '<a href="/vacancy/all/'.$getJobs['employer_id'].'"><span class="vacancy-of-the-day-company">';
                  echo $job['company_name'];
                  echo '</span></a></a>
                  </div>';
@@ -159,6 +154,20 @@
                 
               
             </div>  
+          </section>
+
+
+          <section id="reklama-bleat"
+            style="
+                border: 10px solid orange;
+                background: orange;
+                width: 250px;
+                height: 350px;
+                position: relative;
+                right: -4%;
+            "
+          >
+          Отключите блокировщик рекламы плес.
           </section>
       </section>
 
