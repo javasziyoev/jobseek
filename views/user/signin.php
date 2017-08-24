@@ -10,7 +10,7 @@
            <input type="submit" name="loginsubmit" value="Sign in" class="sign-in-button">
         </form>
     </section>
-
+  <div> Dont have an account? <a href = "/user/signup" >Create one </a></div>
 
 </div>
 
