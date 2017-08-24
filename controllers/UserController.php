@@ -119,7 +119,7 @@ class UserController
      //Check whether user is in database
      $password = md5($password);
      $userId = User::checkUserData($email, $password);
-  
+     
      if ($userId == false){
          //Employer sign in
          $errors = "Incorrect user data";
