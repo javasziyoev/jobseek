@@ -39,7 +39,11 @@
             </div>
 
             <div>Salary</div>
-            <input style="margin-bottom: 1em;" type="range" min="0" max="10000" step="1" value="500"> 
+            <form onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
+                <input style="margin-bottom: 1em;" name="flevel" id="flying" type="range" min="0" max="10000" value="500" step="10">
+                <output for="flying" name="level">500</output>
+            </form>
+
             <div>
                 <label>Employment type</label>
 
