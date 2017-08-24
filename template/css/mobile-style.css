@@ -116,3 +116,7 @@
     max-width: 100%;
     margin: 1em;
 }
+
+#featured-jobs-content {
+    min-width: 0;
+}

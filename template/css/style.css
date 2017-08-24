@@ -812,10 +812,11 @@ ul {
 
 #vacancy-details-content .vacancy-properties {
     background-color: #efefef;
-    width: 70%;
+
     display: flex;
     padding: 1em 1em;
     margin-top: 2em;
+    margin-right: 1em;
 }
 
 #vacancy-details-content .salary-content {
