@@ -160,6 +160,20 @@
               
             </div>  
           </section>
+
+
+          <section id="reklama-bleat"
+            style="
+                border: 10px solid orange;
+                background: orange;
+                width: 250px;
+                height: 350px;
+                position: relative;
+                right: 0;
+            "
+          >
+          Отключите блокировщик рекламы плес.
+          </section>
       </section>
 
       <section id="main-content">
