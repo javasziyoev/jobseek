@@ -1288,6 +1288,7 @@ ul {
 
    #newsy {
     margin: 0 2em 0 0; border-right: 1px solid #cbd1d4; padding: 1em;
+    padding-right: 3em;
    }
 
    #news-content {
