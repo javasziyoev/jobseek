@@ -7,7 +7,7 @@
         {
   echo '<form action="/user/signup" method="post">
   
-    <input type="submit" class="button-post" name = "Post_a_CV" value="Post a CV">
+    <input type="submit" class="button-post" name = "Post_a_CV" value="Register">
     <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
   </form>';}
   else {
