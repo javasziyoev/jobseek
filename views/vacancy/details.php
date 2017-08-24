@@ -48,7 +48,7 @@
         <div>
             <label class="info-label block-cont">Contact information:</label>
             <span style="display: block; margin-bottom: .8em;"><?php 
-        echo $details[1]['contact_first_name'].'  '.$details[1]['contact_last_name'];
+        echo $details[1]['first_name'].'  '.$details[1]['contact_last_name'];
         
         ?></span>
             <div>
