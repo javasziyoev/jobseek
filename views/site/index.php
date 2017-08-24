@@ -167,16 +167,7 @@
           </section>
 
 
-          <section id="reklama-bleat"
-            style="
-                border: 10px solid orange;
-                background: orange;
-                width: 250px;
-                height: 350px;
-                position: relative;
-                right: -4%;
-            "
-          >
+          <section id="reklama-bleat">
           Отключите блокировщик рекламы плес.
           </section>
       </section>
