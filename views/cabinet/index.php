@@ -30,22 +30,22 @@
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Name:</strong></label>
                         <span>%USERNAME</span>
-                        <span style="color: rgb(29, 152, 220); margin-left: 1em;"><strong>edit</strong></span>
+                        <input type="button" value="edit" id='editButton' />
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Last Name:</strong></label>
                         <span>%USERLASTNAME</span>
-                        <span style="color: rgb(29, 152, 220); margin-left: 1em;"><strong>edit</strong></span>
+                        <input type="button" value="edit" id='editButton' />
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Email:</strong></label>
                         <span>%USEREMAIL</span>
-                        <span style="color: rgb(29, 152, 220); margin-left: 1em;"><strong>edit</strong></span>
+                        <input type="button" value="edit" id='editButton' />
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone:</strong></label>
                         <span>%CELLPHONE</span>
-                        <span style="color: rgb(29, 152, 220); margin-left: 1em;"><strong>edit</strong></span>
+                        <input type="button" value="edit" id='editButton' />
                     </div>
                 </div>
 
