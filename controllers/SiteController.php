@@ -17,6 +17,12 @@ class SiteController
 			
 			
 		}
+		public function actionAgreement()
+		{
+			
+			require_once(ROOT. "/views/site/agreement.php");  
+			
+		}
 
 }
 ?>
