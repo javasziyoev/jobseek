@@ -14,14 +14,13 @@
         while($k < $cubes){
             if ($res[$k][0] == 1)break;
             echo
-            '<li><a href=/news/view/'.$res[$k][0].'><div style="display: inline-block; margin: 1em;">
-            <div><img src="'.$res[$k][5].'"></div>
+            '<a href=/news/view/'.$res[$k][0].'><div style="display: inline-block; margin: 1em;">
             <div style="display: block; margin-left: 10px;"><a>
                 <a href="#">'.$res[$k][1].'</a>
                 <h6>'.$res[$k][2].'</h6>
                 <p>'.$res[$k][3].'</p>
             </div>
-        </div></li>';
+        </div>';
     
             $k++;
             }
