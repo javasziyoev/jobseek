@@ -4,7 +4,7 @@
 
 <div id="wrapper" style="margin-top: 25px">
     <section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
-    <h3 class="dark-gray-text" style="margin-bottom: 1em;">Hello, %USERNAME%</h3>
+    <h3 class="dark-gray-text" style="margin-bottom: 1em;">Hello, <?php $userId = User::checkLogged(); echo $userId.'!'; ?></h3>
     
     <div class="tabs">
             <input id="tab1" type="radio" name="tabs" checked>
