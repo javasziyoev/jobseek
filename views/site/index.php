@@ -61,13 +61,23 @@
           
       </section>
 
-
+      <section id="mobad" style="padding: .5% 2%; background-color: orange;">
+        <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center;" class="width-900">
+          <p>For mobile ad</p>
+          <br style="clear:both" />
+        </div>    
+          
+      </section>
 
 
 
   <div id="wrapper">
       <section id="top-jobs-content">
+          
           <section id="jobs-at-content">
+            <div style="width: 90%; height: 200px; background-color: orange; margin-left: 3%; margin-right: 3%; margin-bottom: 1em;">
+              For small add
+            </div>
               <h3 class="dark-gray-text">Jobs at</h3>
               <div>
                   <ul>

@@ -1365,3 +1365,7 @@ ul {
 .descr {
     height: 20em; width: 40em;
 }
+
+#mobad {
+    display: none;
+}
