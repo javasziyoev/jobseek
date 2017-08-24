@@ -63,30 +63,25 @@
                 <li>
                       <a href="/news/page-1" title="Looking for a job">News</a>
                   </li>
-                  <li>
+                  <!--<li>
                       <a href="#" title="Looking for a job">Looking for a job</a>
                       <ul>
                           <li><a href="#">Create resume</a></li>
                           <li><a href="#">How to improve my CV</a></li>
                       </ul>
-                  </li>
+                  </li> -->
                   <li>
-                      <a href="#" title="Looking for employee">Looking for employees</a>
-                      <ul>
-                          <li><a href="#">Post a vacancy</a></li>
-                          <li><a href="#">Price list</a></li>
-                          <li><a href="#">Services description</a></li>
-                      </ul>
+                      <a href="/employer/post_a_vacancy" title="Post a vacancy">Post a vacancy</a>
                   </li>
-                  <li id="no-mob">
-                      <a href="#" title="Companies" style="display: none;">Companies</a>
+                  <li >
+                      <a href="#" title="Companies" id="no-mob">Companies</a>
                       <ul>
                           <li><a href="#">Catalog of companies</a></li>
                           <li><a href="#">Jobs by industry</a></li>
                       </ul>
                   </li>
-                  <li id="no-mob">
-                      <a href="#" title="Help" style="display: none;">Help</a>
+                  <li>
+                      <a href="#" title="Help">Help</a>
                       <ul>
                           <li><a href="#">Support community</a></li>
                           <li><a href="/help/writeus">Write to us</a></li>

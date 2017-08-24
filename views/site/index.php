@@ -14,7 +14,7 @@
     echo'
     <form action="/employer/post_a_vacancy" method="post">
     <div>
-    <input type="submit" class="button-post" name = "Post_a_CV" value="Post a CV">
+    <input type="submit" class="button-post" name = "Post_a_CV" value="Register">
     </div>
     </form>
     <div>
@@ -169,7 +169,7 @@
                 width: 250px;
                 height: 350px;
                 position: relative;
-                right: 0;
+                right: -4%;
             "
           >
           Отключите блокировщик рекламы плес.
