@@ -117,7 +117,7 @@ class UserController
      $errors = false;
      
     if (isset($_POST['loginsubmit']) || $js == 1 ){
-        if (isset($_POST['loginsubmit'])
+        if (isset($_POST['loginsubmit']))
         {
             $email = $_POST['loginemail'];
             $password = $_POST['loginpassword'];
