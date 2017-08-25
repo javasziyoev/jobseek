@@ -29,7 +29,7 @@
         <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center; margin: 0 auto;
     width: 100%;" class="width-900">
           <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
-            <div id="newsy" class="mobnewsy">
+            <div id="newsy" class="desnewsy mobnewsy">
             <?php 
             $c = News::getAmount();
             $c = $c['COUNT(*)'];
@@ -42,17 +42,17 @@
               <div>'.$q[0][2].'</div>
             </div>
             
-            <div id="newsy" class="mobnewsy">
+            <div id="newsy" class="desnewsy mobnewsy">
               <div><strong><a href="news/view/'.($c-1).'">'.$w[0][1].'а</a></strong></div>
               <div>'.$w[0][2].'</div>
             </div>
             
-            <div id="newsy" class="mobnewsy">
+            <div id="newsy" class="desnewsy mobnewsy">
               <div><strong><a href="news/view/'.($c-2).'">'.$e[0][1].'</a></strong></div>
               <div>'.$e[0][2].'</div>
             </div>
             
-            <div id="newsy" class="mobnewsy" style="border-color: #fafafa;">
+            <div id="newsy" class="desnewsy mobnewsy" style="border-color: #fafafa;">
               <div><strong><a href="news/view/'.($c-3).'">'.$r[0][1].'</a></strong></div>
               <div>'.$r[0][2].'</div>
             </div>';

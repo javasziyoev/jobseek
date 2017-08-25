@@ -71,7 +71,6 @@
 
 #newsy {
     margin: 1em 0;
-    padding: 0;
     width: 25%;
     font-size: .85em;
     line-height: 1.4em;  
@@ -187,11 +186,12 @@
     min-width: 0;
 }
 
-#mobnewsy {
+
+.mobnewsy {
     padding-left: 10px; padding-right: 10px;
 }
 
-.mob-ban-but {
+#mob-ban-but {
     margin: 0 auto;
     width: 100%;
 }
