@@ -41,7 +41,7 @@ class Router
 
 				$segments = explode('/', $internalRoute);
 				
-				 $controllerName = array_shift($segments).'Controller';
+				 $controllerName = ucfirst(array_shift($segments)).'Controller';
 				
 				
 				$actionName = 'action'.ucfirst(array_shift($segments));
@@ -50,6 +50,7 @@ class Router
 				
 
 				$controllerFile = ROOT . '/controllers/' .$controllerName. '.php';
+              
 				if (file_exists($controllerFile)) {
 					include_once($controllerFile);
 				}

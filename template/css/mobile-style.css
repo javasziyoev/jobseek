@@ -1,6 +1,6 @@
 #wrapper {
     border: none;
-    margin: 0%;
+    margin: 0;
     padding: 0%;
     min-width: 200px;
     width: 100%;
@@ -70,7 +70,9 @@
 }
 
 #newsy {
-    margin: 0;
+    margin: 1em 0;
+    padding: 0;
+    width: 25%;
     font-size: .85em;
     line-height: 1.4em;  
 }
@@ -119,4 +121,41 @@
 
 #featured-jobs-content {
     min-width: 0;
+}
+
+.no-mob-view {
+    display: none;
+}
+.nav-search-bar {
+    width: 100%;
+    margin-right: 5px;
+}
+
+.only-mob-view {
+    display: inline;
+}
+
+.mob-button-44 {
+    width: 50%;
+    margin: 0;
+}
+
+.mobwrapper {
+    margin: 1em;
+}
+
+#vacancy-details-content .vacancy-properties {
+    padding: .5em .5em;
+}
+
+.salary-value {
+    font-size: .8em;
+}
+.salary-level {
+    font-size: .8em;
+}
+
+#vacancy-details-content .salary-content {
+    width: 25%;
+    margin: 0;
 }
