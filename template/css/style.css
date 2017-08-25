@@ -533,6 +533,7 @@ ul {
 /* SIGN UP */
 #sign-up-content {
     margin-top: 25px;
+    
 }
 
 /* Базовый контейнер табов */
@@ -1384,4 +1385,8 @@ ul {
 
 .only-mob-view {
     display: none;
+}
+
+#sign-in-content {
+    margin: 1em auto; width: 10%;
 }
