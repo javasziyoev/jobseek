@@ -73,28 +73,28 @@ echo '<li id="newsy" style="border-color: #fafafa;">
                     <div>
                     
                     <form action="#" method ="POST">
-                        <label class="info-contact-label block-email margin-right"><strong>Name:</strong></label>
-                        <input name ="name" type = "text" value = <?php echo $koko?>>
+                        <label class="info-contact-label block-email margin-right "><strong>Name:</strong></label>
+                        <input name ="name" type = "text" value = <?php echo $koko?> class="input-text mob-button-100">
                        
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Last Name:</strong></label>
-                        <input name="lastname" type = "text" value =<?php echo $users['contact_last_name']?>>
+                        <input name="lastname" type = "text" value =<?php echo $users['contact_last_name']?> class="input-text mob-button-100">
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Email:</strong></label>
-                        <input name = "email" type = "text" value =<?php  echo $users['contact_email']  ?>>
+                        <input name = "email" type = "text" value =<?php  echo $users['contact_email']  ?> class="input-text mob-button-100">
                     </div>
                  
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone:</strong></label>
-                        <input name ="cellphone1" type = "text" value =<?php  echo $users['contact_cellphone']  ?>>
+                        <input class="input-text mob-button-100" name ="cellphone1" type = "text" value =<?php  echo $users['contact_cellphone']  ?>>
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone ext:</strong></label>
-                        <input name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
+                        <input class="input-text mob-button-100" name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
                     </div>
-                    <input type="submit" onclick="window.location.href='549485'" value="Save" name="submit4" class="post-button" >  
+                    <input class="post-button" type="submit" onclick="window.location.href='549485'" value="Save" name="submit4">  
 
                     </form>
                     <?php 
@@ -124,9 +124,9 @@ echo '<li id="newsy" style="border-color: #fafafa;">
 
 <form action="#" name = "passwordform" method ="POST">
 
-                <div><input type="password" name = "passwordold" class="input-text" placeholder="Current Password"></div>
-                <div><input type="password" name = "passwordnew" class="input-text" placeholder="New Password"></div>
-                <div><input type="password" name = "passwordconf" class="input-text" placeholder="Confirm New Password"></div>
+                <div><input type="password" name = "passwordold" class="input-text mob-button-100" placeholder="Current Password"></div>
+                <div><input type="password" name = "passwordnew" class="input-text mob-button-100" placeholder="New Password"></div>
+                <div><input type="password" name = "passwordconf" class="input-text mob-button-100" placeholder="Confirm New Password"></div>
                 <h3 id ="incorrect_passwords" style="color:rgb(239,84,108)"></h3>
 
                 <input type="submit" value="Change" name="submit1" class="post-button" >  
