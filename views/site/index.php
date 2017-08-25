@@ -26,7 +26,8 @@
 
 
 <section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
-        <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center;" class="width-900">
+        <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center; margin: 0 auto;
+    width: 100%;" class="width-900">
           <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
             <div id="newsy mobnewsy">
             <?php 
