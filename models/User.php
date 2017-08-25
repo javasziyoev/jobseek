@@ -9,7 +9,7 @@ class User
     {
         $db = Db::getConnection();
        
-        $sql = 'INSERT INTO applicant(first_name, last_name, password, email, cellphone) '
+        $sql = 'INSERT INTO employer(first_name,contact_last_name,contact_password,contact_email, contact_cellphone) '
                 . 'VALUES (:firstname, :lastname, :password, :email, :cellphone)';
         $result = $db->prepare($sql);
         $result->bindParam(':firstname', $firstname, PDO::PARAM_STR);
@@ -226,7 +226,7 @@ public static function getEmployment_type()
     public static function checkEmailExists($email){
 
         $db = Db::getConnection();
-        $sql = 'SELECT COUNT(*) FROM applicant WHERE email = :email';
+        $sql = 'SELECT COUNT(*) FROM employer WHERE email = :email';
 
         $result = $db->prepare($sql);
         $result->bindParam(':email', $email,PDO::PARAM_STR);
@@ -300,16 +300,7 @@ public static function CheckUserData($email,$password)
 {
     $db = Db::getConnection();
 
-    $sql = 'SELECT * FROM applicant WHERE email = :email AND password = :password';
-    $result = $db->prepare($sql);
-    $result->bindParam(':email', $email, PDO::PARAM_INT);
-    $result->bindParam(':password', $password, PDO::PARAM_INT);
-    $result->execute();
-
-    $user = $result->fetch();
-    if($user){
-        return $user['applicant_id'];
-    }
+ 
     $sql = '';
     $sql = 'SELECT * FROM employer WHERE contact_email = :email AND contact_password = :password';
     $result = $db->prepare($sql);
@@ -364,21 +355,7 @@ public static function isGuest()
 }
 
 public static function getUserById($id)
-{
-    
-        $db = Db::getConnection();
-        $sql = 'SELECT * FROM applicant WHERE applicant_id=:id';
-        $sql1 = 'SELECT * FROM employer WHERE employer_id=:id';
-       
-        $result = $db->prepare($sql);
-        $result->bindParam(':id', $id, PDO::PARAM_INT);
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $result->execute();
-        if ($result){
-            return $result->fetch();
-        }
-        
-    return false;
+{    return false;
 }
 
 public static function getUserByIdAd($id)
