@@ -26,3 +26,7 @@
 #reklama-bleat {
     right: -2%;
 }
+
+#vacancy-details-content {
+    min-width: 800px;
+}
