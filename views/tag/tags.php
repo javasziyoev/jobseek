@@ -103,15 +103,18 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
                         if( $tag['employment_type_id']==2)
                         {echo 'full-time job';}
 
-                         echo ' · </label>
-                        </span> </div></div></div>';
-                        echo '<form method = "POST"><button name = "favor" value = '.$som2.'>Add to favorites</button></form>';
+                         echo ' · </label> <form method = "POST">
+                        <button name = "favor" value = '.$som2.'>Add to favorites</button></form>;
                         
+                        </span> </div></div></div>';
+                       
                         if(isset($_POST['favor']))
                         {
                             $sql = 'INSERT INTO `favors`(`applicant_id`,`vacancy_id`) VALUES ('.$userId.','.$som2.')';
                             $result = $db->prepare($sql);
                             $result->execute();
+                            echo "<script>window.location.href=''</script>";
+                            
          break; 
                         }
                         }

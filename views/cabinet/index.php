@@ -31,6 +31,8 @@
             </section>
             <section id="content-tab2">
                 Your favorites:
+<?php
+                echo $userId;?>
             </section>
             <section id="content-tab3">
                 <div>
@@ -71,7 +73,7 @@
                     $result = $db->prepare($sql);
                     $result->execute();
                     echo "<script>window.location.href=''</script>";
-                    
+
                 }
 
 
