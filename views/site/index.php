@@ -28,7 +28,7 @@
 <section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
         <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center;" class="width-900">
           <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
-            <div id="newsy">
+            <div id="newsy" style="padding-left: 10px; padding-right: 10px;">
             <?php 
             $c = News::getAmount();
             $c = $c['COUNT(*)'];
@@ -41,17 +41,17 @@
               <div>'.$q[0][2].'</div>
             </div>
             
-            <div id="newsy">
+            <div id="newsy" style="padding-left: 10px; padding-right: 10px;">
               <div><strong><a href="news/view/'.($c-1).'">'.$w[0][1].'а</a></strong></div>
               <div>'.$w[0][2].'</div>
             </div>
             
-            <div id="newsy">
+            <div id="newsy" style="padding-left: 10px; padding-right: 10px;">
               <div><strong><a href="news/view/'.($c-2).'">'.$e[0][1].'</a></strong></div>
               <div>'.$e[0][2].'</div>
             </div>
             
-            <div id="newsy" style="border-color: #fafafa;">
+            <div id="newsy" style="border-color: #fafafa; padding-left: 10px; padding-right: 10px;">
               <div><strong><a href="news/view/'.($c-3).'">'.$r[0][1].'</a></strong></div>
               <div>'.$r[0][2].'</div>
             </div>';
@@ -173,6 +173,16 @@
           Отключите блокировщик рекламы плес.
           </section>
       </section>
+
+      <section id="mobad" style="padding: .5% 2%; background-color: orange; height: 200px;">
+        <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center;" class="width-900">
+          <p>For mobile ad2</p>
+          <br style="clear:both" />
+        </div>    
+          
+      </section>
+
+
 
       <section id="main-content">
         <div id="inner-content">
