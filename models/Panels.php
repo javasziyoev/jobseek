@@ -24,6 +24,23 @@ class Panels
                 }}
                 return $someArr;
     }
+    public static function getFavors($id)
+    {
+          $someArr=[];$i=0; 
+            $db=Db::getConnection();
+            $sql='SELECT * FROM `favors` WHERE applicant_id = '.$id;
+            $result=$db->prepare($sql);
+            $result->execute();
+    
+            while( $user = $result->fetch()){
+                if($user)
+                {
+                   $someArr[$i]= $user;
+                   $i++;
+                }}
+                return $someArr;
+    }
+
 
     public static function getPublUsers(){
         echo 'Search users by name,id,email <br/>';

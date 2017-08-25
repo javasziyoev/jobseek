@@ -104,19 +104,24 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
                         {echo 'full-time job';}
 
                          echo ' · </label> <form method = "POST">
-                        <button name = "favor" value = '.$som2.'>Add to favorites</button></form>;
+                        <button name = "favor'.$som2.'" value = '.$som2.'>Add to favorites</button></form>;
                         
                         </span> </div></div></div>';
                        
-                        if(isset($_POST['favor']))
-                        {
-                            $sql = 'INSERT INTO `favors`(`applicant_id`,`vacancy_id`) VALUES ('.$userId.','.$som2.')';
+                        if(isset($_POST['favor'.$som2]))
+                        {   $sql = 'SELECT * FROM `favors` WHERE vacancy_id ='.$tag['vacancy_id'];
+                            $result = $db->prepare($sql);
+                            $result->execute();
+                            $job=$result->fetch();
+                            if($job['vacancy_id']==$tag['vacancy_id']){}
+else {
+                            $sql = 'INSERT INTO `favors`(`applicant_id`,`vacancy_id`) VALUES ('.$userId.','.$tag['vacancy_id'].')';
                             $result = $db->prepare($sql);
                             $result->execute();
                             echo "<script>window.location.href=''</script>";
                             
          break; 
-                        }
+                        }}
                         }
                 
                 ?>

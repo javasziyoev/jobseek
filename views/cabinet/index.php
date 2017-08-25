@@ -31,8 +31,52 @@
             </section>
             <section id="content-tab2">
                 Your favorites:
-<?php
-                echo $userId;?>
+<?php          
+echo '<ul>';
+$favors=Panels::getFavors($userId);
+foreach($favors as $favor){
+    $sql1='SELECT * FROM `vacancy` WHERE vacancy_id = '.$favor['vacancy_id'];
+
+    $result = $db->prepare($sql1);
+    $result->execute();
+$user2=$result->fetch();
+echo '<li id="newsy" style="border-color: #fafafa;">
+<a href="/vacancy/details/'.$user2['vacancy_id'].'">';
+                echo '<div><strong>';
+ echo $user2['position'].'</strong></div>';
+  echo '<div>';
+  echo $user2['salary'].' ';
+  $sql = 'SELECT * FROM `currency` WHERE currency_id='.$user2['salary_currency_id'];
+  $result=$db->prepare($sql);
+  $result->execute();
+  $user = $result->fetch();
+
+  echo $user['currency_code'].'</div> ';
+  echo '<div>'.$user2['short_descr'].'</div>';
+ $sql = 'SELECT * FROM `employer` WHERE employer_id ='.$user2['employer_id'];
+ $result = $db->prepare($sql);
+ $result->execute();
+ $job=$result->fetch();
+ echo $user2['post_date'];
+ 
+ echo '
+ </a>
+ </li>
+ <form action="#" method ="POST">
+ <input type ="submit" name ="deletefavor'.$favor['vacancy_id'].'"  value ="delete">
+ </form>
+';
+if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
+{
+    $sql = 'DELETE FROM `favors` WHERE vacancy_id='.$favor['vacancy_id'];
+    $result = $db->prepare($sql);
+    $result->execute();
+   
+}
+} echo '</ul>';
+
+
+                ?>
             </section>
             <section id="content-tab3">
                 <div>
@@ -41,28 +85,28 @@
                     <div>
                     
                     <form action="#" method ="POST">
-                        <label class="info-contact-label block-email margin-right"><strong>Name:</strong></label>
-                        <input name ="name" type = "text" value = <?php echo $koko?>>
+                        <label class="info-contact-label block-email margin-right "><strong>Name:</strong></label>
+                        <input name ="name" type = "text" value = <?php echo $koko?> class="input-text mob-button-100">
                        
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Last Name:</strong></label>
-                        <input name="lastname" type = "text" value =<?php echo $users['contact_last_name']?>>
+                        <input name="lastname" type = "text" value =<?php echo $users['contact_last_name']?> class="input-text mob-button-100">
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Email:</strong></label>
-                        <input name = "email" type = "text" value =<?php  echo $users['contact_email']  ?>>
+                        <input name = "email" type = "text" value =<?php  echo $users['contact_email']  ?> class="input-text mob-button-100">
                     </div>
                  
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone:</strong></label>
-                        <input name ="cellphone1" type = "text" value =<?php  echo $users['contact_cellphone']  ?>>
+                        <input class="input-text mob-button-100" name ="cellphone1" type = "text" value =<?php  echo $users['contact_cellphone']  ?>>
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone ext:</strong></label>
-                        <input name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
+                        <input class="input-text mob-button-100" name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
                     </div>
-                    <input type="submit" onclick="window.location.href='549485'" value="Save" name="submit4" class="post-button" >  
+                    <input class="post-button" type="submit" onclick="window.location.href='549485'" value="Save" name="submit4">  
 
                     </form>
                     <?php 
@@ -92,9 +136,9 @@
 
 <form action="#" name = "passwordform" method ="POST">
 
-                <div><input type="password" name = "passwordold" class="input-text" placeholder="Current Password"></div>
-                <div><input type="password" name = "passwordnew" class="input-text" placeholder="New Password"></div>
-                <div><input type="password" name = "passwordconf" class="input-text" placeholder="Confirm New Password"></div>
+                <div><input type="password" name = "passwordold" class="input-text mob-button-100" placeholder="Current Password"></div>
+                <div><input type="password" name = "passwordnew" class="input-text mob-button-100" placeholder="New Password"></div>
+                <div><input type="password" name = "passwordconf" class="input-text mob-button-100" placeholder="Confirm New Password"></div>
                 <h3 id ="incorrect_passwords" style="color:rgb(239,84,108)"></h3>
 
                 <input type="submit" value="Change" name="submit1" class="post-button" >  
