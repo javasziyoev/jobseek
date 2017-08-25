@@ -40,29 +40,44 @@
                     
                     <form action="#" method ="POST">
                         <label class="info-contact-label block-email margin-right"><strong>Name:</strong></label>
-                        <input type = "text" value = <?php echo $koko?>>
+                        <input name ="name" type = "text" value = <?php echo $koko?>>
                        
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Last Name:</strong></label>
-                        <input type = "text" value =<?php echo $users['contact_last_name']?>>
+                        <input name="lastname" type = "text" value =<?php echo $users['contact_last_name']?>>
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Email:</strong></label>
-                        <input type = "text" value =<?php  echo $users['contact_email']  ?>>
+                        <input name = "email" type = "text" value =<?php  echo $users['contact_email']  ?>>
                     </div>
                  
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone:</strong></label>
-                        <input type = "text" value =<?php  echo $users['contact_cellphone']  ?>>
+                        <input name ="cellphone1" type = "text" value =<?php  echo $users['contact_cellphone']  ?>>
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone ext:</strong></label>
-                        <input type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
+                        <input name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
                     </div>
                     <input type="submit" value="Save" name="submit4" class="post-button" >  
                     
                     </form>
+                    <?php
+                    if(isset($_POST['submit4']))
+                    {
+                    $sql='UPDATE `employer` SET `first_name`= "'.$_POST['name'].'", `contact_last_name`="'.$_POST['lastname'].'",`contact_email`="'.$_POST['email'].'",`contact_cellphone`="'.$_POST['cellphone1'].'",`contact_cellphone_ext`="'.$_POST['cellphone2'].'" WHERE employer_id='.$userId;
+                  
+                    $result = $db->prepare($sql);
+                    $result->execute();
+                    Header('Refresh: '.$_SERVER['PHP_SELF']);
+                    
+echo '<h3 style="color:#8cb900"> Successful saved changed information</h3>';
+                    }
+                  ?>
+                    
+                    
+                
                 </div>
 
 
