@@ -28,7 +28,7 @@
 <section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
         <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center;" class="width-900">
           <ul class="work-in-industry-ul" style="display: inline-flex; margin-top: 0;">
-            <div id="newsy">
+            <div id="newsy" style="padding-left: 10px; padding-right: 10px;">
             <?php 
             $c = News::getAmount();
             $c = $c['COUNT(*)'];
