@@ -31,7 +31,7 @@
             if (User::isGuest()){
                 echo '
                 <div>
-                    <a href="/user/signin"><input type="submit" value="Sign In" class="sign-in-button"></a>
+                    <a href="/user/signin" class="no-mob-view"><input type="submit" value="Sign In" class="sign-in-button"></a>
                 </div>
                     </div>';
             }

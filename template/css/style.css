@@ -821,6 +821,7 @@ ul {
 
 #vacancy-details-content .salary-content {
     margin-right: 2em;
+    margin-bottom: .5em; margin-top: .5em;
 }
 
 #vacancy-details-content .salary-level {
@@ -1379,4 +1380,8 @@ ul {
     height: 350px;
     position: relative;
     right: -4%;
+}
+
+.only-mob-view {
+    display: none;
 }

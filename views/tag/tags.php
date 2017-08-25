@@ -1,12 +1,13 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 
-<div id="wrapper">
+<div id="wrapper" >
+    <div class="mobwrapper">
     <section id="vacancy-catalog-content">
         <a href="">All industries</a>
     </section>
     <section id="vacancy-catalog-content">
-        <div class="catalog-side-panel">
+        <div class="catalog-side-panel no-mob-view">
             <div style="margin-bottom: 1em;"><strong>Found <?php $i=0;           
               $db=Db::getConnection();
         $uri = Router::getURI();
@@ -122,6 +123,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
             
         </div>
     </section>
+                    </div>
 </div>
 <script>
 var begining = document.getElementsByClassName('catalog-main')[0].innerHTML;

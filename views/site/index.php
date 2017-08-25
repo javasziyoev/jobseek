@@ -1,19 +1,21 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
-<section id="banner-content">
-<div >
+<section id="banner-content" >
+<div style="display: inline-flex; text-align: center;">
 <?php 
         if (User::isGuest()) 
         {
-  echo '<form action="/user/signup" method="post">
+  echo '<form action="/user/signup" method="post" class="mob-button-44">
   
-    <input type="submit" class="button-post" name = "Post_a_CV" value="Register">
-    <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
+    <input type="submit" class="button-post" name = "Post_a_CV" value="Register" >
+    <input type="submit" class="button-post no-mob-view" name ="post_a_vacancy" value="Post a vacancy"></form>
+    <form action="/user/signin" method="post" class="mob-button-44" >
+    <input type="submit" class="button-post  only-mob-view" name = "Post_a_CV" value="Sign In">
   </form>';}
   else {
     echo'
     <div>
-    <form action="/employer/post_a_vacancy" method="post">
+    <form action="/employer/post_a_vacancy" method="post" ">
     <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
     </div>
     </form>';
