@@ -173,3 +173,9 @@
     position: relative;
     bottom: 0;
 }
+#sign-up-content {
+    margin-top: 25px;
+    margin: 25px auto;
+    width: 100%;
+}
+
