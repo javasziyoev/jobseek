@@ -1,7 +1,7 @@
 <?php
     $i = 0;
     while  ($i < sizeof($res)){
-        $res[$i][2]; $i++;}
+       echo $res[$i][2]; $i++;}
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
             <a href="" class="vacancy-title">'.$position.'</a>
