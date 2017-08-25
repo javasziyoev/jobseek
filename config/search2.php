@@ -1,6 +1,6 @@
 <?php
     $i = 0;
-    $arr = Search::getVacancyByEmp($res[o][0]);
+    $arr = Search::getVacancyByEmp($res[0][0]);
     print_r($arr);
     while  ($i < sizeof($res)){
        echo $res[$i][2]; $i++;}
