@@ -23,7 +23,7 @@
             <input id="tab2" type="radio" name="tabs">
             <label for="tab2" title="Sign up 2">Favorites</label>
             
-            <input id="tab3" type="radio" name="tabs">
+            <input id="tab3" type="radio" name="tabs" checked>
             <label for="tab3" title="Sign up 2">Settings</label>
 
             
