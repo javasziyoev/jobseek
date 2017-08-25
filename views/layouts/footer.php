@@ -1,4 +1,4 @@
-<div id="wrapper">
+<div id="wrapper" style="flex: 0 0 auto;">
       <footer id="footer-content">
         <ul class="footer-ul">
           <li class="footer-li"><a href="">For Employers</a></li>
