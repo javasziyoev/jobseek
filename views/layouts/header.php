@@ -20,9 +20,7 @@
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
             <select class="select-category" name="searchselector">
               <option value="1" >Vacancies</option>
-              <option value="2">CV</option>
-              <option value="3">Companies</option>
-              <option value="4">All</option>
+              <option value="2">Companies</option>
             </select>
             <input type="submit" name="search" value="Search" class="search-button">
             <!-- <small>Advanced search</small> -->

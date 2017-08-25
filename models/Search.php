@@ -20,8 +20,23 @@ class Search
                 }
             }
         }
+        
+        if($selector == 2){
+            $sql = "SELECT * FROM `employer` WHERE `company_name` like '%$searchinp%'";
+            $result = $db->prepare($sql);
+            $result->execute();
+            while( $rez = $result->fetch()){
+                if($rez)
+                {
+                $arr[$i] = $rez;
+                $i++;
+                }
+            }
+        }
             return $arr;
     }
+
+    
 
 }
 
