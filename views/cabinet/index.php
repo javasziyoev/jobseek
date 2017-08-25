@@ -32,11 +32,11 @@
             <section id="content-tab2">
                 Your favorites:
 <?php          
-echo '<ul>'
+echo '<ul>';
 $favors=Panels::getFavors($userId);
 foreach($favors as $favor){
-echo 'huionuin';
     $sql1='SELECT * FROM `vacancy` WHERE vacancy_id = '.$favor['vacancy_id'];
+
     $result = $db->prepare($sql1);
     $result->execute();
 $user2=$result->fetch();
@@ -61,7 +61,19 @@ echo '<li id="newsy" style="border-color: #fafafa;">
  
  echo '
  </a>
- </li>';} echo '</ul>'
+ </li>
+ <form action="#" method ="POST">
+ <input type ="submit" name ="deletefavor'.$favor['vacancy_id'].'"  value ="delete">
+ </form>
+';
+if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
+{
+    $sql = 'DELETE FROM `favors` WHERE vacancy_id='.$favor['vacancy_id'];
+    $result = $db->prepare($sql);
+    $result->execute();
+   
+}
+} echo '</ul>';
 
 
                 ?>
