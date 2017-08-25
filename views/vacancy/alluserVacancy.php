@@ -38,11 +38,13 @@ echo $user['company_name'];
              $user = $result->fetch();
  
              echo $user['currency_code'].'</div> ';
+             echo '<div>'.$getJobs['short_descr'].'</div>';
             $sql = 'SELECT * FROM `employer` WHERE employer_id ='.$getJobs['employer_id'];
             $result = $db->prepare($sql);
             $result->execute();
             $job=$result->fetch();
             echo $getJobs['post_date'];
+            
             echo '
             </a>
             </li>';

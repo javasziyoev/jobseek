@@ -33,12 +33,12 @@
                 <small>By clicking "register", you acknowledge that you read and fully agree
                                 with the terms of use if the website.
                             </small><br>
-                <p><input type="checkbox" name="agree" onclick="agreeForm(this.form)"> 
+                <p><input type="checkbox" name="agree" > 
     I agree with  <a href = "/site/agreement">agreement</a> 
     
     </p>
 
-                <input type="submit" value="Register" name="submit1" class="post-button mob-button-100 wid-100 " disabled>
+                <input type="submit" onclick="agreeForm(this.form)" value="Register" name="submit1" class="post-button mob-button-100 wid-100 ">
             </form>
             <script> 
                 
@@ -53,23 +53,23 @@ if(f.lastname.value!="")
         if(f.password.value!="")
           { f.submit1.disabled=0;
            
-          } else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+          } else   {window.event.preventDefault();
+           if(f.agree.checked) f.agree.checked=0;
 }
       }
-    else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+    else   {   window.event.preventDefault();          if(f.agree.checked) f.agree.checked=0;
 }
-  }  else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+  }  else   {   window.event.preventDefault();;            if(f.agree.checked) f.agree.checked=0;
 }
 
   }
-  else   {   f.submit1.disabled=1;
+  else   {   window.event.preventDefault();
             if(f.agree.checked) f.agree.checked=0;
          }
 
-if(!f.agree.checked) { //alert('please fil necessary fields');
+ //alert('please fil necessary fields');
 checking();
-                      }
-                      else checking();
+                      
 
                       function checking(){ 
        if (f.firstname.value=="") 
@@ -170,10 +170,10 @@ if(f.lastname.value=="")
                             <small>By clicking "register", you acknowledge that you read and fully agree
                                 with the terms of use if the website.
                             </small><br>
-                            <p><input type="checkbox" name="agree" onclick="agreeForm1(this.form)"> 
+                            <p><input type="checkbox" name="agree" > 
                             I agree with  <a href = "/site/agreement">agreement</a> 
                             </p>
-                            <input type="submit" name="submit2" value="Register" class="post-button mob-button-100 wid-100 ">
+                            <input onclick="agreeForm1(this.form)" type="submit" name="submit2" value="Register" class="post-button mob-button-100 wid-100 ">
                             <div style="width:48%;height:auto;float:right;position:relative;top:-450px;">
                             <?php if (isset($e_errors) && is_array($e_errors)): ?>
                         <ul style="list-style-type: none; ">
@@ -208,31 +208,29 @@ if(f.Website.value!="")
                 f.submit2.disabled=0;
                  
            }
-           else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;}
+           else   {   window.event.preventDefault();            if(f.agree.checked) f.agree.checked=0;}
            }
-           else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;}
+           else   {   window.event.preventDefault();            if(f.agree.checked) f.agree.checked=0;}
            
               }
-           else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;}
+           else   {   window.event.preventDefault();           if(f.agree.checked) f.agree.checked=0;}
            
            
-          } else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+          } else   {   window.event.preventDefault();            if(f.agree.checked) f.agree.checked=0;
 }
       }
-    else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+    else   {   window.event.preventDefault();            if(f.agree.checked) f.agree.checked=0;
 }
-  }  else   {   f.submit2.disabled=1;            if(f.agree.checked) f.agree.checked=0;
+  }  else   {   window.event.preventDefault();            if(f.agree.checked) f.agree.checked=0;
 }
 
   }
-  else   {   f.submit2.disabled=1;
+  else   {   window.event.preventDefault();
             if(f.agree.checked) f.agree.checked=0;
          }
 
-if(!f.agree.checked) {//alert('please fil necessary fields');
+//alert('please fil necessary fields');
 checking1();
-                      }
-                      else checking1();
 
 function checking1(){ 
        if (f.Company_name.value=="") 
@@ -247,13 +245,13 @@ else document.getElementById('Name').innerHTML="";
      if (f.Company_name.value=="") 
             document.getElementById('Last_name').innerHTML='<small class="error">Please fill Last_name</small>';
 else document.getElementById('Last_name').innerHTML="";
-     if (f.Company_name.value=="") 
-            document.getElementById('Email_e').innerHTML='<small class="error">Please fill Email_e</small>';
+     if (f.Email_e.value=="") 
+            document.getElementById('Email_e').innerHTML='<small class="error">Please fill Email</small>';
 else document.getElementById('Email_e').innerHTML="";
-     if (f.Company_name.value=="") 
-            document.getElementById('password_e').innerHTML='<small class="error">Please fill password_e</small>';
+     if (f.password_e.value=="") 
+            document.getElementById('password_e').innerHTML='<small class="error">Please fill password</small>';
 else document.getElementById('password_e').innerHTML="";
-     if (f.Company_name.value=="") 
+     if (f.Phone_number.value=="") 
             document.getElementById('Phone_number').innerHTML='<small class="error">Please fill Phone_number</small>';
 else document.getElementById('Phone_number').innerHTML="";
    }
