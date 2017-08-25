@@ -11,7 +11,7 @@
            <input type="submit" name="loginsubmit" value="Sign in" class="sign-in-button mob-button-100" style="width: 100%;">
         </form>
     </section>
-  <div style="margin-bottom: 10em; text-align: center;"> Dont have an account? <a href = "/user/signup" >Create one </a></div>
+  <div style="text-align: center;"> Dont have an account? <a href = "/user/signup" >Create one </a></div>
 </div>
 </div>
 
