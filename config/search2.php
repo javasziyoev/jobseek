@@ -23,6 +23,7 @@ while(true){
     $result = $db->prepare($sql1);
     $result->execute();
     echo $sql1;
+    echon $e;
     if($result == true)break;
     $k++;
     }

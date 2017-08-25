@@ -73,7 +73,7 @@ class UserController
                 if ($e_errors == false){
                     $password =  md5($password);
                     $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,$email_e,$password,$phone_number,$extension_number);
-                    header("Location: /user/signin");
+                    if($result)header("Location: /user/signin");
                     
                 }
                 
@@ -88,7 +88,7 @@ class UserController
         } 
             require_once(ROOT. '/views/user/signup.php');
             return true;
-        
+            $ks=4;
             
 
 	
@@ -96,7 +96,7 @@ class UserController
 //Sign In
  public function actionSignin()
  {
- 
+    echo $ks;
     if (!User::isGuest()){
         header("Location: /index");
     }
