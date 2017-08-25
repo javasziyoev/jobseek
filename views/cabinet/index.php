@@ -3,6 +3,7 @@
 
 
 <div id="wrapper" style="margin-top: 25px">
+<section id="sign-up-content">
     <section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
     <h3 class="dark-gray-text" style="margin-bottom: 1em;">Hello, <?php $userId = User::checkLogged();
                             $sql = 'SELECT * FROM `employer` WHERE employer_id='.$userId;
@@ -16,8 +17,8 @@
     echo $koko.'!'; ?></h3>
     
     <div class="tabs">
-            <input id="tab1" type="radio" name="tabs" checked>
-            <label for="tab1" title="User Data">CV</label>
+            <!--<input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1" title="User Data">CV</label>-->
 
             <input id="tab2" type="radio" name="tabs">
             <label for="tab2" title="Sign up 2">Favorites</label>
@@ -26,9 +27,9 @@
             <label for="tab3" title="Sign up 2">Settings</label>
 
             
-            <section id="content-tab1">
+            <!--<section id="content-tab1">
                 Заполнение CV
-            </section>
+            </section>-->
             <section id="content-tab2">
                 Your favorites:
 <?php          
@@ -86,27 +87,27 @@ if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
                     
                     <form action="#" method ="POST">
                         <label class="info-contact-label block-email margin-right "><strong>Name:</strong></label>
-                        <input name ="name" type = "text" value = <?php echo $koko?> class="input-text mob-button-100">
+                        <input name ="name" type = "text" value = <?php echo $koko?> class="input-text mob-button-100 wid-100 ">
                        
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Last Name:</strong></label>
-                        <input name="lastname" type = "text" value =<?php echo $users['contact_last_name']?> class="input-text mob-button-100">
+                        <input class="input-text mob-button-100 wid-100 " name="lastname" type = "text" value =<?php echo $users['contact_last_name']?>>
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Email:</strong></label>
-                        <input name = "email" type = "text" value =<?php  echo $users['contact_email']  ?> class="input-text mob-button-100">
+                        <input class="input-text mob-button-100 wid-100 " name = "email" type = "text" value =<?php  echo $users['contact_email']  ?> >
                     </div>
                  
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone:</strong></label>
-                        <input class="input-text mob-button-100" name ="cellphone1" type = "text" value =<?php  echo $users['contact_cellphone']  ?>>
+                        <input class="input-text mob-button-100 wid-100 " name ="cellphone1" type = "text" value =<?php  echo $users['contact_cellphone']  ?>>
                     </div>
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone ext:</strong></label>
-                        <input class="input-text mob-button-100" name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
+                        <input class="input-text mob-button-100 wid-100 " name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
                     </div>
-                    <input class="post-button" type="submit" onclick="window.location.href='549485'" value="Save" name="submit4">  
+                    <input class="post-button wid-100 " type="submit" onclick="window.location.href='549485'" value="Save" name="submit4">  
 
                     </form>
                     <?php 
@@ -136,12 +137,12 @@ if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
 
 <form action="#" name = "passwordform" method ="POST">
 
-                <div><input type="password" name = "passwordold" class="input-text mob-button-100" placeholder="Current Password"></div>
-                <div><input type="password" name = "passwordnew" class="input-text mob-button-100" placeholder="New Password"></div>
-                <div><input type="password" name = "passwordconf" class="input-text mob-button-100" placeholder="Confirm New Password"></div>
+                <div><input type="password" name = "passwordold" class="input-text mob-button-100 wid-100 " placeholder="Current Password"></div>
+                <div><input type="password" name = "passwordnew" class="input-text mob-button-100 wid-100 " placeholder="New Password"></div>
+                <div><input type="password" name = "passwordconf" class="input-text mob-button-100 wid-100 " placeholder="Confirm New Password"></div>
                 <h3 id ="incorrect_passwords" style="color:rgb(239,84,108)"></h3>
 
-                <input type="submit" value="Change" name="submit1" class="post-button" >  
+                <input type="submit" value="Change" name="submit1" class="post-button mob-button-100 wid-100 " >  
                  </form>
                  <script>
                  document.forms.passwordform.onsubmit = function(){
@@ -219,16 +220,6 @@ if(document.forms.passwordform.passwordnew.value==document.forms.passwordform.pa
 
 
 <div>
-<h1>
-
-
-
-
-
-
-
-
-
-</h1>
+                </section>
 </div>
 <?php include ROOT . '/views/layouts/footer.php'; ?>
