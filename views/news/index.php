@@ -72,7 +72,7 @@
             if ($res[$k][0] == 1)break;
             echo
             '<div class="" style="display: flex; margin-bottom: 2em;">
-                <img style="max-width: 150px; max-height: 120px; margin-left: 1em; margin-right: 1em;" src="'.$res[$k][6].'" >
+                <img style="max-width: 150px; max-height: 120px; margin-right: 1em;" src="'.$res[$k][6].'" >
             
                 <div margin: 1em;">
                     <div margin-left: 10px;">
