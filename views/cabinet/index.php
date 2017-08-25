@@ -122,7 +122,7 @@ if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
                 }
 
 
-                    echo '<h3 style="color:#8cb900"> Successful saved changed information</h3>';
+                    echo '<h5 style="color:#8cb900">Changes saved.</h5>';
                     
                   ?>
                     
