@@ -115,10 +115,10 @@ h1, h2, h3, h4, h5, h6, h7 {
 .logo {
     margin-top: 5px;
     margin-right: 2em; 
+    width: 120px;
 }
 .nav-search-bar {
     margin-left: 5px;
-    width: 80%;
     display: flex;
 }
 
@@ -533,6 +533,7 @@ ul {
 /* SIGN UP */
 #sign-up-content {
     margin-top: 25px;
+    
 }
 
 /* Базовый контейнер табов */
@@ -1384,4 +1385,8 @@ ul {
 
 .only-mob-view {
     display: none;
+}
+
+#sign-in-content {
+    margin: 1em auto; width: 10%;
 }

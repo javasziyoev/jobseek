@@ -140,6 +140,11 @@
     margin: 0;
 }
 
+.mob-button-100 {
+    width: 100%;
+    margin: 1%;
+}
+
 .mobwrapper {
     margin: 1em;
 }
@@ -158,4 +163,13 @@
 #vacancy-details-content .salary-content {
     width: 25%;
     margin: 0;
+}
+
+#sign-in-content {
+    margin: 0; width: 100%;
+}
+
+#footer-content {
+    position: relative;
+    bottom: 0;
 }
