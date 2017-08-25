@@ -140,6 +140,11 @@
     margin: 0;
 }
 
+.mob-button-100 {
+    width: 100%;
+    margin: 1%;
+}
+
 .mobwrapper {
     margin: 1em;
 }
@@ -159,3 +164,18 @@
     width: 25%;
     margin: 0;
 }
+
+#sign-in-content {
+    margin: 0; width: 100%;
+}
+
+#footer-content {
+    position: relative;
+    bottom: 0;
+}
+#sign-up-content {
+    margin-top: 25px;
+    margin: 25px auto;
+    width: 100%;
+}
+

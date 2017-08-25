@@ -13,10 +13,12 @@
             {   
                 require_once '/components/Core.php';
                
-                $connection = new Firewind();
+                
                 
                 $a = $_POST['searchselector'];
-                echo $a;
+                $b = $_POST['content-search'];
+
+                echo $a,$b;
                 require_once(ROOT. '/views/site/search.php');
             }
 

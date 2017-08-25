@@ -115,10 +115,10 @@ h1, h2, h3, h4, h5, h6, h7 {
 .logo {
     margin-top: 5px;
     margin-right: 2em; 
+    width: 120px;
 }
 .nav-search-bar {
     margin-left: 5px;
-    width: 80%;
     display: flex;
 }
 
@@ -533,6 +533,8 @@ ul {
 /* SIGN UP */
 #sign-up-content {
     margin-top: 25px;
+    margin: 25px auto;
+    width: 30%;
 }
 
 /* Базовый контейнер табов */
@@ -588,7 +590,7 @@ ul {
 .tabs>label {
 	display: inline-block;
 	margin: 0 0 -1px;
-	padding: 15px 25px;
+	padding: 15px 10px;
 	font-weight: 600;
 	text-align: center;
 	color: #aaa;
@@ -1384,4 +1386,18 @@ ul {
 
 .only-mob-view {
     display: none;
+}
+
+#sign-in-content {
+    margin: 1em auto; width: 10%;
+}
+
+.wid-100 {
+    width: 100%;
+    margin: 1%;
+}
+
+.error {
+    color: rgb(239,84,108);
+    margin-left: .2em;
 }

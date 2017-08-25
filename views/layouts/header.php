@@ -15,16 +15,19 @@
 <body>
     <div id="header-content">
         <h3 class="logo"><a href="/index" class="dark-gray-text">Job Seeker</a></h3>
+        <form action="/search" method="POST" style="width: 100%;">
         <div class="nav-search-bar">
-            <input type="search" placeholder="I am looking for..." class="search-input">
-            <select class="select-category">
-              <option value="searchVacancy" selected="">Vacancies</option>
-              <option value="resumeSearch">CV</option>
-              <option value="employerList">Companies</option>
+            <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
+            <select class="select-category" name="searchselector">
+              <option value="1" >Vacancies</option>
+              <option value="2">CV</option>
+              <option value="3">Companies</option>
+              <option value="4">All</option>
             </select>
-            <input type="submit" value="Search" class="search-button">
+            <input type="submit" name="search" value="Search" class="search-button">
             <!-- <small>Advanced search</small> -->
         </div>
+    </form>
             
         <?php
            
