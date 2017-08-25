@@ -11,14 +11,12 @@
         {
             if(isset($_POST['search']))
             {   
-                require_once '/components/Core.php';
-               
-                
-                
+
                 $a = $_POST['searchselector'];
                 $b = $_POST['content-search'];
-
-                echo $a,$b;
+                $res = Search::MainSearch($a,$b);
+                print_r($res);
+                
                 require_once(ROOT. '/views/site/search.php');
             }
 
