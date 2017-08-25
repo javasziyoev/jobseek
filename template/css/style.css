@@ -418,10 +418,6 @@ ul {
 }
 
 
-.vacancies-of-the-day {
-
-}
-
 .vacancies-of-the-day-item {
     margin: 10px 20px 10px 0;
     background: #ffffff;
@@ -851,12 +847,6 @@ ul {
     color: #555;
 }
 
-#vacancy-details-content .block-emp {
-    
-}
-#vacancy-details-content .block-cont {
-    
-}
 #vacancy-details-content .block-phone {
     margin-right: .5em;
 }
@@ -1239,7 +1229,8 @@ ul {
     z-index: 1;
     -webkit-transition: .5s;
     transition: .5s;
-    -webkit-transform: translateZ(0)
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
 }
 .cms-announce-tile:hover .cms-announce-tile__image {
     opacity: 1
@@ -1295,6 +1286,7 @@ ul {
 
    #newsy {
     margin: 0 2em 0 0; border-right: 1px solid #cbd1d4; padding: 1em;
+    padding: 0;
     padding-right: 3em;
    }
 
@@ -1399,8 +1391,4 @@ ul {
 .error {
     color: rgb(239,84,108);
     margin-left: .2em;
-}
-
-.desnewsy {
-    padding: 0;
 }
