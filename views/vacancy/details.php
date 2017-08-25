@@ -69,21 +69,21 @@
         ?></a></h2>
 
         <div class="vacancy-properties">
-            <div class="salary-content" style="margin-bottom: .5em; margin-top: .5em;">
+            <div class="salary-content">
                 <label class="salary-level">Salary</label>
                 <span class="salary-value"><?php  echo $details[0]['salary'].'  '.$details[3]['currency_code'];?></span>
             </div>
 
-            <div class="salary-content" style="margin-bottom: .5em; margin-top: .5em;">
+            <div class="salary-content">
                 <label class="salary-level">City</label>
                 <span class="salary-value"><?php  echo $details[2]['city_name'];?></span>
             </div>
 
-             <div class="salary-content" style="margin-bottom: .5em; margin-top: .5em;">
+             <div class="salary-content">
                 <label class="salary-level">Required experience</label>
                 <span class="salary-value"><?php  echo $details[0]['required_experience'];?></span>
             </div> 
-            <div class="salary-content" style="margin-bottom: .5em; margin-top: .5em;">
+            <div class="salary-content">
                 <label class="salary-level">Post date</label>    
                 <span class="salary-value"><?php  echo $details[0]['post_date'];?></span>
             </div> 
