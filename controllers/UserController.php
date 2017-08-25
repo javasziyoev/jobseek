@@ -1,5 +1,7 @@
 <?php
-
+$k1 = NULL;
+$k2 = NULL;
+$js = 0;
 class UserController
 {
     
@@ -73,7 +75,13 @@ class UserController
                 if ($e_errors == false){
                     $password =  md5($password);
                     $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,$email_e,$password,$phone_number,$extension_number);
-                    if($result)header("Location: /user/signin");
+                    if($result){
+                        $js = 1;
+                        $k1 = $email_e;
+                        $k2 = $password;
+                         
+                        header("Location: /user/signin");
+                    }
                     
                 }
                 
@@ -88,7 +96,7 @@ class UserController
         } 
             require_once(ROOT. '/views/user/signup.php');
             return true;
-            $ks=4;
+          
             
 
 	
@@ -96,7 +104,8 @@ class UserController
 //Sign In
  public function actionSignin()
  {
-    echo $ks;
+ 
+    
     if (!User::isGuest()){
         header("Location: /index");
     }
@@ -106,9 +115,18 @@ class UserController
      $password = '';
 
      $errors = false;
-    if (isset($_POST['loginsubmit'])){
-        $email = $_POST['loginemail'];
-        $password = $_POST['loginpassword'];
+     
+    if (isset($_POST['loginsubmit']) || $js == 1 ){
+        if (isset($_POST['loginsubmit'])
+        {
+            $email = $_POST['loginemail'];
+            $password = $_POST['loginpassword'];
+        }
+        else
+        {
+            $email = $k1;
+            $password = $k2;
+        }
      //Fields Validation
      if (!User::checkEmail($email)) {
          $errors[] = 'Invalid email';
