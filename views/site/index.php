@@ -176,7 +176,7 @@
 
       <section id="mobad" style="padding: .5% 2%; background-color: orange; height: 200px;">
         <div id="inner-content news-content" style=" margin-left:auto; margin-right:auto; text-align: center;" class="width-900">
-          <p>For mobile ad</p>
+          <p>For mobile ad2</p>
           <br style="clear:both" />
         </div>    
           
