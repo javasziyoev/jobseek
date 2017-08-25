@@ -1,4 +1,4 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
+<?php include ROOT . '/views/layouts/header.php'; $i=1;?>
 
 
 
@@ -60,20 +60,23 @@
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone ext:</strong></label>
                         <input name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
                     </div>
-                    <input type="submit" value="Save" name="submit4" class="post-button" >  
-                    
+                    <input type="submit" onclick="window.location.href='549485'" value="Save" name="submit4" class="post-button" >  
+
                     </form>
-                    <?php
+                    <?php 
                     if(isset($_POST['submit4']))
                     {
                     $sql='UPDATE `employer` SET `first_name`= "'.$_POST['name'].'", `contact_last_name`="'.$_POST['lastname'].'",`contact_email`="'.$_POST['email'].'",`contact_cellphone`="'.$_POST['cellphone1'].'",`contact_cellphone_ext`="'.$_POST['cellphone2'].'" WHERE employer_id='.$userId;
                   
                     $result = $db->prepare($sql);
                     $result->execute();
-                    Header('Refresh: '.$_SERVER['PHP_SELF']);
+                    echo "<script>window.location.href=''</script>";
                     
-echo '<h3 style="color:#8cb900"> Successful saved changed information</h3>';
-                    }
+                }
+
+
+                    echo '<h3 style="color:#8cb900"> Successful saved changed information</h3>';
+                    
                   ?>
                     
                     
