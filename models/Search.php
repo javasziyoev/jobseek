@@ -36,9 +36,26 @@ class Search
             return $arr;
     }
 
-    
+    public static function getVacancyByEmp($id)
+    {
+        $db = Db::getConnection();
+        
+            $sql = "SELECT * FROM `vacancy` WHERE `employer_id` like '%$id%'";
+            $result = $db->prepare($sql);
+            $result->execute();
+            while( $rez = $result->fetch()){
+                if($rez)
+                {
+                $arr[$i] = $rez;
+                $i++;
+                
+            }
 
-}
+       }
+
+    
+    }
+}   
 
 
 ?>
