@@ -31,8 +31,40 @@
             </section>
             <section id="content-tab2">
                 Your favorites:
-<?php
-                echo $userId;?>
+<?php          
+
+$favors=Panels::getFavors($userId);
+foreach($favors as $favor){
+echo 'huionuin';
+    $sql1='SELECT * FROM `vacancy` WHERE vacancy_id = '.$favor['vacancy_id'];
+    $result = $db->prepare($sql1);
+    $result->execute();
+$user2=$result->fetch();
+echo '<li id="newsy" style="border-color: #fafafa;">
+<a href="/vacancy/details/'.$user2['vacancy_id'].'">';
+                echo '<div><strong>';
+ echo $user2['position'].'</strong></div>';
+  echo '<div>';
+  echo $user2['salary'].' ';
+  $sql = 'SELECT * FROM `currency` WHERE currency_id='.$user2['salary_currency_id'];
+  $result=$db->prepare($sql);
+  $result->execute();
+  $user = $result->fetch();
+
+  echo $user['currency_code'].'</div> ';
+  echo '<div>'.$user2['short_descr'].'</div>';
+ $sql = 'SELECT * FROM `employer` WHERE employer_id ='.$user2['employer_id'];
+ $result = $db->prepare($sql);
+ $result->execute();
+ $job=$result->fetch();
+ echo $user2['post_date'];
+ 
+ echo '
+ </a>
+ </li>';} 
+
+
+                ?>
             </section>
             <section id="content-tab3">
                 <div>
