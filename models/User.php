@@ -9,8 +9,8 @@ class User
     {
         $db = Db::getConnection();
        
-        $sql = 'INSERT INTO employer(first_name,contact_last_name,contact_password,contact_email, contact_cellphone) '
-                . 'VALUES (:firstname, :lastname, :password, :email, :cellphone)';
+        $sql = 'INSERT INTO employer(first_name,contact_last_name,contact_password,contact_email, contact_cellphone ,applicant) '
+                . 'VALUES (:firstname, :lastname, :password, :email, :cellphone, 1)';
         $result = $db->prepare($sql);
         $result->bindParam(':firstname', $firstname, PDO::PARAM_STR);
         $result->bindParam(':lastname', $lastname, PDO::PARAM_STR);
