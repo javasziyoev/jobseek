@@ -63,7 +63,7 @@
                  
     ?>
         <h2 class="vacancy-name"><?php  echo $details[0]['position'];?></h2>
-        <h2> <a href="" class="company-name">  <?php 
+        <h2>  <a href = "/vacancy/all/<?php echo $details[1]['employer_id']; ?>" class="company-name">  <?php 
         echo $details[1]['company_name'];
         
         ?></a></h2>
