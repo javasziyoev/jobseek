@@ -24,4 +24,7 @@ return array(
 	'index.php' => 'site/index', // actionIndex в SiteController
 	'index' => 'site/index',
 	'site/agreement'=>'site/agreement',
+	'' => 'site/index',
+	'search' => 'search/search',
 	);
+?>
