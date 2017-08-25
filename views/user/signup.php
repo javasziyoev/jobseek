@@ -6,37 +6,39 @@
       <section id="sign-up-content">
         <div class="tabs">
             <input id="tab1" type="radio" name="tabs" <?php if($i == 0)echo 'checked';  ?> >
-            <label for="tab1" title="Sign up 1">Job seeker registration</label>
+            <label for="tab1" title="Sign up 1">Job Seeker Sign Up</label>
 
             <input id="tab2" type="radio" name="tabs" <?php if($i == 1)echo 'checked'; if($k == 1)echo 'checked'; ?> >
-            <label for="tab2" title="Sign up 2">Employer registration</label>
+            <label for="tab2" title="Sign up 2">Employer Sign Up</label>
             
             <section id="content-tab1">
                 <form action="#" method="POST">
 
                 <div>  <div id = "firstname"></div> 
-                    <input type="text" name = "firstname" value="<?php echo $firstname; ?>" class="input-text" placeholder="Name">
+                    <input type="text" name = "firstname" value="<?php echo $firstname; ?>" class="input-text mob-button-100 wid-100 " placeholder="Name">
                 </div>
                 <div>  <div id = "lastname"></div> 
-                    <input type="text" name = "lastname" value="<?php echo $lastname; ?>" class="input-text" placeholder="Last name">
+                    <input type="text" name = "lastname" value="<?php echo $lastname; ?>" class="input-text mob-button-100 wid-100 " placeholder="Last name">
                 </div>
                 
                 <div>  <div id = "email"></div> 
-                    <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text" placeholder="Email">
+                    <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text mob-button-100 wid-100 " placeholder="Email">
                 </div>
                 <div>  <div id = "password"></div> 
-                    <input type="password" name = "password" value="<?php echo $password; ?>" class="input-text" placeholder="Password">
+                    <input type="password" name = "password" value="<?php echo $password; ?>" class="input-text mob-button-100 wid-100 " placeholder="Password">
                 </div>
                 <div>  <div id = "cellphone"></div> 
-                    <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text" placeholder="Phone number">
+                    <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text mob-button-100 wid-100 " placeholder="Phone number">
                 </div>
-           
+                <small>By clicking "register", you acknowledge that you read and fully agree
+                                with the terms of use if the website.
+                            </small><br>
                 <p><input type="checkbox" name="agree" onclick="agreeForm(this.form)"> 
     I agree with  <a href = "/site/agreement">agreement</a> 
     
     </p>
 
-                <input type="submit" value="Register" name="submit1" class="post-button" disabled>
+                <input type="submit" value="Register" name="submit1" class="post-button mob-button-100 wid-100 " disabled>
             </form>
             <script> 
                 
@@ -50,11 +52,7 @@ if(f.lastname.value!="")
       { f.submit1.disabled=0;
         if(f.password.value!="")
           { f.submit1.disabled=0;
-            if(f.cellphone.value!="")
-              { f.submit1.disabled=0;
-                
-              } else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
-}
+           
           } else   {   f.submit1.disabled=1;            if(f.agree.checked) f.agree.checked=0;
 }
       }
@@ -68,37 +66,32 @@ if(f.lastname.value!="")
             if(f.agree.checked) f.agree.checked=0;
          }
 
-if(!f.agree.checked) {alert('please fil necessary fields');
+if(!f.agree.checked) { //alert('please fil necessary fields');
 checking();
                       }
                       else checking();
 
                       function checking(){ 
        if (f.firstname.value=="") 
-            document.getElementById('firstname').innerHTML="<p>Please feel name</p>";
+            document.getElementById('firstname').innerHTML='<small class="error">Please fill name</small>';
 else document.getElementById('firstname').innerHTML="";
 if(f.lastname.value=="")
-              document.getElementById('lastname').innerHTML="<p color='rgb(239,84,108)'>Please feel lastname</p>";
+              document.getElementById('lastname').innerHTML='<small class="error">Please fill lastname</small>';
         else document.getElementById('lastname').innerHTML="";
 
     if(f.email.value=="")
-     document.getElementById('email').innerHTML="<p color='rgb(239,84,108)'>Please feel email</p>";
+     document.getElementById('email').innerHTML='<small class="error">Please fill email</small>';
      else document.getElementById('email').innerHTML="";
 
         if(f.password.value=="")
-                      document.getElementById('password').innerHTML="<p color='rgb(239,84,108)'>Please feel password</p>";
+                      document.getElementById('password').innerHTML='<small class="error">Please fill password</small>';
                 else document.getElementById('password').innerHTML="";
 
-            if(f.cellphone.value=="")
-                            document.getElementById('cellphone').innerHTML="<p color='rgb(239,84,108)'>Please feel cellphone</p>"; 
-                      else document.getElementById('cellphone').innerHTML="";}
+          }
 
    }
 
-</script><style>
-p
-{
-color:rgb(239,84,108);}</style>;
+</script>
 
             <div style="width:48%;height:40%;margin:auto;position:relative;top:-292px;float:right;">
             <?php if (isset($a_errors) && is_array($a_errors)): ?>
@@ -116,7 +109,7 @@ color:rgb(239,84,108);}</style>;
 
                         <div>
                             <div>
-                                <select name = "selectclass" class="select-category">
+                                <select name = "selectclass" class="select-category mob-button-100 wid-100 ">
                                     <?php
                                    
                                      $fuck = User::getCompany();       
@@ -131,14 +124,14 @@ color:rgb(239,84,108);}</style>;
                                 </select>
                             </div>
                             <div>  <div id = "Company_name"></div>     
-                                <input name="Company_name" type="text" placeholder="Company name" value="<?php echo $company_name; ?>" class="input-text company-name">
+                                <input name="Company_name" type="text" placeholder="Company name" value="<?php echo $company_name; ?>" class="input-text company-name mob-button-100 wid-100 ">
                             </div>
                             <div> <div id = "Website"></div>  
-                                <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>" class="input-text">
+                                <input name="Website" type="text" placeholder="Website" value="<?php echo $website; ?>" class="input-text mob-button-100 wid-100 ">
                             </div>
                            
                             <div>
-                                <select name = "selectCity" class="select-category select-city">
+                                <select name = "selectCity" class="select-category select-city mob-button-100 wid-100 ">
                                 <?php
                                 
                                  $fuck = User::getcity();       
@@ -155,24 +148,24 @@ color:rgb(239,84,108);}</style>;
 
                                 ?>                                </select>
                             </div>
-                            <label><strong>Contact person</strong> (confidential)</label>
+                            <label style="margin-top: 1em; margin-bottom: .5em;"><strong>Contact person</strong> (confidential)</label>
                             <div>  <div id = "Name"></div>                 
-                                <input name ="Name" type="text" placeholder="Name" value="<?php echo $name; ?>" class="input-text">
+                                <input name ="Name" type="text" placeholder="Name" value="<?php echo $name; ?>" class="input-text mob-button-100 wid-100 ">
                             </div>
                             <div> <div id = "Last_name"></div>
-                                <input  name = "Last_name"type="text" placeholder="Last name" value = "<?php echo $last_name; ?>" class="input-text">
+                                <input  name = "Last_name"type="text" placeholder="Last name" value = "<?php echo $last_name; ?>" class="input-text mob-button-100 wid-100 ">
                             </div>
                             <div><div id = "Email_e"></div>  
-                                <input name ="Email_e" type="email" placeholder="Email" value="<?php echo $email_e; ?>" class="input-text">
+                                <input name ="Email_e" type="email" placeholder="Email" value="<?php echo $email_e; ?>" class="input-text mob-button-100 wid-100 ">
                             </div>
                             <div> <div id = "password_e"></div>   
-                                <input name ="password_e" type="password" placeholder="Password" class="input-text">
+                                <input name ="password_e" type="password" placeholder="Password" class="input-text mob-button-100 wid-100 ">
                             </div>
                             <div><div id = "Phone_number"></div>   
-                                <input name="Phone_number" type="text" placeholder="Phone number" <?php echo $phone_number; ?> class="input-text">
+                                <input name="Phone_number" type="text" placeholder="Phone number" <?php echo $phone_number; ?> class="input-text mob-button-100 wid-100 ">
                             </div>
                             <div>
-                                <input name="Extension_number" type="text" placeholder="Extension number" value="<?php echo $extension_number; ?>" class="input-text">
+                                <input name="Extension_number" type="text" placeholder="Extension number" value="<?php echo $extension_number; ?>" class="input-text mob-button-100 wid-100 ">
                             </div>
                             <small>By clicking "register", you acknowledge that you read and fully agree
                                 with the terms of use if the website.
@@ -180,7 +173,7 @@ color:rgb(239,84,108);}</style>;
                             <p><input type="checkbox" name="agree" onclick="agreeForm1(this.form)"> 
                             I agree with  <a href = "/site/agreement">agreement</a> 
                             </p>
-                            <input type="submit" name="submit2" value="Register" class="post-button">
+                            <input type="submit" name="submit2" value="Register" class="post-button mob-button-100 wid-100 ">
                             <div style="width:48%;height:auto;float:right;position:relative;top:-450px;">
                             <?php if (isset($e_errors) && is_array($e_errors)): ?>
                         <ul style="list-style-type: none; ">
@@ -236,32 +229,32 @@ if(f.Website.value!="")
             if(f.agree.checked) f.agree.checked=0;
          }
 
-if(!f.agree.checked) {alert('please fil necessary fields');
+if(!f.agree.checked) {//alert('please fil necessary fields');
 checking1();
                       }
                       else checking1();
 
 function checking1(){ 
        if (f.Company_name.value=="") 
-            document.getElementById('Company_name').innerHTML="<p>Please feel Company_name</p>";
+            document.getElementById('Company_name').innerHTML='<small class="error">Please fill Company_name</small>';
 else document.getElementById('Company_name').innerHTML="";
    if (f.Website.value=="") 
-            document.getElementById('Website').innerHTML="<p>Please feel Website</p>";
+            document.getElementById('Website').innerHTML='<small class="error">Please fill Website</small>';
 else document.getElementById('Website').innerHTML="";
      if (f.Name.value=="") 
-            document.getElementById('Name').innerHTML="<p>Please feel name</p>";
+            document.getElementById('Name').innerHTML='<small class="error">Please fill name</small>';
 else document.getElementById('Name').innerHTML="";
      if (f.Company_name.value=="") 
-            document.getElementById('Last_name').innerHTML="<p>Please feel Last_name</p>";
+            document.getElementById('Last_name').innerHTML='<small class="error">Please fill Last_name</small>';
 else document.getElementById('Last_name').innerHTML="";
      if (f.Company_name.value=="") 
-            document.getElementById('Email_e').innerHTML="<p>Please feel Email_e</p>";
+            document.getElementById('Email_e').innerHTML='<small class="error">Please fill Email_e</small>';
 else document.getElementById('Email_e').innerHTML="";
      if (f.Company_name.value=="") 
-            document.getElementById('password_e').innerHTML="<p>Please feel password_e</p>";
+            document.getElementById('password_e').innerHTML='<small class="error">Please fill password_e</small>';
 else document.getElementById('password_e').innerHTML="";
      if (f.Company_name.value=="") 
-            document.getElementById('Phone_number').innerHTML="<p>Please feel Phone_number</p>";
+            document.getElementById('Phone_number').innerHTML='<small class="error">Please fill Phone_number</small>';
 else document.getElementById('Phone_number').innerHTML="";
    }
 }

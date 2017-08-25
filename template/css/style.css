@@ -533,7 +533,8 @@ ul {
 /* SIGN UP */
 #sign-up-content {
     margin-top: 25px;
-    
+    margin: 25px auto;
+    width: 30%;
 }
 
 /* Базовый контейнер табов */
@@ -589,7 +590,7 @@ ul {
 .tabs>label {
 	display: inline-block;
 	margin: 0 0 -1px;
-	padding: 15px 25px;
+	padding: 15px 10px;
 	font-weight: 600;
 	text-align: center;
 	color: #aaa;
@@ -1389,4 +1390,14 @@ ul {
 
 #sign-in-content {
     margin: 1em auto; width: 10%;
+}
+
+.wid-100 {
+    width: 100%;
+    margin: 1%;
+}
+
+.error {
+    color: rgb(239,84,108);
+    margin-left: .2em;
 }
