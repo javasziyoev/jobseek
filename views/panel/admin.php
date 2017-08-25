@@ -80,10 +80,10 @@
                 ?>
             </section>
             
-            <section id="content-tab4" style="height:500px;">
+            <section id="content-tab4" style="height:500px;width:900px;>
             <form method="POST">
                 <input type = "text" name="personalname" placeholder="name" >
-                <div style="display:inline-block;width:25%;border:solid;float:right;">
+                <div style="display:inline-block;width:20%;float:right;">
                 <table cellspacing="30px;" style="margin:auto;">
                 <tr>
                     <th>Id</th>

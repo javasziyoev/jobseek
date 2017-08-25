@@ -453,7 +453,7 @@ $result->bindParam(':addres', $_POST['address'. $vacans['vacancy_id']], PDO::PAR
 $result->bindParam(':published', $_POST['published'. $vacans['vacancy_id']], PDO::PARAM_STR);
 
 return $result->execute();
-echo "<script>window.location.href=''</script>"
+echo "<script>window.location.href=''</script>";
 continue;
 
  }
@@ -520,7 +520,7 @@ echo '__________________________________________________________________________
       
 
         return $result->execute();
-        echo "<script>window.location.href=''</script>"
+        echo "<script>window.location.href=''</script>";
     }
     public static function show_applicants()
     { 
@@ -586,7 +586,7 @@ echo '__________________________________________________________________________
             $result->execute();
             if ($result){
                 return $result->fetch();
-                echo "<script>window.location.href=''</script>"
+                echo "<script>window.location.href=''</script>";
                 }
                     
             return false;
