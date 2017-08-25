@@ -22,6 +22,7 @@ while(true){
     $sql1 = "SELECT * FROM `vacancy` WHERE `employer_id`= $e";
     $result = $db->prepare($sql1);
     $result->execute();
+    echo $sql1;
     if($result == true)break;
     $k++;
     }
@@ -34,6 +35,7 @@ while(true){
     $date = $user['post_date'];
     $er = $user['employment_type_id'];
     $city = $user['city_id'];
+    
  //
      $sql3 = "SELECT * FROM `currency` WHERE `currency_id`= $curr";
     $result = $db->prepare($sql3);
