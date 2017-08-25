@@ -63,7 +63,7 @@
               </div>  
           </section>
            
-          <section id="featured-jobs-content" style="min-width:0;">
+          <section id="featured-jobs-content">
           <h1 style="margin-bottom: 25px;">News</h1>
     <ul>
  <?php
