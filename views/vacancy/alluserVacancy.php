@@ -81,7 +81,7 @@ echo $user['company_name'];
            foreach($getFJobId as $getJobs)
            {
             
-            echo '<li id="newsy" style="border-color: #fafafa;">
+            echo '<li id="newsy" style="border-color: #fafafa; width: 100%">
            <a href="/vacancy/details/'.$getJobs['vacancy_id'].'">';
                            echo '<div><strong>';
             echo $getJobs['position'].'</strong></div>';
