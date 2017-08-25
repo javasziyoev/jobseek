@@ -32,7 +32,7 @@
             <section id="content-tab2">
                 Your favorites:
 <?php          
-
+echo '<ul>'
 $favors=Panels::getFavors($userId);
 foreach($favors as $favor){
 echo 'huionuin';
@@ -61,7 +61,7 @@ echo '<li id="newsy" style="border-color: #fafafa;">
  
  echo '
  </a>
- </li>';} 
+ </li>';} echo '</ul>'
 
 
                 ?>
