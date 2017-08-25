@@ -22,3 +22,12 @@
     float: left;
     padding: 0px 2% 1% 0%;
 }
+
+#vacancy-details-content {
+    min-width: 800px;
+}
+
+#featured-jobs-content{
+    max-width: 800px;
+    min-width: 800px;
+}

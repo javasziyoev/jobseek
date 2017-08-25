@@ -179,3 +179,10 @@
     width: 100%;
 }
 
+#vacancy-details-content {
+    min-width: 0;
+}
+
+#featured-jobs-content{
+    min-width: 0;
+}
