@@ -38,6 +38,8 @@ class Search
 
     public static function getVacancyByEmp($id)
     {
+        $arr = [];
+        $i = 0;
         $db = Db::getConnection();
         
             $sql = "SELECT * FROM `vacancy` WHERE `employer_id` like '%$id%'";
