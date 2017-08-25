@@ -4,7 +4,7 @@
 
 <div id="wrapper" style="margin-top: 25px">
 <section id="sign-up-content">
-    <section id="main-content news" style="padding: .5% 2%; background-color: #fafafa;">
+    <section id="main-content news" style="padding: .5% 2%;">
     <h3 class="dark-gray-text" style="margin-bottom: 1em;">Hello, <?php $userId = User::checkLogged();
                             $sql = 'SELECT * FROM `employer` WHERE employer_id='.$userId;
                             $result = $db->prepare($sql);
