@@ -74,7 +74,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
                 foreach($tags as $tag)
                 {echo '<div class="vacancy-post"><div class="vacancy-postposted">';
                    echo ' <a href="/vacancy/details/'.$tag['vacancy_id'].'" class="vacancy-title">'.$tag['position'].'</a>';
-                   echo ' <div class="salary">  <label>'.$tag['salary'].'</label><label>';
+                   echo ' <div class="salary">  <label>'.$tag['salary'].'</label><label style="margin-left: 5px;">';
                    $sql = 'SELECT * FROM `currency` WHERE currency_id ='.$tag['salary_currency_id'];
                    $result = $db->prepare($sql);
                    $result->execute();
