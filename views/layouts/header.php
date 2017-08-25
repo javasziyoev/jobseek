@@ -15,7 +15,7 @@
 <body>
     <div id="header-content">
         <h3 class="logo"><a href="/index" class="dark-gray-text">Job Seeker</a></h3>
-        <form action="/search" method="POST">
+        <form action="/search" method="POST" style="width: 100%;">
         <div class="nav-search-bar">
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
             <select class="select-category" name="searchselector">
