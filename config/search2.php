@@ -1,7 +1,7 @@
 <?php
     $i = 0;
     $e = $res[0][0];
-    $amount = getVacancyCount();
+    $amount = Search::getVacancyCount();
     print_r($arr);
     while  ($i < sizeof($res)){
        $target = $res[$i][0]; 
