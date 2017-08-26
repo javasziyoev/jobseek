@@ -9,7 +9,7 @@
        {
         $arr = Search::getVacancyByEmp($target);
         $k++;
-        echo $k;
+        echo $arr[2];
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
             <a href="" class="vacancy-title"></a>
