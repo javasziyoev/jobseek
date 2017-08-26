@@ -9,7 +9,7 @@
         
        while($k < $amount['COUNT(*)'])
        {
-        echo [$k]['position'];
+        echo ['position'];
         
         
     echo '<div class="vacancy-post">
