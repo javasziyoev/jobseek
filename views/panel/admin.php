@@ -68,7 +68,6 @@
                 <input  type="date" name="date" placeholder="Date" style="width:20%;"><br><br>
                 <textarea name="short" placeholder="Short description"></textarea><br><br>
                 <textarea name="content" placeholder="Content"></textarea><br><br>
-                <input name="preview" type="file" accept="image/jpeg,image/png" ></input>
                 <input name="preview1" type="text" placeholder="Image url" ></input><br><br>
                 <input type="submit" name = "ba" value="Add" class="post-button" style="margin-top: 1px;">
             </form>
