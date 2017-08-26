@@ -70,7 +70,19 @@ class Search
                
            return $rez;
        }
-        
+    
+       public static function getCurrency($id)
+       {
+           
+           $db = Db::getConnection();
+           
+               $sql = "SELECT `currency_code` FROM `currency` WHERE `currency_id`=$id";
+               $result = $db->prepare($sql);
+               $result->execute();
+              $rez = $result->fetch();
+                  
+              return $rez;
+          }
     
 }   
 
