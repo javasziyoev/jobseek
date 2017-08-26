@@ -1,7 +1,7 @@
 <?php
     $i = 0;
     $arr = Search::getVacancyByEmp($res[0][0]);
-    print_r($arr);
+    print_r($arr[0]);
     $k = 0; 
     while  ($i < sizeof($res)){
         $target = $res[$i][0]; 
