@@ -2,7 +2,7 @@
     $i = 0;
     
     $k = 0; 
-    while  ($i < sizeof($res)){
+    while  ($i < sizeof($res)-1){
         $target = $res[$i][0]; 
         $amount = Search::getVacancyCount($target);
         $arr = Search::getVacancyByEmp($target);
@@ -11,11 +11,11 @@
        while($k < $amount['COUNT(*)'])
        {
         
-        echo $temp['position'];
+        
         
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
-            <a href="" class="vacancy-title"></a>
+            <a href="" class="vacancy-title">.'$temp['position']'.</a>
             <div class="salary"><label></label>
             <label style="margin-left: 5px;"></label></div>
             <div class="short-description"></div>
