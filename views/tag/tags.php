@@ -117,7 +117,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
                                $r++;
                            }
                            if($r>=1){echo '<script>alert("You already added this to favorites");</script>';}
-else if($r==0) {echo '<script>alert("suc");</script>';
+else if($r==0) {echo '<script>alert("successfull added to favorites ");</script>';
                             $sql = 'INSERT INTO `favors`(`applicant_id`,`vacancy_id`) VALUES ('.$userId.','.$tag['vacancy_id'].')';
                             $result = $db->prepare($sql);
                             $result->execute();
