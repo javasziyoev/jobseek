@@ -4,7 +4,7 @@
     $k = 0;
     $target = $res[$i][0];
     echo $target; 
-    $amount = Search::getVacancyCount($target);
+    $amount = Search::getVacancyCount($e);
 echo $amount['COUNT(*)'];    
     
 
