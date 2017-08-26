@@ -33,7 +33,7 @@
             <section id="content-tab2">
                 Your favorites:
 <?php          
-echo '<ul>';
+echo '<ul class="ul-fav">';
 $favors=Panels::getFavors($userId);
 foreach($favors as $favor){
     $sql1='SELECT * FROM `vacancy` WHERE vacancy_id = '.$favor['vacancy_id'];
@@ -64,7 +64,7 @@ echo '<li id="newsy" style="border-color: #fafafa;">
  </a>
  </li>
  <form action="#" method ="POST">
- <input type ="submit" name ="deletefavor'.$favor['vacancy_id'].'"  value ="delete">
+ <input class="post-button delete" type ="submit" name ="deletefavor'.$favor['vacancy_id'].'"  value ="delete">
  </form>
 ';
 if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
