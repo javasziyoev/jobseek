@@ -1,15 +1,20 @@
 <?php
     $i = 0;
     $e = $res[0][0];
-    $amount = Search::getVacancyCount();
+    
+    
+
+    
     print_r($arr);
     while  ($i < sizeof($res)){
-       $target = $res[$i][0]; 
+        $target = $res[$i][0]; 
+        $amount = Search::getVacancyCount($target);
+        $arr = Search::getVacancyByEmp($target);
+        echo $arr[0][0];
        while($k < $amount['COUNT(*)'])
        {
-        $arr = Search::getVacancyByEmp($target);
-        echo $arr['position'];
-        $k++;
+        
+        
         
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
@@ -27,6 +32,7 @@
             </div>
         </div>
     </div>';
+    $k++;
 }
 $i++;
 }
