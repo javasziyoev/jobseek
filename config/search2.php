@@ -11,7 +11,15 @@
        while($k < $amount['COUNT(*)'])
        {
         $curr = Search::getCurrency($k);
-        
+        $city_id = $temp['city_id'];
+        //
+        $sql2 = "SELECT * FROM `city` WHERE `city_id`= ";
+        $result = $db->prepare($sql2);
+        $result->execute();
+        $user = $result->fetch();
+        $city_name = $user['city_name'];
+    
+    // 
         
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
@@ -22,7 +30,7 @@
             <a href="" class="company-name" style="text-decoration:underline;">'.$res[$i][2].'</a>
             <div> 
                 <span>
-                    <label class="city"></label><br/>
+                    <label class="city">'.$city_name.'</label><br/>
                     <label class="post-date">'.$temp['post_date'].'</label> <br/>
                     <label class="jobid"></label>
                 </span>
