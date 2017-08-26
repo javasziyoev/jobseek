@@ -71,10 +71,10 @@
 
 #newsy {
     margin: 1em 0;
-    padding: 0;
     width: 25%;
     font-size: .85em;
     line-height: 1.4em;  
+    padding-left: 10px; padding-right: 10px;
 }
 
 
@@ -185,4 +185,10 @@
 
 #featured-jobs-content{
     min-width: 0;
+}
+
+
+#mob-ban-but {
+    margin: 0 auto;
+    width: 100%;
 }

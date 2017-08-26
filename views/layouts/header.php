@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Job Seeker</title>
+  <title>Jobland</title>
     
   <link rel="stylesheet" href="/template/css/style.css" />   
   <link rel="stylesheet" media="screen and (min-device-width: 1440px)" href="/template/css/desktop.css" /> 
@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="header-content">
-        <h3 class="logo"><a href="/index" class="dark-gray-text">Job Seeker</a></h3>
+        <h3 class="logo"><a href="/index" class="dark-gray-text">Jobland</a></h3>
         <form action="/search" method="POST" style="width: 100%; margin-right: 3px;">
         <div class="nav-search-bar">
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
@@ -53,7 +53,7 @@
                 <div>
                     <ul id="nav" class="nav-bar-ul">
                         <li>
-                            <a href="" style="background-color: #333; line-height: 8px; margin-left: 5px;">'.$users.'</a>
+                            <a href="#" style="background-color: #333; line-height: 8px; margin-left: 5px;">'.$users.'</a>
                             <ul>
                                 <li><a href="/cabinet">Profile</a></li>
                                 <li><a href="/cabinet/favorite">Favorites</a></li>
