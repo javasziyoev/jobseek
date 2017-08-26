@@ -6,10 +6,11 @@
         $target = $res[$i][0]; 
         $amount = Search::getVacancyCount($target);
         $arr = Search::getVacancyByEmp($target);
+        print_r($arr);
         
        while($k < $amount['COUNT(*)'])
        {
-        echo ['position'];
+        
         
         
     echo '<div class="vacancy-post">
