@@ -36,11 +36,11 @@ while($i < sizeof($res)){
     //
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
-            <a href="" class="vacancy-title">'.$res[$i][3].'</a>
+            <a href="/vacancy/details/'.$r.'" class="vacancy-title">'.$res[$i][3].'</a>
             <div class="salary"><label>'.$res[$i][4].'</label>
             <label style="margin-left: 5px;">'.$currency.'</label></div>
             <div class="short-description">'.$res[$i][10].'</div>
-            <a href="" class="company-name">'.$company_name.'</a>
+            <a href="/vacancy/all/'.$res[$i][0].'" class="company-name">'.$company_name.'</a>
             <div> 
                 <span>
                     <label class="city">'.$city_name.'</label><br/>
