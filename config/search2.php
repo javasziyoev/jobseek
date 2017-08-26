@@ -1,12 +1,12 @@
 <?php
     $i = 0;
-    
+    print_r($arr);
     $k = 0; 
     while  ($i < sizeof($res)){
         $target = $res[$i][0]; 
         $amount = Search::getVacancyCount($target);
         $arr = Search::getVacancyByEmp($target);
-        print_r($arr);
+        
         
        while($k < $amount['COUNT(*)'])
        {
