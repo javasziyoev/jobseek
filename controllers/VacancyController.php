@@ -37,7 +37,8 @@ class VacancyController {
     $result->bindParam(':address', $adress, PDO::PARAM_STR);
     
                      $result->execute();
-                              
+                     echo '<script>alert("Vacancy successful added, please wait for proving him by administration"); </script>';
+                     
                 }
                     
             } 
