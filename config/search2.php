@@ -10,20 +10,20 @@
         
        while($k < $amount['COUNT(*)'])
        {
-        
+        $curr = Search::getCurrency($k);
         
         
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
             <a href="" class="vacancy-title">'.$temp['position'].'</a>
             <div class="salary">'.$temp['salary'].'<label></label>
-            <label style="margin-left: 5px;"></label></div>
+            <label style="margin-left: 5px;">'.$curr.'</label></div>
             <div class="short-description">'.$temp['short_descr'].'</div>
             <a href="" class="company-name"></a>
             <div> 
                 <span>
                     <label class="city"></label><br/>
-                    <label class="post-date"></label> <br/>
+                    <label class="post-date">'.$temp['post_date'].'</label> <br/>
                     <label class="jobid"></label>
                 </span>
             </div>
