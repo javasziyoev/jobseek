@@ -57,6 +57,21 @@ class Search
 
     return $arr;
     }
+
+    public static function getVacancyCount()
+    {
+        
+        $db = Db::getConnection();
+        
+            $sql = "SELECT COUNT(*) FROM `vacancy`";
+            $result = $db->prepare($sql);
+            $result->execute();
+           $rez = $result->fetch()
+               
+           return $rez;
+       }
+        
+    
 }   
 
 
