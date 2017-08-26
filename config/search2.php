@@ -13,6 +13,7 @@
         $curr = Search::getCurrency($k);
         $city_id = $temp['city_id'];
         //
+        $db = Db::getConnection();
         $sql2 = "SELECT * FROM `city` WHERE `city_id`= ";
         $result = $db->prepare($sql2);
         $result->execute();
