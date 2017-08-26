@@ -14,7 +14,7 @@
         $city_id = $temp['city_id'];
         //
         $db = Db::getConnection();
-        $sql2 = "SELECT * FROM `city` WHERE `city_id`= ";
+        $sql2 = "SELECT * FROM `city` WHERE `city_id`= $city_id";
         $result = $db->prepare($sql2);
         $result->execute();
         $user = $result->fetch();
