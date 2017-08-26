@@ -19,7 +19,7 @@
             <div class="salary">'.$temp['salary'].'<label></label>
             <label style="margin-left: 5px;">'.$curr['currency_code'].'</label></div>
             <div class="short-description">'.$temp['short_descr'].'</div>
-            <a href="" class="company-name"></a>
+            <a href="" class="company-name" style="text-decoration:underline;">'.$res[0][2].'</a>
             <div> 
                 <span>
                     <label class="city"></label><br/>
