@@ -1,11 +1,11 @@
 <?php
     $i = 0;
     $e = $res[0][0];
-    
+    $k = 0;
     
 
     
-    print_r($arr);
+
     while  ($i < sizeof($res)){
         $target = $res[$i][0]; 
         $amount = Search::getVacancyCount($target);
