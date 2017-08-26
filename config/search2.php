@@ -24,11 +24,11 @@
         
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
-            <a href="" class="vacancy-title">'.$temp['position'].'</a>
+            <a href="/vacancy/details/'.$temp['vacancy_id'].'" class="vacancy-title">'.$temp['position'].'</a>
             <div class="salary">'.$temp['salary'].'<label></label>
             <label style="margin-left: 5px;">'.$curr['currency_code'].'</label></div>
             <div class="short-description">'.$temp['short_descr'].'</div>
-            <a href="" class="company-name" style="text-decoration:underline;">'.$res[$i][2].'</a>
+            <a href="/vacancy/all/'.$temp["employer_id"].'" class="company-name" style="text-decoration:underline;">'.$res[$i][2].'</a>
             <div> 
                 <span>
                     <label class="city">'.$city_name.'</label><br/>
