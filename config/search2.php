@@ -4,7 +4,7 @@
     $k = 0;
     $target = $res[$i][0]; 
     $amount = Search::getVacancyCount($target);
-echo $amount;    
+echo $amount['COUNT(*)'];    
     
 
     while  ($i < sizeof($res)){
