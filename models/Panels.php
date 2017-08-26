@@ -626,24 +626,24 @@ echo '__________________________________________________________________________
         
 
         }
-        public static function addNews($title,$date1,$short,$content,$last){
+        public static function addNews($title,$date1,$short,$content,$preview){
             $db = Db::getConnection();
             $sql = 'INSERT INTO `news`(`title`, `date`, `short_content`, `content`, `preview`) VALUES 
-            (:title,:date1,:short,:content,:last:type)';           
+            (:title,:date1,:short,:content,:preview)';           
             $result = $db->prepare($sql);
             $result->bindParam(':title', $title, PDO::PARAM_STR);
             $result->bindParam(':date1', $date1, PDO::PARAM_STR);
             $result->bindParam(':short', $short, PDO::PARAM_STR);
             $result->bindParam(':content', $content, PDO::PARAM_STR);
-            $result->bindParam(':last', $last, PDO::PARAM_STR);
+            $result->bindParam(':preview', $preview, PDO::PARAM_STR);
             $result->setFetchMode(PDO::FETCH_ASSOC);
             $result->execute();
      
             if ($result){
-                return true;
+                return $sql;
                 }
                     
-            return false;
+                return $sql;
         
 
         }

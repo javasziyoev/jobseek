@@ -37,13 +37,7 @@ class PanelController extends AdminBase{
         $date1 = $_POST['date'];
         $short = $_POST['short'];
         $content = $_POST['content'];
-        $img = $_POST['preview1'];
-        //moving file
-        $last = News::getAmount();
-        $path = 'template/img/';
-        $name = $_FILES['preview']['name'];
-        $temp = $_FILES['preview']['tmp_name'];
-        move_uploaded_file($temp, $path . $last['COUNT(*)'].'.jpeg');
+        $preview = $_POST['preview1'];
         /////
         //ERRORS
         $err = false;
@@ -52,9 +46,8 @@ class PanelController extends AdminBase{
         if (strlen($short) < 1){$err[] = 'short content is empty'; }
         if (strlen($content) < 1){$err[] = 'content is empty'; }
         
-            if(!$err){
-                Panels::addNews($title,$date1,$short,$content,$img);
-            }
+                Panels::addNews($title,$date1,$short,$content,$preview);
+            
             
             //print errors
         $k = 0;
