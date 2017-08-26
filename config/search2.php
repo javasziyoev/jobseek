@@ -1,11 +1,7 @@
 <?php
     $i = 0;
     
-    $k = 0;
-    
-echo $amount['COUNT(*)'];    
-    
-
+    $k = 0; 
     while  ($i < sizeof($res)){
         $target = $res[$i][0]; 
         $amount = Search::getVacancyCount($target);
@@ -34,6 +30,7 @@ echo $amount['COUNT(*)'];
     </div>';
     $k++;
 }
+$k = 0;
 $i++;
 }
 
