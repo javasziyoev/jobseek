@@ -18,10 +18,12 @@ class VacancyController {
                    $address = $_POST['address'];
                    $info = $_POST['info'];
                    $short = $_POST['short'];
-                   $db=Db::getConnection();
-                   $sql = 'INSERT INTO `vacancy`(`industry_id`, `position`, `salary`, `salary_currency_id`, `required_experience`, `city_id`, `info`, `short_descr`, `employment_type_id`, `address`,`published`) 
+                   $date = date("Y-m-d");
                    
-                   VALUES (:industry,:position,:salary,:curency,:required_experience,:city,:info,:short,:employment_type,:address,0)';
+                   $db=Db::getConnection();
+                   $sql = 'INSERT INTO `vacancy`(`industry_id`, `position`, `salary`, `salary_currency_id`, `required_experience`, `city_id`, `info`, `short_descr`, `employment_type_id`, `address`,`published`,`post_date`) 
+                   
+                   VALUES (:industry,:position,:salary,:curency,:required_experience,:city,:info,:short,:employment_type,:address,0,"'.$date.'")';
     $result = $db->prepare($sql);
     $result->bindParam(':industry', $industry, PDO::PARAM_STR);
     $result->bindParam(':position', $position, PDO::PARAM_STR);
