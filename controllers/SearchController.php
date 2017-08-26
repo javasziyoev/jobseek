@@ -21,7 +21,9 @@
                 
                 require_once(ROOT. '/views/site/search.php');
             }
-
+            else{
+                header("Location: /index");
+            }
         }
 
 
