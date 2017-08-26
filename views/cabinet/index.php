@@ -41,7 +41,7 @@ foreach($favors as $favor){
     $result = $db->prepare($sql1);
     $result->execute();
 $user2=$result->fetch();
-echo '<li id="newsy" style="border-color: #fafafa;">
+echo '<li id="newsy" style="border-color: #fafafa; width: 100%;">
 <a href="/vacancy/details/'.$user2['vacancy_id'].'">';
                 echo '<div><strong>';
  echo $user2['position'].'</strong></div>';
@@ -64,7 +64,7 @@ echo '<li id="newsy" style="border-color: #fafafa;">
  </a>
  </li>
  <form action="#" method ="POST">
- <input class="post-button delete" type ="submit" name ="deletefavor'.$favor['vacancy_id'].'"  value ="delete">
+ <input class="post-button delete wid-100" type ="submit" name ="deletefavor'.$favor['vacancy_id'].'"  value ="delete">
  </form>
 ';
 if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
