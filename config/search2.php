@@ -3,6 +3,7 @@
     $e = $res[0][0];
     $k = 0;
     $target = $res[$i][0];
+    echo $e;
     echo $target; 
     $amount = Search::getVacancyCount($e);
 echo $amount['COUNT(*)'];    
