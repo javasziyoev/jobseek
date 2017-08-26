@@ -104,7 +104,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
                         {echo 'full-time job';}
 
                          echo ' · </label> <form method = "POST">
-                        <button name = "favor'.$som2.'" value = '.$som2.'>Add to favorites</button></form>;
+                        <button name = "favor'.$som2.'" value = '.$som2.'>Add to favorites</button></form>
                         
                         </span> </div></div></div>';
                        
