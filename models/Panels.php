@@ -635,7 +635,7 @@ echo '__________________________________________________________________________
             $result->bindParam(':date1', $date1, PDO::PARAM_STR);
             $result->bindParam(':short', $short, PDO::PARAM_STR);
             $result->bindParam(':content', $content, PDO::PARAM_STR);
-            $result->bindParam(':last', $last['COUNT(*)'], PDO::PARAM_STR);
+            $result->bindParam(':last', $last, PDO::PARAM_STR);
             $result->setFetchMode(PDO::FETCH_ASSOC);
             $result->execute();
      
