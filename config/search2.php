@@ -2,7 +2,7 @@
     $i = 0;
     
     $k = 0; 
-    while  ($i < sizeof($res)-1){
+    while  ($i < sizeof($res)){
         $target = $res[$i][0]; 
         $amount = Search::getVacancyCount($target);
         $arr = Search::getVacancyByEmp($target);
