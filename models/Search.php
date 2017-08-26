@@ -58,12 +58,12 @@ class Search
     return $arr;
     }
 
-    public static function getVacancyCount()
+    public static function getVacancyCount($id)
     {
         
         $db = Db::getConnection();
         
-            $sql = "SELECT COUNT(*) FROM `vacancy`";
+            $sql = "SELECT COUNT(*) FROM `vacancy`WHERE `employer_id` like '%$id%'";
             $result = $db->prepare($sql);
             $result->execute();
            $rez = $result->fetch();
