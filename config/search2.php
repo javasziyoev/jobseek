@@ -8,7 +8,7 @@
        while($k < $amount['COUNT(*)'])
        {
         $arr = Search::getVacancyByEmp($target);
-        print_r($arr);
+        echo $arr['position'];
         $k++;
         
     echo '<div class="vacancy-post">
