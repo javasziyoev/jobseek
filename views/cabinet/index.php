@@ -41,7 +41,7 @@ foreach($favors as $favor){
     $result = $db->prepare($sql1);
     $result->execute();
 $user2=$result->fetch();
-echo '<li id="newsy" style="border-color: #fafafa; width: 100%;">
+echo '<li id="newsy" style="border-color: #fafafa; width: 100%; margin: 1em .3em 0 .3em;">
 <a href="/vacancy/details/'.$user2['vacancy_id'].'">';
                 echo '<div><strong>';
  echo $user2['position'].'</strong></div>';
