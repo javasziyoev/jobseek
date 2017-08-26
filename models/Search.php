@@ -58,7 +58,7 @@ class Search
     return $arr;
     }
 
-    public static function getVacancyCount()
+    public static function getVacancyCount($id)
     {
         
         $db = Db::getConnection();

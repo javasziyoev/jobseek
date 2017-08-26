@@ -2,8 +2,9 @@
     $i = 0;
     $e = $res[0][0];
     $k = 0;
-    
-
+    $target = $res[$i][0]; 
+    $amount = Search::getVacancyCount($target);
+echo $amount;    
     
 
     while  ($i < sizeof($res)){
