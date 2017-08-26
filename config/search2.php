@@ -15,7 +15,7 @@
         
     echo '<div class="vacancy-post">
         <div class="vacancy-postposted">
-            <a href="" class="vacancy-title">.'$temp['position']'.</a>
+            <a href="" class="vacancy-title">.'$temp["'position'"]'.</a>
             <div class="salary"><label></label>
             <label style="margin-left: 5px;"></label></div>
             <div class="short-description"></div>
