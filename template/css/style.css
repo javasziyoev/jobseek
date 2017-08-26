@@ -1392,3 +1392,16 @@ ul {
     color: rgb(239,84,108);
     margin-left: .2em;
 }
+.ul-fav {
+    list-style: none;
+}
+
+.delete {
+    background-color: rgb(239,84,108);
+    border-color: rgb(239,84,108);
+}
+
+.delete:hover {
+    background-color: rgb(210, 74, 95);
+    border-color: rgb(210, 74, 95);
+}

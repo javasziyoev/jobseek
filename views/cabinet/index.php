@@ -31,9 +31,9 @@
                 Заполнение CV
             </section>-->
             <section id="content-tab2">
-                Your favorites:
+                <h3>Your favorites:</h3>
 <?php          
-echo '<ul>';
+echo '<ul class="ul-fav">';
 $favors=Panels::getFavors($userId);
 foreach($favors as $favor){
     $sql1='SELECT * FROM `vacancy` WHERE vacancy_id = '.$favor['vacancy_id'];
@@ -41,7 +41,7 @@ foreach($favors as $favor){
     $result = $db->prepare($sql1);
     $result->execute();
 $user2=$result->fetch();
-echo '<li id="newsy" style="border-color: #fafafa;">
+echo '<li id="newsy" style="border-color: #fafafa; width: 100%; margin: 1em .3em 0 .3em;">
 <a href="/vacancy/details/'.$user2['vacancy_id'].'">';
                 echo '<div><strong>';
  echo $user2['position'].'</strong></div>';
@@ -64,7 +64,7 @@ echo '<li id="newsy" style="border-color: #fafafa;">
  </a>
  </li>
  <form action="#" method ="POST">
- <input type ="submit" name ="deletefavor'.$favor['vacancy_id'].'"  value ="delete">
+ <input class="post-button delete wid-100" type ="submit" name ="deletefavor'.$favor['vacancy_id'].'"  value ="delete">
  </form>
 ';
 if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
