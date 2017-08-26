@@ -31,7 +31,7 @@
                 Заполнение CV
             </section>-->
             <section id="content-tab2">
-                <h3>Your favorites:<h3>
+                <h3>Your favorites:</h3>
 <?php          
 echo '<ul class="ul-fav">';
 $favors=Panels::getFavors($userId);
