@@ -11,7 +11,7 @@ echo $amount['COUNT(*)'];
         $target = $res[$i][0]; 
         $amount = Search::getVacancyCount($target);
         $arr = Search::getVacancyByEmp($target);
-        echo $arr[0][0];
+        
        while($k < $amount['COUNT(*)'])
        {
         
