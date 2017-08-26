@@ -66,7 +66,7 @@ class Search
             $sql = "SELECT COUNT(*) FROM `vacancy`";
             $result = $db->prepare($sql);
             $result->execute();
-           $rez = $result->fetch()
+           $rez = $result->fetch();
                
            return $rez;
        }
