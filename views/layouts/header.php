@@ -101,7 +101,7 @@
                   <li >
                       <a href="#" title="Companies" id="no-mob">Companies</a>
                       <ul>
-                          <li><a href="#">Catalog of companies</a></li>
+                          <li><a href="/companies/1">Catalog of companies</a></li>
                           <li><a href="#">Jobs by industry</a></li>
                       </ul>
                   </li>
