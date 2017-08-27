@@ -61,7 +61,7 @@
           </section>
            
           <section id="featured-jobs-content">
-          <h1 style="margin-bottom: 25px;">News</h1>
+          <h1 style="margin-bottom: 25px;">Companies</h1>
     
             
 <?php
