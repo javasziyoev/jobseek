@@ -71,7 +71,7 @@ $db=Db::getConnection();
 $sql = 'SELECT * FROM `vacancy` ';
 $result = $db->prepare($sql);
                        $result->execute();
-                       echo '<div class="vacancy-post"><ul>';
+                       echo '<div class="vacancy-post"><ul style="list-style: none;">';
                        while($count=$result->fetch())
                        {$sql1 = 'SELECT * FROM `employer` WHERE employer_id='.$count['employer_id'];
                         $result1 = $db->prepare($sql1);
