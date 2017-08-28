@@ -26,5 +26,6 @@ return array(
 	'site/agreement'=>'site/agreement',
 	'' => 'site/index',
 	'search' => 'search/search',
+	'companies/([0-9]+)'=>'company/AllComp',
 	);
 ?>

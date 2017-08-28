@@ -21,6 +21,7 @@
             <select class="select-category" name="searchselector">
               <option value="1" >Vacancies</option>
               <option value="2">Companies</option>
+              <option value="3">Cities</option>
             </select>
             <input type="submit" name="search" value="Search" class="search-button">
             <!-- <small>Advanced search</small> -->
@@ -101,7 +102,7 @@
                   <li >
                       <a href="#" title="Companies" id="no-mob">Companies</a>
                       <ul>
-                          <li><a href="#">Catalog of companies</a></li>
+                          <li><a href="/companies/1">Catalog of companies</a></li>
                           <li><a href="#">Jobs by industry</a></li>
                       </ul>
                   </li>

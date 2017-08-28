@@ -33,6 +33,15 @@ class Search
                 }
             }
         }
+        if($selector == 3){
+        
+            $sql = "SELECT * FROM `city` WHERE `city_name`='$searchinp'";
+            $result = $db->prepare($sql);
+            $result->execute();
+           $rez = $result->fetch();
+               
+           return $rez;
+        }
             return $arr;
     }
 
@@ -70,6 +79,31 @@ class Search
                
            return $rez;
        }
+
+       public static function getEmployerById($id)
+       {
+           
+           $db = Db::getConnection();
+           
+               $sql = "SELECT * FROM `employer` WHERE `employer_id` = $id";
+               $result = $db->prepare($sql);
+               $result->execute();
+              $rez = $result->fetch();
+                  
+              return $rez;
+          }
+          public static function getEmployerType($id)
+          {
+              
+              $db = Db::getConnection();
+              
+                  $sql = "SELECT `employment_type_name` FROM `employment_type` WHERE `employment_type_id` = $id";
+                  $result = $db->prepare($sql);
+                  $result->execute();
+                 $rez = $result->fetch();
+                     
+                 return $rez;
+             }
     
        public static function getCurrency($id)
        {
@@ -82,6 +116,29 @@ class Search
               $rez = $result->fetch();
                   
               return $rez;
+          }
+          
+
+          public static function getVacancyByCity($id)
+          {
+              $arr = [];
+              $i = 0;
+              $db = Db::getConnection();
+              
+                  $sql = "SELECT * FROM `vacancy` WHERE `city_id` = $id";
+                  $result = $db->prepare($sql);
+                  $result->execute();
+                  while( $rez = $result->fetch()){
+                      if($rez)
+                      {
+                      $arr[$i] = $rez;
+                      $i++;
+                      
+                  }
+      
+             }
+      
+          return $arr;
           }
     
 }   

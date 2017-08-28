@@ -17,6 +17,7 @@
                 $res = Search::MainSearch($a,$b);
                 
                 
+                
                
                 
                 require_once(ROOT. '/views/site/search.php');
