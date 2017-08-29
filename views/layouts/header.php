@@ -18,7 +18,7 @@
         <form action="/search" method="POST" style="width: 100%; margin-right: 3px;">
         <div class="nav-search-bar">
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
-            <input list="City-list" value="All Cities" placeholder="Select City" style="padding-left: 5px">
+            <input list="City-list" value="All Cities" placeholder="Select City" style="padding-left: 10px; border: 1px solid #cbd1d4; outline: none; rgb(153, 153, 153);">
             <datalist id="City-list">
                 <option>Shanghai</option>
                 <option>Guangzhou</option>
