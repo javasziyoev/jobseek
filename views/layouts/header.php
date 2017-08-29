@@ -18,10 +18,15 @@
         <form action="/search" method="POST" style="width: 100%; margin-right: 3px;">
         <div class="nav-search-bar">
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
-            <input list="City-list">
-            <datalist id="City-list" placeholder="All cities">
-                <option>Один</option>
-                <option>Два</option>
+            <input list="City-list" value="All cities">
+            <datalist id="City-list">
+                <option>Shanghai</option>
+                <option>Guangzhou</option>
+                <option>Beijing</option>
+                <option>Shenzhen</option>
+                <option>Wuhan</option>
+                <option>Chengdu</option>
+                <option>Chongqing</option>
             </datalist>
             <!--<select class="select-category" name="searchselector">
               <option value="1" >Vacancies</option>
