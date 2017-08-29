@@ -18,11 +18,16 @@
         <form action="/search" method="POST" style="width: 100%; margin-right: 3px;">
         <div class="nav-search-bar">
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
-            <select class="select-category" name="searchselector">
+            <input list="City-list">
+            <datalist id="City-list" value="Guangzhou">
+                <option>Один</options>
+                <options>Два</options>
+            </datalist>
+            <!--<select class="select-category" name="searchselector">
               <option value="1" >Vacancies</option>
               <option value="2">Companies</option>
               <option value="3">Cities</option>
-            </select>
+            </select>-->
             <input type="submit" name="search" value="Search" class="search-button">
             <!-- <small>Advanced search</small> -->
         </div>
