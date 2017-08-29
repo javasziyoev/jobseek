@@ -19,9 +19,9 @@
         <div class="nav-search-bar">
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
             <input list="City-list">
-            <datalist id="City-list" value="Guangzhou">
-                <option>Один</options>
-                <options>Два</options>
+            <datalist id="City-list" placeholder="All cities">
+                <option>Один</option>
+                <option>Два</option>
             </datalist>
             <!--<select class="select-category" name="searchselector">
               <option value="1" >Vacancies</option>
