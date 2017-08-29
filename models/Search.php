@@ -4,12 +4,14 @@
 class Search
 {
     
-    public static function MainSearch($selector,$searchinp)
+    public static function MainSearch($selector,$searchinp,$page)
     {   $arr = [];
         $i = 0;
+        $page = intval($page);
+        $per = ($page - 1) * 8;
         $db = Db::getConnection();
-        if($selector == 1){
-            $sql = "SELECT * FROM `vacancy` WHERE `position` like '%$searchinp%'";
+        
+            $sql = "select * from vacancy where `position` like '%$searchinp%' and `city_id` = $selector ORDER by `post_date` Desc LIMIT 8 OFFSET $per";
             $result = $db->prepare($sql);
             $result->execute();
             while( $rez = $result->fetch()){
@@ -19,31 +21,10 @@ class Search
                 $i++;
                 }
             }
+         return $arr;
+			
         }
-        
-        if($selector == 2){
-            $sql = "SELECT * FROM `employer` WHERE `company_name` like '%$searchinp%'";
-            $result = $db->prepare($sql);
-            $result->execute();
-            while( $rez = $result->fetch()){
-                if($rez)
-                {
-                $arr[$i] = $rez;
-                $i++;
-                }
-            }
-        }
-        if($selector == 3){
-        
-            $sql = "SELECT * FROM `city` WHERE `city_name`='$searchinp'";
-            $result = $db->prepare($sql);
-            $result->execute();
-           $rez = $result->fetch();
-               
-           return $rez;
-        }
-            return $arr;
-    }
+			
 
     public static function getVacancyByEmp($id)
     {
@@ -67,12 +48,12 @@ class Search
     return $arr;
     }
 
-    public static function getVacancyCount($id)
+    public static function getVacancyCountByCity($id)
     {
         
         $db = Db::getConnection();
         
-            $sql = "SELECT COUNT(*) FROM `vacancy`WHERE `employer_id` like '%$id%'";
+            $sql = "SELECT COUNT(*) FROM `vacancy` WHERE `city_id`=$id";
             $result = $db->prepare($sql);
             $result->execute();
            $rez = $result->fetch();
@@ -140,7 +121,17 @@ class Search
       
           return $arr;
           }
-    
+          
+          public static function getIdByCity($name)
+          {
+            $db = Db::getConnection();
+            $sql = "Select `city_id` FROM `city` where `city_name`='$name'";
+            $result = $db->prepare($sql);
+            $result->execute();
+            $rez = $result->fetch();
+            return $rez;
+          }
+          
 }   
 
 

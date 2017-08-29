@@ -7,14 +7,14 @@
     class SearchController
     {
 
-        public function actionSearch()
+        public function actionSearch($page)
         {
             if(isset($_POST['search']))
             {   
 
                 $a = $_POST['searchselector'];
                 $b = $_POST['content-search'];
-                $res = Search::MainSearch($a,$b);
+                
                 
                 
                 
