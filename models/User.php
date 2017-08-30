@@ -3,6 +3,15 @@
 
 class User
 {
+public static function getUserDetails($id)
+{        $db = Db::getConnection();
+    $some=[];$i=0;
+    $sql='SELECT * FROM `employer` WHERE applicant=1 and employer_id='.$id;
+    $result = $db->prepare($sql);
+     $result->execute();
+   return $result->fetch();
+    
+}
 
 //registration for applicants
     public static function registera($firstname,$lastname,$password,$email,$cellphone)

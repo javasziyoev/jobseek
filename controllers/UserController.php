@@ -3,6 +3,12 @@
 class UserController
 {
     
+public function actionDetails()
+{
+    require_once(ROOT. '/views/user/details.php');
+    
+}
+
 		//Registration for applicants
 
 
