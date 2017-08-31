@@ -15,7 +15,7 @@
 <body>
     <div id="header-content">
         <h3 class="logo"><a href="/index" class="dark-gray-text">Jobland</a></h3>
-        <form  action="/search/page-1" method="POST" style="width: 100%; margin-right: 3px;">
+        <form  action="/search/direct" method="POST" style="width: 100%; margin-right: 3px;">
         <div class="nav-search-bar">
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
             <input list="City-list" name="searchselector" autocomplete="off" placeholder="Select City" style="padding-left: 10px; border: 1px solid #cbd1d4; outline: none; rgb(153, 153, 153);">

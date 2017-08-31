@@ -16,16 +16,19 @@
     $count = Search::getVacancyCountByCity($city_id);
     $count = $count['COUNT(*)'];
     $e = floor($count / 8) + 1;
-    echo $e;
+    
 //
 //vacancy
     $res = Search::MainSearch($city_id,$b,$page);
-
+    
     
 //
+if($res){
     $i = 0;
-    while($i < 8)
+    while($i < 8 and $i < sizeof($res))
     {
+      
+        
         //employer
         $employer = Search::getEmployerById($res[$i][1]);
         //
@@ -56,25 +59,34 @@
     </div>';
         $i++;
     }
+    }
+    else echo '<h3>0 results found</h3>';
     ?>
     </section>
 </div>
+
 <div class="page">
     <?php 
+    if($res){
     $i = 1;
     while($i < $e ){
         if ($i == 9)break;
-        echo '<a href="/search/page-'.$i.'" >'.$i.'</a>';
+        if($b=="")$b="all";
+        if($a=="")$a="all";
+        echo '<li class="active" style="display:inline-block;list-style:none;"><a class="active" href="/search/q='.$b.'/'.$a.'/page-'.$i.'" >'.$i.'</a></li>';
        
         
         $i++;
     }
     if($e > 9){
+        
         echo '<a href="" style="width:6%;">...</a>
         <a href>'.$e.'</a>';
     }
+}
         ?>
 
 </div>
+</form>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

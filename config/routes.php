@@ -25,7 +25,8 @@ return array(
 	'index' => 'site/index',
 	'site/agreement'=>'site/agreement',
 	'' => 'site/index',
-	'search/page-([0-9]+)' => 'search/search/$1',
+	'search/q=([a-zA-Z]+)/([a-zA-Z]+)/page-([0-9]+)' => 'search/search/$1/$2/$3',
+	'search/direct' => 'search/direct',
 	'companies/([0-9]+)'=>'company/AllComp',
 	);
 ?>

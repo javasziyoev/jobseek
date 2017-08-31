@@ -11,7 +11,7 @@ class Search
         $per = ($page - 1) * 8;
         $db = Db::getConnection();
         
-            $sql = "select * from vacancy where `position` like '%$searchinp%' and `city_id` = $selector ORDER by `post_date` Desc LIMIT 8 OFFSET $per";
+            $sql = "select * from vacancy where `position` like '%$searchinp%' and `city_id` like '%$selector' ORDER by `post_date` Desc LIMIT 8 OFFSET $per";
             $result = $db->prepare($sql);
             $result->execute();
             while( $rez = $result->fetch()){
@@ -53,7 +53,7 @@ class Search
         
         $db = Db::getConnection();
         
-            $sql = "SELECT COUNT(*) FROM `vacancy` WHERE `city_id`=$id";
+            $sql = "SELECT COUNT(*) FROM `vacancy` WHERE `city_id` like '%$id'";
             $result = $db->prepare($sql);
             $result->execute();
            $rez = $result->fetch();

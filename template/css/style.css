@@ -734,7 +734,9 @@ ul {
 .post-button:active {
     outline: none;
 }
-
+.active {
+    color: red;
+}
 .company-name {
     width: 300px;
 }

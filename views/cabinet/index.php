@@ -143,6 +143,7 @@ if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
                 <h3 id ="incorrect_passwords" style="color:rgb(239,84,108)"></h3>
 
                 <input type="submit" value="Change" name="submit1" class="post-button mob-button-100 wid-100 " >  
+                <input type="file" value="CV" name="cv">  
                  </form>
                  <script>
                  document.forms.passwordform.onsubmit = function(){
