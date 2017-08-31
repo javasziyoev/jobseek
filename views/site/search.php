@@ -62,7 +62,7 @@
           </section>
            
           <section id="vacancy-details-content" style="margin-left: 1em;">
-
+          <h1 style="margin-bottom: 25px;">Search results</h1>
     <?php 
 
 //city id
