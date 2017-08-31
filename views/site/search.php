@@ -63,8 +63,6 @@
            
           <section id="vacancy-details-content" style="margin-left: 1em;">
 
-
-    <section id="sign-up-content">
     <?php 
 
 //city id
@@ -121,7 +119,7 @@ if($res){
     }
     else echo '<h3>0 results found</h3>';
     ?>
-    </section>
+  
 </div>
 
 <div class="page">
