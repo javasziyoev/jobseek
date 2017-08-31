@@ -119,7 +119,13 @@ if($res){
     }
     else echo '<h3>0 results found</h3>';
     ?>
-  
+   </section>
+
+
+          <section id="reklama-bleat">
+          Отключите блокировщик рекламы плес.
+          </section>
+      </section>
 </div>
 
 <div class="page">
@@ -142,13 +148,7 @@ if($res){
     }
 }
         ?>
- </section>
 
-
-          <section id="reklama-bleat">
-          Отключите блокировщик рекламы плес.
-          </section>
-      </section>
 </div>
 </form>
 
