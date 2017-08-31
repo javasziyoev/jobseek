@@ -5,6 +5,8 @@ return array(
 	
     'user/signup' => 'user/signup',
 	'user/signin' => 'user/signin',
+	'user/details' => 'user/details',
+	'user/details/[0-9]+)'=>'user/details',
 	'employer/post_a_vacancy' =>'vacancy/vacancy',
 	'vacancy/details' => 'vacancy/details', 
 	'vacancy/details/([0-9]+)' => 'vacancy/details', 

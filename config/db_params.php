@@ -5,7 +5,12 @@ return array(
 			'dbname' => 'jobseeker',
 			'user' => 'root',
 			'password' => '',
+<<<<<<< HEAD
 );
+=======
+);*/
+
+>>>>>>> 083a71770bbdfcaa611201d21591097e2929597c
 
 */
 
