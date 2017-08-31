@@ -170,6 +170,7 @@ if(document.forms.passwordform.passwordnew.value==document.forms.passwordform.pa
                     {     if($_POST['passwordold']){
                         $password=$_POST['passwordold'];
                          $password = md5($password);
+                         print_r($FILE['cv']);
                      
                        
                          if($users==''){
