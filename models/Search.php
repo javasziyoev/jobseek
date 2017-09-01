@@ -7,12 +7,15 @@ class Search
     public static function MainSearch($selector,$searchinp,$page)
     {   $arr = [];
         $i = 0;
+        if($selector==NULL and $searchinp==NULL)$selector='%'.$selector;
+        if($selector==NULL and !$searchinp==NULL)$selector='%';
         $page = intval($page);
         $per = ($page - 1) * 8;
         $db = Db::getConnection();
         
-            $sql = "select * from vacancy where `position` like '%$searchinp%' and `city_id` like '%$selector' ORDER by `post_date` Desc LIMIT 8 OFFSET $per";
+            $sql = "select * from vacancy where `position` like '%$searchinp%' and `city_id` like '$selector' ORDER by `post_date` Desc LIMIT 8 OFFSET $per";
             $result = $db->prepare($sql);
+ 
             $result->execute();
             while( $rez = $result->fetch()){
                 if($rez)
@@ -48,12 +51,11 @@ class Search
     return $arr;
     }
 
-    public static function getVacancyCountByCity($id)
+    public static function getVacancyCountByCity($id,$inp)
     {
-        
         $db = Db::getConnection();
         
-            $sql = "SELECT COUNT(*) FROM `vacancy` WHERE `city_id` like '%$id'";
+            $sql = "SELECT COUNT(*) FROM `vacancy` WHERE `city_id` like '%$id' and `position` like '%$inp%'";
             $result = $db->prepare($sql);
             $result->execute();
            $rez = $result->fetch();

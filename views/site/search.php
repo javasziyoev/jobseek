@@ -70,7 +70,7 @@
     $city_id = $city_id[0];
 //count for page nav
 
-    $count = Search::getVacancyCountByCity($city_id);
+    $count = Search::getVacancyCountByCity($city_id,$b);
     $count = $count['COUNT(*)'];
     $e = floor($count / 8) + 1;
     
