@@ -85,7 +85,9 @@ if($res){
     while($i < 8 and $i < sizeof($res))
     {
       
-        
+        //city
+        $city = getCityById($res[$i][7]);
+        //  
         //employer
         $employer = Search::getEmployerById($res[$i][1]);
         //

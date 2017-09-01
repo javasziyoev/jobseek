@@ -133,6 +133,16 @@ class Search
             $rez = $result->fetch();
             return $rez;
           }
+
+          public static function getCityById($id)
+          {
+            $db = Db::getConnection();
+            $sql = "Select `city_name` FROM `city` where `city_id`='$id'";
+            $result = $db->prepare($sql);
+            $result->execute();
+            $rez = $result->fetch();
+            return $rez;
+          }
           
 }   
 
