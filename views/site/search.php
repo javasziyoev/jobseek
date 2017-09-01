@@ -86,6 +86,7 @@ if($res){
     {
       
         //city
+        print_r($res[$i][7]);
         $city = Search::getCityById($res[$i][7]);
         //  
         //employer
@@ -96,6 +97,7 @@ if($res){
         $currency = $currency[0];
         //
         //employment type
+       
         $job = Search::getEmployerType($res[$i][11]);
         $job = $job[0];
         //
