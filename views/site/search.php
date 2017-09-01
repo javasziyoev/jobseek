@@ -86,7 +86,7 @@ if($res){
     {
       
         //city
-        $city = getCityById($res[$i][7]);
+        $city = Search::getCityById($res[$i][7]);
         //  
         //employer
         $employer = Search::getEmployerById($res[$i][1]);
