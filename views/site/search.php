@@ -109,7 +109,7 @@ if($res){
             <a href="/vacancy/all/'.$employer[$i][0].'" class="company-name">'.$employer[2].'</a>
             <div> 
                 <span>
-                    <label class="city company-name">'.$a.'</label>
+                    <label class="city company-name">'.$city.'</label>
                     <label class="post-date company-name">'.$res[$i][8].'</label> <br/>
                     <label class="jobid company-name">'.$job.'</label>
                 </span>
