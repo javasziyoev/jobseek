@@ -85,7 +85,7 @@ if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
                     <br>
                     <div>
                     
-                    <form action="#" method ="POST">
+                    <form enctype="multipart/form-data" action="#" method ="POST">
                         <label class="info-contact-label block-email margin-right "><strong>Name:</strong></label>
                         <input name ="name" type = "text" value = <?php echo $koko?> class="input-text mob-button-100 wid-100 ">
                        
@@ -106,13 +106,20 @@ if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
                     <div>
                         <label class="info-contact-label block-email margin-right"><strong>Cellphone ext:</strong></label>
                         <input class="input-text mob-button-100 wid-100 " name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
+                        <input  type="file" value="CV" name="cv" accept=".docx , .rtf , .doc" >  
                     </div>
                     <input class="post-button wid-100 " type="submit" onclick="window.location.href='549485'" value="Save" name="submit4">  
-
+                    
                     </form>
                     <?php 
                     if(isset($_POST['submit4']))
                     {
+                        $uploads_dir = '/template/img';
+                        
+                        $tmp_name = $_FILES['cv']['tmp_name'];
+                        $name = basename($_FILES['cv']['name']);
+                    
+                        move_uploaded_file($tmp_name, ROOT."/$uploads_dir/$name");
                     $sql='UPDATE `employer` SET `first_name`= "'.$_POST['name'].'", `contact_last_name`="'.$_POST['lastname'].'",`contact_email`="'.$_POST['email'].'",`contact_cellphone`="'.$_POST['cellphone1'].'",`contact_cellphone_ext`="'.$_POST['cellphone2'].'" WHERE employer_id='.$userId;
                   
                     $result = $db->prepare($sql);
@@ -135,7 +142,7 @@ if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
                 <h3>Change password:</h3>
                 <h3 id ="correct_passwords" style="color:rgb(239,84,108)"></h3>
 
-<form action="#" name = "passwordform" method ="POST">
+<form  action="#" name = "passwordform" method ="POST">
 
                 <div><input type="password" name = "passwordold" class="input-text mob-button-100 wid-100 " placeholder="Current Password"></div>
                 <div><input type="password" name = "passwordnew" class="input-text mob-button-100 wid-100 " placeholder="New Password"></div>
@@ -143,7 +150,7 @@ if(isset($_POST['deletefavor'.$favor['vacancy_id']]))
                 <h3 id ="incorrect_passwords" style="color:rgb(239,84,108)"></h3>
 
                 <input type="submit" value="Change" name="submit1" class="post-button mob-button-100 wid-100 " >  
-                <input type="file" value="CV" name="cv">  
+                
                  </form>
                  <script>
                  document.forms.passwordform.onsubmit = function(){
@@ -168,10 +175,10 @@ if(document.forms.passwordform.passwordnew.value==document.forms.passwordform.pa
 
                     <?php if(isset($_POST['submit1']))
                     {     if($_POST['passwordold']){
-                        $password=$_POST['passwordold'];
+                        
+                        $password = $_POST['passwordold'];
                          $password = md5($password);
-                         print_r($FILE['cv']);
-                     
+                       
                        
                          if($users==''){
 
