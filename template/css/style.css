@@ -1411,6 +1411,7 @@ ul {
 .text-chkbox-show-more {
     display: block;
     position: relative;
+}
     .label-text-show-more {
         cursor: pointer;
     }
@@ -1430,4 +1431,3 @@ ul {
         max-height: none;
         opacity: 1;
     }    
-}
