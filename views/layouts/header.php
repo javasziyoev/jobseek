@@ -117,6 +117,9 @@
                       </ul>
                   </li>
                   <li>
+                    <a href="/about" title="About us">About us</a>
+                </li>
+                  <li>
                       <a href="#" title="Help">Help</a>
                       <ul>
                           <li><a href="#">Support community</a></li>

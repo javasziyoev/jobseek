@@ -1,27 +1,60 @@
 <?php include ROOT . '/views/layouts/header.php'; ?>
 
 <section id="banner-content" >
-<div id="mob-ban-but" style="display: inline-flex; text-align: center;">
-<?php 
-        if (User::isGuest()) 
-        {
-  echo '<form action="/user/signup" method="post" class="mob-button-44">
-  
-    <input type="submit" class="button-post" name = "Post_a_CV" value="Register" style="margin-left: 0px; margin-right: 0px;">
-    <input type="submit" class="button-post no-mob-view" name ="post_a_vacancy" value="Post a vacancy"></form>
-    <form action="/user/signin" method="post" class="mob-button-44" >
-    <input type="submit" class="button-post  only-mob-view" name = "Post_a_CV" value="Sign In" style="margin-left: 0px;margin-right: 0px;">
-  </form>';}
-  else {
-    echo'
-    <div>
-    <form action="/employer/post_a_vacancy" method="post" ">
-    <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
+  <div id="mob-ban-but" style="display: inline-flex; text-align: center;">
+  <?php 
+          if (User::isGuest()) 
+          {
+    echo '<form action="/user/signup" method="post" class="mob-button-44">
+    
+      <input type="submit" class="button-post" name = "Post_a_CV" value="Register" style="margin-left: 0px; margin-right: 0px;">
+      <input type="submit" class="button-post no-mob-view" name ="post_a_vacancy" value="Post a vacancy"></form>
+      <form action="/user/signin" method="post" class="mob-button-44" >
+      <input type="submit" class="button-post  only-mob-view" name = "Post_a_CV" value="Sign In" style="margin-left: 0px;margin-right: 0px;">
+    </form>';}
+    else {
+      echo'
+      <div>
+      <form action="/employer/post_a_vacancy" method="post" ">
+      <input type="submit" class="button-post" name ="post_a_vacancy" value="Post a vacancy">
+      </div>
+      </form>';
+    }
+    ?>
+  </div>
+
+  <div class="substrate">
+    <div class="tabs login-tabs">
+      <input id="tab1" type="radio" name="tabs" checked>
+      <label for="tab1" title="Sign In">Sign In</label>
+      <input id="tab2" type="radio" name="tabs">
+      <label for="tab2" title="Sign Up">Register</label>
+
+      <section id="content-tab1">
+        <div class="social facebook" style="display: inline-flex;"></div>
+        <div class="social facebook linkedin" width="30px" style="display: inline-flex;"></div>
+        
+        <div>
+            <form action="#" method="POST" style="width: 100%;">
+              <input type="text" placeholder="Email" name="loginemail" class="input-text mob-button-100" style="width: 100%;"><br>
+              <input type="password" placeholder="Password" name="loginpassword" class="input-text mob-button-100" style="width: 100%;"><br><br>
+              <input type="submit" name="loginsubmit" value="Sign in" class="sign-in-button mob-button-100" style="width: 100%; margin-left:0;">
+            </form>
+        </div>
+      </section>
+
+      <section id="content-tab2">
+      <?php 
+          if (User::isGuest()) 
+          {
+    echo '<form action="/user/signup" method="post" class="mob-button-44">
+    
+      <input type="submit" class="button-post" name = "Post_a_CV" value="For Applicants" style="margin-top: 3.5em; margin-left: 0px; margin-right: 0px; margin-bottom: 1em; width: 100%;"><br />
+      <input type="submit" class="button-post" name ="post_a_vacancy" value="For Employers" style="margin-left: 0px; margin-right: 0px; width: 100%;"></form>';}
+    ?>
+      </section>
     </div>
-    </form>';
-  }
-  ?>
-</div>
+  </div>
 </section>
 
 

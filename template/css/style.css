@@ -1432,3 +1432,112 @@ ul {
         max-height: none;
         opacity: 1;
     }    
+
+.substrate {
+    background: rgba(0, 0, 0, 0.4);
+    width: 300px;
+    height: 90%;
+    float: right;
+}
+
+
+/* Базовый контейнер табов */
+.login-tabs {
+    min-width: 300px;
+	max-width: none;
+	padding: 0px;
+	margin: 0 auto;
+}
+/* Стили секций с содержанием */
+.login-tabs>section {
+	display: none;
+	padding: 15px;
+    background: none;
+	border: none;
+}
+.login-tabs>section>p {
+	margin: 0 0 5px;
+	line-height: 1.5;
+    color: white;
+	
+	/* прикрутим анимацию */
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+/* Описываем анимацию свойства opacity */
+ 
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* Прячем чекбоксы */
+.login-tabs>input {
+	display: none;
+	position: absolute;
+}
+/* Стили переключателей вкладок (табов) */
+.login-tabs>label {
+	display: inline-block;
+	margin: 0 0 -1px;
+	padding: 15px 10px;
+	font-weight: 600;
+	text-align: center;
+	color: #999;
+	border: none;
+    
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Изменения стиля переключателей вкладок при наведении */
+ 
+.login-tabs>label:hover {
+	color: white;
+	cursor: pointer;
+}
+/* Стили для активной вкладки */
+.login-tabs>input:checked+label {
+	color: white;
+    border: none;
+    background: none;
+	
+}
+
+
+.social {
+    
+    
+}
+
+.facebook {
+    height: 30px;
+    min-width: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: #4768bb;
+    background: url(https://i.hh.ru/bloko/bloko/blocks/icon/fb-icon__min_.svg) 0 no-repeat;
+    background-position: -18px 0;
+    
+}
+
+.linkedin {
+    background: url(https://i.hh.ru/bloko/bloko/blocks/icon/li-icon__min_.svg) 0 no-repeat;
+    background-position: -18px 0;
+}
