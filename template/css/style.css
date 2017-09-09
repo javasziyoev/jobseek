@@ -1414,6 +1414,7 @@ ul {
 }
 .text-chkbox-show-more .label-text-show-more {
         cursor: pointer;
+        color: #0088cc;
     }
 .text-chkbox-show-more .hidden-text {
         display: block;
