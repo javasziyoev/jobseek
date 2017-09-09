@@ -49,7 +49,7 @@
           {
     echo '<form action="/user/signup" method="post" class="mob-button-44">
     
-      <input type="submit" class="button-post" name = "Post_a_CV" value="For Aplicants" style="margin-left: 0px; margin-right: 0px; margin-bottom: 1em; width: 100%;"><br />
+      <input type="submit" class="button-post" name = "Post_a_CV" value="For Aplicants" style="margin-top: 3.5em; margin-left: 0px; margin-right: 0px; margin-bottom: 1em; width: 100%;"><br />
       <input type="submit" class="button-post" name ="post_a_vacancy" value="For Employers" style="margin-left: 0px; margin-right: 0px; width: 100%;"></form>';}
     ?>
       </section>
