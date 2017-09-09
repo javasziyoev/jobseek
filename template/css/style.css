@@ -1511,7 +1511,7 @@ ul {
 	cursor: pointer;
 }
 /* Стили для активной вкладки */
-.tabs>input:checked+label {
+.login-tabs>input:checked+label {
 	color: white;
     border: none;
     background: none;
