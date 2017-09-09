@@ -54,7 +54,60 @@
                           <span class="jobs-count">42</span>
                         </div>
                       </li>
+<<<<<<< HEAD
                   ?>
+=======
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Google</a></span>
+                          <span class="jobs-count">5</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">China Bank</a></span>
+                          <span class="jobs-count">7</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Union Pay</a></span>
+                          <span class="jobs-count">2</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">NVIDIA</a></span>
+                          <span class="jobs-count">10</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Xiaomi</a></span>
+                          <span class="jobs-count">36</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          <span><a href="" class="dark-gray-text">Meizu</a></span>
+                          <span class="jobs-count">15</span>
+                        </div>
+                      </li>
+                      <li>
+                        <label class="text-chkbox-show-more">
+                          <div class="label-text-show-more">
+                              Show more >
+                          </div>
+                          <input type="checkbox" />
+                          <div class="hidden-text">
+                              Раз<br/>
+                              Два<br/>
+                              Три
+                          </div>
+                        </label>
+                      </li>
+
+>>>>>>> 9f74efec9a49073203cd3212afac2b8a65e67d48
                   </ul>
               </div>  
           </section>

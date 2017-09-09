@@ -1407,3 +1407,28 @@ ul {
     background-color: rgb(210, 74, 95);
     border-color: rgb(210, 74, 95);
 }
+
+.text-chkbox-show-more {
+    display: block;
+    position: relative;
+}
+.text-chkbox-show-more .label-text-show-more {
+        cursor: pointer;
+        color: #0088cc;
+    }
+.text-chkbox-show-more .hidden-text {
+        display: block;
+        overflow: hidden;
+        max-height: 0px;
+        opacity: 0;
+        transition: opacity .3s 0s;
+    }
+.text-chkbox-show-more    input {
+        position: absolute;
+        width: 1px; height: 1px;
+        top: -20px; left: -20px;
+    }
+.text-chkbox-show-more    input:checked + .hidden-text {
+        max-height: none;
+        opacity: 1;
+    }    
