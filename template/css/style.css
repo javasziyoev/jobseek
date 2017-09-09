@@ -1412,22 +1412,22 @@ ul {
     display: block;
     position: relative;
 }
-    .label-text-show-more {
+.text-chkbox-show-more .label-text-show-more {
         cursor: pointer;
     }
-    .hidden-text {
+.text-chkbox-show-more .hidden-text {
         display: block;
         overflow: hidden;
         max-height: 0px;
         opacity: 0;
         transition: opacity .3s 0s;
     }
-    input {
+.text-chkbox-show-more    input {
         position: absolute;
         width: 1px; height: 1px;
         top: -20px; left: -20px;
     }
-    input:checked + .hidden-text {
+.text-chkbox-show-more    input:checked + .hidden-text {
         max-height: none;
         opacity: 1;
     }    

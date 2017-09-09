@@ -127,7 +127,7 @@
                         </div>
                       </li>
                       <li>
-                        <!--<label class="text-chkbox-show-more">
+                        <label class="text-chkbox-show-more">
                           <div class="label-text-show-more">
                               Show more >
                           </div>
@@ -138,7 +138,7 @@
                               Три
                           </div>
                         </label>
-                      </li>-->
+                      </li>
 
                   </ul>
               </div>  
