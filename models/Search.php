@@ -145,12 +145,29 @@ class Search
           }
 
           public static function getProvince(){
-
+            $arr = [];
+            $i = 0;
             $db = Db::getConnection();
-            $sql = "Select ``"
-          }
-          
-}   
-
-
+            $sql = "Select b.country_name,count(a.vacancy_id) as amount from vacancy a,country b, city c where a.city_id  = c.city_id and c.country_id = b.country_id  group  by b.country_name 
+            order by count(a.vacancy_id) desc";
+            $result = $db->prepare($sql);
+            $result -> execute();
+            while( $rez = $result->fetch()){
+                   $arr[$i]= Array($rez['country_name'],$rez['amount']);
+                   $i++;
+                }
+            
+   
+            $sql = "SELECT d.country_name,'0' from country d
+            where  d.country_id not in(select DISTINCT r.country_id from city r where r.city_id not in(SELECT DISTINCT f.city_id from vacancy f))";
+            $result = $db->prepare($sql);
+            $result -> execute();
+            
+            while($rez = $result->fetch()){
+                $arr[$i] = Array($rez['country_name'],$rez['0']);
+                $i++;
+            }
+            return $arr;
+        }
+}
 ?>
