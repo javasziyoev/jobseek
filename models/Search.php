@@ -143,6 +143,12 @@ class Search
             $rez = $result->fetch();
             return $rez;
           }
+
+          public static function getProvince(){
+
+            $db = Db::getConnection();
+            $sql = "Select ``"
+          }
           
 }   
 

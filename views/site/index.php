@@ -47,16 +47,13 @@
               <h3 class="dark-gray-text">Jobs At Provinces</h3>
               <div>
                   <ul>
-                  <?php
+                  
                       <li>
                         <div>
                           <span><a href="" class="dark-gray-text">Microsoft</a></span>
                           <span class="jobs-count">42</span>
                         </div>
                       </li>
-<<<<<<< HEAD
-                  ?>
-=======
                       <li>
                         <div>
                           <span><a href="" class="dark-gray-text">Google</a></span>
@@ -107,7 +104,6 @@
                         </label>
                       </li>
 
->>>>>>> 9f74efec9a49073203cd3212afac2b8a65e67d48
                   </ul>
               </div>  
           </section>
