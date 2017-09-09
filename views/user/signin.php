@@ -9,6 +9,7 @@
            <input type="text" placeholder="Email" name="loginemail" class="input-text mob-button-100" ><br>
            <input type="password" placeholder="Password" name="loginpassword" class="input-text mob-button-100" ><br><br>
            <input type="submit" name="loginsubmit" value="Sign in" class="sign-in-button mob-button-100" style="width: 100%;">
+           <?php echo '<h4 style="color:red;">'.$errors.'</h4>'; ?>
         </form>
     </section>
   <div style="text-align: center;"> Dont have an account? <a href = "/user/signup" >Create one </a></div>

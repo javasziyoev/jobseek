@@ -131,6 +131,7 @@ public function actionDetails()
      if ($userId == false){
          //Employer sign in
          $errors = "Incorrect user data";
+         
      } else{
         
          User::auth($userId);
