@@ -1500,7 +1500,8 @@ ul {
 	text-align: center;
 	color: #999;
 	border: none;
-	background: none;
+    
+    background: rgba(0, 0, 0, 0.2);
 }
 
 /* Изменения стиля переключателей вкладок при наведении */
@@ -1512,8 +1513,9 @@ ul {
 /* Стили для активной вкладки */
 .tabs>input:checked+label {
 	color: white;
-	border: none;
-	background: rgba(0, 0, 0, 0.4);
+    border: none;
+    background: none;
+	
 }
 
 
