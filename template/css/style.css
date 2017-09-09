@@ -1407,3 +1407,27 @@ ul {
     background-color: rgb(210, 74, 95);
     border-color: rgb(210, 74, 95);
 }
+
+.text-chkbox-show-more {
+    display: block;
+    position: relative;
+    .label-text-show-more {
+        cursor: pointer;
+    }
+    .hidden-text {
+        display: block;
+        overflow: hidden;
+        max-height: 0px;
+        opacity: 0;
+        transition: opacity .3s 0s;
+    }
+    input {
+        position: absolute;
+        width: 1px; height: 1px;
+        top: -20px; left: -20px;
+    }
+    input:checked + .hidden-text {
+        max-height: none;
+        opacity: 1;
+    }    
+}

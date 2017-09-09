@@ -126,6 +126,20 @@
                           <span class="jobs-count">15</span>
                         </div>
                       </li>
+                      <li>
+                        <label class="text-chkbox-show-more">
+                          <div class="label-text-show-more">
+                              Show more >
+                          </div>
+                          <input type="checkbox" />
+                          <div class="hidden-text">
+                              Раз<br/>
+                              Два<br/>
+                              Три
+                          </div>
+                        </label>
+                      </li>
+
                   </ul>
               </div>  
           </section>
