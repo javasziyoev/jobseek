@@ -102,12 +102,14 @@ public function actionDetails()
 //Sign In
  public function actionSignin()
  {
- 
+    if(isset($_POST['loginsubmit'])){
+        echo $_POST['loginemail'];
+    }
     if (!User::isGuest()){
         header("Location: /index");
     }
 
-    
+    if(is)
      $email = '';
      $password = '';
 
