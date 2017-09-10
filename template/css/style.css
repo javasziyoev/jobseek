@@ -1,4 +1,4 @@
-html {
+*, html {
     font-family: "Segoe UI", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
     
     font-feature-settings: normal;
@@ -1541,3 +1541,27 @@ ul {
     background: url(https://i.hh.ru/bloko/bloko/blocks/icon/li-icon__min_.svg) 0 no-repeat;
     background-position: -18px 0;
 }
+
+
+
+/* DATE OF BIRTH */
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+  }
+  [type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  /* custom styles
+ 
+  input {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+    width: 190px;
+  } */
