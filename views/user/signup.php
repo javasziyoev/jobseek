@@ -21,12 +21,57 @@
                     <input type="text" name = "lastname" value="<?php echo $lastname; ?>" class="input-text mob-button-100 wid-100 " placeholder="Last name">
                 </div>
                 
+                <div>
+                    <select name = "selectclass" class="select-category mob-button-100 wid-100 ">
+                        <option value = "">Человек</option>
+                        <option value = "">Женщина</option>
+                        <option value = "">Жавас</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="text" name = "nationality" class="input-text mob-button-100 wid-100 " placeholder="Nationality">
+                </div>
+
+                <div>
+                    <label for="dateofbirth" style="margin-left: .2em;"><strong>Date Of Birth</strong></label>
+                    <input type="date" name="dateofbirth" id="dateofbirth" class="input-text mob-button-100 wid-100">
+                </div>
+                <br /><br />
+                <textarea name = "exp" placeholder="Previous Experience" class="input-text short-descr mob-button-100 wid-100"></textarea><br>
+                <textarea name = "skills" placeholder="Skills" class="input-text short-descr mob-button-100 wid-100"></textarea><br>
+                <div>
+                    <label for="currentvisa" style="margin-left: .2em;"><strong>Current Visa</strong></label>
+                    <select name = "selectclass" class="select-category mob-button-100 wid-100 ">
+                        <option value = "">None</option>
+                        <option value = "">C</option>
+                        <option value = "">D</option>
+                        <option value = "">F</option>
+                        <option value = "">G</option>
+                        <option value = "">J1 or J2</option>
+                        <option value = "">L</option>
+                        <option value = "">M</option>
+                        <option value = "">Q1 or Q2</option>
+                        <option value = "">R</option>
+                        <option value = "">S1 or S2</option>
+                        <option value = "">X1 or X2</option>
+                        <option value = "">Z</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="attachCV" style="margin-left: .2em;"><strong>Please attach CV (.doc, .docx, .pdf)</strong></label>
+                    <input type="file" style="margin-left: .2em;">
+                </div>
+                <br /><br />
                 <div>  <div id = "email"></div> 
                     <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text mob-button-100 wid-100 " placeholder="Email">
                 </div>
                 <div>  <div id = "password"></div> 
                     <input type="password" name = "password" value="<?php echo $password; ?>" class="input-text mob-button-100 wid-100 " placeholder="Password">
                 </div>
+
+                
+
                 <div>  <div id = "cellphone"></div> 
                     <input type="text" name = "cellphone" value="<?php echo $cellphone; ?>" class="input-text mob-button-100 wid-100 " placeholder="Phone number">
                 </div>
