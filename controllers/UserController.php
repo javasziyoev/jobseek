@@ -109,7 +109,7 @@ public function actionDetails()
         header("Location: /index");
     }
 
-    if(is)
+    
      $email = '';
      $password = '';
 
