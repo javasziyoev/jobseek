@@ -3,16 +3,16 @@
 class CabinetController
 {
 
-    public function actionIndex()
+    public function actionIndex($id)
     {
         $userId = User::checkLogged();
-
         //get info about user from DB
         $user = User::getUserById($userId);
-   
         
+ 
         
-        require_once(ROOT . '/views/cabinet/index.php');
+        if($id == 1) require_once(ROOT . '/views/cabinet/applicant.php');
+        else require_once(ROOT . '/views/cabinet/employer.php');
         return true;
         
     }

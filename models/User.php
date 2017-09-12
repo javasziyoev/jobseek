@@ -380,7 +380,19 @@ public static function getUserByIdAd($id)
         }
         return false;
 }
-
+public static function checkAorE($email)
+{
+    $db = Db::getConnection();
+    $sql = 'SELECT `applicant` FROM employer WHERE contact_email =:email';
+    $result = $db->prepare($sql);
+    $result->bindParam(':email', $email, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();
+    if ($result){
+        return $result->fetch();
+    }
+    return false;
+}
 
 }
 ?>

@@ -137,8 +137,11 @@ public function actionDetails()
      } else{
         
          User::auth($userId);
+         $check = User::checkAorE($email);
+        if($check['applicant'] == 1)header("Location: /cabinet/1");
+        else header("Location: /cabinet/0");
          //User in Cabinet
-         header("Location: /cabinet/");
+    
         
         }
      }

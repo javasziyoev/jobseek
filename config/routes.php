@@ -14,7 +14,7 @@ return array(
 	'vacancy/all/([0-9]+)'=>'vacancy/all',	
 	'tag' => 'tag/index',
 	'tag/([0-9]+)' => 'tag/index',
-	'cabinet' => 'cabinet/index',
+	'cabinet/([0-1])' => 'cabinet/index/$1',
 	'cabinet/favorite' => 'cabinet/favorite',
 	'user/logout' => 'user/logout',
 	'help/writeus' => 'help/writeus',

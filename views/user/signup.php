@@ -58,10 +58,28 @@
                         <option value = "">Z</option>
                     </select>
                 </div>
+                <form   method="POST">
                 <div>
-                    <label for="attachCV" style="margin-left: .2em;"><strong>Please attach CV (.doc, .docx, .pdf)</strong></label>
-                    <input type="file" style="margin-left: .2em;">
+                    <label   for="attachCV" style="margin-left: .2em;"><strong>Please attach CV (.doc, .docx, .pdf)</strong></label>
+                    <input name="cv" type="file" style="margin-left: .2em;">
                 </div>
+                </form>
+                <?php if(isset($_POST['cv']))
+                    {
+                        $uploads_dir = '/template/img';
+                        
+                        $tmp_name = $_FILES['cv']['tmp_name'];
+                        $name = basename($_FILES['cv']['name']);
+                    
+                        move_uploaded_file($tmp_name, ROOT."/$uploads_dir/$name");
+                    $sql='UPDATE `employer` SET `first_name`= "'.$_POST['name'].'", `contact_last_name`="'.$_POST['lastname'].'",`contact_email`="'.$_POST['email'].'",`contact_cellphone`="'.$_POST['cellphone1'].'",`contact_cellphone_ext`="'.$_POST['cellphone2'].'" WHERE employer_id='.$userId;
+                  
+                    $result = $db->prepare($sql);
+                    $result->execute();
+                    echo "<script>window.location.href=''</script>";
+
+                }
+                ?>
                 <br /><br />
                 <div>  <div id = "email"></div> 
                     <input type="email" name = "email" value="<?php echo $email; ?>" class="input-text mob-button-100 wid-100 " placeholder="Email">
