@@ -63,7 +63,7 @@
                     <label   for="attachCV" style="margin-left: .2em;"><strong>Please attach CV (.doc, .docx, .pdf)</strong></label>
                     <input name="cv" type="file" style="margin-left: .2em;">
                 </div>
-                </form>
+                
                 <?php if(isset($_POST['cv']))
                     {
                         $uploads_dir = '/template/img';
@@ -100,7 +100,7 @@
     I agree with  <a href = "/site/agreement">agreement</a> 
     
     </p>
-
+    
                 <input type="submit" onclick="agreeForm(this.form)" value="Register" name="submit1" class="post-button mob-button-100 wid-100 ">
             </form>
             <script> 
@@ -236,7 +236,8 @@ if(f.lastname.value=="")
                             <p><input type="checkbox" name="agree" > 
                             I agree with  <a href = "/site/agreement">agreement</a> 
                             </p>
-                            <input onclick="agreeForm1(this.form)" type="submit" name="submit2" value="Register" class="post-button mob-button-100 wid-100 ">
+                            
+                            <input type="submit" onclick="agreeForm1(this.form)"  name="submit2" value="Register" class="post-button mob-button-100 wid-100 ">
                             <div style="width:48%;height:auto;float:right;position:relative;top:-450px;">
                             <?php if (isset($e_errors) && is_array($e_errors)): ?>
                         <ul style="list-style-type: none; ">
