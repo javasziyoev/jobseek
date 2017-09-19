@@ -102,9 +102,7 @@ public function actionDetails()
 //Sign In
  public function actionSignin()
  {
-    if(isset($_POST['loginsubmit'])){
-        echo $_POST['loginemail'];
-    }
+    
     if (!User::isGuest()){
         header("Location: /index");
     }
@@ -114,9 +112,18 @@ public function actionDetails()
      $password = '';
 
      $errors = false;
-    if (isset($_POST['loginsubmit'])){
-        $email = $_POST['loginemail'];
+    if (isset($_POST['loginsubmit']) or isset($_POST['loginsub'])) {
+        if(isset($_POST['loginsubmit']))
+        {
+        $email = $_POST['loginem'];
         $password = $_POST['loginpassword'];
+    }
+        if(isset($_POST['loginsub']))
+        {
+            $email = $_POST['loginem'];
+            $password = $_POST['loginpass'];
+        }
+        
      //Fields Validation
      if (!User::checkEmail($email)) {
          $errors[] = 'Invalid email';
