@@ -44,10 +44,12 @@ public function actionDetails()
      if($_POST){
             if (isset($_POST['submit1'])) {
                 //cv
+                $cv_c = 0;
                 $uploads_dir = '/template/img';
                 $tmp_name = $_FILES['cv']['tmp_name'];
                 $name = basename($_FILES['cv']['name']);
                 move_uploaded_file($tmp_name, ROOT."/$uploads_dir/$name");
+                if($_FILES['cv'] == true)$cv_c=1;
                 //
 			    $firstname = $_POST['firstname'];
                 $lastname = $_POST['lastname'];	
@@ -58,7 +60,7 @@ public function actionDetails()
                 require_once(ROOT. '/config/applicant_errors.php');
                 if ($a_errors == false){
                     $password =  md5($password);
-                    $result = User::registera($firstname,$lastname,$password,$email,$cellphone);
+                    $result = User::registera($firstname,$lastname,$password,$email,$cellphone,$cv_c);
                     
                     header("Location: /user/signin");
                    
@@ -122,7 +124,7 @@ public function actionDetails()
     if (isset($_POST['loginsubmit']) or isset($_POST['loginsub'])) {
         if(isset($_POST['loginsubmit']))
         {
-        $email = $_POST['loginem'];
+        $email = $_POST['loginemail'];
         $password = $_POST['loginpassword'];
     }
         if(isset($_POST['loginsub']))

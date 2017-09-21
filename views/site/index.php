@@ -31,8 +31,8 @@
       <label for="tab2" title="Sign Up">Register</label>
 
       <section id="content-tab1">
-        <div class="social facebook" style="display: inline-flex;"></div>
-        <div class="social facebook linkedin" width="30px" style="display: inline-flex;"></div>
+      <script src="//ulogin.ru/js/ulogin.js"></script>
+      <div id="uLogin" data-ulogin="display=panel;theme=classic;fields=first_name,last_name;providers=facebook,twitter,google,linkedin;hidden=other;redirect_uri=https%3A%2F%2Fjobland.azurewebsites.net%2F;mobilebuttons=0;"></div>
         
         <div>
             <form   action="/user/signin" method="POST" style="width: 100%;">
@@ -40,6 +40,15 @@
               <input type="password" placeholder="Password" name="loginpass" class="input-text mob-button-100" style="width: 100%;"><br><br>
               <input type="submit" name="loginsub" value="Sign in" class="sign-in-button mob-button-100" style="width: 100%; margin-left:0;">
             </form>
+            <?php
+                                $s = file_get_contents('http://ulogin.ru/token.php?token=' . $_POST['token'] . '&host=' . $_SERVER['HTTP_HOST']);
+                                $user = json_decode($s, true);
+                                //$user['network'] - соц. сеть, через которую авторизовался пользователь
+                                //$user['identity'] - уникальная строка определяющая конкретного пользователя соц. сети
+                                //$user['first_name'] - имя пользователя
+                                //$user['last_name'] - фамилия пользователя
+                            
+            ?>
         </div>
       </section>
 
