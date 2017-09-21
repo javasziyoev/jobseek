@@ -43,8 +43,15 @@ public function actionDetails()
            
      if($_POST){
             if (isset($_POST['submit1'])) {
+                //cv
+                $uploads_dir = '/template/img';
+                $tmp_name = $_FILES['cv']['tmp_name'];
+                $name = basename($_FILES['cv']['name']);
+                move_uploaded_file($tmp_name, ROOT."/$uploads_dir/$name");
+                //
 			    $firstname = $_POST['firstname'];
-			    $lastname = $_POST['lastname'];	
+                $lastname = $_POST['lastname'];	
+                
                 $password = $_POST['password'];
 			    $email = $_POST['email'];	
                 $cellphone = $_POST['cellphone'];
