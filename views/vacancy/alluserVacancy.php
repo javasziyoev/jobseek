@@ -68,7 +68,9 @@ $getFJobId = UserVacancs::getEmployer();
 
 $sql = 'SELECT * FROM `employer` WHERE employer_id='.$getFJobId[0]['employer_id'];
 $result=$db->prepare($sql);
-$result->execute();
+$res = $result->execute();
+print_r($res);
+if($res == true){
 $user = $result->fetch();
 echo $user['company_name'];  
 ?></h1>
@@ -102,8 +104,10 @@ echo $user['company_name'];
             
             echo '
             </a>
-            </li>';
-           }        
+            </li><br>';
+           }  
+          }
+          else echo '<h3>No Vacancies</h3>'      
               ?>
          
         </ul>

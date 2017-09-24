@@ -19,24 +19,25 @@
     
             
 <?php
-
+$i = 0;
 $db=Db::getConnection();
 
 $sql = 'SELECT MIN(`employer_id`) AS id, `company_name` FROM employer GROUP BY `company_name` ';
 $result = $db->prepare($sql);
                        $result->execute();
                        echo '<div class="vacancy-post"><ul style="list-style: none;">';
-                       while($count=$result->fetch())
-                       {$sql1 = 'SELECT * FROM `employer` WHERE employer_id='.$count[0];
+                       while($i < sizeof($detail))
+                       {$sql1 = 'SELECT * FROM `employer` WHERE employer_id='.$detail[$i]['employer_id'];
                         $result1 = $db->prepare($sql1);
                                                $result1->execute();
                         $comp=$result1->fetch();              
                         echo '<li>
                         <div class="vacancy-postposted">
-                         <a href  =/vacancy/all/'.$count[0].' >  '.$comp['company_name'].'</a>
+                         <a href  =/vacancy/all/'.$detail[$i]['employer_id'].' >  '.$detail[$i]['company_name'].'</a>
                         </div></li>
                     ';
-            }echo '</ul></div>'
+                    $i++;
+            }echo '</ul></div>';
 
 ?>
 
@@ -54,6 +55,22 @@ $result = $db->prepare($sql);
 
 
 
+<div class="page">
+    <?php 
+    $i = 1;
+    while($i < $e ){
+        if ($i == 9)break;
+        echo '<a href="/companies/page-'.$i.'" >'.$i.'</a>';
+       
+        
+        $i++;
+    }
+    if($e > 9){
+        echo '<a href="" style="width:6%;">...</a>
+        <a href>'.$e.'</a>';
+    }
+        ?>
 
+</div>
 
 <?php include ROOT . '/views/layouts/footer.php'; ?>

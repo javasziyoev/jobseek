@@ -29,7 +29,7 @@ return array(
 	'' => 'site/index',
 	'search/q=([a-zA-Z]+)/([a-zA-Z]+)/page-([0-9]+)' => 'search/search/$1/$2/$3',
 	'search/direct' => 'search/direct',
-	'companies/([0-9]+)'=>'company/AllComp',
+	'companies/page-([0-9]+)'=>'company/AllComp/$1',
 	'province/([0-9]+)/page-([0-9]+)'=>'vacancy/province/$1/$2',
 	);
 ?>
