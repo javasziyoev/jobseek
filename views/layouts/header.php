@@ -110,21 +110,15 @@
                       </ul>
                   </li> -->
                   <li >
-                      <a href="#" title="Companies" id="no-mob">Companies</a>
-                      <ul>
-                          <li><a href="/companies/1">Catalog of companies</a></li>
-                          <li><a href="#">Jobs by industry</a></li>
-                      </ul>
+                  <a href="/companies/page-1">Catalog of companies</a>
+                      
                   </li>
                   <li>
                     <a href="/about" title="About us">About us</a>
                 </li>
                   <li>
-                      <a href="#" title="Help">Help</a>
-                      <ul>
-                          <li><a href="#">Support community</a></li>
-                          <li><a href="/help/writeus">Write to us</a></li>
-                      </ul>
+                  <a href="/help/writeus">Help</a>
+                      
                   </li>
               </ul>
               
