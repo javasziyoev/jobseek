@@ -169,5 +169,56 @@ class Search
             }
             return $arr;
         }
+        public static function getProvinceById($id){
+            $db = Db::getConnection();
+            $sql = "SELECT `country_name` FROM `country` WHERE `country_id`=$id";
+            $result = $db->prepare($sql);
+            $result -> execute();
+            $result = $result -> fetch();
+            $result = $result['country_name'];
+            return $result;
+        }
+        public static function getIdByProvince($name){
+            $db = Db::getConnection();
+            $sql = "SELECT `country_id` FROM `country` WHERE `country_name`='$name'";
+            $result = $db->prepare($sql);
+            $result -> execute();
+            $result = $result -> fetch();
+            $result = $result['country_id'];
+            return $result;
+        }
+        public static function getProvinceAmount($id){
+            $db = Db::getConnection();
+            $sql = "SELECT COUNT(1) from(Select a.*,c.currency_code from vacancy a,city b ,currency c where 
+            a.city_id=b.city_id and b.country_id = $id and a.salary_currency_id = c.currency_id  ) as s";
+            $result = $db->prepare($sql);
+            $result->setFetchMode(PDO::FETCH_ASSOC);
+            $result->execute();
+            if ($result){
+                $result = $result->fetch();
+                return $result['COUNT(1)'];
+                }
+                    
+            return false;
+    
+        }
+        public static function getProvinceDetails($id,$page,$cubes){
+            $arr = [];
+            $i = 0;
+            $page = intval($page);
+			$per = ($page - 1) * $cubes;
+            $db = Db::getConnection();
+            $sql = "Select a.*,c.currency_code from vacancy a,city b ,currency c where a.city_id=b.city_id and b.country_id = $id and a.salary_currency_id = c.currency_id limit 12 offset".' '.$per;
+            $result = $db->prepare($sql);
+            $result -> execute();
+            $result -> fetch();
+            while ($res = $result ->fetch())
+            {
+                $arr[$i] = $res;
+                $i++;
+            }
+           return $arr;
+
+        }
 }
 ?>

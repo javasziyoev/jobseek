@@ -55,6 +55,16 @@ class VacancyController {
         
 
     }
+    public function actionProvince($id,$page)
+    {
+        $k = Search::getProvinceAmount($id);
+        $cubes = 8;
+        $e = floor($k / $cubes) + 1;
+        $details =  Search::getProvinceDetails($id,$page,$cubes);
+
+        require_once(ROOT. '/views/vacancy/provinceVacancy.php');
+        
+    }
 
 }
 

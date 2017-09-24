@@ -45,12 +45,14 @@ public function actionDetails()
             if (isset($_POST['submit1'])) {
                 //cv
                 $cv_c = 0;
-                $uploads_dir = '/template/img';
+                $uploads_dir = '/template/cv';
                 $tmp_name = $_FILES['cv']['tmp_name'];
                 $name = basename($_FILES['cv']['name']);
                 move_uploaded_file($tmp_name, ROOT."/$uploads_dir/$name");
-                if($_FILES['cv'] == true)$cv_c=1;
+                
+                echo $cv_c;
                 //
+
 			    $firstname = $_POST['firstname'];
                 $lastname = $_POST['lastname'];	
                 
@@ -61,8 +63,8 @@ public function actionDetails()
                 if ($a_errors == false){
                     $password =  md5($password);
                     $result = User::registera($firstname,$lastname,$password,$email,$cellphone,$cv_c);
+                    print_r($result);
                     
-                    header("Location: /user/signin");
                    
                 }
 

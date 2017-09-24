@@ -17,24 +17,26 @@ public static function getUserDetails($id)
     public static function registera($firstname,$lastname,$password,$email,$cellphone,$cv_c)
     {
         $db = Db::getConnection();
-        if(cv_c==1)
+        if($cv_c==1)
         {
             $sql = 'Select max(`employer_id`) from employer';
             $result = $db->prepare($sql);
             $result -> execute();
             $cv = $result->fetch();
-            $cv = $cv['max(employer_id)'];
+            $cv = $cv['max(`employer_id`)'];
+            $cv++;
         }
-        
+    else $cv = 'None';
        
-        $sql = 'INSERT INTO employer(first_name,contact_last_name,contact_password,contact_email, contact_cellphone ,applicant,cv) '
-                . 'VALUES (:firstname, :lastname, :password, :email, :cellphone, 1,:cv)';
+        $sql = "INSERT INTO employer(first_name,contact_last_name,contact_password,contact_email, contact_cellphone ,applicant,cv) 
+                VALUES (:firstname, :lastname, :password, :email, :cellphone, 1,'/template/cv/$cv')";
         $result = $db->prepare($sql);
         $result->bindParam(':firstname', $firstname, PDO::PARAM_STR);
         $result->bindParam(':lastname', $lastname, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
+        $result->bindParam(':cellphone', $cellphone, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->bindParam(':cv', $cv, PDO::PARAM_STR);
+        
 
         return $result->execute();
         
