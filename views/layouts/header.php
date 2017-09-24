@@ -15,7 +15,7 @@
 <body>
     <div id="header-content">
         <h3 class="logo"><a href="/index" class="dark-gray-text">Jobland</a></h3>
-        <form  action="/search/direct" method="POST" style="width: 100%; margin-right: 3px;">
+        <form  action="/views/layouts/findbygoogle.php" method="POST" style="width: 100%; margin-right: 3px;">
         <div class="nav-search-bar">
             <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
             <input list="City-list" name="searchselector" autocomplete="off" placeholder="Select City" style="padding-left: 10px; border: 1px solid #cbd1d4; outline: none; rgb(153, 153, 153);">
@@ -28,6 +28,7 @@
                 <option>Chengdu</option>
                 <option>Chongqing</option>
             </datalist>
+            
             <!--<select class="select-category" name="searchselector">
               <option value="1" >Vacancies</option>
               <option value="2">Companies</option>
@@ -56,17 +57,22 @@
                         $result = $db->prepare($sql);
                         $result->execute();
                         $users = $result->fetch();
+                        
                         if($users=='') 
                         { $users=$userId;
             
-                       
+                            $userId = User::checkLogged();
+                            
+                                    //info about user
+                                    $user = User::getUserByIdAd($userId);
+                                    
                 echo '
                 <div>
                     <ul id="nav" class="nav-bar-ul">
                         <li>
                             <a href="#" style="background-color: #333; line-height: 8px; margin-left: 5px;">'.$users.'</a>
                             <ul>
-                                <li><a href="/cabinet">Profile</a></li>
+                                <li><a href="/cabinet/0">Profile</a></li>
                                 <li><a href="/cabinet/favorite">Favorites</a></li>
                                 <li><a href="/user/logout">Sign out</a></li>
                             </ul>
@@ -80,7 +86,7 @@
                         <li>
                             <a href="" style="background-color: #333; line-height: 8px; margin-left: 5px;">'.$users['first_name'].'</a>
                             <ul>
-                                <li><a href="/cabinet">Profile</a></li>
+                                <li><a href="/cabinet/1">Profile</a></li>
                                 <li><a href="/cabinet/favorite">Favorites</a></li>
                                 <li><a href="/user/logout">Sign out</a></li>
                             </ul>
@@ -116,10 +122,7 @@
                   <li>
                     <a href="/about" title="About us">About us</a>
                 </li>
-                  <li>
-                  <a href="/help/writeus">Help</a>
-                      
-                  </li>
+                  
               </ul>
               
           <!--

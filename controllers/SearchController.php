@@ -9,6 +9,8 @@
 
         public function actionSearch($b,$a,$page)
         {
+            
+           
             if($b=="all")$b="";
             if($a=="all")$a="";
                 
@@ -23,6 +25,7 @@
 
         public function actionDirect()
         {
+            
             if(isset($_POST['search']))
             {   
 
