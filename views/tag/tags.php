@@ -41,8 +41,8 @@
 
             <div>Salary</div>
             <form onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
-                <input style="margin-bottom: 1em;" name="flevel" id="flying" type="range" min="0" max="10000" value="500" step="10">
-                <output for="flying" name="level">500</output>
+                <input id ="r1"  style="margin-bottom: 1em;" name="flevel" id="flying" type="range" min="0" max="100000" value="500" step="10" oninput="fun1()">
+                <output id = "one" for="flying" name="level">500</output>
             </form>
 
             <div>
@@ -74,7 +74,7 @@ echo'<option value='.$current['employment_type_id'].'>'.$current['employment_typ
                 foreach($tags as $tag)
                 {echo '<div class="vacancy-post"><div class="vacancy-postposted">';
                    echo ' <a href="/vacancy/details/'.$tag['vacancy_id'].'" class="vacancy-title">'.$tag['position'].'</a>';
-                   echo ' <div class="salary">  <label>'.$tag['salary'].'</label><label style="margin-left: 5px;">';
+                   echo ' <div class="salary">  <label class ="content">'.$tag['salary'].'</label><label style="margin-left: 5px;">';
                    $sql = 'SELECT * FROM `currency` WHERE currency_id ='.$tag['salary_currency_id'];
                    $result = $db->prepare($sql);
                    $result->execute();
@@ -165,7 +165,6 @@ for(var i =0 ; i<cityes.length;i++)
 document.getElementsByClassName('catalog-main')[0].innerHTML=all;
 
 }function changing2(select){
-
 document.getElementsByClassName('catalog-main')[0].innerHTML=begining;
           var selectedOption = select.options[select.selectedIndex];
 var cityes=[],some=[];all2='';
@@ -183,4 +182,19 @@ document.getElementsByClassName('catalog-main')[0].innerHTML=all2;
              
 
                </script>
+
+<script >function fun1() {
+    var rng=$('#r1').val(); //rng - это Input
+$('#one').text(rng);
+jQuery.each($('.content'),function(i,val)
+           {
+if(parseInt($(this).text()) <rng)
+  {
+
+$(this).parent().parent().show();
+}
+else{    $(this).parent().parent().hide();}
+});
+
+}</script>
 <?php include ROOT . '/views/layouts/footer.php'; ?>
