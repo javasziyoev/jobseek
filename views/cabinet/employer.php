@@ -125,7 +125,7 @@
                 <div>
                     <label class="info-contact-label block-email margin-right"><strong>Cellphone ext:</strong></label>
                     <input class="input-text mob-button-100 wid-100 " name = "cellphone2" type = "text" value =<?php  echo $users['contact_cellphone_ext']  ?>>
-                    <input  type="file" value="CV" name="cv" accept=".docx , .rtf , .doc" >  
+                    
                 </div>
                 <input class="post-button wid-100 " type="submit" onclick="window.location.href='549485'" value="Save" name="submit4">  
                 
