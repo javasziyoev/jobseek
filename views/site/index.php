@@ -7,10 +7,10 @@
           {
     echo '<form action="/user/signup" method="post" class="mob-button-44">
     
-      <input type="submit" class="button-post" name = "Post_a_CV" value="Register" style="margin-left: 0px; margin-right: 0px;">
+      <input type="submit" class="button-post no-mob-view" name = "Post_a_CV" value="Register" style="margin-left: 0px; margin-right: 0px;">
       <input type="submit" class="button-post no-mob-view" name ="post_a_vacancy" value="Post a vacancy"></form>
       <form action="/user/signin" method="post" class="mob-button-44" >
-      <input type="submit" class="button-post  only-mob-view" name = "Post_a_CV" value="Sign In" style="margin-left: 0px;margin-right: 0px;">
+      <!-- <input type="submit" class="button-post  only-mob-view no-mob-view" name = "Post_a_CV" value="Sign In" style="margin-left: 0px;margin-right: 0px;"> -->
     </form>';}
     else {
       echo'
@@ -58,8 +58,8 @@
           {
     echo '<form action="/user/signup" method="post" class="mob-button-44">
     
-      <input type="submit" class="button-post" name = "Post_a_CV" value="For Applicants" style="margin-top: 3.5em; margin-left: 0px; margin-right: 0px; margin-bottom: 1em; width: 100%;"><br />
-      <input type="submit" class="button-post" name ="post_a_vacancy" value="For Employers" style="margin-left: 0px; margin-right: 0px; width: 100%;"></form>';}
+      <input type="submit" class="button-post mob-button-100" name = "Post_a_CV" value="For Applicants" style="margin-top: 3.5em; margin-left: 0px; margin-right: 0px; margin-bottom: 1em; width: 100%;"><br />
+      <input type="submit" class="button-post mob-button-100" name ="post_a_vacancy" value="For Employers" style="margin-left: 0px; margin-right: 0px; width: 100%;"></form>';}
     ?>
       </section>
     </div>

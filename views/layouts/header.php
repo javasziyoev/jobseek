@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -16,29 +16,22 @@
 <body>
     <div id="header-content">
         <h3 class="logo"><a href="/index" class="dark-gray-text">Jobland</a></h3>
-        <form  action="/views/layouts/findbygoogle.php" method="POST" style="width: 100%; margin-right: 3px;">
+
         <div class="nav-search-bar">
-            <input type="search" name="content-search" placeholder="I am looking for..." class="search-input">
-            <input list="City-list" name="searchselector" autocomplete="off" placeholder="Select City" style="padding-left: 10px; border: 1px solid #cbd1d4; outline: none; rgb(153, 153, 153);">
-            <datalist id="City-list">
-                <option>Shanghai</option>
-                <option>Guangzhou</option>
-                <option>Beijing</option>
-                <option>Shenzhen</option>
-                <option>Wuhan</option>
-                <option>Chengdu</option>
-                <option>Chongqing</option>
-            </datalist>
-            
-            <!--<select class="select-category" name="searchselector">
-              <option value="1" >Vacancies</option>
-              <option value="2">Companies</option>
-              <option value="3">Cities</option>
-            </select>-->
-            <input type="submit" name="search" value="Search" class="search-button">
-            <!-- <small>Advanced search</small> -->
+        <script>
+  (function() {
+    var cx = '004419154018501825177:86dbjocyniu';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
         </div>
-    </form>
+ 
             
         <?php
            
