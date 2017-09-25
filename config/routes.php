@@ -12,8 +12,7 @@ return array(
 	'vacancy/details/([0-9]+)' => 'vacancy/details', 
 	'vacancy/all'=>'vacancy/all',
 	'vacancy/all/([0-9]+)'=>'vacancy/all',	
-	'tag' => 'tag/index',
-	'tag/([0-9]+)' => 'tag/index',
+	'tag/([0-9]+)' => 'tag/index/$1',
 	'cabinet/([0-1])' => 'cabinet/index/$1',
 	'cabinet/favorite' => 'cabinet/favorite',
 	'user/logout' => 'user/logout',
@@ -31,5 +30,6 @@ return array(
 	'search/direct' => 'search/direct',
 	'companies/page-([0-9]+)'=>'company/AllComp/$1',
 	'province/([0-9]+)/page-([0-9]+)'=>'vacancy/province/$1/$2',
+	'tag/all'=>'tag/all',
 	);
 ?>

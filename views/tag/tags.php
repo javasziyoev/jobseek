@@ -4,15 +4,12 @@
 <div id="wrapper" >
     <div class="mobwrapper">
     <section id="vacancy-catalog-content">
-        <a href="">All industries</a>
+        <a href="/tag/all">All industries</a>
     </section>
     <section id="vacancy-catalog-content">
         <div class="catalog-side-panel no-mob-view">
             <div style="margin-bottom: 1em;"><strong>Found <?php $i=0;           
               $db=Db::getConnection();
-        $uri = Router::getURI();
-        $internalRoute=preg_replace('~tag/~','',$uri);
-
         $sql = 'SELECT * FROM `vacancy` WHERE industry_id='.$internalRoute;
         $result = $db->prepare($sql);
                                $result->execute();
