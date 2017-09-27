@@ -1281,9 +1281,13 @@ ul {
     margin: 2px;
 }
 
-.page  a:active {
-    color: #f00; /* Цвет активной ссылки */ 
-   } 
+.page  .active  a, .page  .active  span, .page  .active  a:hover, .page  .active  span:hover, .page  .active  a:focus, .page  .active  span:focus {
+    background-color: #FE980F;
+    border-color: #FE980F;
+    color: #FFFFFF;
+    cursor: default;
+    z-index: 2;
+}
 
 
    #newsy {

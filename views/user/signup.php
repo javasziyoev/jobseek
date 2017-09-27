@@ -222,10 +222,27 @@ if(f.lastname.value=="")
                             <small>By clicking "register", you acknowledge that you read and fully agree
                                 with the terms of use if the website.
                             </small><br>
+                            
                             <p><input type="checkbox" name="agree" > 
                             I agree with  <a href = "/site/agreement">agreement</a> 
                             </p>
                             
+                            <script>
+                                    function toggleVisibility(id) {
+                                    var el = document.getElementById(id);
+                                        
+                                    if (el.style.visibility=="visible") { 
+                                            el.style.visibility="hidden";
+                                        }
+                                        else {
+                                            el.style.visibility="visible";
+                                        }
+                                    }
+                            </script>
+                            <p> <input type="checkbox" id="chkpopulation" name="prime" onChange="toggleVisibility('imgpopulation');" >Premium account</p>
+
+                            <img id="imgpopulation" src="/template/img/qr-code.jpg"  style="visibility:hidden" />
+
                             <input type="submit" onclick="agreeForm1(this.form)"  name="submit2" value="Register" class="post-button mob-button-100 wid-100 ">
                             <div style="width:48%;height:auto;float:right;position:relative;top:-450px;">
                             <?php if (isset($e_errors) && is_array($e_errors)): ?>

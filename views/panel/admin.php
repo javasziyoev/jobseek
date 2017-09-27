@@ -33,9 +33,11 @@
             <input id="tab7" type="radio" name="tabs">
             <label for="tab7" title="Sign up 2">logs</label>
             <input id="tab8" type="radio" name="tabs">
-            <label for="tab8" title="Sign up 2">feedbacks</label>
+            <label for="tab8" title="Sign up 2">premium accounts</label>
             <input id="tab9" type="radio" name="tabs">
             <label for="tab9" title="Sign up 2"><a href="/user/logout">sign out</a></label>
+            <input id="tab10" type="radio" name="tabs">
+            <label for="tab10" title="Sign up 2">premium accounts</label>
 
 
             <section id="content-tab1">
@@ -189,12 +191,40 @@
            ?>
                        </section>
             <section id="content-tab8">
-                хуй8
+
+           <form method="POST">
+                <table>
+                <th>employer_id</th>
+                <th>company_name</th>
+                <th>website</th>
+                <th>email</th>
+                
+                <?php
+                
+                $i = 0;
+                while($i < sizeof($get)){
+                echo '<tr><td>'.$get[$i]['employer_id'].'</td>
+                <td>'.$get[$i]['company_name'].'</td>
+                <td>'.$get[$i]['website_url'].'</td>
+                <td>'.$get[$i]['contact_email'].'</td>
+                <td><input type="checkbox" value="accept" name="'.$get[$i]['employer_id'].'"></td></tr>';
+                $i++;
+        }
+                ?>
+                
+                
+              </table>
+              <?php
+              if(sizeof($get)!=0)echo '<input type="submit" name="premium">';
+              ?>
+                </form>
+                
+
             </section>
             <section id="content-tab9">
                 хуй9
             </section>
-
+            
 
 
 

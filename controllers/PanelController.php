@@ -73,8 +73,29 @@ if(isset($_POST['adminex1'])){
     Panels::DeletePersonal($del);
 }
 //
+$i = 0;
+$k = 0;
+$arr = [];
+$get = Panels::getPremiumUsers();
+
+if(isset($_POST['premium'])){
+    while($i < sizeof($get)){
+        $cool = $get[$i]['employer_id'];
+        if($_POST[$cool] == true)
+        {
+            $arr[$k] = $cool;
+            $k++;
+          
+        }
+        $i++;
+    }
+    $accept = Panels::acceptPremium($arr);
+    }
+//
         require_once(ROOT . '/views/panel/admin.php');
         return true;
+
+
         }
 
     

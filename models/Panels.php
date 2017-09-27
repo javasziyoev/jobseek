@@ -647,6 +647,37 @@ echo '__________________________________________________________________________
         
 
         }
+
+        public static function getPremiumUsers()
+        {
+            $arr = [];
+            $i = 0;
+            $db = Db::getConnection();
+            $sql = 'Select * from employer where prime=1 and premium is Null';
+            $result = $db->prepare($sql);
+            $result->execute();
+            while( $cc = $result->fetch()){
+                if($cc)
+                {
+                   $arr[$i]= $cc;
+                   $i++;
+                }}
+                return $arr;
+        }
+        
+        public static function acceptPremium($arr)
+        {
+            $i = 0;
+            $db = Db::getConnection();
+            while ($i<sizeof($arr)){
+            $sql = 'Update employer set premium = 1 where employer_id='.$arr[$i]['employer_id'] ;
+            $result =$db->prepare($sql);
+            $result->execute();
+            $i++;
+            }
+           return true;
+            
+        }
         
     }
     

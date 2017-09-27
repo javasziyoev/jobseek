@@ -56,17 +56,18 @@ $result = $db->prepare($sql);
 
 
 <div class="page">
+    
     <?php 
     $i = 1;
     while($i < $e ){
         if ($i == 9)break;
-        echo '<a href="/companies/page-'.$i.'" >'.$i.'</a>';
+        echo '<li style="display:inline-block;"><a href="/companies/page-'.$i.'" >'.$i.'</a></li>';
        
         
         $i++;
     }
     if($e > 9){
-        echo '<a href="" style="width:6%;">...</a>
+        echo '<li style="display:inline-block;"><a href="" style="width:6%;">...</a></li>
         <a href>'.$e.'</a>';
     }
         ?>

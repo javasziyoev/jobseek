@@ -44,13 +44,13 @@ public static function getUserDetails($id)
 
 //registration for employeers
 public static function registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,
-$email_e,$password,$phone_number,$extension_number)
+$email_e,$password,$phone_number,$extension_number,$prime)
 {
     $db = Db::getConnection();
     
-    $sql = 'INSERT INTO employer(company_class_id, company_name, website_url, city_id, first_name, contact_last_name, contact_email, contact_password, contact_cellphone, contact_cellphone_ext) '
+    $sql = 'INSERT INTO employer(company_class_id, company_name, website_url, city_id, first_name, contact_last_name, contact_email, contact_password, contact_cellphone, contact_cellphone_ext,prime) '
             .'VALUES (:company_class_id, :company_name, :website, :selectcity,:name,:last_name,
-            :email_e,:password,:phone_number,:extension_number)';
+            :email_e,:password,:phone_number,:extension_number,:prime)';
     $result = $db->prepare($sql);
     $result->bindParam(':company_class_id', $company_class_id, PDO::PARAM_STR);
     $result->bindParam(':company_name', $company_name, PDO::PARAM_STR);
@@ -62,7 +62,7 @@ $email_e,$password,$phone_number,$extension_number)
     $result->bindParam(':password', $password, PDO::PARAM_STR);
     $result->bindParam(':phone_number', $phone_number, PDO::PARAM_STR);
     $result->bindParam(':extension_number', $extension_number, PDO::PARAM_STR);
-
+    $result->bindParam(':prime', $prime, PDO::PARAM_STR);
     return $result->execute();
 }
 

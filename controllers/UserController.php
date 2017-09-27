@@ -82,14 +82,14 @@ public function actionDetails()
                 $password = $_POST['password_e'];
                 $phone_number = $_POST['Phone_number'];
                 $extension_number = $_POST['Extension_number'];
-                
-                
+                if($_POST['prime']='on')$prime = 1;
+                else $prime = 0;
 
 
                 require_once(ROOT. '/config/employer_errors.php');
                 if ($e_errors == false){
                     $password =  md5($password);
-                    $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,$email_e,$password,$phone_number,$extension_number);
+                    $result = User::registere($company_class_id,$company_name,$website,$selectcity,$name,$last_name,$email_e,$password,$phone_number,$extension_number,$prime);
                     if($result)header("Location: /user/signin");
                     
                 }
