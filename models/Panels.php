@@ -678,6 +678,19 @@ echo '__________________________________________________________________________
            return true;
             
         }
+        public static function declinePremium($arr)
+        {
+            $i = 0;
+            $db = Db::getConnection();
+            while ($i<sizeof($arr)){
+            $sql = 'delete from employer where employer_id='.$arr[$i]['employer_id'] ;
+            $result =$db->prepare($sql);
+            $result->execute();
+            $i++;
+            }
+           return true;
+            
+        }
         
     }
     

@@ -3,6 +3,9 @@
 <section id="banner-content" >
   <div id="mob-ban-but" style="display: inline-flex; text-align: center;">
   <?php 
+  
+ 
+ 
           if (User::isGuest()) 
           {
     echo '<form action="/user/signup" method="post" class="mob-button-44">
@@ -12,7 +15,8 @@
       <form action="/user/signin" method="post" class="mob-button-44" >
       <!-- <input type="submit" class="button-post  only-mob-view no-mob-view" name = "Post_a_CV" value="Sign In" style="margin-left: 0px;margin-right: 0px;"> -->
     </form>';}
-    else {
+    
+    elseif (!User::isGuest() and $app="" ){
       echo'
       <div>
       <form action="/employer/post_a_vacancy" method="post" ">
@@ -22,37 +26,32 @@
     }
     ?>
   </div>
-
+  <?php
+      if (User::isGuest()){
+        echo '
   <div class="substrate">
-    <div class="tabs login-tabs">
+  <div class="tabs login-tabs">
       <input id="tab1" type="radio" name="tabs" checked>
       <label for="tab1" title="Sign In">Sign In</label>
+      
+
       <input id="tab2" type="radio" name="tabs">
       <label for="tab2" title="Sign Up">Register</label>
+      
 
       <section id="content-tab1">
-      <script src="//ulogin.ru/js/ulogin.js"></script>
-      <div id="uLogin" data-ulogin="display=panel;theme=classic;fields=first_name,last_name;providers=facebook,twitter,google,linkedin;hidden=other;redirect_uri=https%3A%2F%2Fjobland.azurewebsites.net%2F;mobilebuttons=0;"></div>
-        
         <div>
             <form   action="/user/signin" method="POST" style="width: 100%;">
               <input type="text" placeholder="Email" name="loginem" class="input-text mob-button-100" style="width: 100%;"><br>
               <input type="password" placeholder="Password" name="loginpass" class="input-text mob-button-100" style="width: 100%;"><br><br>
               <input type="submit" name="loginsub" value="Sign in" class="sign-in-button mob-button-100" style="width: 100%; margin-left:0;">
             </form>
-            <?php
-                                $s = file_get_contents('http://ulogin.ru/token.php?token=' . $_POST['token'] . '&host=' . $_SERVER['HTTP_HOST']);
-                                $user = json_decode($s, true);
-                                //$user['network'] - соц. сеть, через которую авторизовался пользователь
-                                //$user['identity'] - уникальная строка определяющая конкретного пользователя соц. сети
-                                //$user['first_name'] - имя пользователя
-                                //$user['last_name'] - фамилия пользователя
-                            
-            ?>
+            
         </div>
       </section>
-
-      <section id="content-tab2">
+      
+      <section id="content-tab2">';}
+      ?>
       <?php 
           if (User::isGuest()) 
           {

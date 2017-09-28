@@ -57,7 +57,22 @@ class UserVacancs
                     }}
                     return $Arr;
             }}
-    
+    public static function getVacByEmp($id){
+        $arr = [];
+        $i = 0;
+        $db = Db::getConnection();
+        $sql = 'Select * from vacancy where employer_id ='.$id;
+        $result = $db->prepare($sql);
+        $result->execute();
+        while ($ss = $result->fetch()){
+            if($ss)
+            {
+                $arr[$i] = $ss;
+                $i++;
+            }
+        }
+        return $arr;
+    }
     
 }
 ?>

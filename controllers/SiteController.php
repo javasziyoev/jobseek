@@ -6,7 +6,16 @@ class SiteController
 
 		public function actionIndex()
 		{
-			require_once(ROOT. "/views/site/index.php");  
+			try {
+			
+			}
+			catch(Exception $userId) {
+				
+				$userId = $_SESSION['user'];
+				$app = User::checkAorE1($userId);
+			}
+			require_once(ROOT. "/views/site/index.php"); 
+			
 			return true;
 			
 		}

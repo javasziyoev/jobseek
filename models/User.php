@@ -405,5 +405,19 @@ public static function checkAorE($email)
     return false;
 }
 
+public static function checkAorE1($id)
+{
+    $db = Db::getConnection();
+    $sql = 'SELECT `applicant` FROM employer WHERE employer_id =:id';
+    $result = $db->prepare($sql);
+    $result->bindParam(':id', $id, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();
+    if ($result){
+        $result =  $result->fetch();
+        return $result['applicant'];
+    }
+    return false;
+}
 }
 ?>

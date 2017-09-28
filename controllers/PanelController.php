@@ -73,24 +73,45 @@ if(isset($_POST['adminex1'])){
     Panels::DeletePersonal($del);
 }
 //
+
+
 $i = 0;
 $k = 0;
+$j = 0;
 $arr = [];
+$arr1 = [];
 $get = Panels::getPremiumUsers();
+
 
 if(isset($_POST['premium'])){
     while($i < sizeof($get)){
         $cool = $get[$i]['employer_id'];
-        if($_POST[$cool] == true)
+        $coold = $get[$i]['employer_id'].'d';
+        $c1 = $_POST[$cool];
+        $c2 = $_POST[$coold];
+        
+        
+        if($c1 == true)
         {
             $arr[$k] = $cool;
             $k++;
           
         }
+    
+        elseif ($c2 == true)
+        {
+            $arr1[$j] = $coold;
+            $j++;
+        
+    }
         $i++;
     }
-    $accept = Panels::acceptPremium($arr);
+
+    if($arr)$accept = Panels::acceptPremium($arr);
+    if($arr1)$decline = Panels::declinePremium($arr1);
     }
+
+
 //
         require_once(ROOT . '/views/panel/admin.php');
         return true;

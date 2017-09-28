@@ -207,7 +207,8 @@
                 <td>'.$get[$i]['company_name'].'</td>
                 <td>'.$get[$i]['website_url'].'</td>
                 <td>'.$get[$i]['contact_email'].'</td>
-                <td><input type="checkbox" value="accept" name="'.$get[$i]['employer_id'].'"></td></tr>';
+                <td><input type="checkbox" value="accept"  name="'.$get[$i]['employer_id'].'">Accept</input></td>
+                <td><input type="checkbox" value="accept"  name="'.$get[$i]['employer_id'].'d'.'">Decline</input></td> </tr>';
                 $i++;
         }
                 ?>

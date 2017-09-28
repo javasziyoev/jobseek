@@ -32,7 +32,32 @@
 
             
             <section id="content-tab1">
-                тут все вакансии эмплоера, надо сделать еще кнопку удаления вакансии
+            <section id="featured-jobs-content">
+            <?php
+$i =0;
+$info = UserVacancs::getVacByEmp($userId);
+                echo'<div>
+                    <div>
+                        <h5>'.$info[$i]['position'].'</h5>
+
+                <p>'.$info[$i]['short_descr'].'</p>
+                        <small>Город этой вакансии</small>
+
+                </div>
+                    <div>
+                        Remove/delete
+                    </div>
+                </div>';
+                $i++;
+    ?>
+            
+
+
+                       
+
+
+          </section>
+          
             </section>
 
             <section id="content-tab2">
