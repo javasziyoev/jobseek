@@ -74,7 +74,9 @@
                     </ul>
                 </div>
                 ';
-            } else {  echo '
+            } else {  
+                $c = User::CheckPremium($userId);
+                echo '
                 <div>
                     <ul id="nav" class="nav-bar-ul">
                         <li>
@@ -82,8 +84,10 @@
                             <ul>
                                 <li><a href="/cabinet/1">Profile</a></li>
                                 <li><a href="/cabinet/favorite">Favorites</a></li>
-                                <li><a href="/user/logout">Sign out</a></li>
-                            </ul>
+                                <li><a href="/user/logout">Sign out</a></li>';
+                                if($c == 1)echo '<li><a href="/employer/cv">CV</a></li>';
+
+                            echo '</ul>
                         </li>
                     </ul>
                 </div>

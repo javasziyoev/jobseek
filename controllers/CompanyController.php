@@ -7,11 +7,8 @@ class CompanyController
     {
        
         $k = UserVacancs::getCompanyAmount();
-        $cubes = 8;
-        $e = floor($k / $cubes) + 1;
-        $detail =  UserVacancs::getCompany($page,$cubes);
-        //get info about user from DB
-        
+        $detail =  UserVacancs::getCompany($page,10);
+        $pagination = new Pagination($k,$page,10,'page-');
         
         
         require_once(ROOT . '/views/site/company.php');

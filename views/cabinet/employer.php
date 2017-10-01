@@ -15,6 +15,8 @@
                 if ($users=='') $koko=$userId;
                 else $koko=$users['first_name'];
                 echo $koko.'!'; 
+               
+                
             ?>
         </h3>
 
@@ -34,14 +36,15 @@
             <section id="content-tab1">
             <section id="featured-jobs-content">
             <?php
+            
 $i =0;
 $info = UserVacancs::getVacByEmp($userId);
+while($i < sizeof($info)){
                 echo'<div>
                     <div>
-                        <h5>'.$info[$i]['position'].'</h5>
-
+                        <a href="/vacancy/details"'.$info[$i]['vacancy_id'].'>'.$info[$i]['position'].'</a>
                 <p>'.$info[$i]['short_descr'].'</p>
-                        <small>Город этой вакансии</small>
+                        <small>'.$info[$i]['city_name'].'</small>
 
                 </div>
                     <div>
@@ -49,6 +52,7 @@ $info = UserVacancs::getVacByEmp($userId);
                     </div>
                 </div>';
                 $i++;
+}
     ?>
             
 
@@ -250,6 +254,7 @@ window.event.preventDefault();
     </section>
 
             <section id="content-tab4">
+            
             </section>
 
 </div>

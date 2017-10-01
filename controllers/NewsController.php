@@ -1,15 +1,15 @@
 <?php
-
+require_once(ROOT. '/components/Pagination.php');
 class NewsController{
 
 public function actionIndex($page){
   
     // bottom navigator
     $k = News::getAmount();
-    $cubes = 8;
-    $e = floor($k['COUNT(*)'] / $cubes) + 1;
+    $k = $k['COUNT(*)'];
     //get news from BD
-    $res = News::getNews($page,$cubes);
+    $res = News::getNews($page,10);
+    $pagination = new Pagination($k,$page,10,'page-');
     ///
     require_once(ROOT.'/views/news/index.php');
     

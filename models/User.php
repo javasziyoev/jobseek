@@ -286,33 +286,24 @@ public static function getSectorsId()
         }}
         return $someArr;
 }
-public static function getFJobId()
-{$someArr=[];$i=0; 
-    $someArr2=[];
+public static function getFJobId($page,$cubes)
+{
+    $Arr = [];
+    $i = 0; 
+    $page = intval($page);
+    $per = ($page - 1) * $cubes;
     $db=Db::getConnection();
-    $sql = 'SELECT * FROM `featured_job`';
+    $sql = "SELECT * FROM `vacancy` WHERE 1 ORDER BY `vacancy_id` DESC limit 14 OFFSET".' '.$per;
     $result=$db->prepare($sql);
     $result->execute();
 
     while( $user = $result->fetch()){
-        if($user['actuality']==1)
+        if($user)
         {
-           $someArr[$i]= $user['vacancy_id'];
+           $Arr[$i]= $user;
            $i++;
         }}
-$k=0;
-
-        for($j=0;$j<$i;$j++)
-        {    $sql = 'SELECT * FROM `vacancy` WHERE vacancy_id ='.$someArr[$j];
-            $result = $db->prepare($sql);
-            $result->execute();
-              while($user = $result->fetch())     
-              { 
-                $someArr2[$k]=$user;
-                $k++;
-              }       
-        }
-        return $someArr2;
+        return $Arr;
 }
 
 // Sign in
@@ -416,6 +407,20 @@ public static function checkAorE1($id)
     if ($result){
         $result =  $result->fetch();
         return $result['applicant'];
+    }
+    return false;
+}
+public static function checkPremium($id)
+{
+    $db = Db::getConnection();
+    $sql = 'SELECT `premium` FROM employer WHERE employer_id =:id';
+    $result = $db->prepare($sql);
+    $result->bindParam(':id', $id, PDO::PARAM_INT);
+    $result->setFetchMode(PDO::FETCH_ASSOC);
+    $result->execute();
+    if ($result){
+        $result =  $result->fetch();
+        return $result['premium'];
     }
     return false;
 }

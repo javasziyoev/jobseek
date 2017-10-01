@@ -51,6 +51,7 @@ class VacancyController {
     }
 
     public function actionAll() {
+        
         require_once(ROOT. '/views/vacancy/alluserVacancy.php');
         
 
@@ -58,9 +59,8 @@ class VacancyController {
     public function actionProvince($id,$page)
     {
         $k = Search::getProvinceAmount($id);
-        $cubes = 8;
-        $e = floor($k / $cubes) + 1;
-        $details =  Search::getProvinceDetails($id,$page,$cubes);
+        $pagination = new Pagination($k,$page,10,'page-');
+        $details =  Search::getProvinceDetails($id,$page,10);
 
         require_once(ROOT. '/views/vacancy/provinceVacancy.php');
         

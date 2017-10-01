@@ -1280,13 +1280,14 @@ ul {
     text-align: center;
     margin: 2px;
 }
-
-.page  .active  a, .page  .active  span, .page  .active  a:hover, .page  .active  span:hover, .page  .active  a:focus, .page  .active  span:focus {
-    background-color: #FE980F;
-    border-color: #FE980F;
-    color: #FFFFFF;
-    cursor: default;
-    z-index: 2;
+.page .active a{
+    color:red;
+}
+page li{
+    display:inline-block;
+}
+li a:focus{
+    color:black;
 }
 
 

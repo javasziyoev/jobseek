@@ -175,6 +175,16 @@ public function actionDetails()
      unset($_SESSION["user"]);
      header("Location: /index");
  }
+
+ public function actionPremium()
+ {
+    $id = User::checkLogged();
+    $check = User::checkPremium($id);
+    if($check != 1)header("Location: /index");
+
+    require_once(ROOT. '/views/employer/cv.php');
+    return true;
+ }
 		
 }	
 

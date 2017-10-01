@@ -69,19 +69,9 @@
 </div>
 
 <div class="page">
+
 <?php 
-$i = 1;
-while($i < $e ){
-    if ($i == 9)break;
-    echo '<a href="/province/'.$id.'/page-'.$i.'" >'.$i.'</a>';
-   
-    
-    $i++;
-}
-if($e > 9){
-    echo '<a href="" style="width:6%;">...</a>
-    <a href>'.$e.'</a>';
-}
+echo $pagination->get();
     ?>
 
 </div>

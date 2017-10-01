@@ -61,7 +61,7 @@ class UserVacancs
         $arr = [];
         $i = 0;
         $db = Db::getConnection();
-        $sql = 'Select * from vacancy where employer_id ='.$id;
+        $sql = 'SELECT *,city.city_name from vacancy,city where employer_id='.$id.' and city.city_id = vacancy.city_id';
         $result = $db->prepare($sql);
         $result->execute();
         while ($ss = $result->fetch()){

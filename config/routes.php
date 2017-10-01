@@ -31,5 +31,6 @@ return array(
 	'companies/page-([0-9]+)'=>'company/AllComp/$1',
 	'province/([0-9]+)/page-([0-9]+)'=>'vacancy/province/$1/$2',
 	'tag/all'=>'tag/all',
+	'employer/cv' => 'user/premium',
 	);
 ?>

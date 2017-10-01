@@ -130,7 +130,7 @@
             <div class="vacancies-of-the-day" id="inner-content" style="padding-left: 0px;">
                       <?php            
                
-                $getFJobId = User::getFJobId();
+                $getFJobId = User::getFJobId(1,14);
                 $db = Db::getConnection();
                 
                 foreach($getFJobId as $getJobs)
